@@ -10,20 +10,50 @@ import { products } from "@/data/products";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const Contact = () => {
   const { t, language } = useLanguage();
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    company_name: "",
+    email: "",
+    phone: "",
+    product: "",
+    message: "",
+  });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
+
+    try {
+      const { error } = await supabase
+        .from("contact_submissions")
+        .insert({
+          company_name: formData.company_name.trim(),
+          email: formData.email.trim(),
+          phone: formData.phone.trim() || null,
+          product: formData.product || null,
+          message: formData.message.trim() || null,
+        });
+
+      if (error) throw error;
+
       toast({ title: language === "ar" ? "تم إرسال الرسالة بنجاح" : "Message sent successfully!" });
-    }, 1000);
+      setFormData({ company_name: "", email: "", phone: "", product: "", message: "" });
+    } catch (err) {
+      console.error("Contact form error:", err);
+      toast({
+        title: language === "ar" ? "حدث خطأ" : "Something went wrong",
+        description: language === "ar" ? "يرجى المحاولة مرة أخرى" : "Please try again later",
+        variant: "destructive",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -45,21 +75,40 @@ const Contact = () => {
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label>{t("contact.name")}</Label>
-                    <Input required placeholder={language === "ar" ? "اسم الشركة" : "Your company name"} />
+                    <Input
+                      required
+                      maxLength={100}
+                      placeholder={language === "ar" ? "اسم الشركة" : "Your company name"}
+                      value={formData.company_name}
+                      onChange={(e) => setFormData((prev) => ({ ...prev, company_name: e.target.value }))}
+                    />
                   </div>
                   <div className="space-y-2">
                     <Label>{t("contact.email")}</Label>
-                    <Input type="email" required placeholder="email@company.com" />
+                    <Input
+                      type="email"
+                      required
+                      maxLength={255}
+                      placeholder="email@company.com"
+                      value={formData.email}
+                      onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
+                    />
                   </div>
                 </div>
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label>{t("contact.phone")}</Label>
-                    <Input type="tel" placeholder="+966" />
+                    <Input
+                      type="tel"
+                      maxLength={20}
+                      placeholder="+966"
+                      value={formData.phone}
+                      onChange={(e) => setFormData((prev) => ({ ...prev, phone: e.target.value }))}
+                    />
                   </div>
                   <div className="space-y-2">
                     <Label>{t("contact.product")}</Label>
-                    <Select>
+                    <Select value={formData.product} onValueChange={(val) => setFormData((prev) => ({ ...prev, product: val }))}>
                       <SelectTrigger>
                         <SelectValue placeholder={language === "ar" ? "اختر المنتج" : "Select product"} />
                       </SelectTrigger>
@@ -73,7 +122,13 @@ const Contact = () => {
                 </div>
                 <div className="space-y-2">
                   <Label>{t("contact.message")}</Label>
-                  <Textarea rows={5} placeholder={language === "ar" ? "كيف يمكننا مساعدتك؟" : "How can we help you?"} />
+                  <Textarea
+                    rows={5}
+                    maxLength={2000}
+                    placeholder={language === "ar" ? "كيف يمكننا مساعدتك؟" : "How can we help you?"}
+                    value={formData.message}
+                    onChange={(e) => setFormData((prev) => ({ ...prev, message: e.target.value }))}
+                  />
                 </div>
                 <Button type="submit" disabled={loading} className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
                   <Send className="h-4 w-4 me-2" />
