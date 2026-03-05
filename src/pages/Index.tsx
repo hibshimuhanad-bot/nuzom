@@ -6,12 +6,12 @@ import Layout from "@/components/Layout";
 import { products } from "@/data/products";
 import { Card, CardContent } from "@/components/ui/card";
 import { Building2, Scale, Briefcase, Warehouse, Landmark, Server, ShieldCheck, Puzzle, Cloud } from "lucide-react";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const Hero = () => {
   const { t, language } = useLanguage();
   return (
     <section className="relative overflow-hidden bg-primary min-h-[90vh] flex items-center">
-      {/* Geometric shapes */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 right-10 w-72 h-72 rounded-full bg-secondary/5 animate-float" />
         <div className="absolute bottom-20 left-10 w-96 h-96 rounded-full bg-secondary/3 animate-float" style={{ animationDelay: "2s" }} />
@@ -21,7 +21,7 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
+        <ScrollReveal className="max-w-3xl mx-auto text-center" duration={800}>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6">
             {t("hero.title")}
           </h1>
@@ -42,7 +42,7 @@ const Hero = () => {
               </Link>
             </Button>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );
@@ -53,23 +53,25 @@ const Ecosystem = () => {
   return (
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <ScrollReveal className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{t("ecosystem.title")}</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">{t("ecosystem.subtitle")}</p>
-        </div>
+        </ScrollReveal>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {products.map((product, i) => (
-            <Link key={product.slug} to={`/products/${product.slug}`}>
-              <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-border/50 h-full">
-                <CardContent className="p-6">
-                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${product.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                    <product.icon className="h-6 w-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">{product.name[language]}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{product.tagline[language]}</p>
-                </CardContent>
-              </Card>
-            </Link>
+            <ScrollReveal key={product.slug} delay={i * 100}>
+              <Link to={`/products/${product.slug}`}>
+                <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-border/50 h-full">
+                  <CardContent className="p-6">
+                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${product.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                      <product.icon className="h-6 w-6 text-white" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-foreground mb-2">{product.name[language]}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{product.tagline[language]}</p>
+                  </CardContent>
+                </Card>
+              </Link>
+            </ScrollReveal>
           ))}
         </div>
       </div>
@@ -89,16 +91,20 @@ const WhyNuzom = () => {
   return (
     <section className="py-24 bg-muted">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-16">{t("why.title")}</h2>
+        <ScrollReveal>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-16">{t("why.title")}</h2>
+        </ScrollReveal>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {items.map((item, i) => (
-            <div key={i} className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-secondary/10 flex items-center justify-center">
-                <item.icon className="h-8 w-8 text-secondary" />
+            <ScrollReveal key={i} delay={i * 120}>
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-secondary/10 flex items-center justify-center">
+                  <item.icon className="h-8 w-8 text-secondary" />
+                </div>
+                <h3 className="font-semibold text-foreground mb-2">{t(item.titleKey)}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{t(item.descKey)}</p>
               </div>
-              <h3 className="font-semibold text-foreground mb-2">{t(item.titleKey)}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{t(item.descKey)}</p>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>
@@ -119,13 +125,17 @@ const Industries = () => {
   return (
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-16">{t("industries.title")}</h2>
+        <ScrollReveal>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-16">{t("industries.title")}</h2>
+        </ScrollReveal>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 max-w-4xl mx-auto">
           {items.map((item, i) => (
-            <div key={i} className="flex flex-col items-center p-6 rounded-xl bg-muted hover:bg-secondary/5 transition-colors group">
-              <item.icon className="h-10 w-10 text-secondary mb-3 group-hover:scale-110 transition-transform" />
-              <span className="text-sm font-medium text-foreground text-center">{t(item.key)}</span>
-            </div>
+            <ScrollReveal key={i} delay={i * 80}>
+              <div className="flex flex-col items-center p-6 rounded-xl bg-muted hover:bg-secondary/5 transition-colors group">
+                <item.icon className="h-10 w-10 text-secondary mb-3 group-hover:scale-110 transition-transform" />
+                <span className="text-sm font-medium text-foreground text-center">{t(item.key)}</span>
+              </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>
@@ -138,14 +148,16 @@ const CTABanner = () => {
   return (
     <section className="py-24 bg-primary">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">{t("cta.title")}</h2>
-        <p className="text-primary-foreground/70 text-lg mb-8 max-w-xl mx-auto">{t("cta.subtitle")}</p>
-        <Button asChild size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 px-8">
-          <Link to="/contact">
-            {t("cta.button")}
-            <ArrowRight className="h-4 w-4 ms-2" />
-          </Link>
-        </Button>
+        <ScrollReveal>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">{t("cta.title")}</h2>
+          <p className="text-primary-foreground/70 text-lg mb-8 max-w-xl mx-auto">{t("cta.subtitle")}</p>
+          <Button asChild size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 px-8">
+            <Link to="/contact">
+              {t("cta.button")}
+              <ArrowRight className="h-4 w-4 ms-2" />
+            </Link>
+          </Button>
+        </ScrollReveal>
       </div>
     </section>
   );
