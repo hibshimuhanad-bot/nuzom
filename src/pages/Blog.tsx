@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Layout from "@/components/Layout";
 import { Card, CardContent } from "@/components/ui/card";
@@ -48,6 +49,7 @@ const Blog = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {filtered.map((post, i) => (
               <ScrollReveal key={post.id} delay={i * 80}>
+                <Link to={`/blog/${post.slug}`} key={post.id} className="block h-full">
                 <Card className="border-border/50 hover:shadow-lg transition-shadow cursor-pointer group h-full">
                   <CardContent className="p-6">
                     <div className="flex items-center gap-3 mb-3 text-muted-foreground text-xs">
@@ -63,6 +65,7 @@ const Blog = () => {
                     </span>
                   </CardContent>
                 </Card>
+                </Link>
               </ScrollReveal>
             ))}
           </div>
