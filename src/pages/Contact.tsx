@@ -10,6 +10,7 @@ import { products } from "@/data/products";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const Contact = () => {
   const { t, language } = useLanguage();
@@ -28,17 +29,18 @@ const Contact = () => {
   return (
     <Layout>
       <section className="bg-primary py-24">
-        <div className="container mx-auto px-4 text-center animate-fade-in-up">
-          <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-4">{t("contact.title")}</h1>
-          <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto">{t("contact.subtitle")}</p>
+        <div className="container mx-auto px-4 text-center">
+          <ScrollReveal duration={800}>
+            <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-4">{t("contact.title")}</h1>
+            <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto">{t("contact.subtitle")}</p>
+          </ScrollReveal>
         </div>
       </section>
 
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Form */}
-            <div className="md:col-span-2">
+            <ScrollReveal direction="left" className="md:col-span-2">
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
@@ -78,46 +80,46 @@ const Contact = () => {
                   {t("contact.send")}
                 </Button>
               </form>
-            </div>
+            </ScrollReveal>
 
-            {/* Sidebar */}
-            <div className="space-y-6">
-              <Card className="border-border/50">
-                <CardContent className="p-6">
-                  <h3 className="font-semibold text-foreground mb-4">{t("contact.demo.title")}</h3>
-                  <p className="text-muted-foreground text-sm mb-4">{t("contact.demo.desc")}</p>
-                </CardContent>
-              </Card>
+            <ScrollReveal direction="right" delay={200}>
+              <div className="space-y-6">
+                <Card className="border-border/50">
+                  <CardContent className="p-6">
+                    <h3 className="font-semibold text-foreground mb-4">{t("contact.demo.title")}</h3>
+                    <p className="text-muted-foreground text-sm mb-4">{t("contact.demo.desc")}</p>
+                  </CardContent>
+                </Card>
 
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <Mail className="h-5 w-5 text-secondary mt-0.5" />
-                  <div>
-                    <p className="text-sm font-medium text-foreground">Email</p>
-                    <p className="text-sm text-muted-foreground">info@nuzomlab.com</p>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <Mail className="h-5 w-5 text-secondary mt-0.5" />
+                    <div>
+                      <p className="text-sm font-medium text-foreground">Email</p>
+                      <p className="text-sm text-muted-foreground">info@nuzomlab.com</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Phone className="h-5 w-5 text-secondary mt-0.5" />
+                    <div>
+                      <p className="text-sm font-medium text-foreground">{language === "ar" ? "الهاتف" : "Phone"}</p>
+                      <p className="text-sm text-muted-foreground">+966 11 XXX XXXX</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <MapPin className="h-5 w-5 text-secondary mt-0.5" />
+                    <div>
+                      <p className="text-sm font-medium text-foreground">{language === "ar" ? "الموقع" : "Location"}</p>
+                      <p className="text-sm text-muted-foreground">{language === "ar" ? "الرياض، المملكة العربية السعودية" : "Riyadh, Saudi Arabia"}</p>
+                    </div>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Phone className="h-5 w-5 text-secondary mt-0.5" />
-                  <div>
-                    <p className="text-sm font-medium text-foreground">{language === "ar" ? "الهاتف" : "Phone"}</p>
-                    <p className="text-sm text-muted-foreground">+966 11 XXX XXXX</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <MapPin className="h-5 w-5 text-secondary mt-0.5" />
-                  <div>
-                    <p className="text-sm font-medium text-foreground">{language === "ar" ? "الموقع" : "Location"}</p>
-                    <p className="text-sm text-muted-foreground">{language === "ar" ? "الرياض، المملكة العربية السعودية" : "Riyadh, Saudi Arabia"}</p>
-                  </div>
+
+                <div className="bg-muted rounded-xl h-40 flex items-center justify-center">
+                  <MapPin className="h-8 w-8 text-muted-foreground/30" />
                 </div>
               </div>
-
-              {/* Map placeholder */}
-              <div className="bg-muted rounded-xl h-40 flex items-center justify-center">
-                <MapPin className="h-8 w-8 text-muted-foreground/30" />
-              </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
