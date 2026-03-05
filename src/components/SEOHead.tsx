@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { products } from "@/data/products";
+import { blogPosts } from "@/data/blog";
 
 const pageMeta: Record<string, { title: string; titleAr: string; description: string; descriptionAr: string }> = {
   "/": {
@@ -37,6 +38,7 @@ const SEOHead = () => {
   useEffect(() => {
     const path = location.pathname;
     const productMatch = path.match(/^\/products\/(.+)$/);
+    const blogMatch = path.match(/^\/blog\/(.+)$/);
 
     let title: string;
     let description: string;
@@ -50,6 +52,19 @@ const SEOHead = () => {
         description = language === "ar"
           ? product.tagline.ar
           : product.tagline.en;
+      } else {
+        title = "Nuzom Lab";
+        description = "";
+      }
+    } else if (blogMatch) {
+      const post = blogPosts.find((p) => p.slug === blogMatch[1]);
+      if (post) {
+        title = language === "ar"
+          ? `${post.title.ar} – نُظُم لاب`
+          : `${post.title.en} – Nuzom Lab`;
+        description = language === "ar"
+          ? post.excerpt.ar
+          : post.excerpt.en;
       } else {
         title = "Nuzom Lab";
         description = "";
