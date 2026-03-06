@@ -36,7 +36,7 @@ const ProductPage = () => {
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">{product.name[language]}</h1>
             <p className="text-xl text-secondary mb-3">{product.tagline[language]}</p>
-            <p className="text-primary-foreground/70 text-lg mb-8 max-w-2xl mx-auto">{product.description[language]}</p>
+            <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">{product.description[language]}</p>
             <Button asChild size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
               <Link to="/contact">
                 {t("product.demo")}
