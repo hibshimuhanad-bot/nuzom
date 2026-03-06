@@ -126,7 +126,7 @@ const Navbar = () => {
                       key={product.slug}
                       to={`/products/${product.slug}`}
                       onClick={() => setOpen(false)}
-                      className="block text-primary-foreground/80 hover:text-primary-foreground py-1.5"
+                      className="block text-foreground/80 hover:text-foreground py-1.5"
                     >
                       {product.name[language]}
                     </Link>
