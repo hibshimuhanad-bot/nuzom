@@ -51,6 +51,10 @@ const translations: Record<string, Record<Language, string>> = {
   "industries.facility": { en: "Facility Management", ar: "إدارة المرافق" },
   "industries.government": { en: "Government Contractors", ar: "المقاولون الحكوميون" },
 
+  // Testimonials
+  "testimonials.title": { en: "Trusted by Industry Leaders", ar: "موثوق من قادة الصناعة" },
+  "testimonials.subtitle": { en: "See what our clients say about working with us", ar: "اطلع على آراء عملائنا حول العمل معنا" },
+
   // CTA
   "cta.title": { en: "Ready to digitize your operations?", ar: "مستعد لرقمنة عملياتك؟" },
   "cta.subtitle": { en: "Let's discuss how Nuzom Lab can transform your organization.", ar: "دعنا نناقش كيف يمكن لنُظُم لاب تحويل منظمتك." },
