@@ -35,7 +35,7 @@ const Hero = () => {
                 <ArrowRight className="h-4 w-4 ms-2" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 px-8">
+            <Button asChild variant="outline" size="lg" className="border-foreground/30 text-foreground hover:bg-foreground/10 px-8">
               <Link to="/contact">
                 <Play className="h-4 w-4 me-2" />
                 {t("hero.demo")}
