@@ -34,7 +34,7 @@ const ProductPage = () => {
             <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${product.color} flex items-center justify-center mx-auto mb-6`}>
               <product.icon className="h-8 w-8 text-white" />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-4">{product.name[language]}</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">{product.name[language]}</h1>
             <p className="text-xl text-secondary mb-3">{product.tagline[language]}</p>
             <p className="text-primary-foreground/70 text-lg mb-8 max-w-2xl mx-auto">{product.description[language]}</p>
             <Button asChild size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
