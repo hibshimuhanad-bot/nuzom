@@ -54,7 +54,7 @@ const Footer = () => {
           {/* Contact info */}
           <div>
             <h4 className="font-semibold mb-4">{t("nav.contact")}</h4>
-            <ul className="space-y-2 text-primary-foreground/60 text-sm">
+            <ul className="space-y-2 text-muted-foreground text-sm">
               <li>info@nuzomlab.com</li>
               <li>{language === "ar" ? "الرياض، المملكة العربية السعودية" : "Riyadh, Saudi Arabia"}</li>
             </ul>
