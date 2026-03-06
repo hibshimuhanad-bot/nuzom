@@ -104,8 +104,8 @@ const Navbar = () => {
                 <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent side={language === "ar" ? "right" : "left"} className="bg-primary border-secondary/20">
-              <SheetTitle className="text-primary-foreground">
+            <SheetContent side={language === "ar" ? "right" : "left"} className="bg-background border-border">
+              <SheetTitle className="text-foreground">
                 {language === "ar" ? "نُظُم لاب" : "Nuzom Lab"}
               </SheetTitle>
               <div className="flex flex-col gap-4 mt-8">
