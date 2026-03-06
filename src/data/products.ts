@@ -23,7 +23,7 @@ export const products: Product[] = [
     tagline: { en: "Safety & Compliance Management System", ar: "نظام إدارة السلامة والامتثال" },
     description: { en: "A comprehensive platform for managing health, safety, security, and environmental compliance across your organization.", ar: "منصة شاملة لإدارة الصحة والسلامة والأمن والامتثال البيئي عبر مؤسستك." },
     icon: Shield,
-    color: "from-emerald-500 to-teal-600",
+    color: "from-blue-500 to-cyan-600",
     problem: { en: "Organizations struggle with fragmented safety management, manual incident reporting, and difficulty maintaining compliance across multiple sites and regulations.", ar: "تواجه المنظمات صعوبة في إدارة السلامة المجزأة والإبلاغ اليدوي عن الحوادث وصعوبة الحفاظ على الامتثال عبر مواقع ولوائح متعددة." },
     solution: { en: "Nuzom HSSE centralizes all safety operations into one platform with real-time monitoring, automated reporting, and proactive compliance tracking.", ar: "يجمع نُظُم السلامة جميع عمليات السلامة في منصة واحدة مع المراقبة الفورية والتقارير الآلية وتتبع الامتثال الاستباقي." },
     features: [
@@ -45,7 +45,7 @@ export const products: Product[] = [
     tagline: { en: "Legal Workflow & Case Management", ar: "إدارة سير العمل القانوني والقضايا" },
     description: { en: "Streamline legal operations with case management, document automation, and compliance tracking built for legal professionals.", ar: "تبسيط العمليات القانونية مع إدارة القضايا وأتمتة المستندات وتتبع الامتثال." },
     icon: Scale,
-    color: "from-emerald-500 to-teal-600",
+    color: "from-blue-500 to-cyan-600",
     problem: { en: "Legal teams spend excessive time on manual document management, case tracking across spreadsheets, and struggle with deadline compliance and cross-team collaboration.", ar: "تقضي الفرق القانونية وقتًا مفرطًا في إدارة المستندات يدويًا وتتبع القضايا عبر جداول البيانات." },
     solution: { en: "Nuzom Legal digitizes the entire legal workflow from case intake to resolution, with smart document management and deadline tracking.", ar: "يرقمن نُظُم القانونية سير العمل القانوني بالكامل من استلام القضية إلى الحل." },
     features: [
@@ -111,7 +111,7 @@ export const products: Product[] = [
     tagline: { en: "Fleet & Vehicle Management System", ar: "نظام إدارة الأسطول والمركبات" },
     description: { en: "Complete fleet management solution with vehicle tracking, maintenance scheduling, driver management, and fuel analytics.", ar: "حل إدارة أسطول كامل مع تتبع المركبات وجدولة الصيانة وإدارة السائقين وتحليلات الوقود." },
     icon: Truck,
-    color: "from-teal-500 to-emerald-600",
+    color: "from-cyan-500 to-blue-600",
     problem: { en: "Fleet operators face challenges with vehicle tracking, maintenance scheduling, fuel cost management, and ensuring driver compliance with safety regulations.", ar: "يواجه مشغلو الأساطيل تحديات في تتبع المركبات وجدولة الصيانة وإدارة تكاليف الوقود." },
     solution: { en: "Nuzom Fleet provides real-time fleet visibility, predictive maintenance, automated fuel tracking, and comprehensive driver management in one platform.", ar: "يوفر نُظُم الأسطول رؤية فورية للأسطول والصيانة التنبؤية وتتبع الوقود الآلي." },
     features: [

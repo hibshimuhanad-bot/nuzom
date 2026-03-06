@@ -1,43 +1,65 @@
 
 
-## Design System Update: Blue + Cyan Palette
+# Nuzom Lab – Enterprise SaaS Corporate Website
 
-Switching from Saudi Vision 2030 greens to a modern blue/cyan SaaS palette.
+## Overview
+A bilingual (Arabic/English) corporate website for Nuzom Lab, a Saudi technology studio, showcasing 5 SaaS products under one ecosystem brand. Deep navy (#0B1F33) and electric blue (#2563EB) design system with RTL support.
 
-### Color Mapping (hex → HSL)
+---
 
-| Token | Hex | HSL |
-|-------|-----|-----|
-| background | #0B1220 | 218 52% 8% |
-| card/surface | #111B2E | 219 47% 12% |
-| primary | #2563EB | 217 91% 53% |
-| accent | #22D3EE | 187 82% 53% |
-| foreground/text | #F8FAFC | 210 40% 98% |
-| muted text | #B6C2D1 | 213 24% 77% |
-| border | rgba(255,255,255,0.10) → 0 0% 100% / 10% |
+## Pages & Structure
 
-### Files to Change
+### 1. Shared Layout
+- **Navbar**: Logo, nav links (Home, Solutions dropdown, About, Blog, Contact), language toggle (AR/EN), "Request Demo" CTA button
+- **Footer**: Company info, product links, social links, copyright
+- **RTL/LTR support**: Language context with direction switching
+- **Design tokens**: Navy/blue palette, Inter font, consistent spacing
 
-**1. `src/index.css`** — Remap all CSS variables in `:root` and `.dark`:
-- `--background`: 218 52% 8%
-- `--foreground`: 210 40% 98%
-- `--card`: 219 47% 12%
-- `--primary`: 217 91% 53%, `--primary-foreground`: white
-- `--secondary`: 217 91% 45% (darker blue for secondary)
-- `--accent`: 187 82% 53% (cyan)
-- `--muted`: 219 47% 15%, `--muted-foreground`: 213 24% 77%
-- `--border`/`--input`: 0 0% 100% / 10% approach → 219 30% 18%
-- `--ring`: 187 82% 53% (cyan)
-- `--navy`/`--electric`: update to match new bg/accent
-- Sidebar tokens: align with new palette
-- Update `pulse-glow` keyframes from green HSL to blue `hsl(217 91% 53%)`
-- Update `.text-gradient` to `from-primary to-accent` (blue→cyan)
+### 2. Home Page
+- **Hero**: Bold headline + subtext with gradient background, two CTAs (Explore Solutions / Request Demo), subtle animated geometric shapes
+- **SaaS Ecosystem**: 5 product cards (HSSE, Legal, Tasks, HR, Fleet) with icons, short descriptions, and links to individual product pages
+- **Why Nuzom Lab**: 4-column feature grid (Enterprise Architecture, Saudi Compliance, Modular Ecosystem, Cloud Infrastructure)
+- **Industries**: Icon cards for Construction, Legal Firms, Corporate, Facility Management, Government Contractors
+- **CTA Banner**: "Ready to digitize your operations?" with demo request button
 
-**2. `src/data/products.ts`** — Replace `from-emerald-500 to-teal-600` gradient classes with `from-blue-500 to-cyan-600` (and `from-teal-500 to-emerald-600` → `from-cyan-500 to-blue-600`).
+### 3. Product Pages (5 dynamic pages using shared template)
+Each product (HSSE, Legal, Tasks, HR, Fleet) gets its own route with:
+- **Hero**: Product name, tagline, description, CTA
+- **Problem Statement**: Pain points the product addresses
+- **Solution Overview**: How it solves the problem
+- **Key Features Grid**: 6 features (Dashboard, RBAC, Workflow Automation, Compliance Tracking, Reports & Analytics, Multi-language)
+- **Dashboard Preview**: Placeholder mockup image area
+- **Workflow Automation**: Visual explanation section
+- **Role-Based Access**: Diagram/illustration of access model
+- **Analytics & Reporting**: Data visualization preview
+- **Security & Compliance**: Enterprise security highlights
+- **CTA**: Request Demo form/button
 
-**3. `src/pages/ProductPage.tsx`** — Change `bg-green-400/60` (line 97) to `bg-emerald-400/60` or `bg-cyan-400/60`.
+Product-specific content will be data-driven from a config object, making it easy to add future products.
 
-**4. `tailwind.config.ts`** — Update `navy` and `electric` custom color HSL values to match new tokens.
+### 4. About Page
+- Company story section
+- Vision & Mission cards
+- Technology stack highlights (Cloud, SaaS Architecture, AI)
+- Team/culture section placeholder
 
-No structural or layout changes needed — all pages use semantic tokens and will update automatically.
+### 5. Blog Page
+- Blog listing with category filters (Digital Transformation, Compliance, Enterprise Ops, Tech Trends)
+- Blog post cards with placeholder content
+- Individual blog post template page
+
+### 6. Contact Page
+- Enterprise inquiry form (company name, email, phone, message, product interest dropdown)
+- Demo booking section
+- Email and location info
+- Embedded map placeholder
+
+---
+
+## Key Technical Decisions
+- **Routing**: React Router with routes for `/`, `/about`, `/blog`, `/contact`, `/products/:slug`
+- **i18n**: Custom language context for AR/EN with RTL direction support
+- **Animations**: CSS animations and transitions for scroll reveals and hover effects
+- **Data**: All product/content data stored in static config files (no backend needed initially)
+- **Responsive**: Mobile-first design with hamburger nav menu
 
