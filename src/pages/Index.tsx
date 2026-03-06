@@ -11,7 +11,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 const Hero = () => {
   const { t, language } = useLanguage();
   return (
-    <section className="relative overflow-hidden bg-primary min-h-[90vh] flex items-center">
+    <section className="relative overflow-hidden bg-background min-h-[90vh] flex items-center">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 right-10 w-72 h-72 rounded-full bg-accent/5 animate-float" />
         <div className="absolute bottom-20 left-10 w-96 h-96 rounded-full bg-accent/3 animate-float" style={{ animationDelay: "2s" }} />
