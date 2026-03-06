@@ -74,8 +74,8 @@ const Navbar = () => {
               to={link.href}
               className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                 isActive(link.href)
-                  ? "text-secondary"
-                  : "text-primary-foreground/80 hover:text-primary-foreground"
+              ? "text-secondary"
+                  : "text-foreground/80 hover:text-foreground"
               }`}
             >
               {link.label}
