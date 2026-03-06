@@ -87,7 +87,7 @@ const Navbar = () => {
         <div className="flex items-center gap-2">
           <button
             onClick={() => setLanguage(language === "en" ? "ar" : "en")}
-            className="flex items-center gap-1 px-2 py-1.5 rounded-md text-primary-foreground/80 hover:text-primary-foreground text-sm transition-colors"
+            className="flex items-center gap-1 px-2 py-1.5 rounded-md text-foreground/80 hover:text-foreground text-sm transition-colors"
           >
             <Globe className="h-4 w-4" />
             {language === "en" ? "عربي" : "EN"}
