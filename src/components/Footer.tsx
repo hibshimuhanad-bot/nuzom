@@ -32,7 +32,7 @@ const Footer = () => {
                 <li key={product.slug}>
                   <Link
                     to={`/products/${product.slug}`}
-                    className="text-primary-foreground/60 hover:text-secondary text-sm transition-colors"
+                    className="text-muted-foreground hover:text-secondary text-sm transition-colors"
                   >
                     {product.name[language]}
                   </Link>
