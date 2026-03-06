@@ -29,6 +29,7 @@ const translations: Record<string, Record<Language, string>> = {
   // Ecosystem
   "ecosystem.title": { en: "Our SaaS Ecosystem", ar: "منظومة الحلول البرمجية" },
   "ecosystem.subtitle": { en: "Five integrated platforms designed for enterprise operations", ar: "خمس منصات متكاملة مصممة لعمليات المؤسسات" },
+  "ecosystem.learn_more": { en: "Learn more", ar: "اكتشف المزيد" },
 
   // Why Nuzom
   "why.title": { en: "Why Nuzom Lab", ar: "لماذا نُظُم لاب" },
