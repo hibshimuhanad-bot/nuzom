@@ -17,11 +17,11 @@ const Blog = () => {
 
   return (
     <Layout>
-      <section className="bg-primary py-24">
+      <section className="bg-background py-24">
         <div className="container mx-auto px-4 text-center">
           <ScrollReveal duration={800}>
-            <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-4">{t("blog.title")}</h1>
-            <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto">{t("blog.subtitle")}</p>
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">{t("blog.title")}</h1>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">{t("blog.subtitle")}</p>
           </ScrollReveal>
         </div>
       </section>

@@ -6,7 +6,7 @@ const Footer = () => {
   const { t, language } = useLanguage();
 
   return (
-    <footer className="bg-primary text-primary-foreground">
+    <footer className="bg-background text-foreground border-t border-border">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
@@ -19,7 +19,7 @@ const Footer = () => {
                 {language === "ar" ? "نُظُم لاب" : "Nuzom Lab"}
               </span>
             </div>
-            <p className="text-primary-foreground/60 text-sm leading-relaxed">
+            <p className="text-muted-foreground text-sm leading-relaxed">
               {t("footer.description")}
             </p>
           </div>
@@ -32,7 +32,7 @@ const Footer = () => {
                 <li key={product.slug}>
                   <Link
                     to={`/products/${product.slug}`}
-                    className="text-primary-foreground/60 hover:text-secondary text-sm transition-colors"
+                    className="text-muted-foreground hover:text-secondary text-sm transition-colors"
                   >
                     {product.name[language]}
                   </Link>
@@ -45,24 +45,24 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">{t("footer.company")}</h4>
             <ul className="space-y-2">
-              <li><Link to="/about" className="text-primary-foreground/60 hover:text-secondary text-sm transition-colors">{t("nav.about")}</Link></li>
-              <li><Link to="/blog" className="text-primary-foreground/60 hover:text-secondary text-sm transition-colors">{t("nav.blog")}</Link></li>
-              <li><Link to="/contact" className="text-primary-foreground/60 hover:text-secondary text-sm transition-colors">{t("nav.contact")}</Link></li>
+              <li><Link to="/about" className="text-muted-foreground hover:text-secondary text-sm transition-colors">{t("nav.about")}</Link></li>
+              <li><Link to="/blog" className="text-muted-foreground hover:text-secondary text-sm transition-colors">{t("nav.blog")}</Link></li>
+              <li><Link to="/contact" className="text-muted-foreground hover:text-secondary text-sm transition-colors">{t("nav.contact")}</Link></li>
             </ul>
           </div>
 
           {/* Contact info */}
           <div>
             <h4 className="font-semibold mb-4">{t("nav.contact")}</h4>
-            <ul className="space-y-2 text-primary-foreground/60 text-sm">
+            <ul className="space-y-2 text-muted-foreground text-sm">
               <li>info@nuzomlab.com</li>
               <li>{language === "ar" ? "الرياض، المملكة العربية السعودية" : "Riyadh, Saudi Arabia"}</li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/10 mt-12 pt-8 text-center">
-          <p className="text-primary-foreground/40 text-sm">
+        <div className="border-t border-border mt-12 pt-8 text-center">
+          <p className="text-muted-foreground/60 text-sm">
             © {new Date().getFullYear()} Nuzom Lab. {t("footer.rights")}
           </p>
         </div>

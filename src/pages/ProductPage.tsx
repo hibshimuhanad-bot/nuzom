@@ -28,15 +28,15 @@ const ProductPage = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="bg-primary py-24">
+      <section className="bg-background py-24">
         <div className="container mx-auto px-4">
           <ScrollReveal className="max-w-3xl mx-auto text-center" duration={800}>
             <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${product.color} flex items-center justify-center mx-auto mb-6`}>
               <product.icon className="h-8 w-8 text-white" />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-4">{product.name[language]}</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">{product.name[language]}</h1>
             <p className="text-xl text-secondary mb-3">{product.tagline[language]}</p>
-            <p className="text-primary-foreground/70 text-lg mb-8 max-w-2xl mx-auto">{product.description[language]}</p>
+            <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">{product.description[language]}</p>
             <Button asChild size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
               <Link to="/contact">
                 {t("product.demo")}
@@ -201,11 +201,11 @@ const ProductPage = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-primary">
+      <section className="py-24 bg-muted">
         <div className="container mx-auto px-4 text-center">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-primary-foreground mb-4">{t("cta.title")}</h2>
-            <p className="text-primary-foreground/70 mb-8 max-w-xl mx-auto">{t("cta.subtitle")}</p>
+            <h2 className="text-3xl font-bold text-foreground mb-4">{t("cta.title")}</h2>
+            <p className="text-muted-foreground mb-8 max-w-xl mx-auto">{t("cta.subtitle")}</p>
             <Button asChild size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 px-8">
               <Link to="/contact">
                 {t("product.demo")}

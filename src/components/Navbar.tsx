@@ -22,14 +22,14 @@ const Navbar = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md border-b border-secondary/20">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center">
             <span className="text-secondary-foreground font-bold text-sm">N</span>
           </div>
-          <span className="text-primary-foreground font-bold text-lg">
+          <span className="text-foreground font-bold text-lg">
             {language === "ar" ? "نُظُم لاب" : "Nuzom Lab"}
           </span>
         </Link>
@@ -42,8 +42,8 @@ const Navbar = () => {
               to={link.href}
               className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                 isActive(link.href)
-                  ? "text-secondary"
-                  : "text-primary-foreground/80 hover:text-primary-foreground"
+              ? "text-secondary"
+                  : "text-foreground/80 hover:text-foreground"
               }`}
             >
               {link.label}
@@ -52,7 +52,7 @@ const Navbar = () => {
 
           {/* Solutions Dropdown */}
           <DropdownMenu>
-            <DropdownMenuTrigger className="px-3 py-2 rounded-md text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground transition-colors flex items-center gap-1 outline-none">
+            <DropdownMenuTrigger className="px-3 py-2 rounded-md text-sm font-medium text-foreground/80 hover:text-foreground transition-colors flex items-center gap-1 outline-none">
               {t("nav.solutions")}
               <ChevronDown className="h-3 w-3" />
             </DropdownMenuTrigger>
@@ -74,8 +74,8 @@ const Navbar = () => {
               to={link.href}
               className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                 isActive(link.href)
-                  ? "text-secondary"
-                  : "text-primary-foreground/80 hover:text-primary-foreground"
+              ? "text-secondary"
+                  : "text-foreground/80 hover:text-foreground"
               }`}
             >
               {link.label}
@@ -87,7 +87,7 @@ const Navbar = () => {
         <div className="flex items-center gap-2">
           <button
             onClick={() => setLanguage(language === "en" ? "ar" : "en")}
-            className="flex items-center gap-1 px-2 py-1.5 rounded-md text-primary-foreground/80 hover:text-primary-foreground text-sm transition-colors"
+            className="flex items-center gap-1 px-2 py-1.5 rounded-md text-foreground/80 hover:text-foreground text-sm transition-colors"
           >
             <Globe className="h-4 w-4" />
             {language === "en" ? "عربي" : "EN"}
@@ -100,12 +100,12 @@ const Navbar = () => {
           {/* Mobile menu */}
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="icon" className="text-primary-foreground">
+              <Button variant="ghost" size="icon" className="text-foreground">
                 <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent side={language === "ar" ? "right" : "left"} className="bg-primary border-secondary/20">
-              <SheetTitle className="text-primary-foreground">
+            <SheetContent side={language === "ar" ? "right" : "left"} className="bg-background border-border">
+              <SheetTitle className="text-foreground">
                 {language === "ar" ? "نُظُم لاب" : "Nuzom Lab"}
               </SheetTitle>
               <div className="flex flex-col gap-4 mt-8">
@@ -114,19 +114,19 @@ const Navbar = () => {
                     key={link.href}
                     to={link.href}
                     onClick={() => setOpen(false)}
-                    className="text-primary-foreground/80 hover:text-primary-foreground text-lg font-medium"
+                    className="text-foreground/80 hover:text-foreground text-lg font-medium"
                   >
                     {link.label}
                   </Link>
                 ))}
-                <div className="border-t border-secondary/20 pt-4">
-                  <p className="text-primary-foreground/60 text-sm mb-2">{t("nav.solutions")}</p>
+                <div className="border-t border-border pt-4">
+                  <p className="text-foreground/60 text-sm mb-2">{t("nav.solutions")}</p>
                   {products.map((product) => (
                     <Link
                       key={product.slug}
                       to={`/products/${product.slug}`}
                       onClick={() => setOpen(false)}
-                      className="block text-primary-foreground/80 hover:text-primary-foreground py-1.5"
+                      className="block text-foreground/80 hover:text-foreground py-1.5"
                     >
                       {product.name[language]}
                     </Link>
