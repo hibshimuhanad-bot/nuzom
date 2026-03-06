@@ -45,7 +45,7 @@ export const products: Product[] = [
     tagline: { en: "Legal Workflow & Case Management", ar: "إدارة سير العمل القانوني والقضايا" },
     description: { en: "Streamline legal operations with case management, document automation, and compliance tracking built for legal professionals.", ar: "تبسيط العمليات القانونية مع إدارة القضايا وأتمتة المستندات وتتبع الامتثال." },
     icon: Scale,
-    color: "from-blue-500 to-indigo-600",
+    color: "from-emerald-500 to-teal-600",
     problem: { en: "Legal teams spend excessive time on manual document management, case tracking across spreadsheets, and struggle with deadline compliance and cross-team collaboration.", ar: "تقضي الفرق القانونية وقتًا مفرطًا في إدارة المستندات يدويًا وتتبع القضايا عبر جداول البيانات." },
     solution: { en: "Nuzom Legal digitizes the entire legal workflow from case intake to resolution, with smart document management and deadline tracking.", ar: "يرقمن نُظُم القانونية سير العمل القانوني بالكامل من استلام القضية إلى الحل." },
     features: [
