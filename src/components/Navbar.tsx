@@ -52,7 +52,7 @@ const Navbar = () => {
 
           {/* Solutions Dropdown */}
           <DropdownMenu>
-            <DropdownMenuTrigger className="px-3 py-2 rounded-md text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground transition-colors flex items-center gap-1 outline-none">
+            <DropdownMenuTrigger className="px-3 py-2 rounded-md text-sm font-medium text-foreground/80 hover:text-foreground transition-colors flex items-center gap-1 outline-none">
               {t("nav.solutions")}
               <ChevronDown className="h-3 w-3" />
             </DropdownMenuTrigger>
