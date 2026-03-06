@@ -29,9 +29,11 @@ const translations: Record<string, Record<Language, string>> = {
   // Ecosystem
   "ecosystem.title": { en: "Our SaaS Ecosystem", ar: "منظومة الحلول البرمجية" },
   "ecosystem.subtitle": { en: "Five integrated platforms designed for enterprise operations", ar: "خمس منصات متكاملة مصممة لعمليات المؤسسات" },
+  "ecosystem.learn_more": { en: "Learn more", ar: "اكتشف المزيد" },
 
   // Why Nuzom
   "why.title": { en: "Why Nuzom Lab", ar: "لماذا نُظُم لاب" },
+  "why.subtitle": { en: "Enterprise-grade solutions built for scale", ar: "حلول مؤسسية مصممة للتوسع والنمو" },
   "why.enterprise.title": { en: "Enterprise Architecture", ar: "بنية مؤسسية" },
   "why.enterprise.desc": { en: "Multi-tenant SaaS infrastructure designed for scale.", ar: "بنية SaaS متعددة المستأجرين مصممة للتوسع." },
   "why.compliance.title": { en: "Saudi Compliance Ready", ar: "جاهز للامتثال السعودي" },

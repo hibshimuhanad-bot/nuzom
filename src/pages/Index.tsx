@@ -112,7 +112,7 @@ const BentoGrid = () => {
                   </div>
 
                   <div className="relative z-10 mt-4 flex items-center text-sm text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span>{language === "ar" ? "اكتشف المزيد" : "Learn more"}</span>
+                    <span>{t("ecosystem.learn_more")}</span>
                     <ArrowRight className="h-3.5 w-3.5 ms-1" />
                   </div>
                 </div>
@@ -144,7 +144,7 @@ const WhyNuzom = () => {
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-center mb-4 text-gradient">{t("why.title")}</h2>
           <p className="text-muted-foreground text-center mb-16 max-w-xl mx-auto">
-            Enterprise-grade solutions built for scale
+            {t("why.subtitle")}
           </p>
         </ScrollReveal>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
