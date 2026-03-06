@@ -28,7 +28,7 @@ const ProductPage = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="bg-primary py-24">
+      <section className="bg-background py-24">
         <div className="container mx-auto px-4">
           <ScrollReveal className="max-w-3xl mx-auto text-center" duration={800}>
             <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${product.color} flex items-center justify-center mx-auto mb-6`}>
