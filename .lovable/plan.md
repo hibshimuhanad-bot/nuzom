@@ -1,65 +1,56 @@
 
 
-# Nuzom Lab – Enterprise SaaS Corporate Website
+## Saudi Vision 2030 Design System Update
 
-## Overview
-A bilingual (Arabic/English) corporate website for Nuzom Lab, a Saudi technology studio, showcasing 5 SaaS products under one ecosystem brand. Deep navy (#0B1F33) and electric blue (#2563EB) design system with RTL support.
+### Color Mapping (hex to HSL)
 
----
+| Role | Hex | HSL |
+|------|-----|-----|
+| Primary (Vision Green) | #006C35 | 152 100% 21% |
+| Secondary (Bright Green) | #1F8A4C | 148 63% 33% |
+| Accent (Light Green) | #3BB273 | 148 51% 47% |
+| Background (Dark Slate) | #0F172A | 222 47% 11% |
+| Text | #FFFFFF | 0 0% 100% |
 
-## Pages & Structure
+### Files to Update
 
-### 1. Shared Layout
-- **Navbar**: Logo, nav links (Home, Solutions dropdown, About, Blog, Contact), language toggle (AR/EN), "Request Demo" CTA button
-- **Footer**: Company info, product links, social links, copyright
-- **RTL/LTR support**: Language context with direction switching
-- **Design tokens**: Navy/blue palette, Inter font, consistent spacing
+**1. `src/index.css`** -- Core CSS variables
+- Update `:root` to use the dark background as default (since the site uses a dark navbar/primary, switching to a dark-first approach matching the government-level dark theme)
+- Remap all CSS variables:
+  - `--background`: dark slate (#0F172A)
+  - `--foreground`: white
+  - `--primary`: Vision Green (#006C35)
+  - `--secondary`: Bright Green (#1F8A4C)
+  - `--accent`: Light Green (#3BB273)
+  - Cards: slightly lighter dark slate
+  - Muted/border: dark tones
+  - Ring: accent green
+- Update `.dark` class similarly
+- Update `text-gradient` utility to use green gradient (`from-secondary to-accent`)
+- Update `pulse-glow` keyframes to use green tones instead of blue
 
-### 2. Home Page
-- **Hero**: Bold headline + subtext with gradient background, two CTAs (Explore Solutions / Request Demo), subtle animated geometric shapes
-- **SaaS Ecosystem**: 5 product cards (HSSE, Legal, Tasks, HR, Fleet) with icons, short descriptions, and links to individual product pages
-- **Why Nuzom Lab**: 4-column feature grid (Enterprise Architecture, Saudi Compliance, Modular Ecosystem, Cloud Infrastructure)
-- **Industries**: Icon cards for Construction, Legal Firms, Corporate, Facility Management, Government Contractors
-- **CTA Banner**: "Ready to digitize your operations?" with demo request button
+**2. `tailwind.config.ts`** -- Custom color tokens
+- Update `navy` references to use dark slate HSL
+- Update `electric` references to use accent green HSL
+- Keep structural config unchanged
 
-### 3. Product Pages (5 dynamic pages using shared template)
-Each product (HSSE, Legal, Tasks, HR, Fleet) gets its own route with:
-- **Hero**: Product name, tagline, description, CTA
-- **Problem Statement**: Pain points the product addresses
-- **Solution Overview**: How it solves the problem
-- **Key Features Grid**: 6 features (Dashboard, RBAC, Workflow Automation, Compliance Tracking, Reports & Analytics, Multi-language)
-- **Dashboard Preview**: Placeholder mockup image area
-- **Workflow Automation**: Visual explanation section
-- **Role-Based Access**: Diagram/illustration of access model
-- **Analytics & Reporting**: Data visualization preview
-- **Security & Compliance**: Enterprise security highlights
-- **CTA**: Request Demo form/button
+**3. `src/components/Navbar.tsx`** -- Navbar styling
+- The navbar uses `bg-primary/95` and `border-secondary/20` which will automatically pick up new colors
+- Logo box uses `bg-secondary` -- will become green automatically
+- No structural changes needed, just color propagation
 
-Product-specific content will be data-driven from a config object, making it easy to add future products.
+**4. Component pages** -- Mostly automatic
+- All pages use semantic tokens (`bg-primary`, `text-secondary`, etc.) so they will update automatically
+- A few hardcoded `blue-400` or `blue-*` references in gradients on Index.tsx and ProductPage.tsx need updating to green equivalents
 
-### 4. About Page
-- Company story section
-- Vision & Mission cards
-- Technology stack highlights (Cloud, SaaS Architecture, AI)
-- Team/culture section placeholder
+**5. `src/pages/Index.tsx`** and **`src/pages/ProductPage.tsx`** -- Hardcoded blue references
+- Replace any `blue-*` Tailwind classes with green equivalents (e.g., `green-400`, `emerald-400`)
+- Update gradient directions to use the new green palette
 
-### 5. Blog Page
-- Blog listing with category filters (Digital Transformation, Compliance, Enterprise Ops, Tech Trends)
-- Blog post cards with placeholder content
-- Individual blog post template page
+**6. Memory update** -- Update design system memory to reflect Saudi Vision 2030 palette
 
-### 6. Contact Page
-- Enterprise inquiry form (company name, email, phone, message, product interest dropdown)
-- Demo booking section
-- Email and location info
-- Embedded map placeholder
-
----
-
-## Key Technical Decisions
-- **Routing**: React Router with routes for `/`, `/about`, `/blog`, `/contact`, `/products/:slug`
-- **i18n**: Custom language context for AR/EN with RTL direction support
-- **Animations**: CSS animations and transitions for scroll reveals and hover effects
-- **Data**: All product/content data stored in static config files (no backend needed initially)
-- **Responsive**: Mobile-first design with hamburger nav menu
+### Design Philosophy
+- Dark background with green accents conveys authority and professionalism aligned with Saudi government aesthetics
+- The green palette directly references Saudi national identity and Vision 2030 branding
+- Clean SaaS interface maintained through existing Inter typography and minimal component styling
 
