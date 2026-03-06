@@ -111,7 +111,7 @@ export const products: Product[] = [
     tagline: { en: "Fleet & Vehicle Management System", ar: "نظام إدارة الأسطول والمركبات" },
     description: { en: "Complete fleet management solution with vehicle tracking, maintenance scheduling, driver management, and fuel analytics.", ar: "حل إدارة أسطول كامل مع تتبع المركبات وجدولة الصيانة وإدارة السائقين وتحليلات الوقود." },
     icon: Truck,
-    color: "from-teal-500 to-emerald-600",
+    color: "from-cyan-500 to-blue-600",
     problem: { en: "Fleet operators face challenges with vehicle tracking, maintenance scheduling, fuel cost management, and ensuring driver compliance with safety regulations.", ar: "يواجه مشغلو الأساطيل تحديات في تتبع المركبات وجدولة الصيانة وإدارة تكاليف الوقود." },
     solution: { en: "Nuzom Fleet provides real-time fleet visibility, predictive maintenance, automated fuel tracking, and comprehensive driver management in one platform.", ar: "يوفر نُظُم الأسطول رؤية فورية للأسطول والصيانة التنبؤية وتتبع الوقود الآلي." },
     features: [

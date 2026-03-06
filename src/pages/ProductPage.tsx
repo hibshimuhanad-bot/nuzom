@@ -94,7 +94,7 @@ const ProductPage = () => {
               <div className="flex items-center gap-2 px-4 py-3 bg-primary/5 border-b border-border">
                 <div className="w-3 h-3 rounded-full bg-destructive/60" />
                 <div className="w-3 h-3 rounded-full bg-yellow-400/60" />
-                <div className="w-3 h-3 rounded-full bg-green-400/60" />
+                <div className="w-3 h-3 rounded-full bg-cyan-400/60" />
               </div>
               <div className="p-8 flex items-center justify-center min-h-[300px]">
                 <div className="text-center text-muted-foreground">
