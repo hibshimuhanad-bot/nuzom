@@ -23,7 +23,7 @@ export const products: Product[] = [
     tagline: { en: "Safety & Compliance Management System", ar: "نظام إدارة السلامة والامتثال" },
     description: { en: "A comprehensive platform for managing health, safety, security, and environmental compliance across your organization.", ar: "منصة شاملة لإدارة الصحة والسلامة والأمن والامتثال البيئي عبر مؤسستك." },
     icon: Shield,
-    color: "from-emerald-500 to-teal-600",
+    color: "from-blue-500 to-cyan-600",
     problem: { en: "Organizations struggle with fragmented safety management, manual incident reporting, and difficulty maintaining compliance across multiple sites and regulations.", ar: "تواجه المنظمات صعوبة في إدارة السلامة المجزأة والإبلاغ اليدوي عن الحوادث وصعوبة الحفاظ على الامتثال عبر مواقع ولوائح متعددة." },
     solution: { en: "Nuzom HSSE centralizes all safety operations into one platform with real-time monitoring, automated reporting, and proactive compliance tracking.", ar: "يجمع نُظُم السلامة جميع عمليات السلامة في منصة واحدة مع المراقبة الفورية والتقارير الآلية وتتبع الامتثال الاستباقي." },
     features: [
