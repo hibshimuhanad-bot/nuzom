@@ -5,6 +5,7 @@ import { ArrowRight, Play, Building2, Scale, Briefcase, Warehouse, Landmark, Ser
 import Layout from "@/components/Layout";
 import { products } from "@/data/products";
 import ScrollReveal from "@/components/ScrollReveal";
+import ParticleField from "@/components/ParticleField";
 
 /* ════════════════════════════════════════════
    HERO — AI gradient mesh + floating orbs
