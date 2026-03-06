@@ -13,11 +13,11 @@ const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-primary min-h-[90vh] flex items-center">
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 right-10 w-72 h-72 rounded-full bg-secondary/5 animate-float" />
-        <div className="absolute bottom-20 left-10 w-96 h-96 rounded-full bg-secondary/3 animate-float" style={{ animationDelay: "2s" }} />
-        <div className="absolute top-1/2 left-1/3 w-48 h-48 rotate-45 bg-secondary/5 animate-float" style={{ animationDelay: "4s" }} />
-        <div className="absolute top-10 left-1/4 w-2 h-2 rounded-full bg-secondary/40" />
-        <div className="absolute bottom-32 right-1/3 w-3 h-3 rounded-full bg-secondary/30" />
+        <div className="absolute top-20 right-10 w-72 h-72 rounded-full bg-accent/5 animate-float" />
+        <div className="absolute bottom-20 left-10 w-96 h-96 rounded-full bg-accent/3 animate-float" style={{ animationDelay: "2s" }} />
+        <div className="absolute top-1/2 left-1/3 w-48 h-48 rotate-45 bg-accent/5 animate-float" style={{ animationDelay: "4s" }} />
+        <div className="absolute top-10 left-1/4 w-2 h-2 rounded-full bg-accent/40" />
+        <div className="absolute bottom-32 right-1/3 w-3 h-3 rounded-full bg-accent/30" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
