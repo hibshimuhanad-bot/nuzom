@@ -119,8 +119,8 @@ const Navbar = () => {
                     {link.label}
                   </Link>
                 ))}
-                <div className="border-t border-secondary/20 pt-4">
-                  <p className="text-primary-foreground/60 text-sm mb-2">{t("nav.solutions")}</p>
+                <div className="border-t border-border pt-4">
+                  <p className="text-foreground/60 text-sm mb-2">{t("nav.solutions")}</p>
                   {products.map((product) => (
                     <Link
                       key={product.slug}
