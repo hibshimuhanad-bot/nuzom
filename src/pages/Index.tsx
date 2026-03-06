@@ -22,7 +22,7 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <ScrollReveal className="max-w-3xl mx-auto text-center" duration={800}>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
             {t("hero.title")}
           </h1>
           <p className="text-lg md:text-xl text-primary-foreground/70 mb-10 leading-relaxed max-w-2xl mx-auto">
