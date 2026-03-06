@@ -32,6 +32,7 @@ const translations: Record<string, Record<Language, string>> = {
 
   // Why Nuzom
   "why.title": { en: "Why Nuzom Lab", ar: "لماذا نُظُم لاب" },
+  "why.subtitle": { en: "Enterprise-grade solutions built for scale", ar: "حلول مؤسسية مصممة للتوسع والنمو" },
   "why.enterprise.title": { en: "Enterprise Architecture", ar: "بنية مؤسسية" },
   "why.enterprise.desc": { en: "Multi-tenant SaaS infrastructure designed for scale.", ar: "بنية SaaS متعددة المستأجرين مصممة للتوسع." },
   "why.compliance.title": { en: "Saudi Compliance Ready", ar: "جاهز للامتثال السعودي" },
