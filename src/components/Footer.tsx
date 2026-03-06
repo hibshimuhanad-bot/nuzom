@@ -19,7 +19,7 @@ const Footer = () => {
                 {language === "ar" ? "نُظُم لاب" : "Nuzom Lab"}
               </span>
             </div>
-            <p className="text-primary-foreground/60 text-sm leading-relaxed">
+            <p className="text-muted-foreground text-sm leading-relaxed">
               {t("footer.description")}
             </p>
           </div>
