@@ -14,8 +14,10 @@ const Hero = () => {
   const { t } = useLanguage();
   return (
     <section className="relative min-h-[100vh] flex items-center justify-center ai-gradient-bg dot-pattern overflow-hidden">
+      {/* Particle field */}
+      <ParticleField count={70} />
       {/* Floating orbs */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ zIndex: 0 }}>
         <div className="absolute top-[15%] left-[10%] w-64 h-64 rounded-full bg-primary/10 blur-3xl animate-float" />
         <div className="absolute top-[60%] right-[15%] w-80 h-80 rounded-full bg-accent/8 blur-3xl animate-float-slow" style={{ animationDelay: "2s" }} />
         <div className="absolute top-[30%] right-[30%] w-48 h-48 rounded-full bg-[hsl(270_80%_60%/0.08)] blur-3xl animate-float-reverse" style={{ animationDelay: "4s" }} />
