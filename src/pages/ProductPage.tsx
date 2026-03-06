@@ -5,6 +5,7 @@ import { products } from "@/data/products";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Monitor, GitBranch, Users, BarChart3, ShieldCheck } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import ParticleField from "@/components/ParticleField";
 
 const ProductPage = () => {
   const { slug } = useParams<{ slug: string }>();
