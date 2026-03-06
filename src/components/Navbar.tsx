@@ -114,7 +114,7 @@ const Navbar = () => {
                     key={link.href}
                     to={link.href}
                     onClick={() => setOpen(false)}
-                    className="text-primary-foreground/80 hover:text-primary-foreground text-lg font-medium"
+                    className="text-foreground/80 hover:text-foreground text-lg font-medium"
                   >
                     {link.label}
                   </Link>
