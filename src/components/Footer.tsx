@@ -45,9 +45,9 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">{t("footer.company")}</h4>
             <ul className="space-y-2">
-              <li><Link to="/about" className="text-primary-foreground/60 hover:text-secondary text-sm transition-colors">{t("nav.about")}</Link></li>
-              <li><Link to="/blog" className="text-primary-foreground/60 hover:text-secondary text-sm transition-colors">{t("nav.blog")}</Link></li>
-              <li><Link to="/contact" className="text-primary-foreground/60 hover:text-secondary text-sm transition-colors">{t("nav.contact")}</Link></li>
+              <li><Link to="/about" className="text-muted-foreground hover:text-secondary text-sm transition-colors">{t("nav.about")}</Link></li>
+              <li><Link to="/blog" className="text-muted-foreground hover:text-secondary text-sm transition-colors">{t("nav.blog")}</Link></li>
+              <li><Link to="/contact" className="text-muted-foreground hover:text-secondary text-sm transition-colors">{t("nav.contact")}</Link></li>
             </ul>
           </div>
 
