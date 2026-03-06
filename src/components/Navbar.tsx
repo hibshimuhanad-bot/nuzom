@@ -29,7 +29,7 @@ const Navbar = () => {
           <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center">
             <span className="text-secondary-foreground font-bold text-sm">N</span>
           </div>
-          <span className="text-primary-foreground font-bold text-lg">
+          <span className="text-foreground font-bold text-lg">
             {language === "ar" ? "نُظُم لاب" : "Nuzom Lab"}
           </span>
         </Link>

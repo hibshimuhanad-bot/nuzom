@@ -61,8 +61,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/10 mt-12 pt-8 text-center">
-          <p className="text-primary-foreground/40 text-sm">
+        <div className="border-t border-border mt-12 pt-8 text-center">
+          <p className="text-muted-foreground/60 text-sm">
             © {new Date().getFullYear()} Nuzom Lab. {t("footer.rights")}
           </p>
         </div>

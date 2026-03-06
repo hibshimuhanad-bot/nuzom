@@ -201,11 +201,11 @@ const ProductPage = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-primary">
+      <section className="py-24 bg-muted">
         <div className="container mx-auto px-4 text-center">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-primary-foreground mb-4">{t("cta.title")}</h2>
-            <p className="text-primary-foreground/70 mb-8 max-w-xl mx-auto">{t("cta.subtitle")}</p>
+            <h2 className="text-3xl font-bold text-foreground mb-4">{t("cta.title")}</h2>
+            <p className="text-muted-foreground mb-8 max-w-xl mx-auto">{t("cta.subtitle")}</p>
             <Button asChild size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 px-8">
               <Link to="/contact">
                 {t("product.demo")}
