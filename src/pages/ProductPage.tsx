@@ -5,6 +5,7 @@ import { products } from "@/data/products";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Monitor, GitBranch, Users, BarChart3, ShieldCheck } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import ParticleField from "@/components/ParticleField";
 
 const ProductPage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -28,7 +29,8 @@ const ProductPage = () => {
     <Layout>
       {/* Hero */}
       <section className="relative min-h-[70vh] flex items-center ai-gradient-bg dot-pattern overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <ParticleField count={50} />
+        <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ zIndex: 0 }}>
           <div className="absolute top-[20%] left-[10%] w-72 h-72 rounded-full bg-primary/10 blur-3xl animate-float" />
           <div className="absolute bottom-[20%] right-[10%] w-80 h-80 rounded-full bg-accent/8 blur-3xl animate-float-slow" style={{ animationDelay: "2s" }} />
           <div className="absolute top-[40%] right-[25%] w-48 h-48 rounded-full bg-[hsl(270_80%_60%/0.06)] blur-3xl animate-float-reverse" style={{ animationDelay: "4s" }} />
