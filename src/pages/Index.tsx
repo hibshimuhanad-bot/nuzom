@@ -271,18 +271,6 @@ const testimonials = [
   },
 ];
 
-const clientLogos = [
-  "Al-Manar Group",
-  "Horizon Law",
-  "Desert Star",
-  "Riyadh Metro",
-  "NEOM",
-  "Saudi Aramco",
-  "SABIC",
-  "STC",
-  "Al Rajhi",
-  "Zain KSA",
-];
 
 const Testimonials = () => {
   const { t, language } = useLanguage();
