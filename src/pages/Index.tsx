@@ -325,25 +325,11 @@ const Testimonials = () => {
           ))}
         </div>
 
-        {/* Logo Marquee */}
+        {/* Trust line */}
         <ScrollReveal>
-          <div className="relative">
-            {/* Fade edges */}
-            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10" />
-            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10" />
-            <div className="overflow-hidden">
-              <div className="flex animate-marquee gap-12 items-center">
-                {[...clientLogos, ...clientLogos].map((name, i) => (
-                  <div
-                    key={i}
-                    className="flex-shrink-0 px-6 py-3 rounded-xl border border-border/20 bg-muted/30 backdrop-blur-sm text-muted-foreground text-sm font-medium whitespace-nowrap hover:border-primary/30 hover:text-foreground transition-colors"
-                  >
-                    {name}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+          <p className="text-sm text-muted-foreground uppercase tracking-widest text-center mt-8">
+            Trusted by enterprises across Saudi Arabia &amp; the Gulf
+          </p>
         </ScrollReveal>
       </div>
     </section>
