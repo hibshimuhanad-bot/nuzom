@@ -49,7 +49,7 @@ const Hero = () => {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 glow-btn animate-pulse-glow rounded-xl">
-              <Link to="/products/hsse">
+              <Link to="/products">
                 {t("hero.explore")}
                 <ArrowRight className="h-4 w-4 ms-2" />
               </Link>
@@ -61,6 +61,9 @@ const Hero = () => {
               </Link>
             </Button>
           </div>
+          <p className="mt-8 text-sm text-muted-foreground font-mono tracking-wide">
+            5 Products · 5 Industries · 1 Platform
+          </p>
         </ScrollReveal>
       </div>
 
@@ -99,6 +102,10 @@ const BentoGrid = () => {
             <ScrollReveal key={product.slug} delay={i * 80} className={bentoClasses[i] || ""}>
               <Link to={`/products/${product.slug}`} className="block h-full">
                 <div className={`bento-card p-6 h-full flex flex-col justify-between group relative overflow-hidden ${i === 0 ? "min-h-[320px]" : ""}`}>
+                  {/* Status badge */}
+                  <span className={`absolute top-3 right-3 z-20 text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full ${i === 0 ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30" : "bg-muted text-muted-foreground border border-border/50"}`}>
+                    {i === 0 ? "Available Now" : "Coming Soon"}
+                  </span>
                   {/* Inner glow */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-[0.03] group-hover:opacity-[0.06] transition-opacity duration-500 rounded-2xl`} />
 
@@ -264,18 +271,6 @@ const testimonials = [
   },
 ];
 
-const clientLogos = [
-  "Al-Manar Group",
-  "Horizon Law",
-  "Desert Star",
-  "Riyadh Metro",
-  "NEOM",
-  "Saudi Aramco",
-  "SABIC",
-  "STC",
-  "Al Rajhi",
-  "Zain KSA",
-];
 
 const Testimonials = () => {
   const { t, language } = useLanguage();
@@ -318,25 +313,11 @@ const Testimonials = () => {
           ))}
         </div>
 
-        {/* Logo Marquee */}
+        {/* Trust line */}
         <ScrollReveal>
-          <div className="relative">
-            {/* Fade edges */}
-            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10" />
-            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10" />
-            <div className="overflow-hidden">
-              <div className="flex animate-marquee gap-12 items-center">
-                {[...clientLogos, ...clientLogos].map((name, i) => (
-                  <div
-                    key={i}
-                    className="flex-shrink-0 px-6 py-3 rounded-xl border border-border/20 bg-muted/30 backdrop-blur-sm text-muted-foreground text-sm font-medium whitespace-nowrap hover:border-primary/30 hover:text-foreground transition-colors"
-                  >
-                    {name}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+          <p className="text-sm text-muted-foreground uppercase tracking-widest text-center mt-8">
+            Trusted by enterprises across Saudi Arabia &amp; the Gulf
+          </p>
         </ScrollReveal>
       </div>
     </section>
