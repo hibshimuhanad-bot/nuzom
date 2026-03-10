@@ -61,6 +61,9 @@ const Hero = () => {
               </Link>
             </Button>
           </div>
+          <p className="mt-8 text-sm text-muted-foreground font-mono tracking-wide">
+            5 Products · 5 Industries · 1 Platform
+          </p>
         </ScrollReveal>
       </div>
 
