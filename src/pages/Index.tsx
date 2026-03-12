@@ -81,11 +81,17 @@ const BentoGrid = () => {
 
   // Bento sizing: first card is large (2×2), rest are 1×1
   const bentoClasses = [
-    "sm:col-span-2 sm:row-span-2", // featured
-    "",
-    "",
-    "",
-    "",
+    "sm:col-span-2 sm:row-span-2", // HSSE featured
+    "", // Legal
+    "", // Tasks
+    "", // HR
+    "", // Fleet
+    "sm:col-span-2", // Analytics (wide)
+    "", // Booking
+    "", // Sign
+    "sm:col-span-2", // Tickets (wide)
+    "", // Budget
+    "", // FitAI
   ];
 
   return (
