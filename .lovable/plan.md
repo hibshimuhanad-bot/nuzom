@@ -1,65 +1,56 @@
 
 
-# Nuzom Lab – Enterprise SaaS Corporate Website
+# خطة سحب Landing Pages من جميع المشاريع إلى Nuzom Lab
 
-## Overview
-A bilingual (Arabic/English) corporate website for Nuzom Lab, a Saudi technology studio, showcasing 5 SaaS products under one ecosystem brand. Deep navy (#0B1F33) and electric blue (#2563EB) design system with RTL support.
+## ملاحظة مهمة حول الربط بين المشاريع
 
----
-
-## Pages & Structure
-
-### 1. Shared Layout
-- **Navbar**: Logo, nav links (Home, Solutions dropdown, About, Blog, Contact), language toggle (AR/EN), "Request Demo" CTA button
-- **Footer**: Company info, product links, social links, copyright
-- **RTL/LTR support**: Language context with direction switching
-- **Design tokens**: Navy/blue palette, Inter font, consistent spacing
-
-### 2. Home Page
-- **Hero**: Bold headline + subtext with gradient background, two CTAs (Explore Solutions / Request Demo), subtle animated geometric shapes
-- **SaaS Ecosystem**: 5 product cards (HSSE, Legal, Tasks, HR, Fleet) with icons, short descriptions, and links to individual product pages
-- **Why Nuzom Lab**: 4-column feature grid (Enterprise Architecture, Saudi Compliance, Modular Ecosystem, Cloud Infrastructure)
-- **Industries**: Icon cards for Construction, Legal Firms, Corporate, Facility Management, Government Contractors
-- **CTA Banner**: "Ready to digitize your operations?" with demo request button
-
-### 3. Product Pages (5 dynamic pages using shared template)
-Each product (HSSE, Legal, Tasks, HR, Fleet) gets its own route with:
-- **Hero**: Product name, tagline, description, CTA
-- **Problem Statement**: Pain points the product addresses
-- **Solution Overview**: How it solves the problem
-- **Key Features Grid**: 6 features (Dashboard, RBAC, Workflow Automation, Compliance Tracking, Reports & Analytics, Multi-language)
-- **Dashboard Preview**: Placeholder mockup image area
-- **Workflow Automation**: Visual explanation section
-- **Role-Based Access**: Diagram/illustration of access model
-- **Analytics & Reporting**: Data visualization preview
-- **Security & Compliance**: Enterprise security highlights
-- **CTA**: Request Demo form/button
-
-Product-specific content will be data-driven from a config object, making it easy to add future products.
-
-### 4. About Page
-- Company story section
-- Vision & Mission cards
-- Technology stack highlights (Cloud, SaaS Architecture, AI)
-- Team/culture section placeholder
-
-### 5. Blog Page
-- Blog listing with category filters (Digital Transformation, Compliance, Enterprise Ops, Tech Trends)
-- Blog post cards with placeholder content
-- Individual blog post template page
-
-### 6. Contact Page
-- Enterprise inquiry form (company name, email, phone, message, product interest dropdown)
-- Demo booking section
-- Email and location info
-- Embedded map placeholder
+المشاريع في Lovable مستقلة عن بعض -- لا توجد طريقة لعمل "sync" تلقائي بينها. التعديلات في مشروع Nuzom Lab لن تنتقل تلقائياً للمشاريع الأخرى والعكس. الحل: نسحب المحتوى مرة واحدة إلى `products.ts` وأي تحديث مستقبلي يتم يدوياً في الملف المناسب.
 
 ---
 
-## Key Technical Decisions
-- **Routing**: React Router with routes for `/`, `/about`, `/blog`, `/contact`, `/products/:slug`
-- **i18n**: Custom language context for AR/EN with RTL direction support
-- **Animations**: CSS animations and transitions for scroll reveals and hover effects
-- **Data**: All product/content data stored in static config files (no backend needed initially)
-- **Responsive**: Mobile-first design with hamburger nav menu
+## المنتجات النهائية (11 منتج)
+
+| # | Slug | الاسم EN | المصدر | النوع |
+|---|------|----------|--------|-------|
+| 1 | `hsse` | Nuzom HSSE | File Glimpse | تحديث (Permits, Incidents, Risks, LOTO, MOC, ISO, Training, Audits) |
+| 2 | `legal` | Nuzom Legal | Legal Compass KSA | تحديث (Cases, Sessions, AI Assistant, SLA, Knowledge Base) |
+| 3 | `tasks` | Nuzom Tasks | PTMP/Taskgen | تحديث (Pillars, Workflows, Reports) |
+| 4 | `hr` | Nuzom HR | emdad360 | تحديث (Attendance, Payroll, Leave, Departments, Learning Hub) |
+| 5 | `fleet` | Nuzom Fleet | emdad360 | تحديث (Fuel, Maintenance, Documents, Safety Inspections) |
+| 6 | `analytics` | Nuzom Analytics | Insight Weaver | جديد - منصة تحليلات وذكاء أعمال |
+| 7 | `booking` | Nuzom Booking | Pixel Perfect/Bookly | جديد - نظام حجوزات ومواعيد واشتراكات |
+| 8 | `esign` | Nuzom Sign | secure-sig-vault | جديد - توقيع إلكتروني مؤسسي |
+| 9 | `tickets` | Nuzom Tickets | tkt-system | جديد - نظام تذاكر ITSM (80+ صفحة: Changes, Problems, CMDB, Releases, Contracts, Vendors, Knowledge Base) |
+| 10 | `budget` | Nuzom Budget | Budget Tracker | جديد - إدارة ميزانيات ومشتريات (Budgets, Purchase Orders, Vendors, Cost Centers, Audit Logs) |
+| 11 | `fitai` | Nuzom FitAI | creditguard-codex | جديد - ذكاء اصطناعي للقياسات والتوصيات |
+
+## الملفات المتأثرة
+
+### 1. `src/data/products.ts`
+- إثراء الـ 5 منتجات الحالية بميزات مستخرجة من المشاريع الأصلية (أسماء الصفحات والموديولات الفعلية)
+- إضافة 6 منتجات جديدة بنفس `Product` interface
+- إضافة أيقونات جديدة: `PenTool` (Sign), `Ticket` (Tickets), `Wallet` (Budget), `CalendarDays` (Booking), `PieChart` (Analytics), `Cpu` (FitAI)
+- كل منتج يشمل: name, tagline, description, problem, solution, 6 features, workflowDesc, rbacDesc, analyticsDesc, securityDesc -- بالعربي والإنجليزي
+- المحتوى يُستخرج مباشرة من الصفحات والموديولات الموجودة في كل مشروع
+
+### 2. `src/pages/Index.tsx`
+- تحديث Hero Stats Bar: `"11 Products · 8 Industries · 1 Platform"`
+- تعديل BentoGrid: توسيع الـ `bentoClasses` array لـ 11 عنصر مع تخطيط مناسب
+- HSSE يبقى "Available Now"، الباقي "Coming Soon"
+
+### 3. `src/contexts/LanguageContext.tsx`
+- لا تغيير مطلوب (الترجمات في `products.ts` مباشرة)
+
+### 4. لا تغيير على:
+- `ProductPage.tsx` -- يعمل dynamically
+- `Navbar.tsx` / `Footer.tsx` -- يقرأون من `products` array تلقائياً
+
+## مصادر المحتوى لكل منتج جديد
+
+- **Nuzom Analytics**: من Insight Weaver - dashboards تفاعلية وتقارير ذكاء أعمال
+- **Nuzom Booking**: من Bookly - حجوزات، مواعيد، اشتراكات، باقات، فواتير ZATCA، إدارة فروع
+- **Nuzom Sign**: من secure-sig-vault - تشفير بنكي، توقيع فوري، امتثال عالمي (eIDAS/UETA)، MFA، audit trail، team collaboration
+- **Nuzom Tickets**: من tkt-system (80+ صفحة) - تذاكر، تغييرات، مشاكل، CMDB، إصدارات، عقود، موردين، قاعدة معرفة، AI Automation Hub، workflow builder
+- **Nuzom Budget**: من Budget Tracker - ميزانيات، فترات، طلبات شراء، أوامر شراء، موردين، مراكز تكلفة، تقارير، audit logs
+- **Nuzom FitAI**: من creditguard-codex - تحليل قياسات بالذكاء الاصطناعي، توصيات ذكية، خصوصية أولاً
 
