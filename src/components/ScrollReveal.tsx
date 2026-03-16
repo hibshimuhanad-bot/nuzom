@@ -7,6 +7,7 @@ interface ScrollRevealProps {
   direction?: "up" | "down" | "left" | "right" | "none";
   duration?: number;
   once?: boolean;
+  startVisible?: boolean;
 }
 
 const ScrollReveal = ({
