@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
@@ -5,7 +6,8 @@ import { ArrowRight, ArrowLeft, Play, Building2, Scale, Briefcase, Warehouse, La
 import Layout from "@/components/Layout";
 import { products } from "@/data/products";
 import ScrollReveal from "@/components/ScrollReveal";
-import ParticleField from "@/components/ParticleField";
+
+const ParticleField = lazy(() => import("@/components/ParticleField"));
 
 /* ════════════════════════════════════════════
    HERO — AI gradient mesh + floating orbs
