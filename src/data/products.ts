@@ -362,15 +362,15 @@ export const products: Product[] = [
     name: { en: "Nzom Sign", ar: "نزوم التوقيع" },
     tagline: {
       en: "Sign it. Done. Move on.",
-      ar: "وقّعه. خلاص. امشِ."
+      ar: "وقّع. خلاص. وامشِ لشغلك."
     },
     description: {
       en: "Stop printing, scanning, and waiting. Nzom Sign lets you send, sign, and seal documents in minutes — not days. Legally binding, instantly tracked, always available.",
-      ar: "وقّف الطباعة والمسح والانتظار. نزوم التوقيع يخلّيك ترسل وتوقّع وتختم المستندات في دقائق — مو أيام. ملزم قانونياً، متابَع فوراً، متوفر دايماً."
+      ar: "كفاية طباعة ومسح وانتظار. نزوم التوقيع يخلّيك ترسل وتوقّع وتختم مستنداتك في دقائق — مو أيام. ملزم قانونياً، متابَع لحظياً، ومتوفر في أي وقت."
     },
     emotionalHook: {
       en: "Speed that closes deals.",
-      ar: "سرعة تقفل صفقات."
+      ar: "سرعة تقفل لك الصفقات."
     },
     imagineDay: {
       en: "Imagine sending a contract and getting it signed before your coffee gets cold. No printing. No scanning. No 'I'll sign it when I'm in the office.' Your client signs from their phone, you get notified instantly, and the deal is done. Days compressed into minutes.",
