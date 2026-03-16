@@ -59,10 +59,10 @@ const Hero = () => {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 glow-btn animate-pulse-glow rounded-xl">
-              <Link to="/products">
+              <a href="#products" onClick={(e) => { e.preventDefault(); document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' }); }}>
                 {t("hero.explore")}
                 <DirectionalArrow className="h-4 w-4 ms-2" />
-              </Link>
+              </a>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-border/60 text-foreground hover:bg-muted/50 px-8 rounded-xl backdrop-blur-sm">
               <Link to="/contact">
