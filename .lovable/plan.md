@@ -1,43 +1,48 @@
 
 
-# Nzom Laps – Enterprise SaaS Corporate Website
+# تحسين وضوح تصميم صفحات المنتجات
 
-## Overview
-A bilingual (Arabic/English) corporate website for Nzom Laps (مختبرات الأنظمة), a Saudi technology studio, showcasing 11 SaaS products under one ecosystem brand. Deep navy (#0B1F33) and electric blue (#2563EB) design system with RTL support.
+## المشكلة
+الصفحة الحالية فيها مشاكل وضوح على الموبايل (411px):
+1. **الأقسام تشبه بعض** — كل قسم نفس الشكل (بطاقة + أيقونة + نص) بدون تمييز بصري واضح
+2. **النصوص باهتة** — `text-muted-foreground` (رمادي 77% lightness) على خلفية داكنة = صعب القراءة
+3. **كثرة الأقسام** — 8 أقسام طويلة على الموبايل، الزائر يضيع
+4. **العناصر الزخرفية تشتت** — dot-pattern، grid-pattern، blur orbs، particles كلها تتراكم وتقلل الوضوح
+5. **Dashboard Preview فارغ** — قسم كامل فاضي بأيقونة شفافة، يضعف المصداقية
 
----
+## التغييرات المقترحة
 
-## Pages & Structure
+### 1. `src/pages/ProductPage.tsx` — تبسيط وتوضيح
 
-### 1. Shared Layout
-- **Navbar**: Logo, nav links (Home, Solutions dropdown, About, Blog, Contact), language toggle (AR/EN), "Request Demo" CTA button
-- **Footer**: Company info, product links, social links, copyright
-- **RTL/LTR support**: Language context with direction switching
-- **Design tokens**: Navy/blue palette, Inter font, consistent spacing
+**Hero**: تقليل الارتفاع من `70vh` إلى `60vh` على الموبايل، إزالة ParticleField والأجسام الضبابية، إبقاء gradient بسيط فقط
 
-### 2. Home Page
-- **Hero**: Bold headline + subtext with gradient background, two CTAs (Explore Solutions / Request Demo), subtle animated geometric shapes
-- **SaaS Ecosystem**: 11 product cards with icons, short descriptions, and links to individual product pages
-- **Why Nzom Laps**: 4-column feature grid (Enterprise Architecture, Saudi Compliance, Modular Ecosystem, Cloud Infrastructure)
-- **Industries**: Icon cards for Construction, Legal Firms, Corporate, Facility Management, Government Contractors
-- **CTA Banner**: "Ready to digitize your operations?" with demo request button
+**دمج أقسام مكررة**: 
+- حذف قسم **Dashboard Preview** (فارغ ولا يضيف قيمة)
+- دمج **Workflow + RBAC + Analytics** في قسم واحد بعنوان "كل هذا جاهز لك" مع بطاقات مختصرة بدل 3 أقسام كاملة
+- النتيجة: من 8 أقسام → 5 أقسام (Hero, Problem/Solution, Imagine, Features+Extras, CTA)
 
-### 3. Product Pages (11 dynamic pages using shared template)
-Each product gets its own route with hero, problem, solution, features, workflow, RBAC, analytics, security, and CTA sections.
+**تحسين التباين والقراءة**:
+- النصوص الوصفية: من `text-muted-foreground` إلى `text-foreground/80` (أوضح)
+- العناوين: إضافة `drop-shadow` خفيف للقراءة فوق الخلفيات المتدرجة
+- أحجام خطوط أكبر على الموبايل للنصوص المهمة
 
-### 4. About Page
-- Company story, Vision & Mission, Technology stack
+**تقليل الزخرفة**:
+- إزالة `dot-pattern` و `grid-pattern` من معظم الأقسام
+- إبقاء `ai-gradient-bg` فقط في Hero و CTA
+- إزالة `animate-glow-pulse` من أيقونات الأقسام (تشتت الانتباه)
 
-### 5. Blog Page
-- Blog listing with category filters and individual post pages
+### 2. `src/index.css` — تحسين التباين
 
-### 6. Contact Page
-- Enterprise inquiry form with Supabase backend
+- رفع `--muted-foreground` من `213 24% 77%` إلى `213 20% 82%` لتحسين قراءة النصوص الثانوية
+- تحسين `.bento-card` border من `0.06` opacity إلى `0.1` ليكون الفصل بين البطاقات أوضح
 
----
+### 3. `src/pages/ProductPage.tsx` — تحسينات الموبايل
 
-## Key Technical Decisions
-- **Routing**: React Router with routes for `/`, `/about`, `/blog`, `/contact`, `/products/:slug`
-- **i18n**: Custom language context for AR/EN with RTL direction support
-- **Data**: All product/content data stored in static config files
-- **Responsive**: Mobile-first design with hamburger nav menu
+- تقليل padding من `py-24` إلى `py-14` على الموبايل
+- تقليل أحجام العناوين الفرعية على الموبايل
+- إضافة فواصل بصرية واضحة بين الأقسام (خط أو تدرج لوني)
+
+### الملفات المتأثرة
+- `src/pages/ProductPage.tsx` — إعادة هيكلة الأقسام ودمجها
+- `src/index.css` — تحسين التباين والقراءة
+
