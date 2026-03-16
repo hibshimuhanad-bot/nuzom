@@ -454,15 +454,15 @@ export const products: Product[] = [
     name: { en: "Nzom Budget", ar: "نزوم الميزانيات" },
     tagline: {
       en: "Your money, under control.",
-      ar: "فلوسك، تحت السيطرة."
+      ar: "كل ريال، تحت عينك."
     },
     description: {
       en: "No more budget surprises. No more unauthorized purchases. Nzom Budget gives you complete financial visibility — every riyal tracked, every purchase approved, every budget on target. Sleep well knowing your finances are in order.",
-      ar: "بدون مفاجآت مالية. بدون مشتريات بدون إذن. نزوم الميزانيات يعطيك رؤية مالية كاملة — كل ريال متابَع، كل عملية شراء معتمدة، كل ميزانية في المسار. نم مرتاح وأنت تعرف إن أموالك في نظام."
+      ar: "خلاص من المفاجآت المالية. خلاص من المشتريات بدون إذن. نزوم الميزانيات يعطيك رؤية مالية شاملة — كل ريال متابَع، كل عملية شراء معتمدة، وكل ميزانية ماشية بالمسار. نم مرتاح وأنت عارف إن أموالك في أمان."
     },
     emotionalHook: {
       en: "Financial peace of mind.",
-      ar: "أمان مالي وراحة بال."
+      ar: "راحة بال مالية حقيقية."
     },
     imagineDay: {
       en: "Imagine opening your budget dashboard and seeing every department's spending in real time. A purchase request comes in — it routes through approvals automatically, checks the budget, and generates a PO. No surprises at month-end. No awkward conversations about overspending. Just clean, controlled finances.",
