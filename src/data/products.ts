@@ -317,6 +317,7 @@ export const products: Product[] = [
   // ═══════════════════════════════════════════
   {
     slug: "booking",
+    available: true,
     name: { en: "Nzom Booking", ar: "نزوم الحجوزات" },
     tagline: {
       en: "Clients book easily. You grow effortlessly.",
