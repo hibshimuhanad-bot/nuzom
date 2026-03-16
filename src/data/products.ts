@@ -316,15 +316,15 @@ export const products: Product[] = [
     name: { en: "Nzom Booking", ar: "نزوم الحجوزات" },
     tagline: {
       en: "Clients book easily. You grow effortlessly.",
-      ar: "عملاءك يحجزون بسهولة. وأنت تنمو بدون جهد."
+      ar: "عملاءك يحجزون بسهولة. وأنت تنمو بدون ما تحس."
     },
     description: {
       en: "No more WhatsApp chaos. No more double bookings. Nzom Booking lets your clients book, pay, and subscribe — smoothly, professionally, automatically. You focus on service, we handle the logistics.",
-      ar: "بدون فوضى الواتساب. بدون حجوزات مزدوجة. نزوم الحجوزات يخلي عملاءك يحجزون ويدفعون ويشتركون — بسلاسة، باحترافية، تلقائياً. أنت ركّز على الخدمة، واحنا نتكفل باللوجستيات."
+      ar: "خلاص من فوضى الواتساب. خلاص من الحجوزات المزدوجة. نزوم الحجوزات يخلّي عملاءك يحجزون ويدفعون ويشتركون — بسلاسة واحترافية وتلقائياً. أنت ركّز على خدمتك، والباقي علينا."
     },
     emotionalHook: {
       en: "Smooth bookings, happy clients.",
-      ar: "حجوزات سلسة، عملاء سعداء."
+      ar: "حجوزات بدون صداع، عملاء راضين."
     },
     imagineDay: {
       en: "Imagine your clients booking their appointments from their phones at 2 AM. Confirmations sent automatically. Reminders before the session. Invoices generated instantly. Your front desk isn't glued to the phone anymore. Your branches run independently. Your revenue grows while you sleep.",
