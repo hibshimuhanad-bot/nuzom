@@ -270,15 +270,15 @@ export const products: Product[] = [
     name: { en: "Nzom Analytics", ar: "نزوم التحليلات" },
     tagline: {
       en: "See the full picture. Decide with confidence.",
-      ar: "شوف الصورة كاملة. قرّر بثقة."
+      ar: "شوف الصورة كاملة. وقرّر وأنت واثق."
     },
     description: {
       en: "Stop guessing. Nzom Analytics turns your scattered data into clear, visual insights. Connect everything, see everything, and finally make decisions you're confident about.",
-      ar: "وقّف التخمين. نزوم التحليلات يحوّل بياناتك المبعثرة إلى رؤى واضحة ومرئية. اربط كل شيء، شوف كل شيء، وأخيراً اتخذ قرارات واثق فيها."
+      ar: "كفاية تخمين. نزوم التحليلات يحوّل بياناتك المبعثرة لرؤى واضحة ومرئية. اربط كل شيء، شوف كل شيء، وأخيراً خذ قرارات وأنت مرتاح لها."
     },
     emotionalHook: {
       en: "Clarity changes everything.",
-      ar: "الوضوح يغيّر كل شيء."
+      ar: "لما تشوف الصورة واضحة، كل شيء يتغيّر."
     },
     imagineDay: {
       en: "Imagine walking into a meeting with a single dashboard that tells the whole story. No more 'let me check and get back to you.' No more conflicting spreadsheets. Just clear data, clear insights, and clear decisions. Your board is impressed. Your team is aligned. You're confident.",
