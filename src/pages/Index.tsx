@@ -230,7 +230,7 @@ const Industries = () => {
    CTA — AI gradient mesh + shimmer button
    ════════════════════════════════════════════ */
 const CTABanner = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   return (
     <section className="py-28 relative ai-gradient-bg overflow-hidden">
       <div className="absolute inset-0 dot-pattern" />
