@@ -3,7 +3,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import Layout from "@/components/Layout";
 import { products } from "@/data/products";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, GitBranch, Users, BarChart3, ShieldCheck } from "lucide-react";
+import { ArrowRight, ArrowLeft, Sparkles, GitBranch, Users, BarChart3, ShieldCheck } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const ProductPage = () => {
