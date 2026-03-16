@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
@@ -5,7 +6,8 @@ import { ArrowRight, ArrowLeft, Play, Building2, Scale, Briefcase, Warehouse, La
 import Layout from "@/components/Layout";
 import { products } from "@/data/products";
 import ScrollReveal from "@/components/ScrollReveal";
-import ParticleField from "@/components/ParticleField";
+
+const ParticleField = lazy(() => import("@/components/ParticleField"));
 
 /* ════════════════════════════════════════════
    HERO — AI gradient mesh + floating orbs
@@ -16,7 +18,9 @@ const Hero = () => {
   return (
     <section className="relative min-h-[100vh] flex items-center justify-center ai-gradient-bg dot-pattern overflow-hidden">
       {/* Particle field */}
-      <ParticleField count={70} />
+      <Suspense fallback={null}>
+        <ParticleField count={70} />
+      </Suspense>
       {/* Floating orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ zIndex: 0 }}>
         <div className="absolute top-[15%] left-[10%] w-64 h-64 rounded-full bg-primary/10 blur-3xl animate-float" />
@@ -33,7 +37,7 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <ScrollReveal className="max-w-4xl mx-auto text-center" duration={800}>
+        <ScrollReveal className="max-w-4xl mx-auto text-center" duration={800} startVisible>
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm mb-8">
             <Sparkles className="h-3.5 w-3.5 text-accent" />
