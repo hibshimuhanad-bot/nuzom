@@ -52,7 +52,7 @@ const Hero = () => {
             <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 glow-btn animate-pulse-glow rounded-xl">
               <Link to="/products">
                 {t("hero.explore")}
-                <ArrowRight className="h-4 w-4 ms-2" />
+                <DirectionalArrow className="h-4 w-4 ms-2" />
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-border/60 text-foreground hover:bg-muted/50 px-8 rounded-xl backdrop-blur-sm">
