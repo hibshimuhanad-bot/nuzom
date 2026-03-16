@@ -17,9 +17,10 @@ const ScrollReveal = ({
   direction = "up",
   duration = 600,
   once = true,
+  startVisible = false,
 }: ScrollRevealProps) => {
   const ref = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(startVisible);
 
   useEffect(() => {
     const el = ref.current;
