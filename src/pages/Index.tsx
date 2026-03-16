@@ -130,7 +130,7 @@ const BentoGrid = () => {
 
                   <div className="relative z-10 mt-4 flex items-center text-sm text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <span>{t("ecosystem.learn_more")}</span>
-                    <ArrowRight className="h-3.5 w-3.5 ms-1" />
+                    {language === "ar" ? <ArrowLeft className="h-3.5 w-3.5 ms-1" /> : <ArrowRight className="h-3.5 w-3.5 ms-1" />}
                   </div>
                 </div>
               </Link>
