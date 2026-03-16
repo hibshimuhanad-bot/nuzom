@@ -40,11 +40,11 @@ export const products: Product[] = [
     name: { en: "Nzom HSSE", ar: "نزوم السلامة" },
     tagline: {
       en: "Sleep well. Your sites are safe.",
-      ar: "نَم مرتاح.. مواقعك آمنة."
+      ar: "نَم وعينك مرتاحة.. مواقعك في أمان."
     },
     description: {
       en: "Imagine ending your day knowing every permit is tracked, every risk is logged, and every worker goes home safe. That's Nzom HSSE — peace of mind, not just a system.",
-      ar: "تخيّل تنهي يومك وأنت مطمن إن كل تصريح متابَع، كل خطر مسجّل، وكل عامل راجع لبيته سالم. هذا نزوم السلامة — راحة بال، مو بس نظام."
+      ar: "تخيّل تنهي يومك وأنت متطمّن إن كل تصريح متابَع، وكل خطر مرصود، وكل عامل يرجع لأهله سالم. هذا نزوم السلامة — مو مجرد نظام، هذا راحة بال حقيقية."
     },
     emotionalHook: {
       en: "Peace of mind starts here.",
