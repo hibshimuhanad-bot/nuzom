@@ -15,6 +15,7 @@ import {
 
 export interface Product {
   slug: string;
+  available?: boolean;
   name: { en: string; ar: string };
   tagline: { en: string; ar: string };
   description: { en: string; ar: string };
@@ -37,6 +38,7 @@ export const products: Product[] = [
   // ═══════════════════════════════════════════
   {
     slug: "hsse",
+    available: true,
     name: { en: "Nzom HSSE", ar: "نزوم السلامة" },
     tagline: {
       en: "Sleep well. Your sites are safe.",
@@ -83,6 +85,7 @@ export const products: Product[] = [
   // ═══════════════════════════════════════════
   {
     slug: "legal",
+    available: true,
     name: { en: "Nzom Legal", ar: "نزوم القانونية" },
     tagline: {
       en: "Nothing slips through. Ever.",
@@ -129,6 +132,7 @@ export const products: Product[] = [
   // ═══════════════════════════════════════════
   {
     slug: "tasks",
+    available: true,
     name: { en: "Nzom Tasks", ar: "نزوم المهام" },
     tagline: {
       en: "Relax. Everything is under control.",
@@ -313,6 +317,7 @@ export const products: Product[] = [
   // ═══════════════════════════════════════════
   {
     slug: "booking",
+    available: true,
     name: { en: "Nzom Booking", ar: "نزوم الحجوزات" },
     tagline: {
       en: "Clients book easily. You grow effortlessly.",

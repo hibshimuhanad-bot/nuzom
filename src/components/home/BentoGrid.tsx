@@ -16,6 +16,9 @@ const bentoClasses = [
 const BentoGrid = () => {
   const { t, language } = useLanguage();
 
+  // Sort: available products first
+  const sortedProducts = [...products].sort((a, b) => (b.available ? 1 : 0) - (a.available ? 1 : 0));
+
   return (
     <section className="py-28 bg-background relative">
       <div className="absolute inset-0 grid-pattern opacity-50" />
@@ -26,12 +29,12 @@ const BentoGrid = () => {
         </ScrollReveal>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-[minmax(200px,auto)] gap-4 max-w-6xl mx-auto">
-          {products.map((product, i) => (
+          {sortedProducts.map((product, i) => (
             <ScrollReveal key={product.slug} delay={i * 80} className={bentoClasses[i] || ""}>
               <Link to={`/products/${product.slug}`} className="block h-full">
                 <div className={`bento-card p-6 h-full flex flex-col justify-between group relative overflow-hidden ${i === 0 ? "min-h-[320px]" : ""}`}>
-                  <span className={`absolute top-3 end-3 z-20 text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full ${i === 0 ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30" : "bg-muted text-muted-foreground border border-border/50"}`}>
-                    {i === 0 ? t("ecosystem.available") : t("ecosystem.coming_soon")}
+                  <span className={`absolute top-3 end-3 z-20 text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full ${product.available ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30" : "bg-muted text-muted-foreground border border-border/50"}`}>
+                    {product.available ? t("ecosystem.available") : t("ecosystem.coming_soon")}
                   </span>
                   <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-[0.03] group-hover:opacity-[0.06] transition-opacity duration-500 rounded-2xl`} />
                   <div className="relative z-10">
