@@ -37,7 +37,7 @@ const Hero = () => {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm mb-8">
             <Sparkles className="h-3.5 w-3.5 text-accent" />
             <span className="text-xs font-medium text-muted-foreground">
-              {t("hero.subtitle").slice(0, 40)}…
+              {t("hero.badge")}
             </span>
           </div>
 
