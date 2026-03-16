@@ -147,10 +147,10 @@ const BentoGrid = () => {
 const WhyNuzom = () => {
   const { t } = useLanguage();
   const items = [
-    { icon: Server, titleKey: "why.enterprise.title", descKey: "why.enterprise.desc" },
-    { icon: ShieldCheck, titleKey: "why.compliance.title", descKey: "why.compliance.desc" },
+    { icon: CheckCircle, titleKey: "why.enterprise.title", descKey: "why.enterprise.desc" },
+    { icon: Users, titleKey: "why.compliance.title", descKey: "why.compliance.desc" },
     { icon: Puzzle, titleKey: "why.modular.title", descKey: "why.modular.desc" },
-    { icon: Cloud, titleKey: "why.cloud.title", descKey: "why.cloud.desc" },
+    { icon: ShieldCheck, titleKey: "why.cloud.title", descKey: "why.cloud.desc" },
   ];
 
   return (
