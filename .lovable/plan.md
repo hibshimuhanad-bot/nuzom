@@ -1,65 +1,43 @@
 
 
-# تحويل المحتوى من تقني إلى عاطفي — "بيع الإحساس"
+# Nzom Laps – Enterprise SaaS Corporate Website
 
-## المشكلة
-كل النصوص الحالية تقنية وجافة: "نظام إدارة المهام والعمليات"، "منصة إدارة الموارد البشرية". هذا لا يبيع. المطلوب أن كل صفحة منتج تبيع **الشعور** اللي بيحصل عليه العميل.
+## Overview
+A bilingual (Arabic/English) corporate website for Nzom Laps (مختبرات الأنظمة), a Saudi technology studio, showcasing 11 SaaS products under one ecosystem brand. Deep navy (#0B1F33) and electric blue (#2563EB) design system with RTL support.
 
-## الفلسفة
-كل منتج له "وعد عاطفي" واحد:
+---
 
-| المنتج | الإحساس المُباع |
-|---|---|
-| **HSSE** | راحة البال — موقعك آمن وأنت مطمن |
-| **Legal** | السيطرة — ما يضيع عليك شيء |
-| **Tasks** | الارتياح — كل شيء واضح ومنظم |
-| **HR** | الثقة — فريقك محتواه ومرتاح |
-| **Fleet** | التحكم — أسطولك تحت عينك |
-| **Analytics** | الوضوح — تقرر وأنت شايف الصورة كاملة |
-| **Booking** | السلاسة — عملاءك يحجزون بسهولة |
-| **Sign** | السرعة — وقّع وخلص |
-| **Tickets** | الهدوء — مشاكلك تنحل بدون فوضى |
-| **Budget** | الأمان المالي — فلوسك تحت السيطرة |
-| **FitAI** | الدقة — مقاس مثالي من أول مرة |
+## Pages & Structure
 
-## التغييرات
+### 1. Shared Layout
+- **Navbar**: Logo, nav links (Home, Solutions dropdown, About, Blog, Contact), language toggle (AR/EN), "Request Demo" CTA button
+- **Footer**: Company info, product links, social links, copyright
+- **RTL/LTR support**: Language context with direction switching
+- **Design tokens**: Navy/blue palette, Inter font, consistent spacing
 
-### 1. `src/data/products.ts` — إعادة كتابة المحتوى العاطفي
+### 2. Home Page
+- **Hero**: Bold headline + subtext with gradient background, two CTAs (Explore Solutions / Request Demo), subtle animated geometric shapes
+- **SaaS Ecosystem**: 11 product cards with icons, short descriptions, and links to individual product pages
+- **Why Nzom Laps**: 4-column feature grid (Enterprise Architecture, Saudi Compliance, Modular Ecosystem, Cloud Infrastructure)
+- **Industries**: Icon cards for Construction, Legal Firms, Corporate, Facility Management, Government Contractors
+- **CTA Banner**: "Ready to digitize your operations?" with demo request button
 
-لكل منتج من الـ 11، تحديث:
-- **tagline**: من تقني إلى عاطفي (مثال: "إدارة المهام والعمليات" → "ارتاح.. كل شيء تحت السيطرة")
-- **description**: قصة قصيرة عن الإحساس بدل قائمة ميزات (مثال: "تخيّل تفتح النظام الصبح وتلاقي كل مهمة واضحة، كل مشروع ماشي، ما في شيء ضايع...")
-- **problem**: تحويل من وصف تقني إلى ألم حقيقي يحسه العميل ("تعبت من متابعة الناس واحد واحد؟ كل يوم تضيع وقت تدور مين سوى إيش؟")
-- **solution**: الوعد العاطفي ("مع نزوم المهام، تفتح النظام وترتاح. كل شيء أمامك.")
-- **workflowDesc / rbacDesc / analyticsDesc / securityDesc**: نفس التحويل — من مواصفات إلى فوائد يحسها العميل
+### 3. Product Pages (11 dynamic pages using shared template)
+Each product gets its own route with hero, problem, solution, features, workflow, RBAC, analytics, security, and CTA sections.
 
-### 2. `src/contexts/LanguageContext.tsx` — تحديث النصوص المشتركة
+### 4. About Page
+- Company story, Vision & Mission, Technology stack
 
-تحديث عناوين أقسام صفحة المنتج لتكون عاطفية:
-- `product.problem`: "التحدي" → "الألم اللي تحسه"  /  "The pain you feel"
-- `product.solution`: "حلنا" → "كيف تتغير حياتك"  /  "How your life changes"
-- `product.features`: "الميزات الرئيسية" → "كل هذا جاهز لك"  /  "All this, ready for you"
-- `product.workflow`: "أتمتة سير العمل" → "خلّ النظام يشتغل عنك"  /  "Let the system work for you"
-- `product.rbac`: "التحكم بالوصول" → "كل واحد يشوف اللي يخصه"  /  "Everyone sees what matters to them"
-- `product.analytics`: "التحليلات والتقارير" → "شوف الصورة كاملة"  /  "See the full picture"
-- `product.security`: "الأمان والامتثال" → "بياناتك في أمان"  /  "Your data is safe"
-- `product.dashboard`: "معاينة لوحة التحكم" → "نظرة على نظامك"  /  "A look at your system"
+### 5. Blog Page
+- Blog listing with category filters and individual post pages
 
-### 3. `src/pages/ProductPage.tsx` — تحسينات بصرية
+### 6. Contact Page
+- Enterprise inquiry form with Supabase backend
 
-- إضافة **عبارة عاطفية كبيرة** في Hero فوق اسم المنتج (مثل: "ارتاح.. كل شيء تحت السيطرة")
-- تحويل قسم Problem/Solution من بطاقتين متساويتين إلى **قصة**: الألم أولاً (أكبر) ثم الحل (بتأثير انتقالي)
-- إضافة قسم **"تخيّل..."** جديد بين الحل والميزات — فقرة واحدة تصف يوم العميل بعد استخدام النظام
-- تحديث CTA بعبارة عاطفية خاصة بكل منتج بدل العبارة العامة
+---
 
-### 4. `src/data/products.ts` — إضافة حقول جديدة
-
-إضافة للـ interface:
-- `emotionalHook: { en: string; ar: string }` — العبارة العاطفية الرئيسية
-- `imagineDay: { en: string; ar: string }` — وصف يوم العميل بعد الاستخدام
-
-### الملفات المتأثرة
-- `src/data/products.ts` — إعادة كتابة 11 منتج + إضافة حقلين جديدين
-- `src/contexts/LanguageContext.tsx` — تحديث ~8 مفاتيح ترجمة
-- `src/pages/ProductPage.tsx` — إضافة قسم "تخيّل" + تحسين Hero + تحسين Problem/Solution
-
+## Key Technical Decisions
+- **Routing**: React Router with routes for `/`, `/about`, `/blog`, `/contact`, `/products/:slug`
+- **i18n**: Custom language context for AR/EN with RTL direction support
+- **Data**: All product/content data stored in static config files
+- **Responsive**: Mobile-first design with hamburger nav menu

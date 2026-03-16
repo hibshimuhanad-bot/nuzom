@@ -18,6 +18,8 @@ export interface Product {
   name: { en: string; ar: string };
   tagline: { en: string; ar: string };
   description: { en: string; ar: string };
+  emotionalHook: { en: string; ar: string };
+  imagineDay: { en: string; ar: string };
   icon: any;
   color: string;
   problem: { en: string; ar: string };
@@ -31,288 +33,508 @@ export interface Product {
 
 export const products: Product[] = [
   // ═══════════════════════════════════════════
-  // 1. HSSE
+  // 1. HSSE — الإحساس: راحة البال
   // ═══════════════════════════════════════════
   {
     slug: "hsse",
     name: { en: "Nzom HSSE", ar: "نزوم السلامة" },
-    tagline: { en: "Safety & Compliance Management System", ar: "نظام إدارة السلامة والامتثال" },
-    description: { en: "A comprehensive platform for managing health, safety, security, and environmental compliance — including permits, incidents, risk assessments, LOTO, MOC, ISO compliance, training, and audits.", ar: "منصة شاملة لإدارة الصحة والسلامة والأمن والامتثال البيئي — تشمل التصاريح والحوادث وتقييم المخاطر وعزل الطاقة وإدارة التغيير والامتثال لمعايير الآيزو والتدريب والتدقيق." },
+    tagline: {
+      en: "Sleep well. Your sites are safe.",
+      ar: "نَم مرتاح.. مواقعك آمنة."
+    },
+    description: {
+      en: "Imagine ending your day knowing every permit is tracked, every risk is logged, and every worker goes home safe. That's Nzom HSSE — peace of mind, not just a system.",
+      ar: "تخيّل تنهي يومك وأنت مطمن إن كل تصريح متابَع، كل خطر مسجّل، وكل عامل راجع لبيته سالم. هذا نزوم السلامة — راحة بال، مو بس نظام."
+    },
+    emotionalHook: {
+      en: "Peace of mind starts here.",
+      ar: "راحة البال تبدأ من هنا."
+    },
+    imagineDay: {
+      en: "Imagine starting your morning with a green dashboard — all permits approved, all inspections done, zero open risks. No panicked calls, no last-minute scrambles. You sip your coffee knowing every site is running safely. That's your new normal.",
+      ar: "تخيّل تبدأ صباحك ولوحة التحكم كلها خضراء — كل التصاريح معتمدة، كل الفحوصات مكتملة، صفر مخاطر مفتوحة. بدون اتصالات مفاجئة، بدون ركض آخر لحظة. تشرب قهوتك وأنت تعرف إن كل موقع شغّال بأمان. هذا وضعك الجديد."
+    },
     icon: Shield,
     color: "from-blue-500 to-cyan-600",
-    problem: { en: "Organizations struggle with fragmented safety management, manual incident reporting, and difficulty maintaining compliance across multiple sites — permits tracked in spreadsheets, LOTO procedures on paper, and no unified view of risks.", ar: "تواجه المنظمات صعوبة في إدارة السلامة المجزأة والإبلاغ اليدوي عن الحوادث وصعوبة الحفاظ على الامتثال — التصاريح في جداول بيانات وإجراءات LOTO على الورق وعدم وجود رؤية موحدة للمخاطر." },
-    solution: { en: "Nzom HSSE centralizes all safety operations — permits, incidents, risks, LOTO, MOC, ISO compliance, training, and audits — into one platform with real-time monitoring and automated reporting.", ar: "يجمع نزوم السلامة جميع عمليات السلامة — التصاريح والحوادث والمخاطر وعزل الطاقة وإدارة التغيير والآيزو والتدريب والتدقيق — في منصة واحدة مع المراقبة الفورية." },
+    problem: {
+      en: "You wake up worried. Are the permits in order? Did that incident get reported? Is the site actually safe? You spend your day chasing papers, calling supervisors, and hoping nothing falls through the cracks.",
+      ar: "تصحى وأنت قلقان. هل التصاريح جاهزة؟ هل الحادث تم تبليغه؟ هل الموقع فعلاً آمن؟ يومك يروح وأنت تلاحق أوراق وتتصل بمشرفين وتتمنى إن ما في شيء ضايع."
+    },
+    solution: {
+      en: "With Nzom HSSE, you open one screen and see everything — permits, incidents, risks, inspections, training. Everything is tracked, everyone is accountable, and you finally breathe.",
+      ar: "مع نزوم السلامة، تفتح شاشة وحدة وتشوف كل شيء — التصاريح، الحوادث، المخاطر، الفحوصات، التدريب. كل شيء متابَع، كل شخص مسؤول، وأخيراً ترتاح."
+    },
     features: [
-      { title: { en: "Permit to Work", ar: "تصاريح العمل" }, description: { en: "Digital permit issuance, approval workflows, and real-time tracking for all permit types.", ar: "إصدار التصاريح الرقمية وسير عمل الموافقة والتتبع الفوري لجميع أنواع التصاريح." }, icon: ClipboardCheck },
-      { title: { en: "Incident Management", ar: "إدارة الحوادث" }, description: { en: "Report, investigate, and track incidents with root cause analysis and corrective actions.", ar: "الإبلاغ عن الحوادث والتحقيق فيها وتتبعها مع تحليل الأسباب الجذرية والإجراءات التصحيحية." }, icon: AlertTriangle },
-      { title: { en: "Risk Assessment", ar: "تقييم المخاطر" }, description: { en: "Identify, evaluate, and mitigate risks with heat maps and risk registers.", ar: "تحديد المخاطر وتقييمها والتخفيف منها مع خرائط الحرارة وسجلات المخاطر." }, icon: Flame },
-      { title: { en: "LOTO & MOC", ar: "عزل الطاقة وإدارة التغيير" }, description: { en: "Lockout/Tagout procedures and Management of Change workflows with full audit trails.", ar: "إجراءات عزل الطاقة وسير عمل إدارة التغيير مع مسارات تدقيق كاملة." }, icon: Lock },
-      { title: { en: "ISO Compliance & Audits", ar: "امتثال الآيزو والتدقيق" }, description: { en: "Track ISO standards compliance, schedule audits, manage findings and corrective actions.", ar: "تتبع الامتثال لمعايير الآيزو وجدولة عمليات التدقيق وإدارة النتائج والإجراءات التصحيحية." }, icon: FileCheck },
-      { title: { en: "Training & Lessons Learned", ar: "التدريب والدروس المستفادة" }, description: { en: "Manage safety training programs, certifications, and capture lessons learned from incidents.", ar: "إدارة برامج التدريب على السلامة والشهادات والتقاط الدروس المستفادة من الحوادث." }, icon: BookOpen },
+      { title: { en: "Permit to Work", ar: "تصاريح العمل" }, description: { en: "No more chasing signatures. Digital permits flow automatically to the right people.", ar: "بدون ملاحقة توقيعات. التصاريح الرقمية تروح للشخص الصحيح تلقائياً." }, icon: ClipboardCheck },
+      { title: { en: "Incident Management", ar: "إدارة الحوادث" }, description: { en: "Report from the field in seconds. Investigation starts immediately, not days later.", ar: "بلّغ من الموقع في ثواني. التحقيق يبدأ فوراً، مو بعد أيام." }, icon: AlertTriangle },
+      { title: { en: "Risk Assessment", ar: "تقييم المخاطر" }, description: { en: "See your risks on a heat map. Know exactly where to focus before something happens.", ar: "شوف مخاطرك على خريطة حرارية. اعرف وين تركّز قبل لا يصير شيء." }, icon: Flame },
+      { title: { en: "LOTO & MOC", ar: "عزل الطاقة وإدارة التغيير" }, description: { en: "Energy isolation and change management with zero room for error.", ar: "عزل الطاقة وإدارة التغيير بدون أي مجال للخطأ." }, icon: Lock },
+      { title: { en: "ISO Compliance & Audits", ar: "امتثال الآيزو والتدقيق" }, description: { en: "Audits become easy when everything is already documented and tracked.", ar: "التدقيق يصير سهل لما كل شيء موثّق ومتابَع من الأساس." }, icon: FileCheck },
+      { title: { en: "Training & Lessons Learned", ar: "التدريب والدروس المستفادة" }, description: { en: "Every incident becomes a lesson. Every worker gets trained. Nothing is wasted.", ar: "كل حادث يصير درس. كل عامل يتدرّب. ما في شيء يروح هدر." }, icon: BookOpen },
     ],
-    workflowDesc: { en: "Automate the entire incident lifecycle from reporting to investigation to corrective actions. Set up permit approval chains, LOTO isolation procedures, MOC review gates, and audit scheduling — all with automated notifications and escalation rules.", ar: "أتمتة دورة حياة الحادث بالكامل من الإبلاغ إلى التحقيق إلى الإجراءات التصحيحية. إعداد سلاسل موافقة التصاريح وإجراءات عزل الطاقة وبوابات مراجعة التغيير وجدولة التدقيق." },
-    rbacDesc: { en: "Define granular access levels for safety officers, site managers, permit issuers, LOTO authorized personnel, auditors, and workers. Each role sees only what's relevant to their responsibilities.", ar: "تحديد مستويات وصول دقيقة لمسؤولي السلامة ومديري المواقع ومصدري التصاريح والأشخاص المخولين بعزل الطاقة والمدققين والعمال." },
-    analyticsDesc: { en: "Visualize safety trends, incident rates, near-miss ratios, permit status, risk heat maps, training completion rates, and ISO compliance scores with interactive dashboards.", ar: "عرض اتجاهات السلامة ومعدلات الحوادث ونسب الحوادث الوشيكة وحالة التصاريح وخرائط حرارة المخاطر ومعدلات إتمام التدريب ودرجات امتثال الآيزو." },
-    securityDesc: { en: "Enterprise-grade encryption, comprehensive audit trails, and data residency compliance. Built to meet Saudi regulatory requirements including OSHA and Aramco standards.", ar: "تشفير على مستوى المؤسسات ومسارات تدقيق شاملة والامتثال لإقامة البيانات. مبني لتلبية المتطلبات التنظيمية السعودية بما في ذلك معايير أرامكو." },
+    workflowDesc: { en: "The system works while you sleep. Permits get routed, incidents get escalated, inspections get scheduled — all automatically. You just set the rules once.", ar: "النظام يشتغل وأنت نايم. التصاريح تتوجّه، الحوادث تتصعّد، الفحوصات تنجدول — كل شيء تلقائي. أنت بس تحط القواعد مرة وحدة." },
+    rbacDesc: { en: "Everyone sees exactly what they need. Safety officers see everything. Workers see their tasks. Managers see their sites. No confusion, no overload.", ar: "كل واحد يشوف بالضبط اللي يخصه. مسؤول السلامة يشوف كل شيء. العامل يشوف مهامه. المدير يشوف مواقعه. بدون لخبطة، بدون حمل زايد." },
+    analyticsDesc: { en: "See the safety pulse of your entire organization at a glance. Trends, patterns, weak spots — all visible before they become problems.", ar: "شوف نبض السلامة في كل منظمتك بنظرة وحدة. الاتجاهات، الأنماط، النقاط الضعيفة — كلها واضحة قبل لا تصير مشاكل." },
+    securityDesc: { en: "Your safety data is sacred. Enterprise encryption, Saudi regulatory compliance, and audit trails that satisfy even Aramco standards.", ar: "بيانات السلامة حقتك مقدسة. تشفير مؤسسي، امتثال للأنظمة السعودية، ومسارات تدقيق ترضي حتى معايير أرامكو." },
   },
 
   // ═══════════════════════════════════════════
-  // 2. LEGAL
+  // 2. LEGAL — الإحساس: السيطرة
   // ═══════════════════════════════════════════
   {
     slug: "legal",
     name: { en: "Nzom Legal", ar: "نزوم القانونية" },
-    tagline: { en: "Legal Workflow & Case Management", ar: "إدارة سير العمل القانوني والقضايا" },
-    description: { en: "Streamline legal operations with case management, court session tracking, AI-powered legal assistant, document automation, SLA monitoring, and a comprehensive knowledge base.", ar: "تبسيط العمليات القانونية مع إدارة القضايا وتتبع الجلسات والمساعد القانوني بالذكاء الاصطناعي وأتمتة المستندات ومراقبة اتفاقيات مستوى الخدمة وقاعدة المعرفة الشاملة." },
+    tagline: {
+      en: "Nothing slips through. Ever.",
+      ar: "ما يضيع عليك شيء. أبداً."
+    },
+    description: {
+      en: "Every case tracked. Every deadline met. Every document at your fingertips. Nzom Legal gives you total control over your legal operations — so you focus on winning, not searching.",
+      ar: "كل قضية متابعة. كل موعد ملتزم فيه. كل مستند تحت يدك. نزوم القانونية يعطيك سيطرة كاملة على عملياتك القانونية — تركّز على الفوز، مو على البحث."
+    },
+    emotionalHook: {
+      en: "Total control over your legal world.",
+      ar: "سيطرة كاملة على عالمك القانوني."
+    },
+    imagineDay: {
+      en: "Imagine walking into court with every document ready, every precedent researched, every deadline color-coded on your calendar. Your client asks about case status — you answer in seconds, not hours. Your team works in sync without a single email chain. That's legal work, done right.",
+      ar: "تخيّل تدخل المحكمة وكل مستند جاهز، كل سابقة مبحوثة، كل موعد ملوّن في تقويمك. عميلك يسأل عن حالة القضية — تجاوبه في ثواني، مو ساعات. فريقك يشتغل بتناغم بدون سلسلة إيميلات. هذا العمل القانوني، بالطريقة الصحيحة."
+    },
     icon: Scale,
     color: "from-blue-500 to-cyan-600",
-    problem: { en: "Legal teams spend excessive time on manual document management, case tracking across spreadsheets, and struggle with court session scheduling, SLA compliance, and cross-team collaboration.", ar: "تقضي الفرق القانونية وقتًا مفرطًا في إدارة المستندات يدويًا وتتبع القضايا عبر جداول البيانات وتعاني من جدولة الجلسات والامتثال لاتفاقيات مستوى الخدمة." },
-    solution: { en: "Nzom Legal digitizes the entire legal workflow — cases, sessions, documents, billing, and client communication — with AI-powered tools and a knowledge base for Saudi legal precedents.", ar: "يرقمن نزوم القانونية سير العمل القانوني بالكامل — القضايا والجلسات والمستندات والفوترة والتواصل مع العملاء — مع أدوات ذكاء اصطناعي وقاعدة معرفة للسوابق القانونية السعودية." },
+    problem: {
+      en: "You're drowning in files. Deadlines sneak up on you. Court dates get mixed up. Your team wastes hours searching for documents instead of building cases. It feels like you're always one step behind.",
+      ar: "غارق في الملفات. المواعيد النهائية تفاجئك. جلسات المحكمة تتلخبط. فريقك يضيّع ساعات يدوّر مستندات بدل ما يبني قضايا. دايم تحس إنك متأخر خطوة."
+    },
+    solution: {
+      en: "Nzom Legal puts everything in one place — cases, sessions, documents, deadlines, billing. With AI that understands Saudi law, you're always prepared, always ahead.",
+      ar: "نزوم القانونية يحط كل شيء في مكان واحد — القضايا، الجلسات، المستندات، المواعيد، الفوترة. مع ذكاء اصطناعي يفهم النظام السعودي، دايماً جاهز، دايماً متقدم."
+    },
     features: [
-      { title: { en: "Case Management", ar: "إدارة القضايا" }, description: { en: "Track cases from filing to judgment with comprehensive status workflows and document attachments.", ar: "تتبع القضايا من التقديم حتى الحكم مع سير عمل شامل للحالات والمرفقات." }, icon: Briefcase },
-      { title: { en: "Court Sessions", ar: "الجلسات القضائية" }, description: { en: "Schedule and track court sessions, hearings, and deadlines with calendar integration.", ar: "جدولة وتتبع الجلسات القضائية والمرافعات والمواعيد النهائية مع تكامل التقويم." }, icon: Calendar },
-      { title: { en: "AI Legal Assistant", ar: "المساعد القانوني الذكي" }, description: { en: "AI-powered legal research, document drafting, and case analysis for Saudi legal context.", ar: "بحث قانوني بالذكاء الاصطناعي وصياغة المستندات وتحليل القضايا للسياق القانوني السعودي." }, icon: Brain },
-      { title: { en: "Document Management", ar: "إدارة المستندات" }, description: { en: "Secure document storage with version control, templates, and automated generation.", ar: "تخزين آمن للمستندات مع التحكم في الإصدارات والقوالب والإنشاء التلقائي." }, icon: FileText },
-      { title: { en: "Knowledge Base", ar: "قاعدة المعرفة" }, description: { en: "Searchable repository of legal precedents, articles, and firm-specific know-how.", ar: "مستودع قابل للبحث للسوابق القانونية والمقالات والمعرفة الخاصة بالمكتب." }, icon: BookOpen },
-      { title: { en: "Client Portal", ar: "بوابة العملاء" }, description: { en: "Self-service portal for clients to track cases, submit requests, and communicate securely.", ar: "بوابة خدمة ذاتية للعملاء لتتبع القضايا وتقديم الطلبات والتواصل بأمان." }, icon: Globe },
+      { title: { en: "Case Management", ar: "إدارة القضايا" }, description: { en: "Every case has its own world — files, notes, deadlines, all in one clean view.", ar: "كل قضية لها عالمها — ملفات، ملاحظات، مواعيد، كلها في عرض واحد نظيف." }, icon: Briefcase },
+      { title: { en: "Court Sessions", ar: "الجلسات القضائية" }, description: { en: "Never miss a session. Calendar syncs, reminders, and prep checklists built in.", ar: "ما تفوت جلسة أبداً. مزامنة التقويم والتذكيرات وقوائم التحضير مدمجة." }, icon: Calendar },
+      { title: { en: "AI Legal Assistant", ar: "المساعد القانوني الذكي" }, description: { en: "Ask it anything about Saudi law. It researches, drafts, and suggests — like having a junior associate who never sleeps.", ar: "اسأله أي شيء عن النظام السعودي. يبحث ويصيغ ويقترح — مثل محامي مساعد ما ينام أبداً." }, icon: Brain },
+      { title: { en: "Document Management", ar: "إدارة المستندات" }, description: { en: "Find any document in seconds. Version control, templates, auto-generation.", ar: "لاقي أي مستند في ثواني. تحكم بالنسخ، قوالب، إنشاء تلقائي." }, icon: FileText },
+      { title: { en: "Knowledge Base", ar: "قاعدة المعرفة" }, description: { en: "Your firm's collective wisdom, searchable and always growing.", ar: "الخبرة الجماعية لمكتبك، قابلة للبحث ودايم تنمو." }, icon: BookOpen },
+      { title: { en: "Client Portal", ar: "بوابة العملاء" }, description: { en: "Clients track their cases themselves. Fewer calls, happier clients.", ar: "العملاء يتابعون قضاياهم بنفسهم. اتصالات أقل، عملاء أسعد." }, icon: Globe },
     ],
-    workflowDesc: { en: "Automate case assignment, session scheduling, document review cycles, approval chains, deadline notifications, and SLA monitoring. Reduce manual handoffs and ensure nothing falls through the cracks.", ar: "أتمتة تعيين القضايا وجدولة الجلسات ودورات مراجعة المستندات وسلاسل الموافقة وإشعارات المواعيد النهائية ومراقبة اتفاقيات مستوى الخدمة." },
-    rbacDesc: { en: "Partners, associates, paralegals, consultants, and clients each get tailored views. Sensitive case data stays protected with granular permissions and conflict-of-interest checks.", ar: "الشركاء والمحامون والمساعدون القانونيون والمستشارون والعملاء يحصل كل منهم على عروض مخصصة مع فحوصات تعارض المصالح." },
-    analyticsDesc: { en: "Track case resolution times, win rates, SLA compliance, workload distribution, billing metrics, and generate Saudi regulatory reports automatically.", ar: "تتبع أوقات حل القضايا ومعدلات الفوز والامتثال لاتفاقيات مستوى الخدمة وتوزيع عبء العمل ومقاييس الفوترة وإنشاء التقارير التنظيمية تلقائياً." },
-    securityDesc: { en: "Attorney-client privilege protection, encrypted storage, comprehensive audit logs, and compliance with Saudi legal data requirements and bar association standards.", ar: "حماية امتياز المحامي والعميل والتخزين المشفر وسجلات التدقيق الشاملة والامتثال لمتطلبات البيانات القانونية السعودية." },
+    workflowDesc: { en: "Cases flow naturally — assigned, tracked, escalated, resolved. Deadlines trigger reminders. Documents route for review. You focus on the law, the system handles the rest.", ar: "القضايا تمشي بسلاسة — تُعيَّن، تُتابَع، تُصعَّد، تُحَل. المواعيد تشغّل تذكيرات. المستندات تروح للمراجعة. أنت ركّز على القانون، النظام يتكفل بالباقي." },
+    rbacDesc: { en: "Partners see the big picture. Associates see their cases. Clients see their status. Everyone gets exactly what they need — nothing more, nothing less.", ar: "الشركاء يشوفون الصورة الكبيرة. المحامون يشوفون قضاياهم. العملاء يشوفون حالتهم. كل واحد يحصل بالضبط اللي يحتاجه." },
+    analyticsDesc: { en: "Know which cases are winning, which are stuck, and where your team spends its time. Data-driven decisions, not gut feelings.", ar: "اعرف أي القضايا تكسب، أيها عالقة، ووين فريقك يقضي وقته. قرارات مبنية على بيانات، مو أحاسيس." },
+    securityDesc: { en: "Attorney-client privilege is non-negotiable. Bank-grade encryption, audit logs, and full Saudi data compliance protect every byte.", ar: "سرية المحامي والعميل ما فيها تفاوض. تشفير بنكي، سجلات تدقيق، وامتثال كامل للأنظمة السعودية يحمي كل بايت." },
   },
 
   // ═══════════════════════════════════════════
-  // 3. TASKS
+  // 3. TASKS — الإحساس: الارتياح
   // ═══════════════════════════════════════════
   {
     slug: "tasks",
     name: { en: "Nzom Tasks", ar: "نزوم المهام" },
-    tagline: { en: "Task & Project Operations Management", ar: "إدارة المهام والعمليات" },
-    description: { en: "A powerful pillar-based project management system with portfolios, programs, Kanban boards, scheduled reports, and real-time collaboration for enterprise operations.", ar: "نظام إدارة مشاريع قوي قائم على الركائز مع المحافظ والبرامج ولوحات كانبان والتقارير المجدولة والتعاون الفوري لعمليات المؤسسات." },
+    tagline: {
+      en: "Relax. Everything is under control.",
+      ar: "ارتاح.. كل شيء تحت السيطرة."
+    },
+    description: {
+      en: "Open the system in the morning and find every task clear, every project on track, nothing lost. Nzom Tasks gives you the relief of knowing exactly where everything stands.",
+      ar: "افتح النظام الصبح وتلاقي كل مهمة واضحة، كل مشروع ماشي، ما في شيء ضايع. نزوم المهام يعطيك راحة إنك تعرف بالضبط وين كل شيء."
+    },
+    emotionalHook: {
+      en: "Finally, clarity.",
+      ar: "أخيراً، وضوح."
+    },
+    imagineDay: {
+      en: "Imagine opening your laptop and seeing a clean, organized board. Every task assigned, every deadline visible, every project progressing. No more chasing people. No more 'did you finish that?' messages. Just calm, productive work.",
+      ar: "تخيّل تفتح اللابتوب وتشوف لوحة نظيفة ومرتبة. كل مهمة معيّنة، كل موعد واضح، كل مشروع يتقدم. بدون ملاحقة أحد. بدون رسائل 'خلصت ذاك؟'. بس شغل هادي ومنتج."
+    },
     icon: CheckSquare,
     color: "from-violet-500 to-purple-600",
-    problem: { en: "Enterprise teams lose productivity with disconnected task tools, lack visibility into project progress across portfolios and programs, and struggle with cross-department coordination.", ar: "تفقد فرق المؤسسات الإنتاجية مع أدوات المهام المنفصلة وتفتقر إلى الرؤية في تقدم المشاريع عبر المحافظ والبرامج وتعاني من التنسيق بين الأقسام." },
-    solution: { en: "Nzom Tasks provides a unified pillar-based operations platform with portfolios, programs, projects, Kanban views, task occurrences, scheduled reports, and timeline visualization.", ar: "يوفر نزوم المهام منصة عمليات موحدة قائمة على الركائز مع المحافظ والبرامج والمشاريع وعروض كانبان وتكرارات المهام والتقارير المجدولة." },
+    problem: {
+      en: "Tired of chasing people one by one? Every day you waste time figuring out who did what. Tasks fall through the cracks. Projects feel chaotic. You're the bottleneck because everything flows through you.",
+      ar: "تعبت من متابعة الناس واحد واحد؟ كل يوم تضيع وقت تدور مين سوى إيش. مهام تضيع بين الشقوق. المشاريع تحس بفوضى. أنت عنق الزجاجة لأن كل شيء يمر عليك."
+    },
+    solution: {
+      en: "With Nzom Tasks, you open the system and relax. Everything is in front of you — who's doing what, what's late, what's next. Your team moves without you having to push.",
+      ar: "مع نزوم المهام، تفتح النظام وترتاح. كل شيء أمامك — مين يسوي إيش، إيش متأخر، إيش الجاي. فريقك يتحرك بدون ما تحتاج تدفعهم."
+    },
     features: [
-      { title: { en: "Portfolios & Programs", ar: "المحافظ والبرامج" }, description: { en: "Organize projects into portfolios and programs for strategic alignment and oversight.", ar: "تنظيم المشاريع في محافظ وبرامج للتوافق الاستراتيجي والإشراف." }, icon: Layers },
-      { title: { en: "Kanban & Timeline", ar: "كانبان والجدول الزمني" }, description: { en: "Visual Kanban boards and project timeline views for intuitive task management.", ar: "لوحات كانبان المرئية وعروض الجدول الزمني للمشاريع لإدارة المهام بشكل حدسي." }, icon: KanbanSquare },
-      { title: { en: "Task Automation", ar: "أتمتة المهام" }, description: { en: "Auto-assign, recurring task occurrences, escalation rules, and smart notifications.", ar: "تعيين تلقائي وتكرارات المهام وقواعد التصعيد والإشعارات الذكية." }, icon: Workflow },
-      { title: { en: "Departments & Companies", ar: "الأقسام والشركات" }, description: { en: "Multi-company and department management with hierarchical project structures.", ar: "إدارة الشركات والأقسام المتعددة مع هياكل مشاريع هرمية." }, icon: Building2 },
-      { title: { en: "Scheduled Reports", ar: "التقارير المجدولة" }, description: { en: "Automated report generation and delivery on custom schedules.", ar: "إنشاء التقارير وتسليمها تلقائياً وفق جداول مخصصة." }, icon: Clock },
-      { title: { en: "Multi-language", ar: "متعدد اللغات" }, description: { en: "Full Arabic and English support with RTL interface.", ar: "دعم كامل بالعربية والإنجليزية مع واجهة RTL." }, icon: Globe },
+      { title: { en: "Portfolios & Programs", ar: "المحافظ والبرامج" }, description: { en: "See the big picture. All your projects organized into portfolios that make sense.", ar: "شوف الصورة الكبيرة. كل مشاريعك منظمة في محافظ واضحة." }, icon: Layers },
+      { title: { en: "Kanban & Timeline", ar: "كانبان والجدول الزمني" }, description: { en: "Drag, drop, done. Visual boards that make task management feel effortless.", ar: "اسحب، أفلت، خلاص. لوحات مرئية تخلي إدارة المهام بدون جهد." }, icon: KanbanSquare },
+      { title: { en: "Task Automation", ar: "أتمتة المهام" }, description: { en: "Tasks assign themselves. Reminders send themselves. You just watch it work.", ar: "المهام تتعيّن بنفسها. التذكيرات ترسل نفسها. أنت بس تشوفها تشتغل." }, icon: Workflow },
+      { title: { en: "Departments & Companies", ar: "الأقسام والشركات" }, description: { en: "Multiple companies, multiple departments — one clear view of everything.", ar: "شركات متعددة، أقسام متعددة — عرض واحد واضح لكل شيء." }, icon: Building2 },
+      { title: { en: "Scheduled Reports", ar: "التقارير المجدولة" }, description: { en: "Reports land in your inbox automatically. Stay informed without lifting a finger.", ar: "التقارير توصل لبريدك تلقائياً. خلّك على اطلاع بدون ما تحرك ساكن." }, icon: Clock },
+      { title: { en: "Multi-language", ar: "متعدد اللغات" }, description: { en: "Arabic and English, right-to-left ready. Your whole team feels at home.", ar: "عربي وإنجليزي، جاهز للـ RTL. كل فريقك يحس بالراحة." }, icon: Globe },
     ],
-    workflowDesc: { en: "Define custom workflows for different project types. Automate task routing, approval gates, status transitions, and recurring task occurrences based on your operational rules.", ar: "تحديد سير عمل مخصص لأنواع المشاريع المختلفة. أتمتة توجيه المهام وبوابات الموافقة وانتقالات الحالة وتكرارات المهام." },
-    rbacDesc: { en: "Admin, project managers, team leads, and members each have appropriate access levels. Portfolio-level oversight for executives, project-level for managers.", ar: "المدير ومديرو المشاريع وقادة الفرق والأعضاء لكل منهم مستويات وصول مناسبة. إشراف على مستوى المحفظة للمسؤولين التنفيذيين." },
-    analyticsDesc: { en: "Measure team velocity, track bottlenecks, monitor deadline adherence, portfolio health scores, and generate executive summaries with scheduled automated reports.", ar: "قياس سرعة الفريق وتتبع الاختناقات ومراقبة الالتزام بالمواعيد النهائية ودرجات صحة المحفظة وإنشاء ملخصات تنفيذية بتقارير آلية مجدولة." },
-    securityDesc: { en: "Enterprise security with SSO integration, data encryption at rest and in transit, comprehensive access audit trails, and multi-tenant isolation.", ar: "أمان المؤسسات مع تكامل SSO وتشفير البيانات ومسارات تدقيق وصول شاملة وعزل متعدد المستأجرين." },
+    workflowDesc: { en: "Set it up once, and the system takes over. Tasks route to the right people, deadlines trigger alerts, status updates happen automatically. You manage the strategy, not the follow-ups.", ar: "جهّزه مرة وحدة، والنظام يتولى الباقي. المهام تروح للأشخاص الصحيحين، المواعيد تشغّل تنبيهات، التحديثات تصير تلقائياً. أنت تدير الاستراتيجية، مو المتابعات." },
+    rbacDesc: { en: "Executives see portfolios. Managers see projects. Team members see their tasks. Everyone focuses on what matters to them.", ar: "المسؤولون التنفيذيون يشوفون المحافظ. المديرون يشوفون المشاريع. أعضاء الفريق يشوفون مهامهم. كل واحد يركز على اللي يهمه." },
+    analyticsDesc: { en: "Know instantly — is your team fast or stuck? Which projects are healthy? Where are the bottlenecks? Real answers, not guesswork.", ar: "اعرف فوراً — فريقك سريع ولا عالق؟ أي المشاريع صحية؟ وين الاختناقات؟ إجابات حقيقية، مو تخمينات." },
+    securityDesc: { en: "Your project data stays private. Enterprise encryption, access logs, and multi-tenant isolation keep everything locked down.", ar: "بيانات مشاريعك تبقى خاصة. تشفير مؤسسي، سجلات وصول، وعزل يحمي كل شيء." },
   },
 
   // ═══════════════════════════════════════════
-  // 4. HR
+  // 4. HR — الإحساس: الثقة
   // ═══════════════════════════════════════════
   {
     slug: "hr",
     name: { en: "Nzom HR", ar: "نزوم الموارد البشرية" },
-    tagline: { en: "HR & Workforce Management Platform", ar: "منصة إدارة الموارد البشرية والقوى العاملة" },
-    description: { en: "End-to-end HR management platform covering attendance tracking, payroll processing, leave management, department structure, learning hub, and AI-powered workforce insights.", ar: "منصة إدارة موارد بشرية شاملة تغطي تتبع الحضور ومعالجة الرواتب وإدارة الإجازات وهيكل الأقسام ومركز التعلم ورؤى القوى العاملة بالذكاء الاصطناعي." },
+    tagline: {
+      en: "Your team is taken care of.",
+      ar: "فريقك محتواه ومرتاح."
+    },
+    description: {
+      en: "When your people feel taken care of, they give their best. Nzom HR handles attendance, payroll, leaves, and growth — so your team trusts the system and you trust the numbers.",
+      ar: "لما فريقك يحس إنه محتواه، يعطي أفضل ما عنده. نزوم الموارد البشرية يتكفل بالحضور والرواتب والإجازات والتطوير — فريقك يثق بالنظام وأنت تثق بالأرقام."
+    },
+    emotionalHook: {
+      en: "Happy teams build great companies.",
+      ar: "الفرق السعيدة تبني شركات عظيمة."
+    },
+    imagineDay: {
+      en: "Imagine payroll running itself perfectly every month. Employees request leaves from their phones and get instant approvals. Attendance is tracked without arguments. Training paths are clear. Your HR team finally has time to focus on people, not paperwork.",
+      ar: "تخيّل الرواتب تنزل بشكل مثالي كل شهر لحالها. الموظفين يطلبون إجازات من جوالاتهم ويحصلون موافقة فورية. الحضور يتسجّل بدون جدال. مسارات التدريب واضحة. فريق الموارد البشرية أخيراً عنده وقت يركز على الناس، مو الأوراق."
+    },
     icon: Users,
     color: "from-amber-500 to-orange-600",
-    problem: { en: "HR departments juggle multiple disconnected systems for attendance, payroll, leave tracking, and performance management, leading to data silos and compliance risks with Saudi labor law.", ar: "تتعامل أقسام الموارد البشرية مع أنظمة متعددة منفصلة للحضور والرواتب وتتبع الإجازات وإدارة الأداء مما يؤدي إلى صوامع بيانات ومخاطر امتثال مع نظام العمل السعودي." },
-    solution: { en: "Nzom HR unifies attendance, payroll, leave, departments, learning, and AI insights in one platform with Saudi labor law and GOSI compliance built-in.", ar: "يوحد نزوم الموارد البشرية الحضور والرواتب والإجازات والأقسام والتعلم ورؤى الذكاء الاصطناعي في منصة واحدة مع الامتثال لنظام العمل السعودي والتأمينات الاجتماعية." },
+    problem: {
+      en: "Payroll mistakes. Leave balance arguments. Attendance disputes. Your HR team spends all day on admin instead of building culture. Employees feel like numbers, not people.",
+      ar: "أخطاء في الرواتب. جدالات على رصيد الإجازات. خلافات على الحضور. فريق الموارد البشرية يقضي يومه في إدارة بدل بناء ثقافة. الموظفين يحسون إنهم أرقام، مو بشر."
+    },
+    solution: {
+      en: "Nzom HR automates the tedious stuff — payroll, attendance, leaves — so your HR team can focus on what matters: keeping your people happy, growing, and engaged.",
+      ar: "نزوم الموارد البشرية يأتمت الأشياء المملة — الرواتب، الحضور، الإجازات — عشان فريق الموارد البشرية يركز على اللي يهم: إن فريقك يكون سعيد، يتطور، ومنخرط."
+    },
     features: [
-      { title: { en: "Attendance Tracking", ar: "تتبع الحضور" }, description: { en: "Automated attendance with shift management, overtime calculation, and biometric integration.", ar: "حضور آلي مع إدارة الورديات وحساب العمل الإضافي وتكامل البصمة." }, icon: UserCheck },
-      { title: { en: "Payroll & Salaries", ar: "الرواتب والأجور" }, description: { en: "Automated payroll processing with GOSI deductions, allowances, and bank file generation.", ar: "معالجة الرواتب الآلية مع خصومات التأمينات الاجتماعية والبدلات وإنشاء ملفات البنك." }, icon: CreditCard },
-      { title: { en: "Leave Management", ar: "إدارة الإجازات" }, description: { en: "Leave requests, approvals, balance tracking, and Saudi labor law compliant calculations.", ar: "طلبات الإجازات والموافقات وتتبع الأرصدة والحسابات المتوافقة مع نظام العمل السعودي." }, icon: Calendar },
-      { title: { en: "Departments & Structure", ar: "الأقسام والهيكل التنظيمي" }, description: { en: "Organizational hierarchy, department management, and reporting structure.", ar: "الهيكل التنظيمي وإدارة الأقسام وهيكل التقارير." }, icon: Building2 },
-      { title: { en: "Learning Hub", ar: "مركز التعلم" }, description: { en: "Training programs, course management, certifications, and skill development tracking.", ar: "برامج التدريب وإدارة الدورات والشهادات وتتبع تطوير المهارات." }, icon: GraduationCap },
-      { title: { en: "AI Insights", ar: "رؤى الذكاء الاصطناعي" }, description: { en: "AI-powered workforce analytics, predictive turnover, and performance recommendations.", ar: "تحليلات القوى العاملة بالذكاء الاصطناعي والتنبؤ بالدوران وتوصيات الأداء." }, icon: Brain },
+      { title: { en: "Attendance Tracking", ar: "تتبع الحضور" }, description: { en: "No more spreadsheets. Automatic tracking that everyone trusts.", ar: "بدون جداول بيانات. تتبع تلقائي يثق فيه الجميع." }, icon: UserCheck },
+      { title: { en: "Payroll & Salaries", ar: "الرواتب والأجور" }, description: { en: "Payroll runs perfectly every time. GOSI compliant, bank-ready, zero stress.", ar: "الرواتب تنزل مثالية كل مرة. متوافق مع التأمينات، جاهز للبنك، صفر ضغط." }, icon: CreditCard },
+      { title: { en: "Leave Management", ar: "إدارة الإجازات" }, description: { en: "Request, approve, done. Balances are always accurate. No more arguments.", ar: "اطلب، وافق، خلاص. الأرصدة دايم صحيحة. بدون جدال." }, icon: Calendar },
+      { title: { en: "Departments & Structure", ar: "الأقسام والهيكل التنظيمي" }, description: { en: "Your org chart comes alive. Clear reporting lines, clear responsibilities.", ar: "الهيكل التنظيمي يصير حي. خطوط تقارير واضحة، مسؤوليات واضحة." }, icon: Building2 },
+      { title: { en: "Learning Hub", ar: "مركز التعلم" }, description: { en: "Grow your people. Track their skills, certifications, and career paths.", ar: "طوّر فريقك. تابع مهاراتهم وشهاداتهم ومساراتهم المهنية." }, icon: GraduationCap },
+      { title: { en: "AI Insights", ar: "رؤى الذكاء الاصطناعي" }, description: { en: "Predict who might leave before they do. Act on data, not surprises.", ar: "توقّع مين ممكن يستقيل قبل لا يسوي. تصرّف على بيانات، مو مفاجآت." }, icon: Brain },
     ],
-    workflowDesc: { en: "Automate the entire employee journey — onboarding checklists, leave approval chains, payroll processing, performance review cycles, and exit procedures with automated notifications.", ar: "أتمتة رحلة الموظف بالكامل — قوائم التأهيل وسلاسل موافقة الإجازات ومعالجة الرواتب ودورات مراجعة الأداء وإجراءات الخروج مع إشعارات آلية." },
-    rbacDesc: { en: "HR managers, department heads, direct supervisors, and employees each have tailored access. Self-service portal for employees to manage their own requests.", ar: "مديرو الموارد البشرية ورؤساء الأقسام والمشرفون المباشرون والموظفون لكل منهم وصول مخصص. بوابة خدمة ذاتية للموظفين." },
-    analyticsDesc: { en: "Track headcount trends, attendance patterns, payroll costs, leave utilization, training completion, and generate Saudi regulatory reports (GOSI, WPS) automatically.", ar: "تتبع اتجاهات عدد الموظفين وأنماط الحضور وتكاليف الرواتب واستخدام الإجازات وإتمام التدريب وإنشاء التقارير التنظيمية السعودية تلقائياً." },
-    securityDesc: { en: "Employee data protection with encryption, access logging, GDPR-ready privacy controls, and full compliance with Saudi data privacy regulations.", ar: "حماية بيانات الموظفين بالتشفير وتسجيل الوصول وضوابط الخصوصية والامتثال الكامل لأنظمة خصوصية البيانات السعودية." },
+    workflowDesc: { en: "From day one to exit interview, every HR process flows smoothly. Onboarding checklists complete themselves. Leave approvals route automatically. Payroll calculates without errors. Your HR team becomes strategic, not administrative.", ar: "من اليوم الأول إلى مقابلة الخروج، كل عملية موارد بشرية تمشي بسلاسة. قوائم التأهيل تكتمل لحالها. موافقات الإجازات تتوجّه تلقائياً. الرواتب تتحسب بدون أخطاء. فريق الموارد البشرية يصير استراتيجي، مو إداري." },
+    rbacDesc: { en: "HR sees everything. Managers see their teams. Employees see their own data. Self-service means fewer tickets, happier everyone.", ar: "الموارد البشرية تشوف كل شيء. المديرون يشوفون فرقهم. الموظفون يشوفون بياناتهم. الخدمة الذاتية تعني تذاكر أقل، الكل أسعد." },
+    analyticsDesc: { en: "See your workforce health at a glance. Turnover trends, attendance patterns, payroll costs — everything you need to make smart people decisions.", ar: "شوف صحة القوى العاملة بنظرة. اتجاهات الدوران، أنماط الحضور، تكاليف الرواتب — كل اللي تحتاجه تاخذ قرارات ذكية عن فريقك." },
+    securityDesc: { en: "Employee data is sensitive. We treat it that way — encryption, access controls, and full Saudi privacy compliance.", ar: "بيانات الموظفين حساسة. نتعامل معها بهالطريقة — تشفير، ضوابط وصول، وامتثال كامل لأنظمة الخصوصية السعودية." },
   },
 
   // ═══════════════════════════════════════════
-  // 5. FLEET
+  // 5. FLEET — الإحساس: التحكم
   // ═══════════════════════════════════════════
   {
     slug: "fleet",
     name: { en: "Nzom Fleet", ar: "نزوم الأسطول" },
-    tagline: { en: "Fleet & Vehicle Management System", ar: "نظام إدارة الأسطول والمركبات" },
-    description: { en: "Complete fleet management solution with real-time vehicle tracking, fuel monitoring, predictive maintenance, document management, and digital safety inspections.", ar: "حل إدارة أسطول كامل مع تتبع المركبات الفوري ومراقبة الوقود والصيانة التنبؤية وإدارة المستندات والفحوصات الأمنية الرقمية." },
+    tagline: {
+      en: "Your fleet, under your eyes.",
+      ar: "أسطولك، تحت عينك."
+    },
+    description: {
+      en: "Every vehicle tracked. Every fuel receipt accounted for. Every maintenance scheduled before it's too late. Nzom Fleet gives you the confidence that your fleet is running efficiently — even when you're not watching.",
+      ar: "كل مركبة متابَعة. كل إيصال وقود محسوب. كل صيانة مجدولة قبل فوات الأوان. نزوم الأسطول يعطيك الثقة إن أسطولك يشتغل بكفاءة — حتى لو ما كنت تراقب."
+    },
+    emotionalHook: {
+      en: "Control without micromanaging.",
+      ar: "تحكّم بدون ملاحقة."
+    },
+    imagineDay: {
+      en: "Imagine checking your fleet dashboard and seeing every vehicle's location, fuel level, and next maintenance date — all in real time. A driver completes a safety inspection from his phone before starting. An alert notifies you that a registration expires next week. Everything handled, nothing missed.",
+      ar: "تخيّل تفتح لوحة الأسطول وتشوف موقع كل مركبة ومستوى الوقود وموعد الصيانة الجاي — كله بالوقت الفعلي. السائق يكمل فحص السلامة من جواله قبل ما يبدأ. تنبيه ينبّهك إن رخصة تنتهي الأسبوع الجاي. كل شيء متكفّل فيه، ما في شيء فايت."
+    },
     icon: Truck,
     color: "from-cyan-500 to-blue-600",
-    problem: { en: "Fleet operators face challenges with vehicle tracking, maintenance scheduling, fuel cost management, document expiry tracking, and ensuring driver compliance with safety inspections.", ar: "يواجه مشغلو الأساطيل تحديات في تتبع المركبات وجدولة الصيانة وإدارة تكاليف الوقود وتتبع انتهاء المستندات والتأكد من امتثال السائقين لفحوصات السلامة." },
-    solution: { en: "Nzom Fleet provides real-time fleet visibility, fuel analytics, predictive maintenance, document lifecycle management, and digital safety inspection checklists in one platform.", ar: "يوفر نزوم الأسطول رؤية فورية للأسطول وتحليلات الوقود والصيانة التنبؤية وإدارة دورة حياة المستندات وقوائم فحص السلامة الرقمية في منصة واحدة." },
+    problem: {
+      en: "You don't know where half your vehicles are. Fuel costs keep climbing and you can't figure out why. Maintenance surprises you with breakdowns. Documents expire without warning. It's chaos on wheels.",
+      ar: "ما تعرف وين نص مركباتك. تكاليف الوقود تطلع وما تعرف ليش. الصيانة تفاجئك بأعطال. المستندات تنتهي بدون تحذير. فوضى على عجلات."
+    },
+    solution: {
+      en: "Nzom Fleet puts your entire fleet on one screen. Real-time tracking, smart fuel analytics, predictive maintenance, and automatic document alerts. You're in control without micromanaging.",
+      ar: "نزوم الأسطول يحط كل أسطولك في شاشة وحدة. تتبع فوري، تحليلات وقود ذكية، صيانة تنبؤية، وتنبيهات مستندات تلقائية. أنت متحكم بدون ملاحقة."
+    },
     features: [
-      { title: { en: "Fuel Management", ar: "إدارة الوقود" }, description: { en: "Track fuel consumption, costs, and efficiency per vehicle with anomaly detection.", ar: "تتبع استهلاك الوقود والتكاليف والكفاءة لكل مركبة مع كشف الحالات الشاذة." }, icon: Fuel },
-      { title: { en: "Predictive Maintenance", ar: "الصيانة التنبؤية" }, description: { en: "AI-powered maintenance scheduling based on mileage, time, and vehicle condition data.", ar: "جدولة الصيانة بالذكاء الاصطناعي بناءً على المسافة المقطوعة والوقت وبيانات حالة المركبة." }, icon: Wrench },
-      { title: { en: "Document Lifecycle", ar: "دورة حياة المستندات" }, description: { en: "Track registrations, insurance, licenses with expiry alerts and renewal workflows.", ar: "تتبع التسجيلات والتأمين والرخص مع تنبيهات الانتهاء وسير عمل التجديد." }, icon: FileCheck },
-      { title: { en: "Safety Inspections", ar: "فحوصات السلامة" }, description: { en: "Digital pre-trip and periodic inspection checklists with photo evidence and scoring.", ar: "قوائم فحص رقمية قبل الرحلة ودورية مع صور الأدلة والتسجيل." }, icon: ShieldAlert },
-      { title: { en: "Fleet Dashboard", ar: "لوحة تحكم الأسطول" }, description: { en: "Real-time fleet location, status overview, and utilization metrics.", ar: "موقع الأسطول الفوري ونظرة عامة على الحالة ومقاييس الاستخدام." }, icon: LayoutDashboard },
-      { title: { en: "Bilingual Support", ar: "دعم ثنائي اللغة" }, description: { en: "Full English and Arabic interface with RTL support.", ar: "واجهة كاملة بالإنجليزية والعربية مع دعم RTL." }, icon: Globe },
+      { title: { en: "Fuel Management", ar: "إدارة الوقود" }, description: { en: "Know exactly where every riyal of fuel goes. Spot waste before it drains your budget.", ar: "اعرف بالضبط وين يروح كل ريال وقود. اكتشف الهدر قبل لا يستنزف ميزانيتك." }, icon: Fuel },
+      { title: { en: "Predictive Maintenance", ar: "الصيانة التنبؤية" }, description: { en: "Fix it before it breaks. AI predicts maintenance needs based on real data.", ar: "صلّحها قبل لا تتعطل. الذكاء الاصطناعي يتوقع الصيانة بناءً على بيانات حقيقية." }, icon: Wrench },
+      { title: { en: "Document Lifecycle", ar: "دورة حياة المستندات" }, description: { en: "Registrations, insurance, licenses — never expire without warning again.", ar: "التسجيلات، التأمين، الرخص — ما تنتهي بدون تحذير مرة ثانية." }, icon: FileCheck },
+      { title: { en: "Safety Inspections", ar: "فحوصات السلامة" }, description: { en: "Digital checklists from the driver's phone. Photo evidence. No paperwork.", ar: "قوائم فحص رقمية من جوال السائق. صور كأدلة. بدون ورق." }, icon: ShieldAlert },
+      { title: { en: "Fleet Dashboard", ar: "لوحة تحكم الأسطول" }, description: { en: "One glance tells you everything — location, status, utilization, alerts.", ar: "نظرة وحدة تقولك كل شيء — الموقع، الحالة، الاستخدام، التنبيهات." }, icon: LayoutDashboard },
+      { title: { en: "Bilingual Support", ar: "دعم ثنائي اللغة" }, description: { en: "Full Arabic and English interface. Everyone on your team can use it.", ar: "واجهة كاملة بالعربي والإنجليزي. كل فريقك يقدر يستخدمها." }, icon: Globe },
     ],
-    workflowDesc: { en: "Automate maintenance scheduling based on mileage and time triggers. Set up fuel approval workflows, driver assignment rules, inspection schedules, and document renewal processes.", ar: "أتمتة جدولة الصيانة بناءً على المسافة المقطوعة ومحفزات الوقت. إعداد سير عمل الوقود وقواعد تعيين السائقين وجداول الفحص وعمليات تجديد المستندات." },
-    rbacDesc: { en: "Fleet managers oversee all operations, drivers access their assignments and inspection forms, mechanics manage maintenance tasks, and admins control configurations.", ar: "يشرف مديرو الأسطول على جميع العمليات ويصل السائقون إلى مهامهم ونماذج الفحص ويدير الميكانيكيون مهام الصيانة." },
-    analyticsDesc: { en: "Monitor fuel consumption patterns, vehicle utilization rates, maintenance costs, inspection compliance scores, and driver performance with detailed analytics dashboards.", ar: "مراقبة أنماط استهلاك الوقود ومعدلات استخدام المركبات وتكاليف الصيانة ودرجات امتثال الفحص وأداء السائقين بلوحات تحليلات مفصلة." },
-    securityDesc: { en: "GPS data encryption, secure communication channels, and compliance with Saudi transport authority regulations and Dallah standards.", ar: "تشفير بيانات GPS وقنوات اتصال آمنة والامتثال لأنظمة هيئة النقل السعودية ومعايير دلّة." },
+    workflowDesc: { en: "Maintenance schedules itself. Fuel anomalies get flagged. Document renewals get triggered. Inspections get assigned. Your fleet runs like clockwork without constant supervision.", ar: "الصيانة تجدول نفسها. حالات الوقود الشاذة تتعلّم. تجديد المستندات يتفعّل. الفحوصات تتعيّن. أسطولك يمشي كالساعة بدون مراقبة مستمرة." },
+    rbacDesc: { en: "Fleet managers see everything. Drivers see their vehicles and tasks. Mechanics see maintenance orders. Everyone has exactly the access they need.", ar: "مديرو الأسطول يشوفون كل شيء. السائقون يشوفون مركباتهم ومهامهم. الميكانيكيون يشوفون أوامر الصيانة. كل واحد عنده الوصول اللي يحتاجه بالضبط." },
+    analyticsDesc: { en: "Track fuel trends, vehicle costs, driver behavior, and fleet utilization. Make decisions based on facts, not feelings.", ar: "تابع اتجاهات الوقود وتكاليف المركبات وسلوك السائقين واستخدام الأسطول. اتخذ قرارات مبنية على حقائق، مو أحاسيس." },
+    securityDesc: { en: "GPS data encrypted. Communications secured. Fully compliant with Saudi transport regulations.", ar: "بيانات GPS مشفرة. الاتصالات مؤمّنة. متوافق بالكامل مع أنظمة النقل السعودية." },
   },
 
   // ═══════════════════════════════════════════
-  // 6. ANALYTICS
+  // 6. ANALYTICS — الإحساس: الوضوح
   // ═══════════════════════════════════════════
   {
     slug: "analytics",
     name: { en: "Nzom Analytics", ar: "نزوم التحليلات" },
-    tagline: { en: "Business Intelligence & Analytics Platform", ar: "منصة ذكاء الأعمال والتحليلات" },
-    description: { en: "Interactive dashboards, data source connections, team collaboration, and governance tools — transform raw data into actionable business insights.", ar: "لوحات تحكم تفاعلية واتصالات مصادر البيانات والتعاون الجماعي وأدوات الحوكمة — تحويل البيانات الخام إلى رؤى أعمال قابلة للتنفيذ." },
+    tagline: {
+      en: "See the full picture. Decide with confidence.",
+      ar: "شوف الصورة كاملة. قرّر بثقة."
+    },
+    description: {
+      en: "Stop guessing. Nzom Analytics turns your scattered data into clear, visual insights. Connect everything, see everything, and finally make decisions you're confident about.",
+      ar: "وقّف التخمين. نزوم التحليلات يحوّل بياناتك المبعثرة إلى رؤى واضحة ومرئية. اربط كل شيء، شوف كل شيء، وأخيراً اتخذ قرارات واثق فيها."
+    },
+    emotionalHook: {
+      en: "Clarity changes everything.",
+      ar: "الوضوح يغيّر كل شيء."
+    },
+    imagineDay: {
+      en: "Imagine walking into a meeting with a single dashboard that tells the whole story. No more 'let me check and get back to you.' No more conflicting spreadsheets. Just clear data, clear insights, and clear decisions. Your board is impressed. Your team is aligned. You're confident.",
+      ar: "تخيّل تدخل اجتماع ومعك لوحة تحكم وحدة تحكي القصة كاملة. بدون 'خلّني أتأكد وأرد عليك.' بدون جداول بيانات متعارضة. بس بيانات واضحة، رؤى واضحة، وقرارات واضحة. مجلس الإدارة منبهر. فريقك متوافق. أنت واثق."
+    },
     icon: PieChart,
     color: "from-emerald-500 to-teal-600",
-    problem: { en: "Organizations drown in data scattered across multiple systems — creating reports takes days, insights arrive too late, and there's no single source of truth for decision-making.", ar: "تغرق المنظمات في البيانات المبعثرة عبر أنظمة متعددة — إنشاء التقارير يستغرق أياماً والرؤى تصل متأخرة ولا يوجد مصدر واحد للحقيقة لاتخاذ القرارات." },
-    solution: { en: "Nzom Analytics connects all your data sources, builds interactive dashboards, enables team collaboration on insights, and enforces data governance — all in one platform.", ar: "يربط نزوم التحليلات جميع مصادر بياناتك ويبني لوحات تحكم تفاعلية ويمكّن التعاون الجماعي على الرؤى ويفرض حوكمة البيانات — كل ذلك في منصة واحدة." },
+    problem: {
+      en: "Your data is everywhere — spreadsheets, systems, emails. Creating a report takes days. By the time you get the numbers, they're already old. You make decisions based on gut feeling because the real data is buried.",
+      ar: "بياناتك في كل مكان — جداول بيانات، أنظمة، إيميلات. إنشاء تقرير ياخذ أيام. لما توصلك الأرقام، تكون قديمة. تاخذ قرارات على الحدس لأن البيانات الحقيقية مدفونة."
+    },
+    solution: {
+      en: "Nzom Analytics connects all your data sources and builds beautiful, interactive dashboards. Real-time numbers, clear trends, shared insights. You see, you understand, you act.",
+      ar: "نزوم التحليلات يربط كل مصادر بياناتك ويبني لوحات تحكم جميلة وتفاعلية. أرقام لحظية، اتجاهات واضحة، رؤى مشتركة. تشوف، تفهم، تتصرف."
+    },
     features: [
-      { title: { en: "Interactive Dashboards", ar: "لوحات تحكم تفاعلية" }, description: { en: "Build and customize drag-and-drop dashboards with real-time data visualization.", ar: "بناء وتخصيص لوحات تحكم بالسحب والإفلات مع تصور البيانات في الوقت الفعلي." }, icon: LayoutDashboard },
-      { title: { en: "Data Sources", ar: "مصادر البيانات" }, description: { en: "Connect databases, APIs, spreadsheets, and cloud services as data sources.", ar: "ربط قواعد البيانات وواجهات البرمجة وجداول البيانات والخدمات السحابية كمصادر بيانات." }, icon: Database },
-      { title: { en: "Smart Filters", ar: "فلاتر ذكية" }, description: { en: "Advanced filtering, drill-down, and cross-filtering across dashboard widgets.", ar: "فلترة متقدمة والتعمق والفلترة المتقاطعة عبر عناصر لوحة التحكم." }, icon: Filter },
-      { title: { en: "Team Collaboration", ar: "التعاون الجماعي" }, description: { en: "Share dashboards, invite team members, and collaborate on data insights.", ar: "مشاركة لوحات التحكم ودعوة أعضاء الفريق والتعاون على رؤى البيانات." }, icon: Share2 },
-      { title: { en: "Data Governance", ar: "حوكمة البيانات" }, description: { en: "Data quality rules, access policies, lineage tracking, and compliance controls.", ar: "قواعد جودة البيانات وسياسات الوصول وتتبع النسب وضوابط الامتثال." }, icon: Lock },
-      { title: { en: "Public Dashboards", ar: "لوحات تحكم عامة" }, description: { en: "Publish dashboards publicly or embed them in websites and portals.", ar: "نشر لوحات التحكم بشكل عام أو تضمينها في المواقع والبوابات." }, icon: Globe },
+      { title: { en: "Interactive Dashboards", ar: "لوحات تحكم تفاعلية" }, description: { en: "Drag, drop, and build dashboards that tell your story. No coding needed.", ar: "اسحب وأفلت وابني لوحات تحكم تحكي قصتك. بدون برمجة." }, icon: LayoutDashboard },
+      { title: { en: "Data Sources", ar: "مصادر البيانات" }, description: { en: "Connect everything — databases, spreadsheets, APIs. One source of truth.", ar: "اربط كل شيء — قواعد بيانات، جداول، واجهات برمجة. مصدر حقيقة واحد." }, icon: Database },
+      { title: { en: "Smart Filters", ar: "فلاتر ذكية" }, description: { en: "Drill down into any metric. Ask questions and get instant visual answers.", ar: "تعمّق في أي مقياس. اسأل أسئلة واحصل إجابات مرئية فورية." }, icon: Filter },
+      { title: { en: "Team Collaboration", ar: "التعاون الجماعي" }, description: { en: "Share dashboards with your team. Comment on insights. Align on decisions.", ar: "شارك لوحات التحكم مع فريقك. علّق على الرؤى. اتفقوا على القرارات." }, icon: Share2 },
+      { title: { en: "Data Governance", ar: "حوكمة البيانات" }, description: { en: "Clean data, trusted data. Quality rules and access policies built in.", ar: "بيانات نظيفة، بيانات موثوقة. قواعد جودة وسياسات وصول مدمجة." }, icon: Lock },
+      { title: { en: "Public Dashboards", ar: "لوحات تحكم عامة" }, description: { en: "Share insights publicly or embed them in your website. Impress stakeholders.", ar: "شارك الرؤى بشكل عام أو ضمّنها في موقعك. أبهر أصحاب المصلحة." }, icon: Globe },
     ],
-    workflowDesc: { en: "Set up automated data pipelines that refresh dashboards on schedule. Configure alert rules for KPI thresholds, automate report distribution, and trigger actions based on data changes.", ar: "إعداد خطوط بيانات آلية تحدّث لوحات التحكم وفق جدول زمني. تكوين قواعد التنبيه لعتبات مؤشرات الأداء وأتمتة توزيع التقارير." },
-    rbacDesc: { en: "Data admins manage sources and governance, analysts build dashboards, viewers consume reports. Each role has appropriate data access and editing permissions.", ar: "يدير مسؤولو البيانات المصادر والحوكمة ويبني المحللون لوحات التحكم ويستهلك المشاهدون التقارير. كل دور له أذونات وصول وتحرير مناسبة." },
-    analyticsDesc: { en: "Meta-analytics: track dashboard usage, query performance, data freshness, and user engagement metrics to optimize your analytics platform itself.", ar: "تحليلات وصفية: تتبع استخدام لوحات التحكم وأداء الاستعلامات وحداثة البيانات ومقاييس تفاعل المستخدمين لتحسين منصة التحليلات نفسها." },
-    securityDesc: { en: "Row-level security, data masking, encrypted connections, SSO integration, and comprehensive audit logs for all data access and modifications.", ar: "أمان على مستوى الصف وإخفاء البيانات والاتصالات المشفرة وتكامل SSO وسجلات تدقيق شاملة لجميع عمليات الوصول والتعديل." },
+    workflowDesc: { en: "Data flows in automatically. Dashboards refresh themselves. Alerts trigger when KPIs cross thresholds. Reports deliver themselves to the right people. You just read and decide.", ar: "البيانات تتدفق تلقائياً. لوحات التحكم تحدّث نفسها. التنبيهات تشتغل لما مؤشرات الأداء تتجاوز الحدود. التقارير توصل نفسها للأشخاص الصحيحين. أنت بس اقرأ وقرّر." },
+    rbacDesc: { en: "Admins control the data. Analysts build the dashboards. Viewers see what matters to them. Sensitive data stays protected at every level.", ar: "المدراء يتحكمون بالبيانات. المحللون يبنون لوحات التحكم. المشاهدون يشوفون اللي يهمهم. البيانات الحساسة محمية في كل مستوى." },
+    analyticsDesc: { en: "Even your analytics has analytics. Track dashboard usage, query speed, data freshness — optimize the platform itself.", ar: "حتى التحليلات عندها تحليلات. تابع استخدام لوحات التحكم وسرعة الاستعلامات وحداثة البيانات — حسّن المنصة نفسها." },
+    securityDesc: { en: "Row-level security, data masking, encrypted connections. Your data is visible only to those who should see it.", ar: "أمان على مستوى الصف، إخفاء البيانات، اتصالات مشفرة. بياناتك تنشاف بس من اللي لازم يشوفها." },
   },
 
   // ═══════════════════════════════════════════
-  // 7. BOOKING
+  // 7. BOOKING — الإحساس: السلاسة
   // ═══════════════════════════════════════════
   {
     slug: "booking",
     name: { en: "Nzom Booking", ar: "نزوم الحجوزات" },
-    tagline: { en: "Booking & Appointment Management System", ar: "نظام إدارة الحجوزات والمواعيد" },
-    description: { en: "All-in-one cloud booking system for salons, gyms, clinics, and training centers — with appointment scheduling, subscriptions, ZATCA-compliant invoicing, and multi-branch management.", ar: "نظام حجوزات سحابي متكامل للصالونات والنوادي الرياضية والعيادات ومراكز التدريب — مع جدولة المواعيد والاشتراكات والفوترة المتوافقة مع هيئة الزكاة وإدارة الفروع." },
+    tagline: {
+      en: "Clients book easily. You grow effortlessly.",
+      ar: "عملاءك يحجزون بسهولة. وأنت تنمو بدون جهد."
+    },
+    description: {
+      en: "No more WhatsApp chaos. No more double bookings. Nzom Booking lets your clients book, pay, and subscribe — smoothly, professionally, automatically. You focus on service, we handle the logistics.",
+      ar: "بدون فوضى الواتساب. بدون حجوزات مزدوجة. نزوم الحجوزات يخلي عملاءك يحجزون ويدفعون ويشتركون — بسلاسة، باحترافية، تلقائياً. أنت ركّز على الخدمة، واحنا نتكفل باللوجستيات."
+    },
+    emotionalHook: {
+      en: "Smooth bookings, happy clients.",
+      ar: "حجوزات سلسة، عملاء سعداء."
+    },
+    imagineDay: {
+      en: "Imagine your clients booking their appointments from their phones at 2 AM. Confirmations sent automatically. Reminders before the session. Invoices generated instantly. Your front desk isn't glued to the phone anymore. Your branches run independently. Your revenue grows while you sleep.",
+      ar: "تخيّل عملاءك يحجزون مواعيدهم من جوالاتهم الساعة 2 الصبح. التأكيدات ترسل تلقائياً. التذكيرات قبل الجلسة. الفواتير تتولّد فوراً. الاستقبال ما عاد ملتصق بالتلفون. فروعك تمشي باستقلالية. إيراداتك تنمو وأنت نايم."
+    },
     icon: CalendarDays,
     color: "from-pink-500 to-rose-600",
-    problem: { en: "Service businesses manage appointments via WhatsApp, track subscriptions in spreadsheets, generate invoices manually, and have zero visibility into branch performance and customer patterns.", ar: "تدير شركات الخدمات المواعيد عبر واتساب وتتبع الاشتراكات في جداول بيانات وتُنشئ الفواتير يدوياً وليس لديها رؤية في أداء الفروع وأنماط العملاء." },
-    solution: { en: "Nzom Booking digitizes the entire booking lifecycle — smart scheduling, package management, automated reminders, ZATCA e-invoicing, and multi-branch analytics.", ar: "يرقمن نزوم الحجوزات دورة الحجز بالكامل — جدولة ذكية وإدارة الباقات وتذكيرات آلية وفوترة إلكترونية متوافقة مع ZATCA وتحليلات متعددة الفروع." },
+    problem: {
+      en: "Appointments via WhatsApp. Subscriptions in spreadsheets. Invoices by hand. Your receptionist is overwhelmed. Double bookings happen weekly. You have no idea which branch is performing better. Sound familiar?",
+      ar: "المواعيد عبر الواتساب. الاشتراكات في جداول بيانات. الفواتير باليد. موظف الاستقبال مضغوط. حجوزات مزدوجة تصير كل أسبوع. ما تعرف أي فرع أفضل أداءً. مألوف؟"
+    },
+    solution: {
+      en: "Nzom Booking digitalizes everything — scheduling, packages, reminders, invoicing, multi-branch management. Your clients get a smooth experience, and you get clear business visibility.",
+      ar: "نزوم الحجوزات يرقمن كل شيء — الجدولة، الباقات، التذكيرات، الفوترة، إدارة الفروع. عملاءك يحصلون تجربة سلسة، وأنت تحصل رؤية واضحة لعملك."
+    },
     features: [
-      { title: { en: "Appointment Management", ar: "إدارة المواعيد" }, description: { en: "Smart scheduling with interactive calendar, auto-reminders, and break management.", ar: "جدولة ذكية مع تقويم تفاعلي وتذكيرات تلقائية وإدارة أوقات الراحة." }, icon: CalendarDays },
-      { title: { en: "Subscriptions & Packages", ar: "الاشتراكات والباقات" }, description: { en: "Flexible session/duration packages with auto-deduction and seamless renewal.", ar: "باقات مرنة بالجلسات أو المدة مع خصم تلقائي وتجديد سلس." }, icon: CreditCard },
-      { title: { en: "ZATCA E-Invoicing", ar: "الفوترة الإلكترونية ZATCA" }, description: { en: "Compliant electronic invoicing with QR codes and tax calculation.", ar: "فوترة إلكترونية متوافقة مع رموز QR وحساب الضرائب." }, icon: Receipt },
-      { title: { en: "Customer Management", ar: "إدارة العملاء" }, description: { en: "Comprehensive profiles, attendance tracking, and direct communication.", ar: "ملفات شاملة للعملاء وتتبع الحضور والتواصل المباشر." }, icon: Users },
-      { title: { en: "Multi-Branch", ar: "متعدد الفروع" }, description: { en: "Manage multiple locations with branch-specific settings and staff.", ar: "إدارة مواقع متعددة مع إعدادات وموظفين خاصين بكل فرع." }, icon: Building2 },
-      { title: { en: "Financial Reports", ar: "التقارير المالية" }, description: { en: "Revenue analysis, payment tracking, and financial performance dashboards.", ar: "تحليل الإيرادات وتتبع المدفوعات ولوحات تحكم الأداء المالي." }, icon: BarChart3 },
+      { title: { en: "Appointment Management", ar: "إدارة المواعيد" }, description: { en: "Smart calendar that prevents double bookings. Clients book 24/7.", ar: "تقويم ذكي يمنع الحجوزات المزدوجة. العملاء يحجزون ٢٤/٧." }, icon: CalendarDays },
+      { title: { en: "Subscriptions & Packages", ar: "الاشتراكات والباقات" }, description: { en: "Sell packages, track sessions, auto-renew. Revenue on autopilot.", ar: "بيع باقات، تابع الجلسات، تجدد تلقائي. إيرادات على الطيار الآلي." }, icon: CreditCard },
+      { title: { en: "ZATCA E-Invoicing", ar: "الفوترة الإلكترونية ZATCA" }, description: { en: "Compliant invoices generated automatically. QR codes, tax — all handled.", ar: "فواتير متوافقة تتولّد تلقائياً. رموز QR، ضريبة — كلها مغطّاة." }, icon: Receipt },
+      { title: { en: "Customer Management", ar: "إدارة العملاء" }, description: { en: "Know your clients. Their history, preferences, and visit patterns.", ar: "اعرف عملاءك. تاريخهم، تفضيلاتهم، وأنماط زياراتهم." }, icon: Users },
+      { title: { en: "Multi-Branch", ar: "متعدد الفروع" }, description: { en: "Multiple locations, one system. Compare performance across branches.", ar: "مواقع متعددة، نظام واحد. قارن الأداء بين الفروع." }, icon: Building2 },
+      { title: { en: "Financial Reports", ar: "التقارير المالية" }, description: { en: "Revenue, payments, trends — all clear, all real-time.", ar: "الإيرادات، المدفوعات، الاتجاهات — كلها واضحة، كلها لحظية." }, icon: BarChart3 },
     ],
-    workflowDesc: { en: "Automate appointment confirmations, send reminders before sessions, auto-deduct from subscription balances, generate invoices on payment, and trigger renewal notifications for expiring packages.", ar: "أتمتة تأكيدات المواعيد وإرسال التذكيرات قبل الجلسات والخصم التلقائي من أرصدة الاشتراكات وإنشاء الفواتير عند الدفع وتشغيل إشعارات التجديد للباقات المنتهية." },
-    rbacDesc: { en: "Business owners see all branches, branch managers control their location, staff see their schedules, and customers access their booking portal.", ar: "أصحاب الأعمال يرون جميع الفروع ومديرو الفروع يتحكمون في مواقعهم والموظفون يرون جداولهم والعملاء يصلون لبوابة الحجز." },
-    analyticsDesc: { en: "Track booking rates, peak hours, staff utilization, revenue per service, subscription retention, and customer lifetime value across all branches.", ar: "تتبع معدلات الحجز وساعات الذروة واستخدام الموظفين والإيرادات لكل خدمة والاحتفاظ بالاشتراكات وقيمة العميل مدى الحياة عبر جميع الفروع." },
-    securityDesc: { en: "PCI-compliant payment processing, encrypted customer data, secure booking links, and compliance with Saudi commercial data requirements.", ar: "معالجة مدفوعات متوافقة مع PCI وبيانات عملاء مشفرة وروابط حجز آمنة والامتثال لمتطلبات البيانات التجارية السعودية." },
+    workflowDesc: { en: "Bookings confirm themselves. Reminders send themselves. Subscriptions deduct automatically. Invoices generate on payment. Renewals notify before expiry. It's a business that runs itself.", ar: "الحجوزات تتأكد لحالها. التذكيرات ترسل نفسها. الاشتراكات تخصم تلقائياً. الفواتير تتولّد مع الدفع. التجديدات تنبّه قبل الانتهاء. عمل يمشي لحاله." },
+    rbacDesc: { en: "Owners see all branches. Branch managers control their location. Staff see their schedules. Clients see their bookings. Simple, clean, no confusion.", ar: "أصحاب الأعمال يشوفون كل الفروع. مديرو الفروع يتحكمون بموقعهم. الموظفون يشوفون جداولهم. العملاء يشوفون حجوزاتهم. بسيط، نظيف، بدون لخبطة." },
+    analyticsDesc: { en: "Which services make the most money? When are your peak hours? Which staff is booked the most? Answers to grow your business.", ar: "أي الخدمات تجيب أكثر فلوس؟ متى ساعات الذروة؟ أي موظف محجوز أكثر؟ إجابات تنمّي عملك." },
+    securityDesc: { en: "Payment data encrypted. Client information protected. Fully compliant with Saudi commercial regulations.", ar: "بيانات الدفع مشفرة. معلومات العملاء محمية. متوافق بالكامل مع الأنظمة التجارية السعودية." },
   },
 
   // ═══════════════════════════════════════════
-  // 8. ESIGN
+  // 8. ESIGN — الإحساس: السرعة
   // ═══════════════════════════════════════════
   {
     slug: "esign",
     name: { en: "Nzom Sign", ar: "نزوم التوقيع" },
-    tagline: { en: "Enterprise E-Signature Platform", ar: "منصة التوقيع الإلكتروني للمؤسسات" },
-    description: { en: "Enterprise-grade e-signature platform with envelope workflows, bulk sending, template management, compliance tracking, correspondence management, and comprehensive audit trails.", ar: "منصة توقيع إلكتروني على مستوى المؤسسات مع سير عمل المظاريف والإرسال الجماعي وإدارة القوالب وتتبع الامتثال وإدارة المراسلات ومسارات تدقيق شاملة." },
+    tagline: {
+      en: "Sign it. Done. Move on.",
+      ar: "وقّعه. خلاص. امشِ."
+    },
+    description: {
+      en: "Stop printing, scanning, and waiting. Nzom Sign lets you send, sign, and seal documents in minutes — not days. Legally binding, instantly tracked, always available.",
+      ar: "وقّف الطباعة والمسح والانتظار. نزوم التوقيع يخلّيك ترسل وتوقّع وتختم المستندات في دقائق — مو أيام. ملزم قانونياً، متابَع فوراً، متوفر دايماً."
+    },
+    emotionalHook: {
+      en: "Speed that closes deals.",
+      ar: "سرعة تقفل صفقات."
+    },
+    imagineDay: {
+      en: "Imagine sending a contract and getting it signed before your coffee gets cold. No printing. No scanning. No 'I'll sign it when I'm in the office.' Your client signs from their phone, you get notified instantly, and the deal is done. Days compressed into minutes.",
+      ar: "تخيّل ترسل عقد ويترجع موقّع قبل لا قهوتك تبرد. بدون طباعة. بدون مسح. بدون 'بوقّعه لما أوصل المكتب.' عميلك يوقّع من جواله، تجيك الإشعار فوراً، والصفقة تمّت. أيام مضغوطة في دقائق."
+    },
     icon: PenTool,
     color: "from-indigo-500 to-blue-600",
-    problem: { en: "Organizations waste days chasing physical signatures, printing and scanning documents, lose track of signing status, and lack legally compliant digital signature workflows.", ar: "تهدر المنظمات أياماً في ملاحقة التوقيعات المادية وطباعة ومسح المستندات وتفقد تتبع حالة التوقيع وتفتقر لسير عمل التوقيع الرقمي المتوافق قانونياً." },
-    solution: { en: "Nzom Sign enables instant digital signatures with envelope-based workflows, bulk operations, template library, retention policies, and full eIDAS/UETA compliance.", ar: "يمكّن نزوم التوقيع التوقيعات الرقمية الفورية مع سير عمل قائم على المظاريف والعمليات الجماعية ومكتبة القوالب وسياسات الاحتفاظ والامتثال الكامل." },
+    problem: {
+      en: "Documents sit on desks for days waiting for signatures. You print, sign, scan, email, wait, follow up, print again. Contracts get delayed. Deals get cold. And you can never find who signed what when.",
+      ar: "المستندات تقعد على المكاتب أيام تنتظر توقيعات. تطبع، توقّع، تمسح، ترسل إيميل، تنتظر، تتابع، تطبع مرة ثانية. العقود تتأخر. الصفقات تبرد. وما تقدر تلاقي مين وقّع إيش متى."
+    },
+    solution: {
+      en: "Nzom Sign makes signatures instant. Send a document, recipients sign from any device, you track everything in real time. Legally compliant, fully audited, lightning fast.",
+      ar: "نزوم التوقيع يخلّي التوقيعات فورية. ارسل مستند، المستلمون يوقّعون من أي جهاز، تتابع كل شيء بالوقت الفعلي. متوافق قانونياً، مدقّق بالكامل، سريع كالبرق."
+    },
     features: [
-      { title: { en: "Envelope Workflows", ar: "سير عمل المظاريف" }, description: { en: "Create signing envelopes with ordered recipients, parallel signing, and custom fields.", ar: "إنشاء مظاريف توقيع مع مستلمين مرتبين والتوقيع المتوازي وحقول مخصصة." }, icon: Workflow },
-      { title: { en: "Bulk Send", ar: "الإرسال الجماعي" }, description: { en: "Send documents for signature to hundreds of recipients simultaneously.", ar: "إرسال المستندات للتوقيع لمئات المستلمين في وقت واحد." }, icon: Megaphone },
-      { title: { en: "Template Management", ar: "إدارة القوالب" }, description: { en: "Create reusable templates with pre-placed signature fields and recipient roles.", ar: "إنشاء قوالب قابلة لإعادة الاستخدام مع حقول توقيع وأدوار مستلمين محددة مسبقاً." }, icon: FileText },
-      { title: { en: "Compliance & Retention", ar: "الامتثال والاحتفاظ" }, description: { en: "eIDAS/UETA compliant signatures with configurable document retention policies.", ar: "توقيعات متوافقة مع eIDAS/UETA مع سياسات احتفاظ بالمستندات قابلة للتكوين." }, icon: ClipboardCheck },
-      { title: { en: "Correspondence Management", ar: "إدارة المراسلات" }, description: { en: "Track and manage all organizational correspondence with signing workflows.", ar: "تتبع وإدارة جميع المراسلات التنظيمية مع سير عمل التوقيع." }, icon: Briefcase },
-      { title: { en: "Audit Trail", ar: "مسار التدقيق" }, description: { en: "Complete signing history with timestamps, IP addresses, and certificate details.", ar: "سجل توقيع كامل مع الطوابع الزمنية وعناوين IP وتفاصيل الشهادة." }, icon: Lock },
+      { title: { en: "Envelope Workflows", ar: "سير عمل المظاريف" }, description: { en: "Design who signs first, second, third. Parallel or sequential — your rules.", ar: "صمّم مين يوقّع أول، ثاني، ثالث. متوازي أو متسلسل — قواعدك." }, icon: Workflow },
+      { title: { en: "Bulk Send", ar: "الإرسال الجماعي" }, description: { en: "Send to hundreds at once. Same document, different signers, one click.", ar: "ارسل لمئات بمرة. نفس المستند، موقّعين مختلفين، ضغطة وحدة." }, icon: Megaphone },
+      { title: { en: "Template Management", ar: "إدارة القوالب" }, description: { en: "Create once, reuse forever. Templates with pre-placed fields save hours.", ar: "أنشئ مرة، استخدم للأبد. القوالب مع حقول جاهزة توفّر ساعات." }, icon: FileText },
+      { title: { en: "Compliance & Retention", ar: "الامتثال والاحتفاظ" }, description: { en: "Legally binding everywhere. Documents stored securely for as long as you need.", ar: "ملزم قانونياً في كل مكان. المستندات مخزّنة بأمان طول ما تحتاج." }, icon: ClipboardCheck },
+      { title: { en: "Correspondence Management", ar: "إدارة المراسلات" }, description: { en: "Track every letter, memo, and document that flows through your organization.", ar: "تابع كل خطاب ومذكرة ومستند يمر عبر منظمتك." }, icon: Briefcase },
+      { title: { en: "Audit Trail", ar: "مسار التدقيق" }, description: { en: "Who signed what, when, from where. Complete proof, zero disputes.", ar: "مين وقّع إيش، متى، من وين. إثبات كامل، صفر نزاعات." }, icon: Lock },
     ],
-    workflowDesc: { en: "Design multi-step signing workflows with sequential and parallel routing, delegation rules, expiration deadlines, and automated reminders. Integrate with document management systems.", ar: "تصميم سير عمل توقيع متعدد الخطوات مع توجيه متسلسل ومتوازي وقواعد تفويض ومواعيد انتهاء وتذكيرات آلية. التكامل مع أنظمة إدارة المستندات." },
-    rbacDesc: { en: "Organization admins manage settings, department managers control templates, signers access their documents, and workspace admins oversee compliance.", ar: "يدير مسؤولو المنظمة الإعدادات ويتحكم مديرو الأقسام في القوالب ويصل الموقعون إلى مستنداتهم ويشرف مسؤولو مساحات العمل على الامتثال." },
-    analyticsDesc: { en: "Track signing completion rates, average turnaround time, envelope status distribution, department usage, and template effectiveness metrics.", ar: "تتبع معدلات إتمام التوقيع ومتوسط وقت الاستجابة وتوزيع حالة المظاريف واستخدام الأقسام ومقاييس فعالية القوالب." },
-    securityDesc: { en: "Bank-grade AES-256 encryption, MFA authentication, PKI digital certificates, tamper-evident seals, and compliance with Saudi e-transactions regulations.", ar: "تشفير AES-256 على مستوى البنوك والمصادقة متعددة العوامل وشهادات PKI الرقمية وأختام مقاومة للتلاعب والامتثال لأنظمة المعاملات الإلكترونية السعودية." },
+    workflowDesc: { en: "Documents flow like water. Send → Sign → Done. Auto-reminders for pending signatures. Delegation when someone is out. Expiry deadlines that keep things moving. You never chase a signature again.", ar: "المستندات تمشي مثل الماء. ارسل ← وقّع ← خلاص. تذكيرات تلقائية للتوقيعات المعلّقة. تفويض لما أحد غائب. مواعيد انتهاء تخلّي الأمور تمشي. ما تلاحق توقيع مرة ثانية." },
+    rbacDesc: { en: "Admins control templates and policies. Departments manage their documents. Signers see only what needs their signature. Clean, simple, efficient.", ar: "المدراء يتحكمون بالقوالب والسياسات. الأقسام تدير مستنداتها. الموقّعون يشوفون بس اللي يحتاج توقيعهم. نظيف، بسيط، فعّال." },
+    analyticsDesc: { en: "How fast are documents getting signed? Where are the bottlenecks? Which templates are used most? Data to make your document flow even faster.", ar: "كم بسرعة المستندات تتوقّع؟ وين الاختناقات؟ أي القوالب تُستخدم أكثر؟ بيانات تخلّي تدفق مستنداتك أسرع." },
+    securityDesc: { en: "Bank-grade encryption. Digital certificates. Tamper-proof seals. Fully compliant with Saudi e-transaction regulations. Your signatures are as secure as your vault.", ar: "تشفير بنكي. شهادات رقمية. أختام مقاومة للتلاعب. متوافق بالكامل مع أنظمة المعاملات الإلكترونية السعودية. توقيعاتك آمنة مثل خزنتك." },
   },
 
   // ═══════════════════════════════════════════
-  // 9. TICKETS
+  // 9. TICKETS — الإحساس: الهدوء
   // ═══════════════════════════════════════════
   {
     slug: "tickets",
     name: { en: "Nzom Tickets", ar: "نزوم التذاكر" },
-    tagline: { en: "IT Service Management & Helpdesk", ar: "إدارة خدمات تقنية المعلومات ومكتب المساعدة" },
-    description: { en: "Enterprise ITSM platform with ticket management, change control, problem management, CMDB, release management, contract & vendor management, knowledge base, and AI automation hub.", ar: "منصة ITSM مؤسسية مع إدارة التذاكر والتحكم بالتغييرات وإدارة المشاكل وقاعدة بيانات التكوين وإدارة الإصدارات وإدارة العقود والموردين وقاعدة المعرفة ومحور أتمتة الذكاء الاصطناعي." },
+    tagline: {
+      en: "Problems solved. Calmly.",
+      ar: "مشاكل تنحل. بهدوء."
+    },
+    description: {
+      en: "IT issues don't have to mean chaos. Nzom Tickets brings calm to your helpdesk — every ticket tracked, every change managed, every problem resolved methodically. Your IT team works with purpose, not panic.",
+      ar: "مشاكل التقنية ما لازم تعني فوضى. نزوم التذاكر يجيب الهدوء لمكتب المساعدة — كل تذكرة متابَعة، كل تغيير مُدار، كل مشكلة تنحل بمنهجية. فريقك التقني يشتغل بهدف، مو بذعر."
+    },
+    emotionalHook: {
+      en: "Calm in the storm.",
+      ar: "هدوء وسط العاصفة."
+    },
+    imagineDay: {
+      en: "Imagine a Monday morning where your helpdesk dashboard is green. Tickets are auto-assigned to the right people. AI suggests solutions before agents even read the full description. Changes go through proper approvals. Your IT team sips coffee and resolves issues methodically. No fire drills.",
+      ar: "تخيّل صباح يوم الأحد ولوحة مكتب المساعدة خضراء. التذاكر تتعيّن تلقائياً للأشخاص الصحيحين. الذكاء الاصطناعي يقترح حلول قبل ما الوكلاء يقرون الوصف كامل. التغييرات تمر من الموافقات الصحيحة. فريقك التقني يشرب قهوته ويحل المشاكل بمنهجية. بدون حالات طوارئ."
+    },
     icon: Ticket,
     color: "from-orange-500 to-red-600",
-    problem: { en: "IT departments handle tickets via email, track changes in spreadsheets, have no CMDB for asset relationships, and lack integrated workflows for problems, releases, and vendor management.", ar: "تتعامل أقسام تقنية المعلومات مع التذاكر عبر البريد الإلكتروني وتتبع التغييرات في جداول بيانات ولا تملك CMDB لعلاقات الأصول وتفتقر لسير عمل متكامل للمشاكل والإصدارات وإدارة الموردين." },
-    solution: { en: "Nzom Tickets unifies all ITSM processes — incidents, changes, problems, CMDB, releases, contracts, vendors, and knowledge base — with AI-powered automation and workflow builder.", ar: "يوحد نزوم التذاكر جميع عمليات ITSM — الحوادث والتغييرات والمشاكل وCMDB والإصدارات والعقود والموردين وقاعدة المعرفة — مع أتمتة بالذكاء الاصطناعي." },
+    problem: {
+      en: "Tickets come from everywhere — email, calls, walk-ups. Nobody knows who's working on what. Changes happen without approval. Problems recur because nobody tracks root causes. Your IT team is always firefighting.",
+      ar: "التذاكر تجي من كل مكان — إيميل، اتصالات، زيارات. ما أحد يعرف مين يشتغل على إيش. التغييرات تصير بدون موافقة. المشاكل تتكرر لأن ما أحد يتابع الأسباب الجذرية. فريقك التقني دايم يطفي حرائق."
+    },
+    solution: {
+      en: "Nzom Tickets unifies everything — incidents, changes, problems, assets, vendors — into one calm, organized system. AI routes tickets, suggests solutions, and your team resolves with confidence.",
+      ar: "نزوم التذاكر يوحّد كل شيء — الحوادث، التغييرات، المشاكل، الأصول، الموردين — في نظام واحد هادي ومنظم. الذكاء الاصطناعي يوجّه التذاكر، يقترح حلول، وفريقك يحل بثقة."
+    },
     features: [
-      { title: { en: "Ticket Management", ar: "إدارة التذاكر" }, description: { en: "Create, assign, track, merge, split, and bulk-operate on tickets with SLA tracking.", ar: "إنشاء وتعيين وتتبع ودمج وتقسيم وعمليات جماعية على التذاكر مع تتبع SLA." }, icon: Headphones },
-      { title: { en: "Change & Release", ar: "التغييرات والإصدارات" }, description: { en: "Change workflows with calendar view, approval chains, and release planning.", ar: "سير عمل التغييرات مع عرض التقويم وسلاسل الموافقة وتخطيط الإصدارات." }, icon: GitBranch },
-      { title: { en: "CMDB", ar: "قاعدة بيانات التكوين" }, description: { en: "Configuration items, CI types, asset lifecycle, and relationship mapping.", ar: "عناصر التكوين وأنواع CI ودورة حياة الأصول وخريطة العلاقات." }, icon: Server },
-      { title: { en: "Problem Management", ar: "إدارة المشاكل" }, description: { en: "Root cause analysis, problem board, known error database, and trend analytics.", ar: "تحليل الأسباب الجذرية ولوحة المشاكل وقاعدة بيانات الأخطاء المعروفة وتحليلات الاتجاهات." }, icon: Target },
-      { title: { en: "Vendor & Contracts", ar: "الموردون والعقود" }, description: { en: "Vendor assessments, contract management, performance tracking, and cost management.", ar: "تقييم الموردين وإدارة العقود وتتبع الأداء وإدارة التكاليف." }, icon: Handshake },
-      { title: { en: "AI Automation Hub", ar: "محور أتمتة الذكاء الاصطناعي" }, description: { en: "AI-powered ticket routing, auto-categorization, suggested solutions, and workflow builder.", ar: "توجيه التذاكر بالذكاء الاصطناعي والتصنيف التلقائي والحلول المقترحة ومنشئ سير العمل." }, icon: Brain },
+      { title: { en: "Ticket Management", ar: "إدارة التذاكر" }, description: { en: "Every issue has a home. Assign, track, resolve — with SLA guarantees.", ar: "كل مشكلة لها بيت. عيّن، تابع، حل — مع ضمانات SLA." }, icon: Headphones },
+      { title: { en: "Change & Release", ar: "التغييرات والإصدارات" }, description: { en: "No more cowboy changes. Proper approvals, calendar views, and impact tracking.", ar: "بدون تغييرات عشوائية. موافقات صحيحة، عرض تقويم، وتتبع التأثير." }, icon: GitBranch },
+      { title: { en: "CMDB", ar: "قاعدة بيانات التكوين" }, description: { en: "Know your assets and how they connect. When something breaks, know what's affected.", ar: "اعرف أصولك وكيف تترابط. لما شيء يتعطل، اعرف إيش يتأثر." }, icon: Server },
+      { title: { en: "Problem Management", ar: "إدارة المشاكل" }, description: { en: "Stop fixing symptoms. Find root causes. Prevent problems from coming back.", ar: "وقّف ترقيع الأعراض. لاقي الأسباب الجذرية. امنع المشاكل من الرجوع." }, icon: Target },
+      { title: { en: "Vendor & Contracts", ar: "الموردون والعقود" }, description: { en: "Track vendor performance and contracts. Know who delivers and who doesn't.", ar: "تابع أداء الموردين والعقود. اعرف مين يسلّم ومين لا." }, icon: Handshake },
+      { title: { en: "AI Automation Hub", ar: "محور أتمتة الذكاء الاصطناعي" }, description: { en: "AI reads tickets, categorizes them, and suggests solutions. Your agents start ahead.", ar: "الذكاء الاصطناعي يقرأ التذاكر، يصنّفها، ويقترح حلول. وكلاءك يبدؤون متقدمين." }, icon: Brain },
     ],
-    workflowDesc: { en: "Build custom workflows for ticket routing, change approvals, problem escalation, release deployment gates, and vendor onboarding. AI auto-assigns tickets and suggests resolutions from the knowledge base.", ar: "بناء سير عمل مخصص لتوجيه التذاكر وموافقات التغييرات وتصعيد المشاكل وبوابات نشر الإصدارات وتأهيل الموردين. الذكاء الاصطناعي يعيّن التذاكر تلقائياً ويقترح حلولاً من قاعدة المعرفة." },
-    rbacDesc: { en: "Admins configure the system, agents handle tickets, change managers approve changes, problem managers investigate root causes, and end-users submit requests via the self-service portal.", ar: "المدراء يكوّنون النظام والوكلاء يتعاملون مع التذاكر ومديرو التغيير يوافقون على التغييرات ومديرو المشاكل يحققون في الأسباب الجذرية والمستخدمون يقدمون الطلبات عبر بوابة الخدمة الذاتية." },
-    analyticsDesc: { en: "Track SLA compliance, first response time, resolution time, ticket volume trends, change success rates, CMDB health, agent workload, team performance, and TCO calculations.", ar: "تتبع الامتثال لاتفاقيات مستوى الخدمة ووقت الاستجابة الأول ووقت الحل واتجاهات حجم التذاكر ومعدلات نجاح التغييرات وصحة CMDB وعبء عمل الوكلاء وأداء الفريق وحسابات TCO." },
-    securityDesc: { en: "Role-based access control, encrypted communications, IP-based restrictions, comprehensive audit trails, and compliance with ITIL best practices and Saudi cybersecurity regulations.", ar: "التحكم بالوصول حسب الأدوار والاتصالات المشفرة والقيود المبنية على IP ومسارات تدقيق شاملة والامتثال لأفضل ممارسات ITIL وأنظمة الأمن السيبراني السعودية." },
+    workflowDesc: { en: "Tickets route themselves to the right team. Escalations happen automatically. Changes go through approval gates. Problems get investigated systematically. Your IT department runs like a well-oiled machine.", ar: "التذاكر توجّه نفسها للفريق الصحيح. التصعيدات تصير تلقائياً. التغييرات تمر من بوابات الموافقة. المشاكل تتحقق منها بمنهجية. قسم تقنية المعلومات يمشي كالآلة المزيّتة." },
+    rbacDesc: { en: "Admins configure. Agents resolve. Managers approve changes. End-users submit requests from a simple portal. Everyone knows their role.", ar: "المدراء يكوّنون. الوكلاء يحلون. المديرون يوافقون على التغييرات. المستخدمون يقدمون طلبات من بوابة بسيطة. كل واحد يعرف دوره." },
+    analyticsDesc: { en: "Are SLAs being met? How fast do you respond? Which problems keep coming back? Data that makes your IT team better every week.", ar: "هل الـ SLA متحقق؟ كم بسرعة ترد؟ أي المشاكل ترجع؟ بيانات تخلّي فريقك التقني أفضل كل أسبوع." },
+    securityDesc: { en: "Access controls, encrypted communications, audit trails, and ITIL compliance. Your IT governance meets the highest standards.", ar: "ضوابط وصول، اتصالات مشفرة، مسارات تدقيق، وامتثال ITIL. حوكمة تقنية المعلومات تلبي أعلى المعايير." },
   },
 
   // ═══════════════════════════════════════════
-  // 10. BUDGET
+  // 10. BUDGET — الإحساس: الأمان المالي
   // ═══════════════════════════════════════════
   {
     slug: "budget",
     name: { en: "Nzom Budget", ar: "نزوم الميزانيات" },
-    tagline: { en: "Budget & Procurement Management", ar: "إدارة الميزانيات والمشتريات" },
-    description: { en: "Comprehensive budget management system with budget periods, purchase requests, purchase orders, vendor management, cost centers, department budgets, and full audit logging.", ar: "نظام إدارة ميزانيات شامل مع فترات الميزانية وطلبات الشراء وأوامر الشراء وإدارة الموردين ومراكز التكلفة وميزانيات الأقسام وتسجيل التدقيق الكامل." },
+    tagline: {
+      en: "Your money, under control.",
+      ar: "فلوسك، تحت السيطرة."
+    },
+    description: {
+      en: "No more budget surprises. No more unauthorized purchases. Nzom Budget gives you complete financial visibility — every riyal tracked, every purchase approved, every budget on target. Sleep well knowing your finances are in order.",
+      ar: "بدون مفاجآت مالية. بدون مشتريات بدون إذن. نزوم الميزانيات يعطيك رؤية مالية كاملة — كل ريال متابَع، كل عملية شراء معتمدة، كل ميزانية في المسار. نم مرتاح وأنت تعرف إن أموالك في نظام."
+    },
+    emotionalHook: {
+      en: "Financial peace of mind.",
+      ar: "أمان مالي وراحة بال."
+    },
+    imagineDay: {
+      en: "Imagine opening your budget dashboard and seeing every department's spending in real time. A purchase request comes in — it routes through approvals automatically, checks the budget, and generates a PO. No surprises at month-end. No awkward conversations about overspending. Just clean, controlled finances.",
+      ar: "تخيّل تفتح لوحة الميزانيات وتشوف إنفاق كل قسم بالوقت الفعلي. طلب شراء يجي — يمر من الموافقات تلقائياً، يتأكد من الميزانية، وينشئ أمر شراء. بدون مفاجآت نهاية الشهر. بدون محادثات محرجة عن تجاوز الإنفاق. بس ماليّة نظيفة ومتحكّم فيها."
+    },
     icon: Wallet,
     color: "from-lime-500 to-green-600",
-    problem: { en: "Finance teams manage budgets in spreadsheets, process purchase requests via email, lack visibility into spending across cost centers, and have no audit trail for budget approvals.", ar: "تدير فرق المالية الميزانيات في جداول بيانات وتعالج طلبات الشراء عبر البريد الإلكتروني وتفتقر للرؤية في الإنفاق عبر مراكز التكلفة وليس لديها مسار تدقيق لموافقات الميزانية." },
-    solution: { en: "Nzom Budget centralizes budget planning, purchase workflows, vendor management, and cost tracking with real-time spending visibility and comprehensive audit logs.", ar: "يجمع نزوم الميزانيات تخطيط الميزانية وسير عمل الشراء وإدارة الموردين وتتبع التكاليف مع رؤية فورية للإنفاق وسجلات تدقيق شاملة." },
+    problem: {
+      en: "Budgets in spreadsheets. Purchase requests via email. No one knows how much is left in the budget until it's too late. Overspending happens silently. Month-end becomes a nightmare of reconciliation.",
+      ar: "الميزانيات في جداول بيانات. طلبات الشراء عبر الإيميل. ما أحد يعرف كم باقي في الميزانية إلا لما يفوت الأوان. تجاوز الإنفاق يصير بصمت. نهاية الشهر تصير كابوس مطابقة."
+    },
+    solution: {
+      en: "Nzom Budget centralizes everything — planning, purchasing, tracking, reporting. Real-time visibility into every riyal. Approvals that prevent overspending before it happens. Financial control that gives you confidence.",
+      ar: "نزوم الميزانيات يجمع كل شيء — التخطيط، الشراء، التتبع، التقارير. رؤية فورية لكل ريال. موافقات تمنع تجاوز الإنفاق قبل ما يصير. تحكّم مالي يعطيك ثقة."
+    },
     features: [
-      { title: { en: "Budget Planning", ar: "تخطيط الميزانية" }, description: { en: "Create budgets by period, department, project, and category with allocation tracking.", ar: "إنشاء الميزانيات حسب الفترة والقسم والمشروع والفئة مع تتبع التخصيص." }, icon: Target },
-      { title: { en: "Purchase Requests", ar: "طلبات الشراء" }, description: { en: "Submit, review, and approve purchase requests with multi-level approval chains.", ar: "تقديم ومراجعة والموافقة على طلبات الشراء مع سلاسل موافقة متعددة المستويات." }, icon: Package },
-      { title: { en: "Purchase Orders", ar: "أوامر الشراء" }, description: { en: "Generate POs from approved requests, track delivery, and manage payments.", ar: "إنشاء أوامر الشراء من الطلبات المعتمدة وتتبع التسليم وإدارة المدفوعات." }, icon: Receipt },
-      { title: { en: "Vendor Management", ar: "إدارة الموردين" }, description: { en: "Vendor registration, performance ratings, and procurement history tracking.", ar: "تسجيل الموردين وتقييم الأداء وتتبع سجل المشتريات." }, icon: Store },
-      { title: { en: "Cost Centers", ar: "مراكز التكلفة" }, description: { en: "Define cost centers, track expenses, and allocate budgets across departments.", ar: "تحديد مراكز التكلفة وتتبع المصروفات وتوزيع الميزانيات عبر الأقسام." }, icon: DollarSign },
-      { title: { en: "Audit Logs", ar: "سجلات التدقيق" }, description: { en: "Complete trail of all budget changes, approvals, and transactions.", ar: "مسار كامل لجميع تغييرات الميزانية والموافقات والمعاملات." }, icon: ClipboardCheck },
+      { title: { en: "Budget Planning", ar: "تخطيط الميزانية" }, description: { en: "Plan by period, department, project. Know exactly how much is allocated and spent.", ar: "خطّط حسب الفترة والقسم والمشروع. اعرف بالضبط كم مخصّص وكم مصروف." }, icon: Target },
+      { title: { en: "Purchase Requests", ar: "طلبات الشراء" }, description: { en: "Submit, review, approve — with automatic budget checks before approval.", ar: "قدّم، راجع، وافق — مع فحص ميزانية تلقائي قبل الموافقة." }, icon: Package },
+      { title: { en: "Purchase Orders", ar: "أوامر الشراء" }, description: { en: "From approved request to PO in one click. Track delivery and payments.", ar: "من طلب معتمد إلى أمر شراء بضغطة. تابع التسليم والمدفوعات." }, icon: Receipt },
+      { title: { en: "Vendor Management", ar: "إدارة الموردين" }, description: { en: "Rate vendors, track history, choose the best. Data-driven procurement.", ar: "قيّم الموردين، تابع التاريخ، اختر الأفضل. مشتريات مبنية على بيانات." }, icon: Store },
+      { title: { en: "Cost Centers", ar: "مراكز التكلفة" }, description: { en: "Know where every riyal goes. Track expenses by center, department, project.", ar: "اعرف وين يروح كل ريال. تابع المصروفات حسب المركز والقسم والمشروع." }, icon: DollarSign },
+      { title: { en: "Audit Logs", ar: "سجلات التدقيق" }, description: { en: "Every approval, every change, every transaction — fully documented.", ar: "كل موافقة، كل تغيير، كل معاملة — موثّقة بالكامل." }, icon: ClipboardCheck },
     ],
-    workflowDesc: { en: "Automate purchase request approvals based on amount thresholds and department hierarchy. Route POs to appropriate budget holders, trigger over-budget alerts, and auto-generate payment schedules.", ar: "أتمتة موافقات طلبات الشراء بناءً على حدود المبالغ والتسلسل الهرمي للأقسام. توجيه أوامر الشراء لأصحاب الميزانية المناسبين وتشغيل تنبيهات تجاوز الميزانية." },
-    rbacDesc: { en: "CFO sees all budgets, department heads manage their allocations, procurement officers handle POs, requesters submit purchase requests, and auditors review logs.", ar: "المدير المالي يرى جميع الميزانيات ورؤساء الأقسام يديرون تخصيصاتهم ومسؤولو المشتريات يتعاملون مع أوامر الشراء والطالبون يقدمون طلبات الشراء والمدققون يراجعون السجلات." },
-    analyticsDesc: { en: "Track budget utilization rates, spending trends, vendor performance scores, cost center analysis, purchase cycle times, and generate financial compliance reports.", ar: "تتبع معدلات استخدام الميزانية واتجاهات الإنفاق ودرجات أداء الموردين وتحليل مراكز التكلفة وأوقات دورة الشراء وإنشاء تقارير الامتثال المالي." },
-    securityDesc: { en: "Financial-grade encryption, segregation of duties controls, approval delegation rules, and compliance with Saudi financial regulations and internal audit standards.", ar: "تشفير على مستوى مالي وضوابط فصل المهام وقواعد تفويض الموافقة والامتثال للأنظمة المالية السعودية ومعايير التدقيق الداخلي." },
+    workflowDesc: { en: "Purchase requests check budgets automatically. Approvals route to the right managers. POs generate from approved requests. Budgets update in real time. No manual work, no errors, no surprises.", ar: "طلبات الشراء تفحص الميزانيات تلقائياً. الموافقات تروح للمديرين الصحيحين. أوامر الشراء تتولّد من الطلبات المعتمدة. الميزانيات تتحدث بالوقت الفعلي. بدون عمل يدوي، بدون أخطاء، بدون مفاجآت." },
+    rbacDesc: { en: "Finance controls the big picture. Department heads manage their budgets. Requesters submit and track. Approvers approve from their phones. Everyone plays their part.", ar: "المالية تتحكم بالصورة الكبيرة. رؤساء الأقسام يديرون ميزانياتهم. مقدّمو الطلبات يقدمون ويتابعون. المعتمدون يوافقون من جوالاتهم. كل واحد يلعب دوره." },
+    analyticsDesc: { en: "Budget vs actual — in real time. Spending trends, vendor costs, department efficiency. The numbers that keep your finances healthy.", ar: "الميزانية مقابل الفعلي — بالوقت الفعلي. اتجاهات الإنفاق، تكاليف الموردين، كفاءة الأقسام. الأرقام اللي تخلّي مالياتك صحية." },
+    securityDesc: { en: "Financial data deserves the highest protection. Encryption, access controls, audit trails, and full Saudi regulatory compliance.", ar: "البيانات المالية تستحق أعلى حماية. تشفير، ضوابط وصول، مسارات تدقيق، وامتثال كامل للأنظمة السعودية." },
   },
 
   // ═══════════════════════════════════════════
-  // 11. FITAI
+  // 11. FITAI — الإحساس: الدقة
   // ═══════════════════════════════════════════
   {
     slug: "fitai",
-    name: { en: "Nzom FitAI", ar: "نزوم فت إيه آي" },
-    tagline: { en: "AI-Powered Fit Intelligence Platform", ar: "منصة ذكاء المقاسات بالذكاء الاصطناعي" },
-    description: { en: "Revolutionary AI platform that analyzes body measurements to recommend perfect-fit products — with fit profiles, smart recommendations, outfit builder, wardrobe management, and embeddable widgets.", ar: "منصة ذكاء اصطناعي ثورية تحلل قياسات الجسم للتوصية بمنتجات مثالية المقاس — مع ملفات المقاسات والتوصيات الذكية ومنشئ الأزياء وإدارة خزانة الملابس وعناصر قابلة للتضمين." },
-    icon: Cpu,
-    color: "from-fuchsia-500 to-purple-600",
-    problem: { en: "E-commerce fashion retailers lose billions to returns caused by sizing issues. Customers guess their size, order multiple sizes, and return what doesn't fit — costly for both sides.", ar: "يخسر تجار الأزياء الإلكترونية مليارات بسبب المرتجعات الناتجة عن مشاكل المقاسات. يخمّن العملاء مقاسهم ويطلبون مقاسات متعددة ويُرجعون ما لا يناسبهم." },
-    solution: { en: "Nzom FitAI uses advanced AI to analyze body measurements from photos, predict perfect sizes, recommend matching products, and reduce returns by up to 60%.", ar: "يستخدم نزوم فت إيه آي ذكاءً اصطناعياً متقدماً لتحليل قياسات الجسم من الصور والتنبؤ بالمقاسات المثالية والتوصية بالمنتجات المطابقة وتقليل المرتجعات بنسبة تصل إلى 60%." },
+    name: { en: "Nzom FitAI", ar: "نزوم فت" },
+    tagline: {
+      en: "Perfect fit. First time.",
+      ar: "مقاس مثالي. من أول مرة."
+    },
+    description: {
+      en: "No more returns because of wrong sizes. Nzom FitAI uses AI to predict the perfect fit for every customer — reducing returns, increasing satisfaction, and making online fashion finally work.",
+      ar: "بدون مرتجعات بسبب مقاسات غلط. نزوم فت يستخدم الذكاء الاصطناعي يتوقع المقاس المثالي لكل عميل — يقلل المرتجعات، يزيد الرضا، ويخلّي الموضة أونلاين أخيراً تشتغل."
+    },
+    emotionalHook: {
+      en: "Precision that delights.",
+      ar: "دقة تُسعد."
+    },
+    imagineDay: {
+      en: "Imagine a customer browsing your online store. Instead of guessing their size, AI tells them exactly which size will fit — based on their body, the fabric, and the brand's cut. They order confidently, it fits perfectly, they come back for more. Returns drop. Reviews improve. Your brand becomes known for getting it right.",
+      ar: "تخيّل عميل يتصفح متجرك أونلاين. بدل ما يخمّن مقاسه، الذكاء الاصطناعي يقوله بالضبط أي مقاس يناسبه — بناءً على جسمه والقماش وقصّة الماركة. يطلب بثقة، يلبسه بشكل مثالي، يرجع يشتري مرة ثانية. المرتجعات تنزل. التقييمات تتحسن. علامتك التجارية تشتهر إنها تجيبها صح."
+    },
+    icon: Shirt,
+    color: "from-fuchsia-500 to-pink-600",
+    problem: {
+      en: "Online fashion has a 30%+ return rate — mostly because of sizing. Customers guess, order multiple sizes, return what doesn't fit. It costs you money, damages your brand, and frustrates your customers.",
+      ar: "الموضة أونلاين فيها نسبة مرتجعات أكثر من 30% — أغلبها بسبب المقاسات. العملاء يخمّنون، يطلبون مقاسات متعددة، ويرجّعون اللي ما يناسب. يكلفك فلوس، يضر علامتك التجارية، ويحبط عملاءك."
+    },
+    solution: {
+      en: "Nzom FitAI uses computer vision and machine learning to recommend the exact right size. Customers order once, it fits, they're happy. Returns drop dramatically. Your bottom line improves.",
+      ar: "نزوم فت يستخدم الرؤية الحاسوبية والتعلم الآلي يوصي بالمقاس الصحيح بالضبط. العملاء يطلبون مرة، يناسبهم، يكونون سعداء. المرتجعات تنزل بشكل كبير. أرباحك تتحسن."
+    },
     features: [
-      { title: { en: "Instant Analysis", ar: "تحليل فوري" }, description: { en: "Upload a photo and get accurate body measurements in seconds using advanced AI.", ar: "حمّل صورة واحصل على قياسات جسم دقيقة في ثوانٍ باستخدام الذكاء الاصطناعي المتقدم." }, icon: Zap },
-      { title: { en: "Smart Recommendations", ar: "توصيات ذكية" }, description: { en: "Personalized product recommendations with fit scores, style matches, and size predictions.", ar: "توصيات منتجات مخصصة مع درجات الملاءمة ومطابقة الأنماط والتنبؤ بالمقاسات." }, icon: Sparkles },
-      { title: { en: "Outfit Builder", ar: "منشئ الأزياء" }, description: { en: "AI-curated outfit combinations based on your style preferences and body type.", ar: "تنسيقات أزياء مختارة بالذكاء الاصطناعي بناءً على تفضيلات أسلوبك ونوع جسمك." }, icon: Shirt },
-      { title: { en: "Fit Profile", ar: "ملف المقاسات" }, description: { en: "Save your measurements and preferences for instant size recommendations everywhere.", ar: "احفظ قياساتك وتفضيلاتك للحصول على توصيات مقاسات فورية في كل مكان." }, icon: UserCheck },
-      { title: { en: "Embeddable Widget", ar: "عنصر قابل للتضمين" }, description: { en: "Add fit recommendations to any e-commerce store with a simple code snippet.", ar: "أضف توصيات المقاسات لأي متجر إلكتروني بمقطع كود بسيط." }, icon: Eye },
-      { title: { en: "Privacy First", ar: "الخصوصية أولاً" }, description: { en: "Your data is encrypted and secure. We never share measurements or personal information.", ar: "بياناتك مشفرة وآمنة. لا نشارك القياسات أو المعلومات الشخصية أبداً." }, icon: Shield },
+      { title: { en: "AI Size Prediction", ar: "توقع المقاس بالذكاء الاصطناعي" }, description: { en: "Accurate size recommendations based on body measurements and garment data.", ar: "توصيات مقاس دقيقة بناءً على قياسات الجسم وبيانات الملابس." }, icon: Brain },
+      { title: { en: "Virtual Try-On", ar: "التجربة الافتراضية" }, description: { en: "See how clothes look on you before buying. Confidence before checkout.", ar: "شوف كيف الملابس تبان عليك قبل الشراء. ثقة قبل الدفع." }, icon: Eye },
+      { title: { en: "Body Scanning", ar: "مسح الجسم" }, description: { en: "Quick, private body measurements using just a smartphone camera.", ar: "قياسات جسم سريعة وخاصة باستخدام كاميرا الجوال فقط." }, icon: Sparkles },
+      { title: { en: "Brand Calibration", ar: "معايرة العلامة التجارية" }, description: { en: "Every brand fits differently. AI learns each brand's sizing patterns.", ar: "كل ماركة تلبس بشكل مختلف. الذكاء الاصطناعي يتعلم أنماط مقاسات كل ماركة." }, icon: Shirt },
+      { title: { en: "Analytics Dashboard", ar: "لوحة التحليلات" }, description: { en: "Track return rates, size distribution, and recommendation accuracy.", ar: "تابع نسب المرتجعات وتوزيع المقاسات ودقة التوصيات." }, icon: BarChart3 },
+      { title: { en: "E-commerce Integration", ar: "تكامل التجارة الإلكترونية" }, description: { en: "Plugs into Shopify, WooCommerce, or any custom store. Simple setup.", ar: "يتكامل مع شوبيفاي وووكومرس أو أي متجر مخصص. إعداد بسيط." }, icon: Store },
     ],
-    workflowDesc: { en: "Customer uploads photo → AI extracts measurements → algorithm matches against product size charts → generates fit scores → recommends best sizes → saves to profile for future purchases.", ar: "العميل يحمّل صورة → الذكاء الاصطناعي يستخرج القياسات → الخوارزمية تطابق مع جداول مقاسات المنتجات → تنشئ درجات الملاءمة → توصي بأفضل المقاسات → تحفظ في الملف للمشتريات المستقبلية." },
-    rbacDesc: { en: "Platform admins manage AI models and size charts, tenant admins configure their store integration, staff manage products, and customers access their fit profiles.", ar: "مدراء المنصة يديرون نماذج الذكاء الاصطناعي وجداول المقاسات ومدراء المتاجر يكوّنون تكاملهم والموظفون يديرون المنتجات والعملاء يصلون لملفات مقاساتهم." },
-    analyticsDesc: { en: "Track fit accuracy rates, return reduction metrics, widget conversion rates, popular size distributions, and customer engagement analytics across all integrated stores.", ar: "تتبع معدلات دقة الملاءمة ومقاييس تقليل المرتجعات ومعدلات تحويل العنصر وتوزيعات المقاسات الشائعة وتحليلات تفاعل العملاء عبر جميع المتاجر المتكاملة." },
-    securityDesc: { en: "End-to-end encryption for body measurements, GDPR-compliant data handling, no raw image storage, SOC 2 Type II certification, and privacy-by-design architecture.", ar: "تشفير شامل لقياسات الجسم ومعالجة بيانات متوافقة مع GDPR وعدم تخزين الصور الخام وشهادة SOC 2 Type II وهندسة الخصوصية بالتصميم." },
+    workflowDesc: { en: "Customer visits your store → AI recommends size → Customer orders confidently → It fits → Customer is happy → They come back. A simple loop that transforms your business.", ar: "العميل يزور متجرك ← الذكاء الاصطناعي يوصي بالمقاس ← العميل يطلب بثقة ← يناسبه ← العميل سعيد ← يرجع. دورة بسيطة تحوّل عملك." },
+    rbacDesc: { en: "Store admins manage products and calibration. Marketing sees conversion data. Customers get personalized recommendations. Your data stays your data.", ar: "مدراء المتجر يديرون المنتجات والمعايرة. التسويق يشوف بيانات التحويل. العملاء يحصلون توصيات مخصصة. بياناتك تبقى بياناتك." },
+    analyticsDesc: { en: "Watch your return rate drop in real time. Track which sizes sell most, which products need recalibration, and how AI recommendations affect revenue.", ar: "شاهد نسبة المرتجعات تنزل بالوقت الفعلي. تابع أي المقاسات تنباع أكثر، أي المنتجات تحتاج إعادة معايرة، وكيف توصيات الذكاء الاصطناعي تأثّر على الإيرادات." },
+    securityDesc: { en: "Body data is deeply personal. We encrypt everything, never share data, and comply with the strictest privacy standards.", ar: "بيانات الجسم شخصية جداً. نشفّر كل شيء، ما نشارك بيانات أبداً، ونلتزم بأعلى معايير الخصوصية." },
   },
 ];
