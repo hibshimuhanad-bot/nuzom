@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, Building2, Scale, Briefcase, Warehouse, Landmark, Server, ShieldCheck, Puzzle, Cloud, Sparkles } from "lucide-react";
+import { ArrowRight, Play, Building2, Scale, Briefcase, Warehouse, Landmark, Server, ShieldCheck, Puzzle, Cloud, Sparkles, CheckCircle, MessageCircle, Rocket, Users } from "lucide-react";
 import Layout from "@/components/Layout";
 import { products } from "@/data/products";
 import ScrollReveal from "@/components/ScrollReveal";
