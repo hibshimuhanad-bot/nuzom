@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, Building2, Scale, Briefcase, Warehouse, Landmark, Server, ShieldCheck, Puzzle, Cloud, Sparkles, CheckCircle, MessageCircle, Rocket, Users } from "lucide-react";
+import { ArrowRight, ArrowLeft, Play, Building2, Scale, Briefcase, Warehouse, Landmark, Server, ShieldCheck, Puzzle, Cloud, Sparkles, CheckCircle, MessageCircle, Rocket, Users } from "lucide-react";
 import Layout from "@/components/Layout";
 import { products } from "@/data/products";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -11,7 +11,8 @@ import ParticleField from "@/components/ParticleField";
    HERO — AI gradient mesh + floating orbs
    ════════════════════════════════════════════ */
 const Hero = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const DirectionalArrow = language === "ar" ? ArrowLeft : ArrowRight;
   return (
     <section className="relative min-h-[100vh] flex items-center justify-center ai-gradient-bg dot-pattern overflow-hidden">
       {/* Particle field */}
@@ -51,7 +52,7 @@ const Hero = () => {
             <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 glow-btn animate-pulse-glow rounded-xl">
               <Link to="/products">
                 {t("hero.explore")}
-                <ArrowRight className="h-4 w-4 ms-2" />
+                <DirectionalArrow className="h-4 w-4 ms-2" />
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-border/60 text-foreground hover:bg-muted/50 px-8 rounded-xl backdrop-blur-sm">
@@ -109,7 +110,7 @@ const BentoGrid = () => {
               <Link to={`/products/${product.slug}`} className="block h-full">
                 <div className={`bento-card p-6 h-full flex flex-col justify-between group relative overflow-hidden ${i === 0 ? "min-h-[320px]" : ""}`}>
                   {/* Status badge */}
-                  <span className={`absolute top-3 right-3 z-20 text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full ${i === 0 ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30" : "bg-muted text-muted-foreground border border-border/50"}`}>
+                  <span className={`absolute top-3 end-3 z-20 text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full ${i === 0 ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30" : "bg-muted text-muted-foreground border border-border/50"}`}>
                     {i === 0 ? t("ecosystem.available") : t("ecosystem.coming_soon")}
                   </span>
                   {/* Inner glow */}
@@ -129,7 +130,7 @@ const BentoGrid = () => {
 
                   <div className="relative z-10 mt-4 flex items-center text-sm text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <span>{t("ecosystem.learn_more")}</span>
-                    <ArrowRight className="h-3.5 w-3.5 ms-1" />
+                    {language === "ar" ? <ArrowLeft className="h-3.5 w-3.5 ms-1" /> : <ArrowRight className="h-3.5 w-3.5 ms-1" />}
                   </div>
                 </div>
               </Link>
@@ -229,7 +230,7 @@ const Industries = () => {
    CTA — AI gradient mesh + shimmer button
    ════════════════════════════════════════════ */
 const CTABanner = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   return (
     <section className="py-28 relative ai-gradient-bg overflow-hidden">
       <div className="absolute inset-0 dot-pattern" />
@@ -242,7 +243,7 @@ const CTABanner = () => {
           <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-10 glow-btn animate-pulse-glow rounded-xl">
             <Link to="/contact">
               {t("cta.button")}
-              <ArrowRight className="h-4 w-4 ms-2" />
+              {language === "ar" ? <ArrowLeft className="h-4 w-4 ms-2" /> : <ArrowRight className="h-4 w-4 ms-2" />}
             </Link>
           </Button>
         </ScrollReveal>

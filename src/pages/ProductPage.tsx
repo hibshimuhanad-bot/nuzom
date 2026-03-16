@@ -3,7 +3,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import Layout from "@/components/Layout";
 import { products } from "@/data/products";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, GitBranch, Users, BarChart3, ShieldCheck } from "lucide-react";
+import { ArrowRight, ArrowLeft, Sparkles, GitBranch, Users, BarChart3, ShieldCheck } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const ProductPage = () => {
@@ -42,7 +42,7 @@ const ProductPage = () => {
             <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 glow-btn rounded-xl">
               <Link to="/contact">
                 {t("product.demo")}
-                <ArrowRight className="h-4 w-4 ms-2" />
+                {language === "ar" ? <ArrowLeft className="h-4 w-4 ms-2" /> : <ArrowRight className="h-4 w-4 ms-2" />}
               </Link>
             </Button>
           </ScrollReveal>
@@ -147,7 +147,7 @@ const ProductPage = () => {
             <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-10 glow-btn rounded-xl">
               <Link to="/contact">
                 {t("product.demo")}
-                <ArrowRight className="h-4 w-4 ms-2" />
+                {language === "ar" ? <ArrowLeft className="h-4 w-4 ms-2" /> : <ArrowRight className="h-4 w-4 ms-2" />}
               </Link>
             </Button>
           </ScrollReveal>
