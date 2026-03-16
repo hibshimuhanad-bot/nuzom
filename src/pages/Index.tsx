@@ -62,7 +62,7 @@ const Hero = () => {
             </Button>
           </div>
           <p className="mt-8 text-sm text-muted-foreground font-mono tracking-wide">
-            11 Products · 8 Industries · 1 Platform
+            {t("hero.stats")}
           </p>
         </ScrollReveal>
       </div>
