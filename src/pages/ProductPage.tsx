@@ -147,7 +147,7 @@ const ProductPage = () => {
             <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-10 glow-btn rounded-xl">
               <Link to="/contact">
                 {t("product.demo")}
-                <ArrowRight className="h-4 w-4 ms-2" />
+                {language === "ar" ? <ArrowLeft className="h-4 w-4 ms-2" /> : <ArrowRight className="h-4 w-4 ms-2" />}
               </Link>
             </Button>
           </ScrollReveal>
