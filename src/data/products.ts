@@ -178,15 +178,15 @@ export const products: Product[] = [
     name: { en: "Nzom HR", ar: "نزوم الموارد البشرية" },
     tagline: {
       en: "Your team is taken care of.",
-      ar: "فريقك محتواه ومرتاح."
+      ar: "فريقك في أيدٍ أمينة."
     },
     description: {
       en: "When your people feel taken care of, they give their best. Nzom HR handles attendance, payroll, leaves, and growth — so your team trusts the system and you trust the numbers.",
-      ar: "لما فريقك يحس إنه محتواه، يعطي أفضل ما عنده. نزوم الموارد البشرية يتكفل بالحضور والرواتب والإجازات والتطوير — فريقك يثق بالنظام وأنت تثق بالأرقام."
+      ar: "لما فريقك يحس إنه محتواه ومقدّر، يعطيك أفضل ما عنده. نزوم الموارد البشرية يتولّى الحضور والرواتب والإجازات والتطوير — فريقك يثق بالنظام، وأنت تثق بالأرقام."
     },
     emotionalHook: {
       en: "Happy teams build great companies.",
-      ar: "الفرق السعيدة تبني شركات عظيمة."
+      ar: "الفريق الراضي يبني شركة عظيمة."
     },
     imagineDay: {
       en: "Imagine payroll running itself perfectly every month. Employees request leaves from their phones and get instant approvals. Attendance is tracked without arguments. Training paths are clear. Your HR team finally has time to focus on people, not paperwork.",
