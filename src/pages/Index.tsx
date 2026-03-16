@@ -11,7 +11,8 @@ import ParticleField from "@/components/ParticleField";
    HERO — AI gradient mesh + floating orbs
    ════════════════════════════════════════════ */
 const Hero = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const DirectionalArrow = language === "ar" ? ArrowLeft : ArrowRight;
   return (
     <section className="relative min-h-[100vh] flex items-center justify-center ai-gradient-bg dot-pattern overflow-hidden">
       {/* Particle field */}
