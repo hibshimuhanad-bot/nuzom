@@ -15,12 +15,12 @@ const testimonials = [
   {
     name: { en: "Mohammed Al-Harbi", ar: "محمد الحربي" },
     role: { en: "COO, Desert Star Construction", ar: "مدير العمليات، شركة نجم الصحراء للمقاولات" },
-    quote: { en: "The integration between Nzom Tasks and HR modules gave us unprecedented visibility across our 2,000+ workforce.", ar: "التكامل بين نزوم المهام والموارد البشرية أعطانا رؤية غير مسبوقة عبر أكثر من 2,000 موظف." },
+    quote: { en: "The integration between Nzom Tasks and Booking modules gave us unprecedented visibility across our 2,000+ workforce.", ar: "التكامل بين نزوم المهام ونظام الحجوزات أعطانا رؤية غير مسبوقة عبر أكثر من 2,000 موظف." },
   },
   {
     name: { en: "Dr. Nora Al-Zahrani", ar: "د. نورا الزهراني" },
     role: { en: "IT Manager, Riyadh Metro Project", ar: "مدير تقنية المعلومات، مشروع مترو الرياض" },
-    quote: { en: "Nzom Fleet reduced our vehicle maintenance costs by 30% with predictive analytics and smart scheduling.", ar: "نزوم الأسطول خفّض تكاليف صيانة المركبات بنسبة 30% بفضل التحليلات التنبؤية والجدولة الذكية." },
+    quote: { en: "Nzom Booking reduced our scheduling conflicts by 60% with smart room allocation and automated confirmations.", ar: "نزوم الحجوزات خفّض تعارضات الجدولة بنسبة 60% بفضل التخصيص الذكي للقاعات والتأكيدات الآلية." },
   },
 ];
 
@@ -63,7 +63,7 @@ const Testimonials = () => {
         </div>
         <ScrollReveal>
           <p className="text-sm text-muted-foreground uppercase tracking-widest text-center mt-8">
-            Trusted by enterprises across Saudi Arabia &amp; the Gulf
+            {t("testimonials.trust")}
           </p>
         </ScrollReveal>
       </div>

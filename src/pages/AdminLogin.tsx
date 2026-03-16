@@ -6,11 +6,13 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { Lock } from "lucide-react";
 
 const AdminLogin = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
+  const { t, language } = useLanguage();
   const [loading, setLoading] = useState(false);
   const [isSignUp, setIsSignUp] = useState(false);
   const [email, setEmail] = useState("");
@@ -24,7 +26,7 @@ const AdminLogin = () => {
       if (isSignUp) {
         const { error } = await supabase.auth.signUp({ email, password });
         if (error) throw error;
-        toast({ title: "Account created! Please contact an admin to grant you access." });
+        toast({ title: language === "ar" ? "تم إنشاء الحساب! يرجى التواصل مع المسؤول لمنحك الصلاحيات." : "Account created! Please contact an admin to grant you access." });
         setIsSignUp(false);
       } else {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
@@ -39,8 +41,8 @@ const AdminLogin = () => {
         if (!roles || roles.length === 0) {
           await supabase.auth.signOut();
           toast({
-            title: "Access denied",
-            description: "You do not have admin privileges.",
+            title: language === "ar" ? "تم رفض الوصول" : "Access denied",
+            description: language === "ar" ? "ليس لديك صلاحيات المسؤول." : "You do not have admin privileges.",
             variant: "destructive",
           });
           return;
@@ -50,7 +52,7 @@ const AdminLogin = () => {
       }
     } catch (err: any) {
       toast({
-        title: "Error",
+        title: language === "ar" ? "خطأ" : "Error",
         description: err.message,
         variant: "destructive",
       });
@@ -66,13 +68,13 @@ const AdminLogin = () => {
           <div className="mx-auto w-12 h-12 rounded-xl bg-secondary flex items-center justify-center mb-2">
             <Lock className="h-6 w-6 text-secondary-foreground" />
           </div>
-          <CardTitle className="text-foreground">Admin Dashboard</CardTitle>
-          <CardDescription>{isSignUp ? "Create an account" : "Sign in to manage submissions"}</CardDescription>
+          <CardTitle className="text-foreground">{t("admin.title")}</CardTitle>
+          <CardDescription>{isSignUp ? t("admin.signup_desc") : t("admin.signin")}</CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleAuth} className="space-y-4">
             <div className="space-y-2">
-              <Label>Email</Label>
+              <Label>{t("admin.email")}</Label>
               <Input
                 type="email"
                 required
@@ -82,7 +84,7 @@ const AdminLogin = () => {
               />
             </div>
             <div className="space-y-2">
-              <Label>Password</Label>
+              <Label>{t("admin.password")}</Label>
               <Input
                 type="password"
                 required
@@ -93,13 +95,13 @@ const AdminLogin = () => {
               />
             </div>
             <Button type="submit" disabled={loading} className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90">
-              {loading ? "..." : isSignUp ? "Sign Up" : "Sign In"}
+              {loading ? "..." : isSignUp ? t("admin.register") : t("admin.login")}
             </Button>
           </form>
           <p className="text-center text-sm text-muted-foreground mt-4">
-            {isSignUp ? "Already have an account?" : "Need an account?"}{" "}
+            {isSignUp ? t("admin.has_account") : t("admin.need_account")}{" "}
             <button onClick={() => setIsSignUp(!isSignUp)} className="text-secondary hover:underline">
-              {isSignUp ? "Sign in" : "Sign up"}
+              {isSignUp ? t("admin.login") : t("admin.register")}
             </button>
           </p>
         </CardContent>

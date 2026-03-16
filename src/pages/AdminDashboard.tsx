@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { LogOut, Trash2, Mail, Phone, Package, MessageSquare, RefreshCw } from "lucide-react";
 
 interface Submission {
@@ -21,6 +22,7 @@ interface Submission {
 const AdminDashboard = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
+  const { t, language } = useLanguage();
   const [submissions, setSubmissions] = useState<Submission[]>([]);
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState<any>(null);
@@ -66,7 +68,7 @@ const AdminDashboard = () => {
       .order("created_at", { ascending: false });
 
     if (error) {
-      toast({ title: "Error loading submissions", variant: "destructive" });
+      toast({ title: language === "ar" ? "خطأ في تحميل الطلبات" : "Error loading submissions", variant: "destructive" });
     } else {
       setSubmissions(data || []);
     }
@@ -76,10 +78,10 @@ const AdminDashboard = () => {
   const handleDelete = async (id: string) => {
     const { error } = await supabase.from("contact_submissions").delete().eq("id", id);
     if (error) {
-      toast({ title: "Error deleting", variant: "destructive" });
+      toast({ title: language === "ar" ? "خطأ في الحذف" : "Error deleting", variant: "destructive" });
     } else {
       setSubmissions((prev) => prev.filter((s) => s.id !== id));
-      toast({ title: "Submission deleted" });
+      toast({ title: language === "ar" ? "تم حذف الطلب" : "Submission deleted" });
     }
   };
 
@@ -87,8 +89,9 @@ const AdminDashboard = () => {
     await supabase.auth.signOut();
   };
 
+  const dateLocale = language === "ar" ? "ar-SA" : "en-US";
   const formatDate = (d: string) =>
-    new Date(d).toLocaleDateString("en-US", {
+    new Date(d).toLocaleDateString(dateLocale, {
       year: "numeric", month: "short", day: "numeric", hour: "2-digit", minute: "2-digit",
     });
 
@@ -101,12 +104,12 @@ const AdminDashboard = () => {
             <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center">
               <span className="text-secondary-foreground font-bold text-sm">N</span>
             </div>
-            <h1 className="text-primary-foreground font-bold text-lg">Admin Dashboard</h1>
+            <h1 className="text-primary-foreground font-bold text-lg">{t("admin.title")}</h1>
           </div>
           <div className="flex items-center gap-3">
             <span className="text-primary-foreground/60 text-sm hidden sm:inline">{user?.email}</span>
             <Button variant="ghost" size="sm" onClick={handleLogout} className="text-primary-foreground/80 hover:text-primary-foreground">
-              <LogOut className="h-4 w-4 me-1" /> Logout
+              <LogOut className="h-4 w-4 me-1" /> {t("admin.logout")}
             </Button>
           </div>
         </div>
@@ -117,13 +120,13 @@ const AdminDashboard = () => {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
           <Card>
             <CardContent className="p-6">
-              <p className="text-muted-foreground text-sm">Total Submissions</p>
+              <p className="text-muted-foreground text-sm">{t("admin.total")}</p>
               <p className="text-3xl font-bold text-foreground">{submissions.length}</p>
             </CardContent>
           </Card>
           <Card>
             <CardContent className="p-6">
-              <p className="text-muted-foreground text-sm">This Month</p>
+              <p className="text-muted-foreground text-sm">{t("admin.this_month")}</p>
               <p className="text-3xl font-bold text-foreground">
                 {submissions.filter((s) => new Date(s.created_at).getMonth() === new Date().getMonth()).length}
               </p>
@@ -131,7 +134,7 @@ const AdminDashboard = () => {
           </Card>
           <Card>
             <CardContent className="p-6">
-              <p className="text-muted-foreground text-sm">With Product Interest</p>
+              <p className="text-muted-foreground text-sm">{t("admin.with_product")}</p>
               <p className="text-3xl font-bold text-foreground">
                 {submissions.filter((s) => s.product).length}
               </p>
@@ -142,24 +145,24 @@ const AdminDashboard = () => {
         {/* Table */}
         <Card>
           <CardHeader className="flex flex-row items-center justify-between">
-            <CardTitle className="text-foreground">Contact Submissions</CardTitle>
+            <CardTitle className="text-foreground">{t("admin.submissions")}</CardTitle>
             <Button variant="outline" size="sm" onClick={fetchSubmissions} disabled={loading}>
-              <RefreshCw className={`h-4 w-4 me-1 ${loading ? "animate-spin" : ""}`} /> Refresh
+              <RefreshCw className={`h-4 w-4 me-1 ${loading ? "animate-spin" : ""}`} /> {t("admin.refresh")}
             </Button>
           </CardHeader>
           <CardContent>
             {submissions.length === 0 && !loading ? (
-              <p className="text-muted-foreground text-center py-12">No submissions yet.</p>
+              <p className="text-muted-foreground text-center py-12">{t("admin.no_submissions")}</p>
             ) : (
               <div className="overflow-x-auto">
                 <Table>
                   <TableHeader>
                     <TableRow>
-                      <TableHead>Date</TableHead>
-                      <TableHead>Company</TableHead>
-                      <TableHead>Contact</TableHead>
-                      <TableHead>Product</TableHead>
-                      <TableHead>Message</TableHead>
+                      <TableHead>{t("admin.date")}</TableHead>
+                      <TableHead>{t("admin.company")}</TableHead>
+                      <TableHead>{t("admin.contact")}</TableHead>
+                      <TableHead>{t("admin.product_col")}</TableHead>
+                      <TableHead>{t("admin.message")}</TableHead>
                       <TableHead className="w-12"></TableHead>
                     </TableRow>
                   </TableHeader>

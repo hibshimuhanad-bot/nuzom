@@ -4,6 +4,7 @@ import { products } from "@/data/products";
 
 const Footer = () => {
   const { t, language } = useLanguage();
+  const brandName = language === "ar" ? "مختبرات الأنظمة" : "Nzom Laps";
 
   return (
     <footer className="bg-background text-foreground border-t border-border/30 dot-pattern">
@@ -15,9 +16,7 @@ const Footer = () => {
               <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center">
                 <span className="text-secondary-foreground font-bold text-sm">N</span>
               </div>
-              <span className="font-bold text-lg">
-                {language === "ar" ? "مختبرات الأنظمة" : "Nzom Laps"}
-              </span>
+              <span className="font-bold text-lg">{brandName}</span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
               {t("footer.description")}
@@ -63,7 +62,7 @@ const Footer = () => {
 
         <div className="border-t border-border mt-12 pt-8 text-center">
           <p className="text-muted-foreground/60 text-sm">
-            © {new Date().getFullYear()} Nzom Laps. {t("footer.rights")}
+            © {new Date().getFullYear()} {brandName}. {t("footer.rights")}
           </p>
         </div>
       </div>
