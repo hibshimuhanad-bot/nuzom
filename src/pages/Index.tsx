@@ -42,10 +42,10 @@ const Hero = () => {
             </span>
           </div>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] mb-8 text-gradient">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold leading-[1.15] md:leading-[1.1] mb-6 md:mb-8 text-gradient">
             {t("hero.title")}
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground mb-12 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-base md:text-xl text-muted-foreground mb-10 md:mb-12 leading-relaxed max-w-2xl mx-auto">
             {t("hero.subtitle")}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -62,7 +62,7 @@ const Hero = () => {
               </Link>
             </Button>
           </div>
-          <p className="mt-8 text-sm text-muted-foreground font-mono tracking-wide">
+          <p className="mt-6 md:mt-8 text-xs md:text-sm text-muted-foreground tracking-wide">
             {t("hero.stats")}
           </p>
         </ScrollReveal>
