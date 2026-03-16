@@ -110,7 +110,7 @@ const BentoGrid = () => {
               <Link to={`/products/${product.slug}`} className="block h-full">
                 <div className={`bento-card p-6 h-full flex flex-col justify-between group relative overflow-hidden ${i === 0 ? "min-h-[320px]" : ""}`}>
                   {/* Status badge */}
-                  <span className={`absolute top-3 right-3 z-20 text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full ${i === 0 ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30" : "bg-muted text-muted-foreground border border-border/50"}`}>
+                  <span className={`absolute top-3 end-3 z-20 text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full ${i === 0 ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30" : "bg-muted text-muted-foreground border border-border/50"}`}>
                     {i === 0 ? t("ecosystem.available") : t("ecosystem.coming_soon")}
                   </span>
                   {/* Inner glow */}
