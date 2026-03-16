@@ -408,15 +408,15 @@ export const products: Product[] = [
     name: { en: "Nzom Tickets", ar: "نزوم التذاكر" },
     tagline: {
       en: "Problems solved. Calmly.",
-      ar: "مشاكل تنحل. بهدوء."
+      ar: "المشاكل تنحل. بكل هدوء."
     },
     description: {
       en: "IT issues don't have to mean chaos. Nzom Tickets brings calm to your helpdesk — every ticket tracked, every change managed, every problem resolved methodically. Your IT team works with purpose, not panic.",
-      ar: "مشاكل التقنية ما لازم تعني فوضى. نزوم التذاكر يجيب الهدوء لمكتب المساعدة — كل تذكرة متابَعة، كل تغيير مُدار، كل مشكلة تنحل بمنهجية. فريقك التقني يشتغل بهدف، مو بذعر."
+      ar: "مشاكل التقنية ما لازم تعني فوضى وضغط. نزوم التذاكر يجلب الهدوء لفريقك التقني — كل تذكرة متابَعة، كل تغيير مُدار، وكل مشكلة تنحل بمنهجية واضحة. فريقك يشتغل بتركيز، مو بذعر."
     },
     emotionalHook: {
       en: "Calm in the storm.",
-      ar: "هدوء وسط العاصفة."
+      ar: "هدوء وسط أي عاصفة تقنية."
     },
     imagineDay: {
       en: "Imagine a Monday morning where your helpdesk dashboard is green. Tickets are auto-assigned to the right people. AI suggests solutions before agents even read the full description. Changes go through proper approvals. Your IT team sips coffee and resolves issues methodically. No fire drills.",
