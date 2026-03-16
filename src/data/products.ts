@@ -1,16 +1,12 @@
 import {
-  Shield, Scale, CheckSquare, Users, Truck,
+  Shield, Scale, CheckSquare, Users,
   LayoutDashboard, Lock, Workflow, ClipboardCheck, BarChart3, Globe,
-  PenTool, Ticket, Wallet, CalendarDays, PieChart, Cpu,
-  FileText, AlertTriangle, Flame, Cog, BookOpen, Megaphone,
-  Briefcase, Calendar, Gavel, Brain, Headphones,
+  CalendarDays,
+  FileText, AlertTriangle, Flame, Cog, BookOpen,
+  Briefcase, Calendar, Gavel,
   Target, Layers, KanbanSquare, Clock,
-  UserCheck, CreditCard, GraduationCap, Building2,
-  Fuel, Wrench, FileCheck, ShieldAlert,
-  TrendingUp, Database, Filter, Share2,
-  Receipt, Package, Store, DollarSign,
-  Zap, Sparkles, Eye, Shirt,
-  GitBranch, Server, FolderTree, Handshake
+  CreditCard, Building2,
+  Receipt
 } from "lucide-react";
 
 export interface Product {
