@@ -500,15 +500,15 @@ export const products: Product[] = [
     name: { en: "Nzom FitAI", ar: "نزوم فت" },
     tagline: {
       en: "Perfect fit. First time.",
-      ar: "مقاس مثالي. من أول مرة."
+      ar: "المقاس الصح. من أول مرة."
     },
     description: {
       en: "No more returns because of wrong sizes. Nzom FitAI uses AI to predict the perfect fit for every customer — reducing returns, increasing satisfaction, and making online fashion finally work.",
-      ar: "بدون مرتجعات بسبب مقاسات غلط. نزوم فت يستخدم الذكاء الاصطناعي يتوقع المقاس المثالي لكل عميل — يقلل المرتجعات، يزيد الرضا، ويخلّي الموضة أونلاين أخيراً تشتغل."
+      ar: "خلاص من المرتجعات بسبب مقاسات غلط. نزوم فت يستخدم الذكاء الاصطناعي عشان يتوقع المقاس المثالي لكل عميل — يقلّل المرتجعات، يرفع الرضا، ويخلّي الموضة أونلاين أخيراً تشتغل صح."
     },
     emotionalHook: {
       en: "Precision that delights.",
-      ar: "دقة تُسعد."
+      ar: "دقة تصنع الفرق."
     },
     imagineDay: {
       en: "Imagine a customer browsing your online store. Instead of guessing their size, AI tells them exactly which size will fit — based on their body, the fabric, and the brand's cut. They order confidently, it fits perfectly, they come back for more. Returns drop. Reviews improve. Your brand becomes known for getting it right.",
