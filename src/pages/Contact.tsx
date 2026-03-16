@@ -57,7 +57,7 @@ const Contact = () => {
   };
 
   const contactInfo = [
-    { icon: Mail, label: "Email", value: "info@nuzomlab.com" },
+    { icon: Mail, label: "Email", value: "info@nzomlaps.com" },
     { icon: Phone, label: language === "ar" ? "الهاتف" : "Phone", value: "+966 11 XXX XXXX" },
     { icon: MapPin, label: language === "ar" ? "الموقع" : "Location", value: language === "ar" ? "الرياض، المملكة العربية السعودية" : "Riyadh, Saudi Arabia" },
   ];

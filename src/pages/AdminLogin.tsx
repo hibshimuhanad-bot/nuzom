@@ -78,7 +78,7 @@ const AdminLogin = () => {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="admin@nuzomlab.com"
+                placeholder="admin@nzomlaps.com"
               />
             </div>
             <div className="space-y-2">

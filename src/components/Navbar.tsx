@@ -30,7 +30,7 @@ const Navbar = () => {
             <span className="text-secondary-foreground font-bold text-sm">N</span>
           </div>
           <span className="text-foreground font-bold text-lg">
-            {language === "ar" ? "نُظُم لاب" : "Nuzom Lab"}
+            {language === "ar" ? "مختبرات الأنظمة" : "Nzom Laps"}
           </span>
         </Link>
 
@@ -106,7 +106,7 @@ const Navbar = () => {
             </SheetTrigger>
             <SheetContent side={language === "ar" ? "right" : "left"} className="bg-background border-border">
               <SheetTitle className="text-foreground">
-                {language === "ar" ? "نُظُم لاب" : "Nuzom Lab"}
+                {language === "ar" ? "مختبرات الأنظمة" : "Nzom Laps"}
               </SheetTitle>
               <div className="flex flex-col gap-4 mt-8">
                 {navLinks.map((link) => (
