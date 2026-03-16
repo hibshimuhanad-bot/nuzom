@@ -1,8 +1,8 @@
 import {
   Shield, Scale, CheckSquare, Users,
   LayoutDashboard, Lock, Workflow, ClipboardCheck, BarChart3, Globe,
-  CalendarDays,
-  FileText, AlertTriangle, Flame, Cog, BookOpen,
+  CalendarDays, Brain,
+  FileText, AlertTriangle, Flame, Cog, BookOpen, FileCheck,
   Briefcase, Calendar, Gavel,
   Target, Layers, KanbanSquare, Clock,
   CreditCard, Building2,
