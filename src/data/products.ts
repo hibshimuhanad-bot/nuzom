@@ -132,15 +132,15 @@ export const products: Product[] = [
     name: { en: "Nzom Tasks", ar: "نزوم المهام" },
     tagline: {
       en: "Relax. Everything is under control.",
-      ar: "ارتاح.. كل شيء تحت السيطرة."
+      ar: "ارتاح.. كل شيء ماشي بالضبط."
     },
     description: {
       en: "Open the system in the morning and find every task clear, every project on track, nothing lost. Nzom Tasks gives you the relief of knowing exactly where everything stands.",
-      ar: "افتح النظام الصبح وتلاقي كل مهمة واضحة، كل مشروع ماشي، ما في شيء ضايع. نزوم المهام يعطيك راحة إنك تعرف بالضبط وين كل شيء."
+      ar: "افتح النظام الصبح وكل مهمة في مكانها، كل مشروع ماشي، وما في شيء ضايع. نزوم المهام يعطيك الراحة إنك تعرف بالضبط وين كل شيء واقف."
     },
     emotionalHook: {
       en: "Finally, clarity.",
-      ar: "أخيراً، وضوح."
+      ar: "أخيراً.. كل شيء واضح."
     },
     imagineDay: {
       en: "Imagine opening your laptop and seeing a clean, organized board. Every task assigned, every deadline visible, every project progressing. No more chasing people. No more 'did you finish that?' messages. Just calm, productive work.",
