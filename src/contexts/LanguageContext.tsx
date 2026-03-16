@@ -70,9 +70,9 @@ const translations: Record<string, Record<Language, string>> = {
   "testimonials.subtitle": { en: "See what our clients say about working with us", ar: "اطلع على آراء عملائنا حول العمل معنا" },
 
   // CTA
-  "cta.title": { en: "Your solutions are ready — one step away", ar: "حلولك جاهزة — خطوة واحدة تفصلك" },
-  "cta.subtitle": { en: "Contact us now and get your system ready to work. No waiting, no complexity.", ar: "تواصل معنا الآن واحصل على نظامك جاهز للعمل. بدون انتظار، بدون تعقيد." },
-  "cta.button": { en: "Contact Us Now", ar: "تواصل معنا الآن" },
+  "cta.title": { en: "Your solutions are ready — one step away", ar: "حلولك جاهزة — تفصلك خطوة وحدة بس" },
+  "cta.subtitle": { en: "Contact us now and get your system ready to work. No waiting, no complexity.", ar: "تواصل معنا الحين واحصل على نظامك جاهز للعمل. بدون انتظار، وبدون أي تعقيد." },
+  "cta.button": { en: "Contact Us Now", ar: "تواصل معنا الحين" },
 
   // About
   "about.story.title": { en: "Our Story", ar: "قصتنا" },
@@ -99,16 +99,16 @@ const translations: Record<string, Record<Language, string>> = {
   "blog.subtitle": { en: "Latest insights on digital transformation and enterprise operations", ar: "أحدث الرؤى حول التحول الرقمي وعمليات المؤسسات" },
 
   // Product common
-  "product.features": { en: "All this, ready for you", ar: "كل هذا جاهز لك" },
+  "product.features": { en: "All this, ready for you", ar: "كل هذا، جاهز لك الحين" },
   "product.dashboard": { en: "A look at your system", ar: "نظرة على نظامك" },
-  "product.workflow": { en: "Let the system work for you", ar: "خلّ النظام يشتغل عنك" },
-  "product.rbac": { en: "Everyone sees what matters to them", ar: "كل واحد يشوف اللي يخصه" },
-  "product.analytics": { en: "See the full picture", ar: "شوف الصورة كاملة" },
-  "product.security": { en: "Your data is safe", ar: "بياناتك في أمان" },
-  "product.demo": { en: "Contact Us Now", ar: "تواصل معنا الآن" },
-  "product.problem": { en: "The pain you feel", ar: "الألم اللي تحسه" },
-  "product.solution": { en: "How your life changes", ar: "كيف تتغير حياتك" },
-  "product.imagine": { en: "Imagine...", ar: "تخيّل..." },
+  "product.workflow": { en: "Let the system work for you", ar: "النظام يشتغل — وأنت ترتاح" },
+  "product.rbac": { en: "Everyone sees what matters to them", ar: "كل شخص يشوف اللي يخصّه بس" },
+  "product.analytics": { en: "See the full picture", ar: "الصورة الكاملة قدّامك" },
+  "product.security": { en: "Your data is safe", ar: "بياناتك محميّة بالكامل" },
+  "product.demo": { en: "Contact Us Now", ar: "تواصل معنا الحين" },
+  "product.problem": { en: "The pain you feel", ar: "المشكلة اللي تعيشها كل يوم" },
+  "product.solution": { en: "How your life changes", ar: "كيف تتغيّر حياتك معنا" },
+  "product.imagine": { en: "Imagine...", ar: "تخيّل معي..." },
 
   // Footer
   "footer.description": { en: "Building enterprise SaaS systems for modern organizations.", ar: "بناء أنظمة SaaS مؤسسية للمنظمات الحديثة." },

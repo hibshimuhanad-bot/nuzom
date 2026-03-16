@@ -40,11 +40,11 @@ export const products: Product[] = [
     name: { en: "Nzom HSSE", ar: "نزوم السلامة" },
     tagline: {
       en: "Sleep well. Your sites are safe.",
-      ar: "نَم مرتاح.. مواقعك آمنة."
+      ar: "نَم وعينك مرتاحة.. مواقعك في أمان."
     },
     description: {
       en: "Imagine ending your day knowing every permit is tracked, every risk is logged, and every worker goes home safe. That's Nzom HSSE — peace of mind, not just a system.",
-      ar: "تخيّل تنهي يومك وأنت مطمن إن كل تصريح متابَع، كل خطر مسجّل، وكل عامل راجع لبيته سالم. هذا نزوم السلامة — راحة بال، مو بس نظام."
+      ar: "تخيّل تنهي يومك وأنت متطمّن إن كل تصريح متابَع، وكل خطر مرصود، وكل عامل يرجع لأهله سالم. هذا نزوم السلامة — مو مجرد نظام، هذا راحة بال حقيقية."
     },
     emotionalHook: {
       en: "Peace of mind starts here.",
@@ -86,15 +86,15 @@ export const products: Product[] = [
     name: { en: "Nzom Legal", ar: "نزوم القانونية" },
     tagline: {
       en: "Nothing slips through. Ever.",
-      ar: "ما يضيع عليك شيء. أبداً."
+      ar: "ولا شيء يفلت منك. أبداً."
     },
     description: {
       en: "Every case tracked. Every deadline met. Every document at your fingertips. Nzom Legal gives you total control over your legal operations — so you focus on winning, not searching.",
-      ar: "كل قضية متابعة. كل موعد ملتزم فيه. كل مستند تحت يدك. نزوم القانونية يعطيك سيطرة كاملة على عملياتك القانونية — تركّز على الفوز، مو على البحث."
+      ar: "كل قضية متابَعة. كل موعد ملتزم فيه. كل مستند في متناول يدك. نزوم القانونية يمنحك سيطرة مطلقة على عملياتك القانونية — عشان تركّز على كسب القضايا، مو البحث عن الملفات."
     },
     emotionalHook: {
       en: "Total control over your legal world.",
-      ar: "سيطرة كاملة على عالمك القانوني."
+      ar: "عالمك القانوني، تحت سيطرتك الكاملة."
     },
     imagineDay: {
       en: "Imagine walking into court with every document ready, every precedent researched, every deadline color-coded on your calendar. Your client asks about case status — you answer in seconds, not hours. Your team works in sync without a single email chain. That's legal work, done right.",
@@ -132,15 +132,15 @@ export const products: Product[] = [
     name: { en: "Nzom Tasks", ar: "نزوم المهام" },
     tagline: {
       en: "Relax. Everything is under control.",
-      ar: "ارتاح.. كل شيء تحت السيطرة."
+      ar: "ارتاح.. كل شيء ماشي بالضبط."
     },
     description: {
       en: "Open the system in the morning and find every task clear, every project on track, nothing lost. Nzom Tasks gives you the relief of knowing exactly where everything stands.",
-      ar: "افتح النظام الصبح وتلاقي كل مهمة واضحة، كل مشروع ماشي، ما في شيء ضايع. نزوم المهام يعطيك راحة إنك تعرف بالضبط وين كل شيء."
+      ar: "افتح النظام الصبح وكل مهمة في مكانها، كل مشروع ماشي، وما في شيء ضايع. نزوم المهام يعطيك الراحة إنك تعرف بالضبط وين كل شيء واقف."
     },
     emotionalHook: {
       en: "Finally, clarity.",
-      ar: "أخيراً، وضوح."
+      ar: "أخيراً.. كل شيء واضح."
     },
     imagineDay: {
       en: "Imagine opening your laptop and seeing a clean, organized board. Every task assigned, every deadline visible, every project progressing. No more chasing people. No more 'did you finish that?' messages. Just calm, productive work.",
@@ -178,15 +178,15 @@ export const products: Product[] = [
     name: { en: "Nzom HR", ar: "نزوم الموارد البشرية" },
     tagline: {
       en: "Your team is taken care of.",
-      ar: "فريقك محتواه ومرتاح."
+      ar: "فريقك في أيدٍ أمينة."
     },
     description: {
       en: "When your people feel taken care of, they give their best. Nzom HR handles attendance, payroll, leaves, and growth — so your team trusts the system and you trust the numbers.",
-      ar: "لما فريقك يحس إنه محتواه، يعطي أفضل ما عنده. نزوم الموارد البشرية يتكفل بالحضور والرواتب والإجازات والتطوير — فريقك يثق بالنظام وأنت تثق بالأرقام."
+      ar: "لما فريقك يحس إنه محتواه ومقدّر، يعطيك أفضل ما عنده. نزوم الموارد البشرية يتولّى الحضور والرواتب والإجازات والتطوير — فريقك يثق بالنظام، وأنت تثق بالأرقام."
     },
     emotionalHook: {
       en: "Happy teams build great companies.",
-      ar: "الفرق السعيدة تبني شركات عظيمة."
+      ar: "الفريق الراضي يبني شركة عظيمة."
     },
     imagineDay: {
       en: "Imagine payroll running itself perfectly every month. Employees request leaves from their phones and get instant approvals. Attendance is tracked without arguments. Training paths are clear. Your HR team finally has time to focus on people, not paperwork.",
@@ -224,15 +224,15 @@ export const products: Product[] = [
     name: { en: "Nzom Fleet", ar: "نزوم الأسطول" },
     tagline: {
       en: "Your fleet, under your eyes.",
-      ar: "أسطولك، تحت عينك."
+      ar: "أسطولك كامل، تحت نظرك."
     },
     description: {
       en: "Every vehicle tracked. Every fuel receipt accounted for. Every maintenance scheduled before it's too late. Nzom Fleet gives you the confidence that your fleet is running efficiently — even when you're not watching.",
-      ar: "كل مركبة متابَعة. كل إيصال وقود محسوب. كل صيانة مجدولة قبل فوات الأوان. نزوم الأسطول يعطيك الثقة إن أسطولك يشتغل بكفاءة — حتى لو ما كنت تراقب."
+      ar: "كل مركبة متابَعة. كل ريال وقود محسوب. كل صيانة مجدولة قبل فوات الأوان. نزوم الأسطول يعطيك الثقة إن أسطولك يشتغل بأعلى كفاءة — حتى وأنت مو هناك."
     },
     emotionalHook: {
       en: "Control without micromanaging.",
-      ar: "تحكّم بدون ملاحقة."
+      ar: "تحكّم كامل، بدون ما تلاحق أحد."
     },
     imagineDay: {
       en: "Imagine checking your fleet dashboard and seeing every vehicle's location, fuel level, and next maintenance date — all in real time. A driver completes a safety inspection from his phone before starting. An alert notifies you that a registration expires next week. Everything handled, nothing missed.",
@@ -270,15 +270,15 @@ export const products: Product[] = [
     name: { en: "Nzom Analytics", ar: "نزوم التحليلات" },
     tagline: {
       en: "See the full picture. Decide with confidence.",
-      ar: "شوف الصورة كاملة. قرّر بثقة."
+      ar: "شوف الصورة كاملة. وقرّر وأنت واثق."
     },
     description: {
       en: "Stop guessing. Nzom Analytics turns your scattered data into clear, visual insights. Connect everything, see everything, and finally make decisions you're confident about.",
-      ar: "وقّف التخمين. نزوم التحليلات يحوّل بياناتك المبعثرة إلى رؤى واضحة ومرئية. اربط كل شيء، شوف كل شيء، وأخيراً اتخذ قرارات واثق فيها."
+      ar: "كفاية تخمين. نزوم التحليلات يحوّل بياناتك المبعثرة لرؤى واضحة ومرئية. اربط كل شيء، شوف كل شيء، وأخيراً خذ قرارات وأنت مرتاح لها."
     },
     emotionalHook: {
       en: "Clarity changes everything.",
-      ar: "الوضوح يغيّر كل شيء."
+      ar: "لما تشوف الصورة واضحة، كل شيء يتغيّر."
     },
     imagineDay: {
       en: "Imagine walking into a meeting with a single dashboard that tells the whole story. No more 'let me check and get back to you.' No more conflicting spreadsheets. Just clear data, clear insights, and clear decisions. Your board is impressed. Your team is aligned. You're confident.",
@@ -316,15 +316,15 @@ export const products: Product[] = [
     name: { en: "Nzom Booking", ar: "نزوم الحجوزات" },
     tagline: {
       en: "Clients book easily. You grow effortlessly.",
-      ar: "عملاءك يحجزون بسهولة. وأنت تنمو بدون جهد."
+      ar: "عملاءك يحجزون بسهولة. وأنت تنمو بدون ما تحس."
     },
     description: {
       en: "No more WhatsApp chaos. No more double bookings. Nzom Booking lets your clients book, pay, and subscribe — smoothly, professionally, automatically. You focus on service, we handle the logistics.",
-      ar: "بدون فوضى الواتساب. بدون حجوزات مزدوجة. نزوم الحجوزات يخلي عملاءك يحجزون ويدفعون ويشتركون — بسلاسة، باحترافية، تلقائياً. أنت ركّز على الخدمة، واحنا نتكفل باللوجستيات."
+      ar: "خلاص من فوضى الواتساب. خلاص من الحجوزات المزدوجة. نزوم الحجوزات يخلّي عملاءك يحجزون ويدفعون ويشتركون — بسلاسة واحترافية وتلقائياً. أنت ركّز على خدمتك، والباقي علينا."
     },
     emotionalHook: {
       en: "Smooth bookings, happy clients.",
-      ar: "حجوزات سلسة، عملاء سعداء."
+      ar: "حجوزات بدون صداع، عملاء راضين."
     },
     imagineDay: {
       en: "Imagine your clients booking their appointments from their phones at 2 AM. Confirmations sent automatically. Reminders before the session. Invoices generated instantly. Your front desk isn't glued to the phone anymore. Your branches run independently. Your revenue grows while you sleep.",
@@ -362,15 +362,15 @@ export const products: Product[] = [
     name: { en: "Nzom Sign", ar: "نزوم التوقيع" },
     tagline: {
       en: "Sign it. Done. Move on.",
-      ar: "وقّعه. خلاص. امشِ."
+      ar: "وقّع. خلاص. وامشِ لشغلك."
     },
     description: {
       en: "Stop printing, scanning, and waiting. Nzom Sign lets you send, sign, and seal documents in minutes — not days. Legally binding, instantly tracked, always available.",
-      ar: "وقّف الطباعة والمسح والانتظار. نزوم التوقيع يخلّيك ترسل وتوقّع وتختم المستندات في دقائق — مو أيام. ملزم قانونياً، متابَع فوراً، متوفر دايماً."
+      ar: "كفاية طباعة ومسح وانتظار. نزوم التوقيع يخلّيك ترسل وتوقّع وتختم مستنداتك في دقائق — مو أيام. ملزم قانونياً، متابَع لحظياً، ومتوفر في أي وقت."
     },
     emotionalHook: {
       en: "Speed that closes deals.",
-      ar: "سرعة تقفل صفقات."
+      ar: "سرعة تقفل لك الصفقات."
     },
     imagineDay: {
       en: "Imagine sending a contract and getting it signed before your coffee gets cold. No printing. No scanning. No 'I'll sign it when I'm in the office.' Your client signs from their phone, you get notified instantly, and the deal is done. Days compressed into minutes.",
@@ -408,15 +408,15 @@ export const products: Product[] = [
     name: { en: "Nzom Tickets", ar: "نزوم التذاكر" },
     tagline: {
       en: "Problems solved. Calmly.",
-      ar: "مشاكل تنحل. بهدوء."
+      ar: "المشاكل تنحل. بكل هدوء."
     },
     description: {
       en: "IT issues don't have to mean chaos. Nzom Tickets brings calm to your helpdesk — every ticket tracked, every change managed, every problem resolved methodically. Your IT team works with purpose, not panic.",
-      ar: "مشاكل التقنية ما لازم تعني فوضى. نزوم التذاكر يجيب الهدوء لمكتب المساعدة — كل تذكرة متابَعة، كل تغيير مُدار، كل مشكلة تنحل بمنهجية. فريقك التقني يشتغل بهدف، مو بذعر."
+      ar: "مشاكل التقنية ما لازم تعني فوضى وضغط. نزوم التذاكر يجلب الهدوء لفريقك التقني — كل تذكرة متابَعة، كل تغيير مُدار، وكل مشكلة تنحل بمنهجية واضحة. فريقك يشتغل بتركيز، مو بذعر."
     },
     emotionalHook: {
       en: "Calm in the storm.",
-      ar: "هدوء وسط العاصفة."
+      ar: "هدوء وسط أي عاصفة تقنية."
     },
     imagineDay: {
       en: "Imagine a Monday morning where your helpdesk dashboard is green. Tickets are auto-assigned to the right people. AI suggests solutions before agents even read the full description. Changes go through proper approvals. Your IT team sips coffee and resolves issues methodically. No fire drills.",
@@ -454,15 +454,15 @@ export const products: Product[] = [
     name: { en: "Nzom Budget", ar: "نزوم الميزانيات" },
     tagline: {
       en: "Your money, under control.",
-      ar: "فلوسك، تحت السيطرة."
+      ar: "كل ريال، تحت عينك."
     },
     description: {
       en: "No more budget surprises. No more unauthorized purchases. Nzom Budget gives you complete financial visibility — every riyal tracked, every purchase approved, every budget on target. Sleep well knowing your finances are in order.",
-      ar: "بدون مفاجآت مالية. بدون مشتريات بدون إذن. نزوم الميزانيات يعطيك رؤية مالية كاملة — كل ريال متابَع، كل عملية شراء معتمدة، كل ميزانية في المسار. نم مرتاح وأنت تعرف إن أموالك في نظام."
+      ar: "خلاص من المفاجآت المالية. خلاص من المشتريات بدون إذن. نزوم الميزانيات يعطيك رؤية مالية شاملة — كل ريال متابَع، كل عملية شراء معتمدة، وكل ميزانية ماشية بالمسار. نم مرتاح وأنت عارف إن أموالك في أمان."
     },
     emotionalHook: {
       en: "Financial peace of mind.",
-      ar: "أمان مالي وراحة بال."
+      ar: "راحة بال مالية حقيقية."
     },
     imagineDay: {
       en: "Imagine opening your budget dashboard and seeing every department's spending in real time. A purchase request comes in — it routes through approvals automatically, checks the budget, and generates a PO. No surprises at month-end. No awkward conversations about overspending. Just clean, controlled finances.",
@@ -500,15 +500,15 @@ export const products: Product[] = [
     name: { en: "Nzom FitAI", ar: "نزوم فت" },
     tagline: {
       en: "Perfect fit. First time.",
-      ar: "مقاس مثالي. من أول مرة."
+      ar: "المقاس الصح. من أول مرة."
     },
     description: {
       en: "No more returns because of wrong sizes. Nzom FitAI uses AI to predict the perfect fit for every customer — reducing returns, increasing satisfaction, and making online fashion finally work.",
-      ar: "بدون مرتجعات بسبب مقاسات غلط. نزوم فت يستخدم الذكاء الاصطناعي يتوقع المقاس المثالي لكل عميل — يقلل المرتجعات، يزيد الرضا، ويخلّي الموضة أونلاين أخيراً تشتغل."
+      ar: "خلاص من المرتجعات بسبب مقاسات غلط. نزوم فت يستخدم الذكاء الاصطناعي عشان يتوقع المقاس المثالي لكل عميل — يقلّل المرتجعات، يرفع الرضا، ويخلّي الموضة أونلاين أخيراً تشتغل صح."
     },
     emotionalHook: {
       en: "Precision that delights.",
-      ar: "دقة تُسعد."
+      ar: "دقة تصنع الفرق."
     },
     imagineDay: {
       en: "Imagine a customer browsing your online store. Instead of guessing their size, AI tells them exactly which size will fit — based on their body, the fabric, and the brand's cut. They order confidently, it fits perfectly, they come back for more. Returns drop. Reviews improve. Your brand becomes known for getting it right.",
