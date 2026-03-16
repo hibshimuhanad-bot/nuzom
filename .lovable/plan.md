@@ -1,43 +1,28 @@
 
 
-# Nzom Laps – Enterprise SaaS Corporate Website
+# إصلاح الأسهم والبادجات في RTL + تحسين المحتوى العربي
 
-## Overview
-A bilingual (Arabic/English) corporate website for Nzom Laps (مختبرات الأنظمة), a Saudi technology studio, showcasing 11 SaaS products under one ecosystem brand. Deep navy (#0B1F33) and electric blue (#2563EB) design system with RTL support.
+## المشاكل المكتشفة
 
----
+### 1. الأسهم معكوسة في RTL
+`ArrowRight` مستخدم في كل مكان — في العربي المفروض يكون `ArrowLeft` لأن الاتجاه معكوس. الأماكن المتأثرة:
+- **Hero buttons** (Index.tsx) — سهم "تصفّح الأنظمة"
+- **Bento grid** (Index.tsx) — سهم "اكتشف المزيد"
+- **CTA** (Index.tsx) — سهم "تواصل معنا الآن"
+- **ProductPage.tsx** — أسهم أزرار Hero و CTA
 
-## Pages & Structure
+### 2. البادجات في مكان ثابت `right-3`
+بادج الحالة ("متوفر الآن" / "قريباً") في البنتو جريد مثبت على `right-3` — في RTL المفروض يكون على اليسار. الحل: استخدام `end-3` بدل `right-3`.
 
-### 1. Shared Layout
-- **Navbar**: Logo, nav links (Home, Solutions dropdown, About, Blog, Contact), language toggle (AR/EN), "Request Demo" CTA button
-- **Footer**: Company info, product links, social links, copyright
-- **RTL/LTR support**: Language context with direction switching
-- **Design tokens**: Navy/blue palette, Inter font, consistent spacing
+## التغييرات
 
-### 2. Home Page
-- **Hero**: Bold headline + subtext with gradient background, two CTAs (Explore Solutions / Request Demo), subtle animated geometric shapes
-- **SaaS Ecosystem**: 11 product cards with icons, short descriptions, and links to individual product pages
-- **Why Nzom Laps**: 4-column feature grid (Enterprise Architecture, Saudi Compliance, Modular Ecosystem, Cloud Infrastructure)
-- **Industries**: Icon cards for Construction, Legal Firms, Corporate, Facility Management, Government Contractors
-- **CTA Banner**: "Ready to digitize your operations?" with demo request button
+### `src/pages/Index.tsx`
+- استبدال كل `ArrowRight` بمكوّن ديناميكي يتغير حسب اللغة: `ArrowRight` للإنجليزي و `ArrowLeft` للعربي
+- تغيير `right-3` في بادج الحالة إلى `end-3` (يدعم RTL تلقائياً)
 
-### 3. Product Pages (11 dynamic pages using shared template)
-Each product gets its own route with hero, problem, solution, features, workflow, RBAC, analytics, security, and CTA sections.
+### `src/pages/ProductPage.tsx`
+- نفس المعالجة للأسهم — عكسها في العربي
 
-### 4. About Page
-- Company story, Vision & Mission, Technology stack
+### `src/pages/BlogPost.tsx`
+- هذا الملف فيه معالجة صحيحة بالفعل (`BackArrow = isAr ? ArrowRight : ArrowLeft`) — لا يحتاج تعديل
 
-### 5. Blog Page
-- Blog listing with category filters and individual post pages
-
-### 6. Contact Page
-- Enterprise inquiry form with Supabase backend
-
----
-
-## Key Technical Decisions
-- **Routing**: React Router with routes for `/`, `/about`, `/blog`, `/contact`, `/products/:slug`
-- **i18n**: Custom language context for AR/EN with RTL direction support
-- **Data**: All product/content data stored in static config files
-- **Responsive**: Mobile-first design with hamburger nav menu
