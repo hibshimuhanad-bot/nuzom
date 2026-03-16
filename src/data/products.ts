@@ -85,6 +85,7 @@ export const products: Product[] = [
   // ═══════════════════════════════════════════
   {
     slug: "legal",
+    available: true,
     name: { en: "Nzom Legal", ar: "نزوم القانونية" },
     tagline: {
       en: "Nothing slips through. Ever.",
