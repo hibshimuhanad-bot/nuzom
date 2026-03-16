@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://nuzomlab.com/sitemap.xml
+Sitemap: https://nzomlaps.com/sitemap.xml
