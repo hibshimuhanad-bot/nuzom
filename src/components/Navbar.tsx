@@ -60,7 +60,7 @@ const Navbar = () => {
               {products.map((product) => (
                 <DropdownMenuItem key={product.slug} asChild>
                   <Link to={`/products/${product.slug}`} className="cursor-pointer">
-                    <product.icon className="h-4 w-4 mr-2" />
+                    <product.icon className="h-4 w-4 me-2" />
                     {product.name[language]}
                   </Link>
                 </DropdownMenuItem>

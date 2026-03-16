@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { products } from "@/data/products";
-import { Mail, MapPin, Phone, Send, Sparkles } from "lucide-react";
+import { Mail, MapPin, Send, Sparkles } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
@@ -57,8 +57,7 @@ const Contact = () => {
   };
 
   const contactInfo = [
-    { icon: Mail, label: "Email", value: "info@nzomlaps.com" },
-    { icon: Phone, label: language === "ar" ? "الهاتف" : "Phone", value: "+966 11 XXX XXXX" },
+    { icon: Mail, label: language === "ar" ? "البريد الإلكتروني" : "Email", value: "info@nzomlaps.com" },
     { icon: MapPin, label: language === "ar" ? "الموقع" : "Location", value: language === "ar" ? "الرياض، المملكة العربية السعودية" : "Riyadh, Saudi Arabia" },
   ];
 

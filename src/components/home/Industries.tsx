@@ -18,7 +18,8 @@ const Industries = () => {
       <div className="absolute inset-0 grid-pattern opacity-30" />
       <div className="container mx-auto px-4 relative z-10">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-center mb-16 text-gradient-blue">{t("industries.title")}</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-center mb-4 text-gradient-blue">{t("industries.title")}</h2>
+          <p className="text-muted-foreground text-lg max-w-xl mx-auto text-center mb-16">{t("industries.subtitle")}</p>
         </ScrollReveal>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
           {items.map((item, i) => (

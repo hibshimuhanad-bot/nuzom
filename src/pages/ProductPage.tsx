@@ -16,8 +16,8 @@ const ProductPage = () => {
       <Layout>
         <div className="min-h-[60vh] flex items-center justify-center">
           <div className="text-center">
-            <h1 className="text-2xl font-bold mb-4">Product not found</h1>
-            <Button asChild><Link to="/">Go Home</Link></Button>
+            <h1 className="text-2xl font-bold text-foreground mb-4">{t("product.notfound")}</h1>
+            <Button asChild><Link to="/">{t("product.gohome")}</Link></Button>
           </div>
         </div>
       </Layout>

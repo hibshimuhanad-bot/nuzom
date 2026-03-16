@@ -59,6 +59,7 @@ const translations: Record<string, Record<Language, string>> = {
 
   // Industries
   "industries.title": { en: "Industries We Serve", ar: "القطاعات التي نخدمها" },
+  "industries.subtitle": { en: "Tailored solutions for diverse sectors across the Kingdom", ar: "حلول مخصصة لقطاعات متنوعة في المملكة" },
   "industries.construction": { en: "Construction Companies", ar: "شركات المقاولات" },
   "industries.legal": { en: "Legal Firms", ar: "مكاتب المحاماة" },
   "industries.corporate": { en: "Corporate Enterprises", ar: "المؤسسات الكبرى" },
@@ -68,6 +69,7 @@ const translations: Record<string, Record<Language, string>> = {
   // Testimonials
   "testimonials.title": { en: "Trusted by Industry Leaders", ar: "موثوق من قادة الصناعة" },
   "testimonials.subtitle": { en: "See what our clients say about working with us", ar: "اطلع على آراء عملائنا حول العمل معنا" },
+  "testimonials.trust": { en: "Trusted by enterprises across Saudi Arabia & the Gulf", ar: "موثوق من المؤسسات في المملكة العربية السعودية والخليج" },
 
   // CTA
   "cta.title": { en: "Your solutions are ready — one step away", ar: "حلولك جاهزة — تفصلك خطوة وحدة بس" },
@@ -109,6 +111,36 @@ const translations: Record<string, Record<Language, string>> = {
   "product.problem": { en: "The pain you feel", ar: "المشكلة اللي تعيشها كل يوم" },
   "product.solution": { en: "How your life changes", ar: "كيف تتغيّر حياتك معنا" },
   "product.imagine": { en: "Imagine...", ar: "تخيّل معي..." },
+  "product.notfound": { en: "Product not found", ar: "المنتج غير موجود" },
+  "product.gohome": { en: "Go Home", ar: "العودة للرئيسية" },
+
+  // 404
+  "notfound.title": { en: "Page Not Found", ar: "الصفحة غير موجودة" },
+  "notfound.desc": { en: "The page you're looking for doesn't exist or has been moved.", ar: "الصفحة التي تبحث عنها غير موجودة أو تم نقلها." },
+  "notfound.home": { en: "Return to Home", ar: "العودة للرئيسية" },
+
+  // Admin
+  "admin.title": { en: "Admin Dashboard", ar: "لوحة التحكم" },
+  "admin.signin": { en: "Sign in to manage submissions", ar: "سجّل دخولك لإدارة الطلبات" },
+  "admin.signup_desc": { en: "Create an account", ar: "إنشاء حساب" },
+  "admin.email": { en: "Email", ar: "البريد الإلكتروني" },
+  "admin.password": { en: "Password", ar: "كلمة المرور" },
+  "admin.login": { en: "Sign In", ar: "تسجيل الدخول" },
+  "admin.register": { en: "Sign Up", ar: "إنشاء حساب" },
+  "admin.has_account": { en: "Already have an account?", ar: "لديك حساب بالفعل؟" },
+  "admin.need_account": { en: "Need an account?", ar: "تحتاج حساب؟" },
+  "admin.logout": { en: "Logout", ar: "تسجيل الخروج" },
+  "admin.total": { en: "Total Submissions", ar: "إجمالي الطلبات" },
+  "admin.this_month": { en: "This Month", ar: "هذا الشهر" },
+  "admin.with_product": { en: "With Product Interest", ar: "مهتم بمنتج" },
+  "admin.submissions": { en: "Contact Submissions", ar: "طلبات التواصل" },
+  "admin.refresh": { en: "Refresh", ar: "تحديث" },
+  "admin.no_submissions": { en: "No submissions yet.", ar: "لا توجد طلبات بعد." },
+  "admin.date": { en: "Date", ar: "التاريخ" },
+  "admin.company": { en: "Company", ar: "الشركة" },
+  "admin.contact": { en: "Contact", ar: "التواصل" },
+  "admin.product_col": { en: "Product", ar: "المنتج" },
+  "admin.message": { en: "Message", ar: "الرسالة" },
 
   // Footer
   "footer.description": { en: "Building enterprise SaaS systems for modern organizations.", ar: "بناء أنظمة SaaS مؤسسية للمنظمات الحديثة." },

@@ -33,20 +33,21 @@ const BlogPost = () => {
   return (
     <Layout>
       <article>
-        <section className="bg-primary py-24">
-          <div className="container mx-auto px-4 max-w-3xl">
+        <section className="ai-gradient-bg dot-pattern py-24 relative overflow-hidden">
+          <div className="absolute top-[20%] right-[10%] w-64 h-64 rounded-full bg-primary/10 blur-3xl animate-float" />
+          <div className="container mx-auto px-4 max-w-3xl relative z-10">
             <ScrollReveal duration={800}>
               <Link
                 to="/blog"
-                className="inline-flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground transition-colors mb-6"
+                className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-6"
               >
                 <BackArrow className="h-4 w-4" />
                 {isAr ? "العودة إلى المدونة" : "Back to Blog"}
               </Link>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-4">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
                 {post.title[language]}
               </h1>
-              <div className="flex flex-wrap items-center gap-4 text-primary-foreground/60 text-sm">
+              <div className="flex flex-wrap items-center gap-4 text-muted-foreground text-sm">
                 <span className="flex items-center gap-1">
                   <Calendar className="h-4 w-4" />
                   {post.date}
