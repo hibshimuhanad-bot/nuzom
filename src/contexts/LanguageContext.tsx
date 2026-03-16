@@ -103,7 +103,7 @@ const translations: Record<string, Record<Language, string>> = {
 };
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>("en");
+  const [language, setLanguage] = useState<Language>("ar");
   const dir = language === "ar" ? "rtl" : "ltr";
 
   useEffect(() => {
