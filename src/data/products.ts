@@ -38,6 +38,7 @@ export const products: Product[] = [
   // ═══════════════════════════════════════════
   {
     slug: "hsse",
+    available: true,
     name: { en: "Nzom HSSE", ar: "نزوم السلامة" },
     tagline: {
       en: "Sleep well. Your sites are safe.",
