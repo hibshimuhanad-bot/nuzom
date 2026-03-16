@@ -15,6 +15,7 @@ import {
 
 export interface Product {
   slug: string;
+  available?: boolean;
   name: { en: string; ar: string };
   tagline: { en: string; ar: string };
   description: { en: string; ar: string };
