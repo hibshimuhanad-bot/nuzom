@@ -22,7 +22,7 @@ const translations: Record<string, Record<Language, string>> = {
 
   // Hero
   "hero.title": { en: "Engineering Enterprise SaaS Systems for Modern Organizations", ar: "تصميم أنظمة SaaS المؤسسية للمنظمات الحديثة" },
-  "hero.subtitle": { en: "Nuzom Lab builds scalable SaaS platforms designed to help organizations manage operations, compliance, and governance digitally.", ar: "نُظُم لاب تبني منصات SaaS قابلة للتوسع لمساعدة المنظمات في إدارة العمليات والامتثال والحوكمة رقمياً." },
+  "hero.subtitle": { en: "Nzom Laps builds scalable SaaS platforms designed to help organizations manage operations, compliance, and governance digitally.", ar: "مختبرات الأنظمة تبني منصات SaaS قابلة للتوسع لمساعدة المنظمات في إدارة العمليات والامتثال والحوكمة رقمياً." },
   "hero.explore": { en: "Explore Solutions", ar: "استكشف الحلول" },
   "hero.demo": { en: "Request Demo", ar: "طلب عرض تجريبي" },
 
@@ -31,8 +31,8 @@ const translations: Record<string, Record<Language, string>> = {
   "ecosystem.subtitle": { en: "Five integrated platforms designed for enterprise operations", ar: "خمس منصات متكاملة مصممة لعمليات المؤسسات" },
   "ecosystem.learn_more": { en: "Learn more", ar: "اكتشف المزيد" },
 
-  // Why Nuzom
-  "why.title": { en: "Why Nuzom Lab", ar: "لماذا نُظُم لاب" },
+  // Why Nzom
+  "why.title": { en: "Why Nzom Laps", ar: "لماذا مختبرات الأنظمة" },
   "why.subtitle": { en: "Enterprise-grade solutions built for scale", ar: "حلول مؤسسية مصممة للتوسع والنمو" },
   "why.enterprise.title": { en: "Enterprise Architecture", ar: "بنية مؤسسية" },
   "why.enterprise.desc": { en: "Multi-tenant SaaS infrastructure designed for scale.", ar: "بنية SaaS متعددة المستأجرين مصممة للتوسع." },
@@ -57,12 +57,12 @@ const translations: Record<string, Record<Language, string>> = {
 
   // CTA
   "cta.title": { en: "Ready to digitize your operations?", ar: "مستعد لرقمنة عملياتك؟" },
-  "cta.subtitle": { en: "Let's discuss how Nuzom Lab can transform your organization.", ar: "دعنا نناقش كيف يمكن لنُظُم لاب تحويل منظمتك." },
+  "cta.subtitle": { en: "Let's discuss how Nzom Laps can transform your organization.", ar: "دعنا نناقش كيف يمكن لمختبرات الأنظمة تحويل منظمتك." },
   "cta.button": { en: "Request Demo", ar: "طلب عرض تجريبي" },
 
   // About
   "about.story.title": { en: "Our Story", ar: "قصتنا" },
-  "about.story.text": { en: "Nuzom Lab is a technology studio building SaaS systems for modern organizations. Founded with the vision to simplify complex enterprise operations through technology, we design and develop scalable platforms that address real operational challenges.", ar: "نُظُم لاب هي استوديو تقني يبني أنظمة SaaS للمنظمات الحديثة. تأسست برؤية تبسيط العمليات المؤسسية المعقدة من خلال التكنولوجيا." },
+  "about.story.text": { en: "Nzom Laps is a technology studio building SaaS systems for modern organizations. Founded with the vision to simplify complex enterprise operations through technology, we design and develop scalable platforms that address real operational challenges.", ar: "مختبرات الأنظمة هي استوديو تقني يبني أنظمة SaaS للمنظمات الحديثة. تأسست برؤية تبسيط العمليات المؤسسية المعقدة من خلال التكنولوجيا." },
   "about.vision.title": { en: "Our Vision", ar: "رؤيتنا" },
   "about.vision.text": { en: "To become a leading SaaS ecosystem provider in Saudi Arabia.", ar: "أن نصبح مزود منظومة SaaS رائد في المملكة العربية السعودية." },
   "about.mission.title": { en: "Our Mission", ar: "مهمتنا" },

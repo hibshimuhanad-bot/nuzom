@@ -16,7 +16,7 @@ const Footer = () => {
                 <span className="text-secondary-foreground font-bold text-sm">N</span>
               </div>
               <span className="font-bold text-lg">
-                {language === "ar" ? "نُظُم لاب" : "Nuzom Lab"}
+                {language === "ar" ? "مختبرات الأنظمة" : "Nzom Laps"}
               </span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
@@ -55,7 +55,7 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">{t("nav.contact")}</h4>
             <ul className="space-y-2 text-muted-foreground text-sm">
-              <li>info@nuzomlab.com</li>
+              <li>info@nzomlaps.com</li>
               <li>{language === "ar" ? "الرياض، المملكة العربية السعودية" : "Riyadh, Saudi Arabia"}</li>
             </ul>
           </div>
@@ -63,7 +63,7 @@ const Footer = () => {
 
         <div className="border-t border-border mt-12 pt-8 text-center">
           <p className="text-muted-foreground/60 text-sm">
-            © {new Date().getFullYear()} Nuzom Lab. {t("footer.rights")}
+            © {new Date().getFullYear()} Nzom Laps. {t("footer.rights")}
           </p>
         </div>
       </div>

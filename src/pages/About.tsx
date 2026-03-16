@@ -13,7 +13,6 @@ const About = () => {
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center ai-gradient-bg dot-pattern overflow-hidden">
         <ParticleField count={50} className="absolute inset-0" />
-        {/* Floating orbs */}
         <div className="absolute top-20 left-[10%] w-72 h-72 rounded-full bg-[hsl(var(--glow-purple))] opacity-[0.08] blur-[100px] animate-float-slow" />
         <div className="absolute bottom-10 right-[15%] w-60 h-60 rounded-full bg-[hsl(var(--glow-accent))] opacity-[0.06] blur-[80px] animate-float-reverse" />
 
@@ -27,11 +26,11 @@ const About = () => {
               {language === "ar" ? (
                 <>من <span className="text-gradient">نحن</span></>
               ) : (
-                <>About <span className="text-gradient">Nuzom Lab</span></>
+                <>About <span className="text-gradient">Nzom Laps</span></>
               )}
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              {language === "ar" ? "نُظُم لاب – استوديو تقني سعودي" : "A Saudi technology studio building enterprise SaaS systems"}
+              {language === "ar" ? "مختبرات الأنظمة – استوديو تقني سعودي" : "A Saudi technology studio building enterprise SaaS systems"}
             </p>
           </ScrollReveal>
         </div>
