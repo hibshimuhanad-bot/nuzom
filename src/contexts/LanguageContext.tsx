@@ -70,9 +70,9 @@ const translations: Record<string, Record<Language, string>> = {
   "testimonials.subtitle": { en: "See what our clients say about working with us", ar: "اطلع على آراء عملائنا حول العمل معنا" },
 
   // CTA
-  "cta.title": { en: "Your solutions are ready — one step away", ar: "حلولك جاهزة — خطوة واحدة تفصلك" },
-  "cta.subtitle": { en: "Contact us now and get your system ready to work. No waiting, no complexity.", ar: "تواصل معنا الآن واحصل على نظامك جاهز للعمل. بدون انتظار، بدون تعقيد." },
-  "cta.button": { en: "Contact Us Now", ar: "تواصل معنا الآن" },
+  "cta.title": { en: "Your solutions are ready — one step away", ar: "حلولك جاهزة — تفصلك خطوة وحدة بس" },
+  "cta.subtitle": { en: "Contact us now and get your system ready to work. No waiting, no complexity.", ar: "تواصل معنا الحين واحصل على نظامك جاهز للعمل. بدون انتظار، وبدون أي تعقيد." },
+  "cta.button": { en: "Contact Us Now", ar: "تواصل معنا الحين" },
 
   // About
   "about.story.title": { en: "Our Story", ar: "قصتنا" },
