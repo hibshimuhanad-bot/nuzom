@@ -21,27 +21,41 @@ const translations: Record<string, Record<Language, string>> = {
   "nav.demo": { en: "Request Demo", ar: "طلب عرض" },
 
   // Hero
-  "hero.title": { en: "Engineering Enterprise SaaS Systems for Modern Organizations", ar: "تصميم أنظمة SaaS المؤسسية للمنظمات الحديثة" },
-  "hero.subtitle": { en: "Nzom Laps builds scalable SaaS platforms designed to help organizations manage operations, compliance, and governance digitally.", ar: "مختبرات الأنظمة تبني منصات SaaS قابلة للتوسع لمساعدة المنظمات في إدارة العمليات والامتثال والحوكمة رقمياً." },
-  "hero.explore": { en: "Explore Solutions", ar: "استكشف الحلول" },
-  "hero.demo": { en: "Request Demo", ar: "طلب عرض تجريبي" },
+  "hero.badge": { en: "Ready-made solutions · No complexity", ar: "حلول جاهزة · بدون تعقيد" },
+  "hero.title": { en: "Ready-made software to manage your business — Start today", ar: "برامج جاهزة لإدارة أعمالك — ابدأ اليوم" },
+  "hero.subtitle": { en: "Over 11 systems ready for immediate use. From safety to HR, from legal to finance — your solutions are ready, just contact us.", ar: "أكثر من 11 نظام جاهز للاستخدام الفوري. من السلامة إلى الموارد البشرية، من القانون إلى المالية — حلولك جاهزة، فقط تواصل معنا." },
+  "hero.explore": { en: "Browse Systems", ar: "تصفّح الأنظمة" },
+  "hero.demo": { en: "Contact Us Now", ar: "تواصل معنا الآن" },
+  "hero.stats": { en: "11 Ready Systems · 8 Sectors · Instant Activation", ar: "١١ نظام جاهز · ٨ قطاعات · تفعيل فوري" },
 
   // Ecosystem
-  "ecosystem.title": { en: "Our SaaS Ecosystem", ar: "منظومة الحلول البرمجية" },
-  "ecosystem.subtitle": { en: "Five integrated platforms designed for enterprise operations", ar: "خمس منصات متكاملة مصممة لعمليات المؤسسات" },
+  "ecosystem.title": { en: "Ready-to-Run Systems", ar: "أنظمة جاهزة للتشغيل" },
+  "ecosystem.subtitle": { en: "Choose the right system for your business — ready to activate and customize to your needs", ar: "اختر النظام المناسب لعملك — جاهز للتفعيل والتخصيص حسب احتياجك" },
   "ecosystem.learn_more": { en: "Learn more", ar: "اكتشف المزيد" },
+  "ecosystem.available": { en: "Available Now", ar: "متوفر الآن" },
+  "ecosystem.coming_soon": { en: "Coming Soon", ar: "قريباً" },
 
   // Why Nzom
   "why.title": { en: "Why Nzom Laps", ar: "لماذا مختبرات الأنظمة" },
-  "why.subtitle": { en: "Enterprise-grade solutions built for scale", ar: "حلول مؤسسية مصممة للتوسع والنمو" },
-  "why.enterprise.title": { en: "Enterprise Architecture", ar: "بنية مؤسسية" },
-  "why.enterprise.desc": { en: "Multi-tenant SaaS infrastructure designed for scale.", ar: "بنية SaaS متعددة المستأجرين مصممة للتوسع." },
-  "why.compliance.title": { en: "Saudi Compliance Ready", ar: "جاهز للامتثال السعودي" },
-  "why.compliance.desc": { en: "Systems designed with local regulatory environments in mind.", ar: "أنظمة مصممة مع مراعاة البيئات التنظيمية المحلية." },
-  "why.modular.title": { en: "Modular Ecosystem", ar: "منظومة معيارية" },
-  "why.modular.desc": { en: "Each system works independently or as an integrated platform.", ar: "كل نظام يعمل بشكل مستقل أو كمنصة متكاملة." },
-  "why.cloud.title": { en: "Cloud Infrastructure", ar: "بنية سحابية" },
-  "why.cloud.desc": { en: "Secure modern infrastructure ready for enterprise deployment.", ar: "بنية تحتية حديثة وآمنة جاهزة للنشر المؤسسي." },
+  "why.subtitle": { en: "Solutions designed to get you started immediately", ar: "حلول مصممة لتبدأ فوراً" },
+  "why.enterprise.title": { en: "Ready for Immediate Use", ar: "جاهز للاستخدام الفوري" },
+  "why.enterprise.desc": { en: "No need to build from scratch — our systems are ready to activate.", ar: "لا حاجة لبناء من الصفر، أنظمتنا جاهزة للتفعيل." },
+  "why.compliance.title": { en: "Fits Small & Large", ar: "يناسب الصغيرة والكبيرة" },
+  "why.compliance.desc": { en: "From a company with 10 employees to an enterprise with 10,000.", ar: "من شركة بـ 10 موظفين إلى مؤسسة بـ 10,000." },
+  "why.modular.title": { en: "One System or Full Suite", ar: "نظام واحد أو منظومة كاملة" },
+  "why.modular.desc": { en: "Pick what you need, and add more systems later.", ar: "اختر ما تحتاج، وأضف أنظمة أخرى لاحقاً." },
+  "why.cloud.title": { en: "Continuous Support", ar: "دعم فني مستمر" },
+  "why.cloud.desc": { en: "Our team is with you from activation to full operation.", ar: "فريقنا معك من التفعيل إلى التشغيل الكامل." },
+
+  // How to Start
+  "howto.title": { en: "How to Get Started?", ar: "كيف تبدأ؟" },
+  "howto.subtitle": { en: "Three simple steps to your ready system", ar: "ثلاث خطوات بسيطة لنظامك الجاهز" },
+  "howto.step1.title": { en: "Choose Your System", ar: "اختر النظام" },
+  "howto.step1.desc": { en: "Browse our systems and pick what suits your business.", ar: "تصفّح أنظمتنا واختر ما يناسب عملك." },
+  "howto.step2.title": { en: "Contact Us", ar: "تواصل معنا" },
+  "howto.step2.desc": { en: "Our team understands your needs and prepares everything.", ar: "فريقنا يفهم احتياجك ويجهز كل شيء." },
+  "howto.step3.title": { en: "Start Working", ar: "ابدأ العمل" },
+  "howto.step3.desc": { en: "Your system is ready and running within days.", ar: "نظامك جاهز ويعمل خلال أيام." },
 
   // Industries
   "industries.title": { en: "Industries We Serve", ar: "القطاعات التي نخدمها" },
@@ -56,9 +70,9 @@ const translations: Record<string, Record<Language, string>> = {
   "testimonials.subtitle": { en: "See what our clients say about working with us", ar: "اطلع على آراء عملائنا حول العمل معنا" },
 
   // CTA
-  "cta.title": { en: "Ready to digitize your operations?", ar: "مستعد لرقمنة عملياتك؟" },
-  "cta.subtitle": { en: "Let's discuss how Nzom Laps can transform your organization.", ar: "دعنا نناقش كيف يمكن لمختبرات الأنظمة تحويل منظمتك." },
-  "cta.button": { en: "Request Demo", ar: "طلب عرض تجريبي" },
+  "cta.title": { en: "Your solutions are ready — one step away", ar: "حلولك جاهزة — خطوة واحدة تفصلك" },
+  "cta.subtitle": { en: "Contact us now and get your system ready to work. No waiting, no complexity.", ar: "تواصل معنا الآن واحصل على نظامك جاهز للعمل. بدون انتظار، بدون تعقيد." },
+  "cta.button": { en: "Contact Us Now", ar: "تواصل معنا الآن" },
 
   // About
   "about.story.title": { en: "Our Story", ar: "قصتنا" },
