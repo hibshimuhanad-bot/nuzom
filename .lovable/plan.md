@@ -1,43 +1,48 @@
 
 
-# Nzom Laps – Enterprise SaaS Corporate Website
+# تحسين محتوى الصفحة الرئيسية — رسالة بيعية واضحة
 
-## Overview
-A bilingual (Arabic/English) corporate website for Nzom Laps (مختبرات الأنظمة), a Saudi technology studio, showcasing 11 SaaS products under one ecosystem brand. Deep navy (#0B1F33) and electric blue (#2563EB) design system with RTL support.
+## المشكلة الحالية
+المحتوى الحالي تقني وعام جداً ("تصميم أنظمة SaaS المؤسسية للمنظمات الحديثة") — لا يوصل رسالة واضحة أن عندكم **برامج جاهزة للاستخدام الفوري** تخدم المؤسسات الصغيرة والكبيرة.
 
----
+## التغييرات المقترحة
 
-## Pages & Structure
+### 1. Hero Section — رسالة مباشرة وقوية
+**قبل:**
+- العنوان: "تصميم أنظمة SaaS المؤسسية للمنظمات الحديثة"
+- الوصف: "مختبرات الأنظمة تبني منصات SaaS قابلة للتوسع..."
 
-### 1. Shared Layout
-- **Navbar**: Logo, nav links (Home, Solutions dropdown, About, Blog, Contact), language toggle (AR/EN), "Request Demo" CTA button
-- **Footer**: Company info, product links, social links, copyright
-- **RTL/LTR support**: Language context with direction switching
-- **Design tokens**: Navy/blue palette, Inter font, consistent spacing
+**بعد:**
+- العنوان: "برامج جاهزة لإدارة أعمالك — ابدأ اليوم"
+- الوصف: "أكثر من 11 نظام جاهز للاستخدام الفوري. من السلامة إلى الموارد البشرية، من القانون إلى المالية — حلولك جاهزة، فقط تواصل معنا."
+- Badge: "حلول جاهزة · بدون تعقيد"
+- الأزرار: "تصفّح الأنظمة" + "تواصل معنا الآن"
+- السطر السفلي: "١١ نظام جاهز · ٨ قطاعات · تفعيل فوري"
 
-### 2. Home Page
-- **Hero**: Bold headline + subtext with gradient background, two CTAs (Explore Solutions / Request Demo), subtle animated geometric shapes
-- **SaaS Ecosystem**: 11 product cards with icons, short descriptions, and links to individual product pages
-- **Why Nzom Laps**: 4-column feature grid (Enterprise Architecture, Saudi Compliance, Modular Ecosystem, Cloud Infrastructure)
-- **Industries**: Icon cards for Construction, Legal Firms, Corporate, Facility Management, Government Contractors
-- **CTA Banner**: "Ready to digitize your operations?" with demo request button
+### 2. قسم المنتجات (Bento Grid)
+- العنوان: "أنظمة جاهزة للتشغيل" بدل "منظومة الحلول البرمجية"
+- الوصف: "اختر النظام المناسب لعملك — جاهز للتفعيل والتخصيص حسب احتياجك"
+- تحديث badges: "متوفر الآن" / "قريباً" بالعربي
 
-### 3. Product Pages (11 dynamic pages using shared template)
-Each product gets its own route with hero, problem, solution, features, workflow, RBAC, analytics, security, and CTA sections.
+### 3. قسم "لماذا مختبرات الأنظمة" — مزايا بيعية
+تحويل العناوين من تقنية إلى عملية:
+- "جاهز للاستخدام الفوري" — لا حاجة لبناء من الصفر، أنظمتنا جاهزة للتفعيل
+- "يناسب الصغيرة والكبيرة" — من شركة بـ 10 موظفين إلى مؤسسة بـ 10,000
+- "نظام واحد أو منظومة كاملة" — اختر ما تحتاج، وأضف أنظمة أخرى لاحقاً
+- "دعم فني مستمر" — فريقنا معك من التفعيل إلى التشغيل الكامل
 
-### 4. About Page
-- Company story, Vision & Mission, Technology stack
+### 4. قسم CTA — دعوة واضحة
+- العنوان: "حلولك جاهزة — خطوة واحدة تفصلك"
+- الوصف: "تواصل معنا الآن واحصل على نظامك جاهز للعمل. بدون انتظار، بدون تعقيد."
+- الزر: "تواصل معنا الآن"
 
-### 5. Blog Page
-- Blog listing with category filters and individual post pages
+### 5. إضافة قسم جديد: "كيف تبدأ؟" (3 خطوات)
+قسم بسيط بـ 3 خطوات:
+1. **اختر النظام** — تصفّح أنظمتنا واختر ما يناسب عملك
+2. **تواصل معنا** — فريقنا يفهم احتياجك ويجهز كل شيء
+3. **ابدأ العمل** — نظامك جاهز ويعمل خلال أيام
 
-### 6. Contact Page
-- Enterprise inquiry form with Supabase backend
+### الملفات المتأثرة
+- `src/contexts/LanguageContext.tsx` — تحديث جميع النصوص العربية والإنجليزية
+- `src/pages/Index.tsx` — إضافة قسم "كيف تبدأ" + تحديث شريط الأرقام + badges بالعربي
 
----
-
-## Key Technical Decisions
-- **Routing**: React Router with routes for `/`, `/about`, `/blog`, `/contact`, `/products/:slug`
-- **i18n**: Custom language context for AR/EN with RTL direction support
-- **Data**: All product/content data stored in static config files
-- **Responsive**: Mobile-first design with hamburger nav menu
