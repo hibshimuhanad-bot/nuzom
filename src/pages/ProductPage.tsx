@@ -3,7 +3,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import Layout from "@/components/Layout";
 import { products } from "@/data/products";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Monitor, GitBranch, Users, BarChart3, ShieldCheck } from "lucide-react";
+import { ArrowRight, Monitor, GitBranch, Users, BarChart3, ShieldCheck, Sparkles } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import ParticleField from "@/components/ParticleField";
 
@@ -42,6 +42,8 @@ const ProductPage = () => {
             <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${product.color} flex items-center justify-center mx-auto mb-6 shadow-lg`}>
               <product.icon className="h-8 w-8 text-foreground" />
             </div>
+            {/* Emotional Hook */}
+            <p className="text-accent text-lg md:text-xl font-semibold mb-3">{product.emotionalHook[language]}</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-gradient">{product.name[language]}</h1>
             <p className="text-xl text-accent mb-3">{product.tagline[language]}</p>
             <p className="text-muted-foreground text-lg mb-10 max-w-2xl mx-auto leading-relaxed">{product.description[language]}</p>
@@ -55,30 +57,47 @@ const ProductPage = () => {
         </div>
       </section>
 
-      {/* Problem / Solution */}
+      {/* Problem / Solution — Story style */}
       <section className="py-24 bg-background relative">
         <div className="absolute inset-0 grid-pattern opacity-30" />
-        <div className="container mx-auto px-4 max-w-5xl relative z-10">
-          <div className="grid md:grid-cols-2 gap-6">
-            <ScrollReveal direction="left">
-              <div className="bento-card p-8 h-full">
-                <div className="w-10 h-10 rounded-xl bg-destructive/10 flex items-center justify-center mb-4">
-                  <span className="text-destructive text-lg">⚡</span>
-                </div>
-                <h2 className="text-2xl font-bold text-foreground mb-4">{t("product.problem")}</h2>
-                <p className="text-muted-foreground leading-relaxed text-lg">{product.problem[language]}</p>
+        <div className="container mx-auto px-4 max-w-3xl relative z-10">
+          {/* Problem — bigger, first */}
+          <ScrollReveal>
+            <div className="bento-card p-8 md:p-10 mb-8">
+              <div className="w-10 h-10 rounded-xl bg-destructive/10 flex items-center justify-center mb-4">
+                <span className="text-destructive text-lg">⚡</span>
               </div>
-            </ScrollReveal>
-            <ScrollReveal direction="right" delay={150}>
-              <div className="bento-card p-8 h-full">
-                <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
-                  <span className="text-accent text-lg">✓</span>
-                </div>
-                <h2 className="text-2xl font-bold text-foreground mb-4">{t("product.solution")}</h2>
-                <p className="text-muted-foreground leading-relaxed text-lg">{product.solution[language]}</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">{t("product.problem")}</h2>
+              <p className="text-muted-foreground leading-relaxed text-lg">{product.problem[language]}</p>
+            </div>
+          </ScrollReveal>
+          {/* Solution — emerges after */}
+          <ScrollReveal delay={200}>
+            <div className="bento-card p-8 md:p-10 border-accent/20 bg-accent/5">
+              <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
+                <span className="text-accent text-lg">✓</span>
               </div>
-            </ScrollReveal>
-          </div>
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">{t("product.solution")}</h2>
+              <p className="text-muted-foreground leading-relaxed text-lg">{product.solution[language]}</p>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Imagine Section */}
+      <section className="py-20 bg-muted/30 relative overflow-hidden">
+        <div className="absolute inset-0 dot-pattern opacity-20" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-accent/5 blur-[120px]" />
+        <div className="container mx-auto px-4 max-w-3xl relative z-10">
+          <ScrollReveal>
+            <div className="text-center mb-6">
+              <Sparkles className="h-8 w-8 text-accent mx-auto mb-4" />
+              <h2 className="text-3xl md:text-4xl font-bold text-gradient-blue">{t("product.imagine")}</h2>
+            </div>
+            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed text-center max-w-2xl mx-auto">
+              {product.imagineDay[language]}
+            </p>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -173,7 +192,7 @@ const ProductPage = () => {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <ScrollReveal direction="left" className="order-2 md:order-1">
               <div className="grid grid-cols-2 gap-3">
-                {["Admin", "Manager", "User", "Viewer"].map((role, i) => (
+                {["Admin", "Manager", "User", "Viewer"].map((role) => (
                   <div key={role} className="bento-card p-5 text-center group">
                     <div className="relative w-10 h-10 mx-auto mb-2">
                       <div className="absolute inset-0 rounded-full bg-accent/10 blur-md group-hover:bg-accent/20 transition-colors" />
@@ -247,12 +266,13 @@ const ProductPage = () => {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* CTA — Emotional */}
       <section className="py-24 relative ai-gradient-bg overflow-hidden">
         <div className="absolute inset-0 dot-pattern" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-primary/10 blur-[100px]" />
         <div className="container mx-auto px-4 text-center relative z-10">
           <ScrollReveal>
+            <p className="text-accent text-lg font-semibold mb-3">{product.emotionalHook[language]}</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">{t("cta.title")}</h2>
             <p className="text-muted-foreground mb-10 max-w-xl mx-auto">{t("cta.subtitle")}</p>
             <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-10 glow-btn animate-pulse-glow rounded-xl">
