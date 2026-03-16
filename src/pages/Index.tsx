@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, Building2, Scale, Briefcase, Warehouse, Landmark, Server, ShieldCheck, Puzzle, Cloud, Sparkles } from "lucide-react";
+import { ArrowRight, Play, Building2, Scale, Briefcase, Warehouse, Landmark, Server, ShieldCheck, Puzzle, Cloud, Sparkles, CheckCircle, MessageCircle, Rocket, Users } from "lucide-react";
 import Layout from "@/components/Layout";
 import { products } from "@/data/products";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -37,7 +37,7 @@ const Hero = () => {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm mb-8">
             <Sparkles className="h-3.5 w-3.5 text-accent" />
             <span className="text-xs font-medium text-muted-foreground">
-              {t("hero.subtitle").slice(0, 40)}…
+              {t("hero.badge")}
             </span>
           </div>
 
@@ -62,7 +62,7 @@ const Hero = () => {
             </Button>
           </div>
           <p className="mt-8 text-sm text-muted-foreground font-mono tracking-wide">
-            11 Products · 8 Industries · 1 Platform
+            {t("hero.stats")}
           </p>
         </ScrollReveal>
       </div>
@@ -110,7 +110,7 @@ const BentoGrid = () => {
                 <div className={`bento-card p-6 h-full flex flex-col justify-between group relative overflow-hidden ${i === 0 ? "min-h-[320px]" : ""}`}>
                   {/* Status badge */}
                   <span className={`absolute top-3 right-3 z-20 text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full ${i === 0 ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30" : "bg-muted text-muted-foreground border border-border/50"}`}>
-                    {i === 0 ? "Available Now" : "Coming Soon"}
+                    {i === 0 ? t("ecosystem.available") : t("ecosystem.coming_soon")}
                   </span>
                   {/* Inner glow */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-[0.03] group-hover:opacity-[0.06] transition-opacity duration-500 rounded-2xl`} />
@@ -147,10 +147,10 @@ const BentoGrid = () => {
 const WhyNuzom = () => {
   const { t } = useLanguage();
   const items = [
-    { icon: Server, titleKey: "why.enterprise.title", descKey: "why.enterprise.desc" },
-    { icon: ShieldCheck, titleKey: "why.compliance.title", descKey: "why.compliance.desc" },
+    { icon: CheckCircle, titleKey: "why.enterprise.title", descKey: "why.enterprise.desc" },
+    { icon: Users, titleKey: "why.compliance.title", descKey: "why.compliance.desc" },
     { icon: Puzzle, titleKey: "why.modular.title", descKey: "why.modular.desc" },
-    { icon: Cloud, titleKey: "why.cloud.title", descKey: "why.cloud.desc" },
+    { icon: ShieldCheck, titleKey: "why.cloud.title", descKey: "why.cloud.desc" },
   ];
 
   return (
@@ -330,6 +330,48 @@ const Testimonials = () => {
   );
 };
 
+/* ════════════════════════════════════════════
+   HOW TO START — 3 steps
+   ════════════════════════════════════════════ */
+const HowToStart = () => {
+  const { t } = useLanguage();
+  const steps = [
+    { icon: Sparkles, num: "١", titleKey: "howto.step1.title", descKey: "howto.step1.desc" },
+    { icon: MessageCircle, num: "٢", titleKey: "howto.step2.title", descKey: "howto.step2.desc" },
+    { icon: Rocket, num: "٣", titleKey: "howto.step3.title", descKey: "howto.step3.desc" },
+  ];
+
+  return (
+    <section className="py-28 bg-muted/30 relative">
+      <div className="absolute inset-0 grid-pattern opacity-30" />
+      <div className="container mx-auto px-4 relative z-10">
+        <ScrollReveal className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gradient">{t("howto.title")}</h2>
+          <p className="text-muted-foreground text-lg max-w-xl mx-auto">{t("howto.subtitle")}</p>
+        </ScrollReveal>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          {steps.map((step, i) => (
+            <ScrollReveal key={i} delay={i * 150}>
+              <div className="bento-card p-8 text-center group relative">
+                <div className="text-4xl font-extrabold text-primary/20 mb-4">{step.num}</div>
+                <div className="relative w-14 h-14 mx-auto mb-5">
+                  <div className="absolute inset-0 rounded-2xl bg-primary/20 blur-xl group-hover:bg-primary/30 transition-colors animate-glow-pulse" />
+                  <div className="relative w-14 h-14 rounded-2xl bg-muted border border-border/50 flex items-center justify-center group-hover:border-primary/30 transition-colors">
+                    <step.icon className="h-6 w-6 text-accent" />
+                  </div>
+                </div>
+                <h3 className="font-bold text-foreground text-lg mb-2">{t(step.titleKey)}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{t(step.descKey)}</p>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 /* ════════════════════════════════════════════ */
 const Index = () => {
   return (
@@ -337,6 +379,7 @@ const Index = () => {
       <Hero />
       <BentoGrid />
       <WhyNuzom />
+      <HowToStart />
       <Industries />
       <Testimonials />
       <CTABanner />
