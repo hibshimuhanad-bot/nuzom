@@ -132,6 +132,7 @@ export const products: Product[] = [
   // ═══════════════════════════════════════════
   {
     slug: "tasks",
+    available: true,
     name: { en: "Nzom Tasks", ar: "نزوم المهام" },
     tagline: {
       en: "Relax. Everything is under control.",
