@@ -86,15 +86,15 @@ export const products: Product[] = [
     name: { en: "Nzom Legal", ar: "نزوم القانونية" },
     tagline: {
       en: "Nothing slips through. Ever.",
-      ar: "ما يضيع عليك شيء. أبداً."
+      ar: "ولا شيء يفلت منك. أبداً."
     },
     description: {
       en: "Every case tracked. Every deadline met. Every document at your fingertips. Nzom Legal gives you total control over your legal operations — so you focus on winning, not searching.",
-      ar: "كل قضية متابعة. كل موعد ملتزم فيه. كل مستند تحت يدك. نزوم القانونية يعطيك سيطرة كاملة على عملياتك القانونية — تركّز على الفوز، مو على البحث."
+      ar: "كل قضية متابَعة. كل موعد ملتزم فيه. كل مستند في متناول يدك. نزوم القانونية يمنحك سيطرة مطلقة على عملياتك القانونية — عشان تركّز على كسب القضايا، مو البحث عن الملفات."
     },
     emotionalHook: {
       en: "Total control over your legal world.",
-      ar: "سيطرة كاملة على عالمك القانوني."
+      ar: "عالمك القانوني، تحت سيطرتك الكاملة."
     },
     imagineDay: {
       en: "Imagine walking into court with every document ready, every precedent researched, every deadline color-coded on your calendar. Your client asks about case status — you answer in seconds, not hours. Your team works in sync without a single email chain. That's legal work, done right.",
