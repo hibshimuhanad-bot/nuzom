@@ -4,20 +4,8 @@ import { ArrowRight, ArrowLeft } from "lucide-react";
 import { products } from "@/data/products";
 import ScrollReveal from "@/components/ScrollReveal";
 
-const bentoClasses = [
-  "sm:col-span-2 sm:row-span-2",
-  "", "", "", "",
-  "sm:col-span-2",
-  "", "",
-  "sm:col-span-2",
-  "", "",
-];
-
 const BentoGrid = () => {
   const { t, language } = useLanguage();
-
-  // Sort: available products first
-  const sortedProducts = [...products].sort((a, b) => (b.available ? 1 : 0) - (a.available ? 1 : 0));
 
   return (
     <section className="py-28 bg-background relative">
@@ -28,23 +16,23 @@ const BentoGrid = () => {
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">{t("ecosystem.subtitle")}</p>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-[minmax(200px,auto)] gap-4 max-w-6xl mx-auto">
-          {sortedProducts.map((product, i) => (
-            <ScrollReveal key={product.slug} delay={i * 80} className={bentoClasses[i] || ""}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-4xl mx-auto">
+          {products.map((product, i) => (
+            <ScrollReveal key={product.slug} delay={i * 80}>
               <Link to={`/products/${product.slug}`} className="block h-full">
-                <div className={`bento-card p-6 h-full flex flex-col justify-between group relative overflow-hidden ${i === 0 ? "min-h-[320px]" : ""}`}>
-                  <span className={`absolute top-3 end-3 z-20 text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full ${product.available ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30" : "bg-muted text-muted-foreground border border-border/50"}`}>
-                    {product.available ? t("ecosystem.available") : t("ecosystem.coming_soon")}
+                <div className="bento-card p-6 h-full flex flex-col justify-between group relative overflow-hidden min-h-[240px]">
+                  <span className="absolute top-3 end-3 z-20 text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                    {t("ecosystem.available")}
                   </span>
                   <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-[0.03] group-hover:opacity-[0.06] transition-opacity duration-500 rounded-2xl`} />
                   <div className="relative z-10">
                     <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${product.color} flex items-center justify-center mb-4 group-hover:scale-110 group-hover:shadow-lg transition-all duration-300`}>
                       <product.icon className="h-6 w-6 text-foreground" />
                     </div>
-                    <h3 className={`font-bold text-foreground mb-2 ${i === 0 ? "text-2xl" : "text-lg"}`}>
+                    <h3 className="font-bold text-foreground mb-2 text-xl">
                       {product.name[language]}
                     </h3>
-                    <p className={`text-muted-foreground leading-relaxed ${i === 0 ? "text-base" : "text-sm"}`}>
+                    <p className="text-muted-foreground leading-relaxed text-sm">
                       {product.tagline[language]}
                     </p>
                   </div>
