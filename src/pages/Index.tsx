@@ -33,7 +33,7 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <ScrollReveal className="max-w-4xl mx-auto text-center" duration={800}>
+        <ScrollReveal className="max-w-4xl mx-auto text-center" duration={800} startVisible>
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm mb-8">
             <Sparkles className="h-3.5 w-3.5 text-accent" />
