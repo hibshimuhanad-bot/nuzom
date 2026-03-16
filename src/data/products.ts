@@ -224,15 +224,15 @@ export const products: Product[] = [
     name: { en: "Nzom Fleet", ar: "نزوم الأسطول" },
     tagline: {
       en: "Your fleet, under your eyes.",
-      ar: "أسطولك، تحت عينك."
+      ar: "أسطولك كامل، تحت نظرك."
     },
     description: {
       en: "Every vehicle tracked. Every fuel receipt accounted for. Every maintenance scheduled before it's too late. Nzom Fleet gives you the confidence that your fleet is running efficiently — even when you're not watching.",
-      ar: "كل مركبة متابَعة. كل إيصال وقود محسوب. كل صيانة مجدولة قبل فوات الأوان. نزوم الأسطول يعطيك الثقة إن أسطولك يشتغل بكفاءة — حتى لو ما كنت تراقب."
+      ar: "كل مركبة متابَعة. كل ريال وقود محسوب. كل صيانة مجدولة قبل فوات الأوان. نزوم الأسطول يعطيك الثقة إن أسطولك يشتغل بأعلى كفاءة — حتى وأنت مو هناك."
     },
     emotionalHook: {
       en: "Control without micromanaging.",
-      ar: "تحكّم بدون ملاحقة."
+      ar: "تحكّم كامل، بدون ما تلاحق أحد."
     },
     imagineDay: {
       en: "Imagine checking your fleet dashboard and seeing every vehicle's location, fuel level, and next maintenance date — all in real time. A driver completes a safety inspection from his phone before starting. An alert notifies you that a registration expires next week. Everything handled, nothing missed.",
