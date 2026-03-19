@@ -23,10 +23,10 @@ const translations: Record<string, Record<Language, string>> = {
   // Hero
   "hero.badge": { en: "Ready-made solutions · No complexity", ar: "حلول جاهزة · بدون تعقيد" },
   "hero.title": { en: "Ready-made software to manage your business — Start today", ar: "برامج جاهزة لإدارة أعمالك — ابدأ اليوم" },
-  "hero.subtitle": { en: "4 systems ready for immediate use — Safety, Legal, Tasks, and Booking. Your solutions are ready, just contact us.", ar: "٤ أنظمة جاهزة للاستخدام الفوري — السلامة، القانونية، المهام، والحجوزات. حلولك جاهزة، فقط تواصل معنا." },
+  "hero.subtitle": { en: "Systems ready for immediate use — Safety, Legal, Tasks, and Booking. Your solutions are ready, just contact us.", ar: "أنظمة جاهزة للاستخدام الفوري — السلامة، القانونية، المهام، والحجوزات. حلولك جاهزة، فقط تواصل معنا." },
   "hero.explore": { en: "Browse Systems", ar: "تصفّح الأنظمة" },
   "hero.demo": { en: "Contact Us Now", ar: "تواصل معنا الآن" },
-  "hero.stats": { en: "4 Ready Systems · 5 Sectors · Instant Activation", ar: "٤ أنظمة جاهزة · ٥ قطاعات · تفعيل فوري" },
+  "hero.stats": { en: "Ready Systems · 5 Sectors · Instant Activation", ar: "أنظمة جاهزة · ٥ قطاعات · تفعيل فوري" },
 
   // Ecosystem
   "ecosystem.title": { en: "Ready-to-Run Systems", ar: "أنظمة جاهزة للتشغيل" },
