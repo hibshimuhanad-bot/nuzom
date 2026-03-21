@@ -23,14 +23,20 @@ const translations: Record<string, Record<Language, string>> = {
   // Hero
   "hero.badge": { en: "Ready-made solutions · No complexity", ar: "حلول جاهزة · بدون تعقيد" },
   "hero.title": { en: "Ready-made software to manage your business", ar: "برامج جاهزة لإدارة أعمالك" },
-  "hero.subtitle": { en: "Systems ready for immediate use — Safety, Legal, Tasks, and Booking. Your solutions are ready, just contact us.", ar: "أنظمة جاهزة للاستخدام الفوري — السلامة، القانونية، المهام، والحجوزات. حلولك جاهزة، فقط تواصل معنا." },
+  "hero.subtitle": {
+    en: "Systems ready for immediate use — Safety, Legal, Tasks, and Booking. Your solutions are ready, just contact us.",
+    ar: "أنظمة جاهزة للاستخدام الفوري — السلامة، القانونية، المهام، والحجوزات. حلولك جاهزة، فقط تواصل معنا.",
+  },
   "hero.explore": { en: "Browse Systems", ar: "تصفّح الأنظمة" },
   "hero.demo": { en: "Contact Us Now", ar: "تواصل معنا الآن" },
-  "hero.stats": { en: "Ready Systems · 5 Sectors · Instant Activation", ar: "أنظمة جاهزة · ٥ قطاعات · تفعيل فوري" },
+  "hero.stats": { en: "Ready Systems · 5 Sectors · Instant Activation", ar: "أنظمة جاهزة · تفعيل فوري" },
 
   // Ecosystem
   "ecosystem.title": { en: "Ready-to-Run Systems", ar: "أنظمة جاهزة للتشغيل" },
-  "ecosystem.subtitle": { en: "Choose the right system for your business — ready to activate and customize to your needs", ar: "اختر النظام المناسب لعملك — جاهز للتفعيل والتخصيص حسب احتياجك" },
+  "ecosystem.subtitle": {
+    en: "Choose the right system for your business — ready to activate and customize to your needs",
+    ar: "اختر النظام المناسب لعملك — جاهز للتفعيل والتخصيص حسب احتياجك",
+  },
   "ecosystem.learn_more": { en: "Learn more", ar: "اكتشف المزيد" },
   "ecosystem.available": { en: "Available Now", ar: "متوفر الآن" },
   "ecosystem.coming_soon": { en: "Coming Soon", ar: "قريباً" },
@@ -39,27 +45,48 @@ const translations: Record<string, Record<Language, string>> = {
   "why.title": { en: "Why Nzom Labs", ar: "لماذا مختبرات الأنظمة" },
   "why.subtitle": { en: "Solutions designed to get you started immediately", ar: "حلول مصممة لتبدأ فوراً" },
   "why.enterprise.title": { en: "Ready for Immediate Use", ar: "جاهز للاستخدام الفوري" },
-  "why.enterprise.desc": { en: "No need to build from scratch — our systems are ready to activate.", ar: "لا حاجة لبناء من الصفر، أنظمتنا جاهزة للتفعيل." },
+  "why.enterprise.desc": {
+    en: "No need to build from scratch — our systems are ready to activate.",
+    ar: "لا حاجة لبناء من الصفر، أنظمتنا جاهزة للتفعيل.",
+  },
   "why.compliance.title": { en: "Fits Small & Large", ar: "يناسب الصغيرة والكبيرة" },
-  "why.compliance.desc": { en: "From a company with 10 employees to an enterprise with 10,000.", ar: "من شركة بـ 10 موظفين إلى مؤسسة بـ 10,000." },
+  "why.compliance.desc": {
+    en: "From a company with 10 employees to an enterprise with 10,000.",
+    ar: "من شركة بـ 10 موظفين إلى مؤسسة بـ 10,000.",
+  },
   "why.modular.title": { en: "One System or Full Suite", ar: "نظام واحد أو منظومة كاملة" },
-  "why.modular.desc": { en: "Pick what you need, and add more systems later.", ar: "اختر ما تحتاج، وأضف أنظمة أخرى لاحقاً." },
+  "why.modular.desc": {
+    en: "Pick what you need, and add more systems later.",
+    ar: "اختر ما تحتاج، وأضف أنظمة أخرى لاحقاً.",
+  },
   "why.cloud.title": { en: "Continuous Support", ar: "دعم فني مستمر" },
-  "why.cloud.desc": { en: "Our team is with you from activation to full operation.", ar: "فريقنا معك من التفعيل إلى التشغيل الكامل." },
+  "why.cloud.desc": {
+    en: "Our team is with you from activation to full operation.",
+    ar: "فريقنا معك من التفعيل إلى التشغيل الكامل.",
+  },
 
   // How to Start
   "howto.title": { en: "How to Get Started?", ar: "كيف تبدأ؟" },
   "howto.subtitle": { en: "Three simple steps to your ready system", ar: "ثلاث خطوات بسيطة لنظامك الجاهز" },
   "howto.step1.title": { en: "Choose Your System", ar: "اختر النظام" },
-  "howto.step1.desc": { en: "Browse our systems and pick what suits your business.", ar: "تصفّح أنظمتنا واختر ما يناسب عملك." },
+  "howto.step1.desc": {
+    en: "Browse our systems and pick what suits your business.",
+    ar: "تصفّح أنظمتنا واختر ما يناسب عملك.",
+  },
   "howto.step2.title": { en: "Contact Us", ar: "تواصل معنا" },
-  "howto.step2.desc": { en: "Our team understands your needs and prepares everything.", ar: "فريقنا يفهم احتياجك ويجهز كل شيء." },
+  "howto.step2.desc": {
+    en: "Our team understands your needs and prepares everything.",
+    ar: "فريقنا يفهم احتياجك ويجهز كل شيء.",
+  },
   "howto.step3.title": { en: "Start Working", ar: "ابدأ العمل" },
   "howto.step3.desc": { en: "Your system is ready and running within days.", ar: "نظامك جاهز ويعمل خلال أيام." },
 
   // Industries
   "industries.title": { en: "Industries We Serve", ar: "القطاعات التي نخدمها" },
-  "industries.subtitle": { en: "Tailored solutions for diverse sectors across the Kingdom", ar: "حلول مخصصة لقطاعات متنوعة في المملكة" },
+  "industries.subtitle": {
+    en: "Tailored solutions for diverse sectors across the Kingdom",
+    ar: "حلول مخصصة لقطاعات متنوعة في المملكة",
+  },
   "industries.construction": { en: "Construction Companies", ar: "شركات المقاولات" },
   "industries.legal": { en: "Legal Firms", ar: "مكاتب المحاماة" },
   "industries.corporate": { en: "Corporate Enterprises", ar: "المؤسسات الكبرى" },
@@ -68,25 +95,46 @@ const translations: Record<string, Record<Language, string>> = {
 
   // Testimonials
   "testimonials.title": { en: "Trusted by Industry Leaders", ar: "موثوق من قادة الصناعة" },
-  "testimonials.subtitle": { en: "See what our clients say about working with us", ar: "اطلع على آراء عملائنا حول العمل معنا" },
-  "testimonials.trust": { en: "Trusted by enterprises across Saudi Arabia & the Gulf", ar: "موثوق من المؤسسات في المملكة العربية السعودية والخليج" },
+  "testimonials.subtitle": {
+    en: "See what our clients say about working with us",
+    ar: "اطلع على آراء عملائنا حول العمل معنا",
+  },
+  "testimonials.trust": {
+    en: "Trusted by enterprises across Saudi Arabia & the Gulf",
+    ar: "موثوق من المؤسسات في المملكة العربية السعودية والخليج",
+  },
 
   // CTA
   "cta.title": { en: "Your solutions are ready — one step away", ar: "حلولك جاهزة — تفصلك خطوة وحدة بس" },
-  "cta.subtitle": { en: "Contact us now and get your system ready to work. No waiting, no complexity.", ar: "تواصل معنا الحين واحصل على نظامك جاهز للعمل. بدون انتظار، وبدون أي تعقيد." },
+  "cta.subtitle": {
+    en: "Contact us now and get your system ready to work. No waiting, no complexity.",
+    ar: "تواصل معنا الحين واحصل على نظامك جاهز للعمل. بدون انتظار، وبدون أي تعقيد.",
+  },
   "cta.button": { en: "Contact Us Now", ar: "تواصل معنا الحين" },
 
   // About
   "about.story.title": { en: "Our Story", ar: "قصتنا" },
-  "about.story.text": { en: "Nzom Labs is a technology studio building SaaS systems for modern organizations. Founded with the vision to simplify complex enterprise operations through technology, we design and develop scalable platforms that address real operational challenges.", ar: "مختبرات الأنظمة هي استوديو تقني يبني أنظمة SaaS للمنظمات الحديثة. تأسست برؤية تبسيط العمليات المؤسسية المعقدة من خلال التكنولوجيا." },
+  "about.story.text": {
+    en: "Nzom Labs is a technology studio building SaaS systems for modern organizations. Founded with the vision to simplify complex enterprise operations through technology, we design and develop scalable platforms that address real operational challenges.",
+    ar: "مختبرات الأنظمة هي استوديو تقني يبني أنظمة SaaS للمنظمات الحديثة. تأسست برؤية تبسيط العمليات المؤسسية المعقدة من خلال التكنولوجيا.",
+  },
   "about.vision.title": { en: "Our Vision", ar: "رؤيتنا" },
-  "about.vision.text": { en: "To become a leading SaaS ecosystem provider in Saudi Arabia.", ar: "أن نصبح مزود منظومة SaaS رائد في المملكة العربية السعودية." },
+  "about.vision.text": {
+    en: "To become a leading SaaS ecosystem provider in Saudi Arabia.",
+    ar: "أن نصبح مزود منظومة SaaS رائد في المملكة العربية السعودية.",
+  },
   "about.mission.title": { en: "Our Mission", ar: "مهمتنا" },
-  "about.mission.text": { en: "Design systems that simplify complex organizational operations.", ar: "تصميم أنظمة تبسط العمليات التنظيمية المعقدة." },
+  "about.mission.text": {
+    en: "Design systems that simplify complex organizational operations.",
+    ar: "تصميم أنظمة تبسط العمليات التنظيمية المعقدة.",
+  },
 
   // Contact
   "contact.title": { en: "Get in Touch", ar: "تواصل معنا" },
-  "contact.subtitle": { en: "Ready to transform your operations? Let's talk.", ar: "مستعد لتحويل عملياتك؟ دعنا نتحدث." },
+  "contact.subtitle": {
+    en: "Ready to transform your operations? Let's talk.",
+    ar: "مستعد لتحويل عملياتك؟ دعنا نتحدث.",
+  },
   "contact.name": { en: "Company Name", ar: "اسم الشركة" },
   "contact.email": { en: "Email", ar: "البريد الإلكتروني" },
   "contact.phone": { en: "Phone", ar: "الهاتف" },
@@ -94,11 +142,17 @@ const translations: Record<string, Record<Language, string>> = {
   "contact.message": { en: "Message", ar: "الرسالة" },
   "contact.send": { en: "Send Message", ar: "إرسال الرسالة" },
   "contact.demo.title": { en: "Book a Demo", ar: "احجز عرض تجريبي" },
-  "contact.demo.desc": { en: "See our platforms in action with a personalized demo.", ar: "شاهد منصاتنا أثناء العمل مع عرض تجريبي مخصص." },
+  "contact.demo.desc": {
+    en: "See our platforms in action with a personalized demo.",
+    ar: "شاهد منصاتنا أثناء العمل مع عرض تجريبي مخصص.",
+  },
 
   // Blog
   "blog.title": { en: "Blog & Insights", ar: "المدونة والرؤى" },
-  "blog.subtitle": { en: "Latest insights on digital transformation and enterprise operations", ar: "أحدث الرؤى حول التحول الرقمي وعمليات المؤسسات" },
+  "blog.subtitle": {
+    en: "Latest insights on digital transformation and enterprise operations",
+    ar: "أحدث الرؤى حول التحول الرقمي وعمليات المؤسسات",
+  },
 
   // Product common
   "product.features": { en: "All this, ready for you", ar: "كل هذا، جاهز لك الحين" },
@@ -116,7 +170,10 @@ const translations: Record<string, Record<Language, string>> = {
 
   // 404
   "notfound.title": { en: "Page Not Found", ar: "الصفحة غير موجودة" },
-  "notfound.desc": { en: "The page you're looking for doesn't exist or has been moved.", ar: "الصفحة التي تبحث عنها غير موجودة أو تم نقلها." },
+  "notfound.desc": {
+    en: "The page you're looking for doesn't exist or has been moved.",
+    ar: "الصفحة التي تبحث عنها غير موجودة أو تم نقلها.",
+  },
   "notfound.home": { en: "Return to Home", ar: "العودة للرئيسية" },
 
   // Admin
@@ -143,7 +200,10 @@ const translations: Record<string, Record<Language, string>> = {
   "admin.message": { en: "Message", ar: "الرسالة" },
 
   // Footer
-  "footer.description": { en: "Building enterprise SaaS systems for modern organizations.", ar: "بناء أنظمة SaaS مؤسسية للمنظمات الحديثة." },
+  "footer.description": {
+    en: "Building enterprise SaaS systems for modern organizations.",
+    ar: "بناء أنظمة SaaS مؤسسية للمنظمات الحديثة.",
+  },
   "footer.products": { en: "Products", ar: "المنتجات" },
   "footer.company": { en: "Company", ar: "الشركة" },
   "footer.rights": { en: "All rights reserved.", ar: "جميع الحقوق محفوظة." },
@@ -162,11 +222,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     return translations[key]?.[language] || key;
   };
 
-  return (
-    <LanguageContext.Provider value={{ language, setLanguage, t, dir }}>
-      {children}
-    </LanguageContext.Provider>
-  );
+  return <LanguageContext.Provider value={{ language, setLanguage, t, dir }}>{children}</LanguageContext.Provider>;
 };
 
 export const useLanguage = () => {
