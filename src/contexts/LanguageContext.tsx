@@ -22,7 +22,7 @@ const translations: Record<string, Record<Language, string>> = {
 
   // Hero
   "hero.badge": { en: "Ready-made solutions · No complexity", ar: "حلول جاهزة · بدون تعقيد" },
-  "hero.title": { en: "Ready-made software to manage your business — Start today", ar: "برامج جاهزة لإدارة أعمالك — ابدأ اليوم" },
+  "hero.title": { en: "Ready-made software to manage your business", ar: "برامج جاهزة لإدارة أعمالك" },
   "hero.subtitle": { en: "Systems ready for immediate use — Safety, Legal, Tasks, and Booking. Your solutions are ready, just contact us.", ar: "أنظمة جاهزة للاستخدام الفوري — السلامة، القانونية، المهام، والحجوزات. حلولك جاهزة، فقط تواصل معنا." },
   "hero.explore": { en: "Browse Systems", ar: "تصفّح الأنظمة" },
   "hero.demo": { en: "Contact Us Now", ar: "تواصل معنا الآن" },
