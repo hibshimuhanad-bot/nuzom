@@ -1,33 +1,15 @@
 
 
-# إرسال إشعار بالبيانات إلى info@nzomlabs.com
+# تصحيح الدومين من nzomlaps.com إلى nzomlabs.com
 
-## الوضع الحالي
-- نموذج التواصل يرسل إيميل تأكيد للعميل فقط (`contact-confirmation`)
-- لا يوجد إشعار يصل لك أنت كمدير عند استلام رسالة جديدة
+## المشكلة
+الدومين مكتوب خطأ "nzomlaps" بدل "nzomlabs" في ملفين:
 
-## الخطة
+## التغييرات
 
-### 1. إنشاء قالب إيميل إشعار جديد
-**ملف جديد:** `supabase/functions/_shared/transactional-email-templates/contact-notification.tsx`
-- إيميل يحتوي على كل بيانات النموذج (اسم الشركة، الإيميل، الهاتف، المنتج، الرسالة)
-- يُرسل دائماً إلى `info@nzomlabs.com` باستخدام خاصية `to` في القالب
-- العنوان: "رسالة جديدة من [اسم الشركة]"
-- تصميم واضح يعرض كل البيانات بشكل منظم
+### `public/robots.txt`
+- سطر 13: `nzomlaps.com` → `nzomlabs.com`
 
-### 2. تسجيل القالب في registry.ts
-- إضافة `contact-notification` إلى خريطة `TEMPLATES`
-
-### 3. تحديث صفحة التواصل (`Contact.tsx`)
-- بعد إرسال إيميل التأكيد للعميل، إرسال إيميل إشعار ثاني:
-  - `templateName: 'contact-notification'`
-  - بدون `recipientEmail` (القالب يحدد المستلم تلقائياً)
-  - `templateData` تحتوي على كل بيانات النموذج
-
-### 4. إعادة نشر Edge Functions
-- نشر `send-transactional-email` لتحديث القوالب
-
----
-
-**النتيجة**: كل ما أحد يعبي نموذج التواصل، يوصلك إيميل على info@nzomlabs.com فيه كل البيانات.
+### `public/sitemap.xml`
+- جميع الروابط (16 رابط): `nzomlaps.com` → `nzomlabs.com`
 
