@@ -18,7 +18,7 @@ const pageMeta: Record<string, { title: string; titleAr: string; description: st
     descriptionAr: "تعرف على مختبرات الأنظمة، استوديو تقني سعودي متخصص في بناء أنظمة SaaS للمؤسسات.",
   },
   "/blog": {
-    title: "Blog – Nzom Laps Insights",
+    title: "Blog – Nzom Labs Insights",
     titleAr: "المدونة – رؤى مختبرات الأنظمة",
     description: "Insights on digital transformation, compliance best practices, and enterprise technology trends in Saudi Arabia.",
     descriptionAr: "رؤى حول التحول الرقمي وأفضل ممارسات الامتثال واتجاهات تقنية المؤسسات في السعودية.",
