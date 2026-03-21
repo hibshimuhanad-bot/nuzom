@@ -4,7 +4,7 @@ import { products } from "@/data/products";
 
 const Footer = () => {
   const { t, language } = useLanguage();
-  const brandName = language === "ar" ? "مختبرات الأنظمة" : "Nzom Laps";
+  const brandName = language === "ar" ? "مختبرات الأنظمة" : "Nzom Labs";
 
   return (
     <footer className="bg-background text-foreground border-t border-border/30 dot-pattern">
