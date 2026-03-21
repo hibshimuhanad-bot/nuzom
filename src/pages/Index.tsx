@@ -71,6 +71,9 @@ const Hero = () => {
               </Link>
             </Button>
           </div>
+          <p className="mt-6 md:mt-8 text-xs md:text-sm text-muted-foreground tracking-wide">
+            {t("hero.stats")}
+          </p>
         </ScrollReveal>
       </div>
 
