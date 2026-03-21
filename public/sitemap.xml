@@ -1,77 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://nzomlaps.com/</loc>
+    <loc>https://nzomlabs.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://nzomlaps.com/about</loc>
+    <loc>https://nzomlabs.com/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nzomlaps.com/blog</loc>
+    <loc>https://nzomlabs.com/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nzomlaps.com/contact</loc>
+    <loc>https://nzomlabs.com/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nzomlaps.com/products/hsse</loc>
+    <loc>https://nzomlabs.com/products/hsse</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://nzomlaps.com/products/legal</loc>
+    <loc>https://nzomlabs.com/products/legal</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://nzomlaps.com/products/tasks</loc>
+    <loc>https://nzomlabs.com/products/tasks</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://nzomlaps.com/products/hr</loc>
+    <loc>https://nzomlabs.com/products/hr</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://nzomlaps.com/products/fleet</loc>
+    <loc>https://nzomlabs.com/products/fleet</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://nzomlaps.com/blog/digital-transformation-saudi-construction</loc>
+    <loc>https://nzomlabs.com/blog/digital-transformation-saudi-construction</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nzomlaps.com/blog/navigating-saudi-compliance-requirements</loc>
+    <loc>https://nzomlabs.com/blog/navigating-saudi-compliance-requirements</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nzomlaps.com/blog/future-enterprise-fleet-management</loc>
+    <loc>https://nzomlabs.com/blog/future-enterprise-fleet-management</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nzomlaps.com/blog/streamlining-legal-operations-technology</loc>
+    <loc>https://nzomlabs.com/blog/streamlining-legal-operations-technology</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nzomlaps.com/blog/hr-tech-trends-gcc-region</loc>
+    <loc>https://nzomlabs.com/blog/hr-tech-trends-gcc-region</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nzomlaps.com/blog/building-safety-culture-enterprise-operations</loc>
+    <loc>https://nzomlabs.com/blog/building-safety-culture-enterprise-operations</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
