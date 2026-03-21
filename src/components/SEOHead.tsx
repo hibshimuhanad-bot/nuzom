@@ -24,9 +24,9 @@ const pageMeta: Record<string, { title: string; titleAr: string; description: st
     descriptionAr: "رؤى حول التحول الرقمي وأفضل ممارسات الامتثال واتجاهات تقنية المؤسسات في السعودية.",
   },
   "/contact": {
-    title: "Contact Nzom Laps – Request a Demo",
+    title: "Contact Nzom Labs – Request a Demo",
     titleAr: "تواصل معنا – مختبرات الأنظمة",
-    description: "Get in touch with Nzom Laps for enterprise SaaS solutions. Request a demo or book a consultation.",
+    description: "Get in touch with Nzom Labs for enterprise SaaS solutions. Request a demo or book a consultation.",
     descriptionAr: "تواصل مع مختبرات الأنظمة لحلول SaaS للمؤسسات. اطلب عرضاً توضيحياً أو احجز استشارة.",
   },
 };
