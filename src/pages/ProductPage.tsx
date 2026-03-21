@@ -65,14 +65,25 @@ const ProductPage = () => {
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <div className="max-w-5xl mx-auto">
-                <div className="rounded-xl overflow-hidden shadow-2xl shadow-primary/10 border border-border/30 transition-transform duration-500 hover:scale-[1.02]">
-                  <img
-                    src={screenshotMap[product.slug]}
-                    alt={`${product.name[language]} dashboard`}
-                    className="w-full h-auto"
-                    loading="lazy"
-                  />
-                </div>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <div className="rounded-xl overflow-hidden shadow-2xl shadow-primary/10 border border-border/30 transition-transform duration-500 hover:scale-[1.02] cursor-zoom-in">
+                      <img
+                        src={screenshotMap[product.slug]}
+                        alt={`${product.name[language]} dashboard`}
+                        className="w-full h-auto"
+                        loading="lazy"
+                      />
+                    </div>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-[95vw] max-h-[95vh] p-2 bg-background/95 backdrop-blur-sm border-border/50">
+                    <img
+                      src={screenshotMap[product.slug]}
+                      alt={`${product.name[language]} dashboard`}
+                      className="w-full h-auto rounded-lg"
+                    />
+                  </DialogContent>
+                </Dialog>
               </div>
             </ScrollReveal>
           </div>
