@@ -61,7 +61,7 @@ const SEOHead = () => {
       if (post) {
         title = language === "ar"
           ? `${post.title.ar} – مختبرات الأنظمة`
-          : `${post.title.en} – Nzom Laps`;
+          : `${post.title.en} – Nzom Labs`;
         description = language === "ar"
           ? post.excerpt.ar
           : post.excerpt.en;
