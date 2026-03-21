@@ -16,6 +16,7 @@ const AdminDashboard = lazy(() => import("./pages/AdminDashboard"));
 const ProductPage = lazy(() => import("./pages/ProductPage"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+const Unsubscribe = lazy(() => import("./pages/Unsubscribe"));
 
 const queryClient = new QueryClient();
 
