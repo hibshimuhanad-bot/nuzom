@@ -54,6 +54,21 @@ const Contact = () => {
         },
       });
 
+      // Send notification email to admin
+      await supabase.functions.invoke("send-transactional-email", {
+        body: {
+          templateName: "contact-notification",
+          idempotencyKey: `contact-notify-${id}`,
+          templateData: {
+            company_name: formData.company_name.trim(),
+            email: formData.email.trim(),
+            phone: formData.phone.trim() || null,
+            product: formData.product || null,
+            message: formData.message.trim() || null,
+          },
+        },
+      });
+
       toast({ title: language === "ar" ? "تم إرسال الرسالة بنجاح" : "Message sent successfully!" });
       setFormData({ company_name: "", email: "", phone: "", product: "", message: "" });
     } catch (err) {
