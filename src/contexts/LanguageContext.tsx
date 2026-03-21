@@ -29,7 +29,7 @@ const translations: Record<string, Record<Language, string>> = {
   },
   "hero.explore": { en: "Browse Systems", ar: "تصفّح الأنظمة" },
   "hero.demo": { en: "Contact Us Now", ar: "تواصل معنا الآن" },
-  "hero.stats": { en: "Ready Systems · 5 Sectors · Instant Activation", ar: "أنظمة جاهزة · تفعيل فوري" },
+  "hero.stats": { en: "Ready Systems · 4 Sectors · Instant Activation", ar: "أنظمة جاهزة · تفعيل فوري" },
 
   // Ecosystem
   "ecosystem.title": { en: "Ready-to-Run Systems", ar: "أنظمة جاهزة للتشغيل" },

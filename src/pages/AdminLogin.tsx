@@ -62,7 +62,7 @@ const AdminLogin = () => {
   };
 
   return (
-    <div className="min-h-screen bg-primary flex items-center justify-center p-4">
+    <div className="min-h-screen ai-gradient-bg flex items-center justify-center p-4">
       <Card className="w-full max-w-md border-border/50">
         <CardHeader className="text-center">
           <div className="mx-auto w-12 h-12 rounded-xl bg-secondary flex items-center justify-center mb-2">

@@ -105,7 +105,7 @@ const Navbar = () => {
             </SheetTrigger>
             <SheetContent side={language === "ar" ? "right" : "left"} className="bg-background border-border">
               <SheetTitle className="text-foreground">
-                {language === "ar" ? "مختبرات الأنظمة" : "Nzom Laps"}
+                {language === "ar" ? "مختبرات الأنظمة" : "Nzom Labs"}
               </SheetTitle>
               <div className="flex flex-col gap-4 mt-8">
                 {navLinks.map((link) => (
