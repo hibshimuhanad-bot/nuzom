@@ -49,6 +49,30 @@ const ProductPage = () => {
         </div>
       </section>
 
+      {/* Screenshot Preview */}
+      {product.screenshots && product.screenshots.length > 0 && (
+        <section className="py-14 md:py-20 bg-muted/30 relative overflow-hidden">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-primary/5 blur-[120px]" />
+          <div className="container mx-auto px-4 relative z-10">
+            <ScrollReveal>
+              <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-gradient-blue">{t("product.preview")}</h2>
+            </ScrollReveal>
+            <ScrollReveal delay={200}>
+              <div className="max-w-5xl mx-auto">
+                <div className="rounded-xl overflow-hidden shadow-2xl shadow-primary/10 border border-border/30 transition-transform duration-500 hover:scale-[1.02]">
+                  <img
+                    src={product.screenshots[0]}
+                    alt={`${product.name[language]} dashboard`}
+                    className="w-full h-auto"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+      )}
+
       {/* Problem / Solution — Story */}
       <section className="py-14 md:py-20 bg-background relative">
         <div className="container mx-auto px-4 max-w-3xl relative z-10">

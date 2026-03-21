@@ -156,6 +156,7 @@ const translations: Record<string, Record<Language, string>> = {
 
   // Product common
   "product.features": { en: "All this, ready for you", ar: "كل هذا، جاهز لك " },
+  "product.preview": { en: "System Preview", ar: "معاينة النظام" },
   "product.dashboard": { en: "A look at your system", ar: "نظرة على نظامك" },
   "product.workflow": { en: "Let the system work for you", ar: "النظام يشتغل — وأنت ترتاح" },
   "product.rbac": { en: "Everyone sees what matters to them", ar: "كل شخص يشوف اللي يخصّه بس" },
