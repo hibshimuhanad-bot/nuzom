@@ -66,7 +66,7 @@ const SEOHead = () => {
           ? post.excerpt.ar
           : post.excerpt.en;
       } else {
-        title = "Nzom Laps";
+        title = "Nzom Labs";
         description = "";
       }
     } else {
