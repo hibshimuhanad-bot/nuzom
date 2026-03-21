@@ -15,43 +15,38 @@ interface ContactNotificationProps {
   message?: string
 }
 
+const DataCard = ({ label, value }: { label: string; value: string }) => (
+  <Section style={dataCard}>
+    <Text style={dataLabel}>{label}</Text>
+    <Text style={dataValue}>{value}</Text>
+  </Section>
+)
+
 const ContactNotificationEmail = ({ company_name, email, phone, product, message }: ContactNotificationProps) => (
   <Html lang="ar" dir="rtl">
     <Head />
     <Preview>رسالة جديدة من {company_name || 'زائر'} عبر نموذج التواصل</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Heading style={h1}>📩 رسالة جديدة من نموذج التواصل</Heading>
-        <Text style={subtitle}>تم استلام رسالة جديدة عبر موقع {SITE_NAME}</Text>
-        <Hr style={hr} />
-
-        <Section style={dataSection}>
-          <Text style={label}>اسم الشركة</Text>
-          <Text style={value}>{company_name || '—'}</Text>
+        {/* Gradient Header */}
+        <Section style={header}>
+          <Text style={headerText}>{SITE_NAME}</Text>
+          <Text style={headerSubtitle}>📩 رسالة جديدة من نموذج التواصل</Text>
         </Section>
 
-        <Section style={dataSection}>
-          <Text style={label}>البريد الإلكتروني</Text>
-          <Text style={value}>{email || '—'}</Text>
-        </Section>
-
-        <Section style={dataSection}>
-          <Text style={label}>رقم الهاتف</Text>
-          <Text style={value}>{phone || '—'}</Text>
-        </Section>
-
-        <Section style={dataSection}>
-          <Text style={label}>المنتج</Text>
-          <Text style={value}>{product || '—'}</Text>
-        </Section>
-
-        <Section style={dataSection}>
-          <Text style={label}>الرسالة</Text>
-          <Text style={value}>{message || '—'}</Text>
+        {/* Data Cards */}
+        <Section style={cardsContainer}>
+          <DataCard label="اسم الشركة" value={company_name || '—'} />
+          <DataCard label="البريد الإلكتروني" value={email || '—'} />
+          <DataCard label="رقم الهاتف" value={phone || '—'} />
+          <DataCard label="المنتج" value={product || '—'} />
+          <DataCard label="الرسالة" value={message || '—'} />
         </Section>
 
         <Hr style={hr} />
-        <Text style={footer}>هذا الإشعار مرسل تلقائياً من موقع {SITE_NAME}</Text>
+        <Text style={footer}>
+          هذا الإشعار مرسل تلقائياً من موقع {SITE_NAME}
+        </Text>
       </Container>
     </Body>
   </Html>
@@ -72,11 +67,53 @@ export const template = {
 } satisfies TemplateEntry
 
 const main = { backgroundColor: '#ffffff', fontFamily: 'Arial, sans-serif' }
-const container = { padding: '24px 28px', maxWidth: '520px', margin: '0 auto' }
-const h1 = { fontSize: '20px', fontWeight: 'bold' as const, color: '#111827', margin: '0 0 8px' }
-const subtitle = { fontSize: '14px', color: '#6b7280', margin: '0 0 20px' }
-const hr = { borderColor: '#e5e7eb', margin: '16px 0' }
-const dataSection = { marginBottom: '12px' }
-const label = { fontSize: '12px', color: '#9ca3af', margin: '0 0 2px', fontWeight: 'bold' as const }
-const value = { fontSize: '15px', color: '#1f2937', margin: '0', lineHeight: '1.5' }
-const footer = { fontSize: '11px', color: '#9ca3af', margin: '20px 0 0', textAlign: 'center' as const }
+const container = { maxWidth: '560px', margin: '0 auto', padding: '0' }
+const header = {
+  background: 'linear-gradient(135deg, #2563EB 0%, #22D3EE 100%)',
+  padding: '24px 30px',
+  borderRadius: '12px 12px 0 0',
+  textAlign: 'center' as const,
+}
+const headerText = {
+  color: '#ffffff',
+  fontSize: '22px',
+  fontWeight: 'bold' as const,
+  margin: '0 0 6px',
+  letterSpacing: '1px',
+}
+const headerSubtitle = {
+  color: 'rgba(255,255,255,0.9)',
+  fontSize: '14px',
+  margin: '0',
+}
+const cardsContainer = {
+  padding: '20px 24px',
+}
+const dataCard = {
+  backgroundColor: '#F8FAFC',
+  border: '1px solid #E2E8F0',
+  borderRadius: '8px',
+  padding: '12px 16px',
+  marginBottom: '10px',
+}
+const dataLabel = {
+  fontSize: '12px',
+  color: '#2563EB',
+  fontWeight: 'bold' as const,
+  margin: '0 0 4px',
+  textAlign: 'right' as const,
+}
+const dataValue = {
+  fontSize: '15px',
+  color: '#1E293B',
+  margin: '0',
+  lineHeight: '1.5',
+  textAlign: 'right' as const,
+}
+const hr = { borderColor: '#E2E8F0', margin: '4px 24px 16px' }
+const footer = {
+  fontSize: '11px',
+  color: '#94A3B8',
+  margin: '0 24px 20px',
+  textAlign: 'center' as const,
+}
