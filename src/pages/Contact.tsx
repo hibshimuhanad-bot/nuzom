@@ -30,9 +30,11 @@ const Contact = () => {
     setLoading(true);
 
     try {
+      const id = crypto.randomUUID();
       const { error } = await supabase
         .from("contact_submissions")
         .insert({
+          id,
           company_name: formData.company_name.trim(),
           email: formData.email.trim(),
           phone: formData.phone.trim() || null,
@@ -41,6 +43,16 @@ const Contact = () => {
         });
 
       if (error) throw error;
+
+      // Send confirmation email to the submitter
+      await supabase.functions.invoke("send-transactional-email", {
+        body: {
+          templateName: "contact-confirmation",
+          recipientEmail: formData.email.trim(),
+          idempotencyKey: `contact-confirm-${id}`,
+          templateData: { company_name: formData.company_name.trim() },
+        },
+      });
 
       toast({ title: language === "ar" ? "تم إرسال الرسالة بنجاح" : "Message sent successfully!" });
       setFormData({ company_name: "", email: "", phone: "", product: "", message: "" });

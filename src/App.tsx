@@ -38,6 +38,7 @@ const App = () => (
               <Route path="/admin" element={<AdminDashboard />} />
               <Route path="/products/:slug" element={<ProductPage />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
+              <Route path="/unsubscribe" element={<Unsubscribe />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
