@@ -4,7 +4,7 @@ import { createClient } from 'npm:@supabase/supabase-js@2'
 import { TEMPLATES } from '../_shared/transactional-email-templates/registry.ts'
 
 // Configuration baked in at scaffold time
-const SITE_NAME = "nzomlaps"
+const SITE_NAME = "Nzom Labs"
 const SENDER_DOMAIN = "notify.nzomlabs.com"
 const FROM_DOMAIN = "nzomlabs.com"
 
