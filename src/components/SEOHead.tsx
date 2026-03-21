@@ -6,9 +6,9 @@ import { blogPosts } from "@/data/blog";
 
 const pageMeta: Record<string, { title: string; titleAr: string; description: string; descriptionAr: string }> = {
   "/": {
-    title: "Nzom Laps – Enterprise SaaS Systems for Modern Organizations",
+    title: "Nzom Labs – Enterprise SaaS Systems for Modern Organizations",
     titleAr: "مختبرات الأنظمة – أنظمة SaaS للمؤسسات الحديثة",
-    description: "Nzom Laps builds scalable SaaS platforms for operations, compliance, governance, and workflow management in Saudi Arabia.",
+    description: "Nzom Labs builds scalable SaaS platforms for operations, compliance, governance, and workflow management in Saudi Arabia.",
     descriptionAr: "مختبرات الأنظمة تبني منصات SaaS قابلة للتوسع لإدارة العمليات والامتثال والحوكمة في المملكة العربية السعودية.",
   },
   "/about": {
