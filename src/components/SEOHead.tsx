@@ -48,7 +48,7 @@ const SEOHead = () => {
       if (product) {
         title = language === "ar"
           ? `${product.name.ar} – مختبرات الأنظمة`
-          : `${product.name.en} – Nzom Laps`;
+          : `${product.name.en} – Nzom Labs`;
         description = language === "ar"
           ? product.tagline.ar
           : product.tagline.en;
