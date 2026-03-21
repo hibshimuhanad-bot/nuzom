@@ -1,30 +1,15 @@
 
 
-# إضافة لقطة شاشة نظام المهام في صفحة المنتج
+# تكبير الصورة عند الضغط عليها
 
-## الخطة
+## التغيير
 
-### 1. نسخ الصورة للمشروع
-- نسخ `user-uploads://image-4.png` إلى `src/assets/screenshots/tasks-dashboard.png`
+### `src/pages/ProductPage.tsx`
+- إضافة `Dialog` من shadcn/ui حول الصورة
+- عند الضغط على الصورة → تفتح في dialog بحجم كبير (fullscreen تقريباً)
+- زر إغلاق واضح
+- تأثير `cursor-zoom-in` على الصورة الأصلية
 
-### 2. تحديث `Product` interface في `src/data/products.ts`
-- إضافة حقل `screenshots?: string[]` اختياري
-- تعبئة المسار لمنتج `tasks`
-
-### 3. إضافة قسم "معاينة النظام" في `src/pages/ProductPage.tsx`
-- قسم جديد بين Hero و Problem/Solution
-- الصورة داخل إطار browser mockup (شريط عنوان + أزرار traffic light + ظل + زوايا مستديرة)
-- عنوان القسم: "معاينة النظام" / "System Preview"
-- تأثير hover خفيف (scale) للتفاعل
-- القسم يظهر فقط إذا كان `product.screenshots` موجود وغير فارغ
-
-### 4. إضافة مفاتيح ترجمة في `LanguageContext.tsx`
-- `"product.preview"`: "معاينة النظام" / "System Preview"
-
-### 5. استخدام Product Shot Generator
-- تحويل الصورة لـ product shot احترافي بإطار macOS وخلفية gradient قبل إضافتها
-
----
-
-**النتيجة**: صفحة المهام ستعرض لقطة الـ dashboard الحقيقية بشكل احترافي. يمكنك لاحقاً إضافة صور للأنظمة الأخرى بنفس الطريقة.
+### المكونات المستخدمة
+- `Dialog`, `DialogContent`, `DialogTrigger` من `@/components/ui/dialog` (موجودة بالفعل)
 
