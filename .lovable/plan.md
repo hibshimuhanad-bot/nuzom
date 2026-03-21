@@ -1,15 +1,33 @@
 
 
-# تكبير الصورة عند الضغط عليها
+# إرسال إشعار بالبيانات إلى info@nzomlabs.com
 
-## التغيير
+## الوضع الحالي
+- نموذج التواصل يرسل إيميل تأكيد للعميل فقط (`contact-confirmation`)
+- لا يوجد إشعار يصل لك أنت كمدير عند استلام رسالة جديدة
 
-### `src/pages/ProductPage.tsx`
-- إضافة `Dialog` من shadcn/ui حول الصورة
-- عند الضغط على الصورة → تفتح في dialog بحجم كبير (fullscreen تقريباً)
-- زر إغلاق واضح
-- تأثير `cursor-zoom-in` على الصورة الأصلية
+## الخطة
 
-### المكونات المستخدمة
-- `Dialog`, `DialogContent`, `DialogTrigger` من `@/components/ui/dialog` (موجودة بالفعل)
+### 1. إنشاء قالب إيميل إشعار جديد
+**ملف جديد:** `supabase/functions/_shared/transactional-email-templates/contact-notification.tsx`
+- إيميل يحتوي على كل بيانات النموذج (اسم الشركة، الإيميل، الهاتف، المنتج، الرسالة)
+- يُرسل دائماً إلى `info@nzomlabs.com` باستخدام خاصية `to` في القالب
+- العنوان: "رسالة جديدة من [اسم الشركة]"
+- تصميم واضح يعرض كل البيانات بشكل منظم
+
+### 2. تسجيل القالب في registry.ts
+- إضافة `contact-notification` إلى خريطة `TEMPLATES`
+
+### 3. تحديث صفحة التواصل (`Contact.tsx`)
+- بعد إرسال إيميل التأكيد للعميل، إرسال إيميل إشعار ثاني:
+  - `templateName: 'contact-notification'`
+  - بدون `recipientEmail` (القالب يحدد المستلم تلقائياً)
+  - `templateData` تحتوي على كل بيانات النموذج
+
+### 4. إعادة نشر Edge Functions
+- نشر `send-transactional-email` لتحديث القوالب
+
+---
+
+**النتيجة**: كل ما أحد يعبي نموذج التواصل، يوصلك إيميل على info@nzomlabs.com فيه كل البيانات.
 
