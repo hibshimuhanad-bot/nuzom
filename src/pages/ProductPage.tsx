@@ -7,9 +7,11 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { ArrowRight, ArrowLeft, Sparkles, GitBranch, Users, BarChart3, ShieldCheck } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import tasksScreenshot from "@/assets/screenshots/tasks-product-shot.png";
+import hsseScreenshot from "@/assets/screenshots/hsse-product-shot.png";
 
 const screenshotMap: Record<string, string> = {
   tasks: tasksScreenshot,
+  hsse: hsseScreenshot,
 };
 
 const ProductPage = () => {
