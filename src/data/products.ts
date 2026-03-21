@@ -26,6 +26,7 @@ export interface Product {
   rbacDesc: { en: string; ar: string };
   analyticsDesc: { en: string; ar: string };
   securityDesc: { en: string; ar: string };
+  screenshots?: string[];
 }
 
 export const products: Product[] = [
