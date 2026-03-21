@@ -78,7 +78,7 @@ const translations: Record<string, Record<Language, string>> = {
 
   // About
   "about.story.title": { en: "Our Story", ar: "قصتنا" },
-  "about.story.text": { en: "Nzom Laps is a technology studio building SaaS systems for modern organizations. Founded with the vision to simplify complex enterprise operations through technology, we design and develop scalable platforms that address real operational challenges.", ar: "مختبرات الأنظمة هي استوديو تقني يبني أنظمة SaaS للمنظمات الحديثة. تأسست برؤية تبسيط العمليات المؤسسية المعقدة من خلال التكنولوجيا." },
+  "about.story.text": { en: "Nzom Labs is a technology studio building SaaS systems for modern organizations. Founded with the vision to simplify complex enterprise operations through technology, we design and develop scalable platforms that address real operational challenges.", ar: "مختبرات الأنظمة هي استوديو تقني يبني أنظمة SaaS للمنظمات الحديثة. تأسست برؤية تبسيط العمليات المؤسسية المعقدة من خلال التكنولوجيا." },
   "about.vision.title": { en: "Our Vision", ar: "رؤيتنا" },
   "about.vision.text": { en: "To become a leading SaaS ecosystem provider in Saudi Arabia.", ar: "أن نصبح مزود منظومة SaaS رائد في المملكة العربية السعودية." },
   "about.mission.title": { en: "Our Mission", ar: "مهمتنا" },

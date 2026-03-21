@@ -95,7 +95,7 @@ const SEOHead = () => {
     setMeta("name", "description", description);
     setMeta("property", "og:title", title);
     setMeta("property", "og:description", description);
-    setMeta("property", "og:url", `https://nzomlaps.com${path}`);
+    setMeta("property", "og:url", `https://nzomlabs.com${path}`);
     setMeta("name", "twitter:title", title);
     setMeta("name", "twitter:description", description);
   }, [location.pathname, language]);
