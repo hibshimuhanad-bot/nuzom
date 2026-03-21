@@ -53,7 +53,7 @@ const SEOHead = () => {
           ? product.tagline.ar
           : product.tagline.en;
       } else {
-        title = "Nzom Laps";
+        title = "Nzom Labs";
         description = "";
       }
     } else if (blogMatch) {
