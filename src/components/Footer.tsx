@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from "@/assets/logo.png";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { products } from "@/data/products";
 
