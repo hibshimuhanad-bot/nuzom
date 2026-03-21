@@ -6,27 +6,27 @@ import { blogPosts } from "@/data/blog";
 
 const pageMeta: Record<string, { title: string; titleAr: string; description: string; descriptionAr: string }> = {
   "/": {
-    title: "Nzom Laps – Enterprise SaaS Systems for Modern Organizations",
+    title: "Nzom Labs – Enterprise SaaS Systems for Modern Organizations",
     titleAr: "مختبرات الأنظمة – أنظمة SaaS للمؤسسات الحديثة",
-    description: "Nzom Laps builds scalable SaaS platforms for operations, compliance, governance, and workflow management in Saudi Arabia.",
+    description: "Nzom Labs builds scalable SaaS platforms for operations, compliance, governance, and workflow management in Saudi Arabia.",
     descriptionAr: "مختبرات الأنظمة تبني منصات SaaS قابلة للتوسع لإدارة العمليات والامتثال والحوكمة في المملكة العربية السعودية.",
   },
   "/about": {
-    title: "About Nzom Laps – Saudi Technology Studio",
+    title: "About Nzom Labs – Saudi Technology Studio",
     titleAr: "من نحن – مختبرات الأنظمة",
-    description: "Learn about Nzom Laps, a Saudi technology studio focused on building enterprise SaaS systems for digital transformation.",
+    description: "Learn about Nzom Labs, a Saudi technology studio focused on building enterprise SaaS systems for digital transformation.",
     descriptionAr: "تعرف على مختبرات الأنظمة، استوديو تقني سعودي متخصص في بناء أنظمة SaaS للمؤسسات.",
   },
   "/blog": {
-    title: "Blog – Nzom Laps Insights",
+    title: "Blog – Nzom Labs Insights",
     titleAr: "المدونة – رؤى مختبرات الأنظمة",
     description: "Insights on digital transformation, compliance best practices, and enterprise technology trends in Saudi Arabia.",
     descriptionAr: "رؤى حول التحول الرقمي وأفضل ممارسات الامتثال واتجاهات تقنية المؤسسات في السعودية.",
   },
   "/contact": {
-    title: "Contact Nzom Laps – Request a Demo",
+    title: "Contact Nzom Labs – Request a Demo",
     titleAr: "تواصل معنا – مختبرات الأنظمة",
-    description: "Get in touch with Nzom Laps for enterprise SaaS solutions. Request a demo or book a consultation.",
+    description: "Get in touch with Nzom Labs for enterprise SaaS solutions. Request a demo or book a consultation.",
     descriptionAr: "تواصل مع مختبرات الأنظمة لحلول SaaS للمؤسسات. اطلب عرضاً توضيحياً أو احجز استشارة.",
   },
 };
@@ -48,12 +48,12 @@ const SEOHead = () => {
       if (product) {
         title = language === "ar"
           ? `${product.name.ar} – مختبرات الأنظمة`
-          : `${product.name.en} – Nzom Laps`;
+          : `${product.name.en} – Nzom Labs`;
         description = language === "ar"
           ? product.tagline.ar
           : product.tagline.en;
       } else {
-        title = "Nzom Laps";
+        title = "Nzom Labs";
         description = "";
       }
     } else if (blogMatch) {
@@ -61,12 +61,12 @@ const SEOHead = () => {
       if (post) {
         title = language === "ar"
           ? `${post.title.ar} – مختبرات الأنظمة`
-          : `${post.title.en} – Nzom Laps`;
+          : `${post.title.en} – Nzom Labs`;
         description = language === "ar"
           ? post.excerpt.ar
           : post.excerpt.en;
       } else {
-        title = "Nzom Laps";
+        title = "Nzom Labs";
         description = "";
       }
     } else {
@@ -75,7 +75,7 @@ const SEOHead = () => {
         title = language === "ar" ? meta.titleAr : meta.title;
         description = language === "ar" ? meta.descriptionAr : meta.description;
       } else {
-        title = "Nzom Laps";
+        title = "Nzom Labs";
         description = "";
       }
     }
@@ -95,7 +95,7 @@ const SEOHead = () => {
     setMeta("name", "description", description);
     setMeta("property", "og:title", title);
     setMeta("property", "og:description", description);
-    setMeta("property", "og:url", `https://nzomlaps.com${path}`);
+    setMeta("property", "og:url", `https://nzomlabs.com${path}`);
     setMeta("name", "twitter:title", title);
     setMeta("name", "twitter:description", description);
   }, [location.pathname, language]);

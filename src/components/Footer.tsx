@@ -4,7 +4,7 @@ import { products } from "@/data/products";
 
 const Footer = () => {
   const { t, language } = useLanguage();
-  const brandName = language === "ar" ? "مختبرات الأنظمة" : "Nzom Laps";
+  const brandName = language === "ar" ? "مختبرات الأنظمة" : "Nzom Labs";
 
   return (
     <footer className="bg-background text-foreground border-t border-border/30 dot-pattern">
@@ -13,9 +13,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center">
-                <span className="text-secondary-foreground font-bold text-sm">N</span>
-              </div>
+              <img src="/src/assets/logo.png" alt="Nzom Labs" className="w-8 h-8 rounded-lg object-contain" />
               <span className="font-bold text-lg">{brandName}</span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
@@ -54,7 +52,7 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">{t("nav.contact")}</h4>
             <ul className="space-y-2 text-muted-foreground text-sm">
-              <li>info@nzomlaps.com</li>
+              <li>info@nzomlabs.com</li>
               <li>{language === "ar" ? "الرياض، المملكة العربية السعودية" : "Riyadh, Saudi Arabia"}</li>
             </ul>
           </div>

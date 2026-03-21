@@ -36,7 +36,7 @@ const translations: Record<string, Record<Language, string>> = {
   "ecosystem.coming_soon": { en: "Coming Soon", ar: "قريباً" },
 
   // Why Nzom
-  "why.title": { en: "Why Nzom Laps", ar: "لماذا مختبرات الأنظمة" },
+  "why.title": { en: "Why Nzom Labs", ar: "لماذا مختبرات الأنظمة" },
   "why.subtitle": { en: "Solutions designed to get you started immediately", ar: "حلول مصممة لتبدأ فوراً" },
   "why.enterprise.title": { en: "Ready for Immediate Use", ar: "جاهز للاستخدام الفوري" },
   "why.enterprise.desc": { en: "No need to build from scratch — our systems are ready to activate.", ar: "لا حاجة لبناء من الصفر، أنظمتنا جاهزة للتفعيل." },
@@ -78,7 +78,7 @@ const translations: Record<string, Record<Language, string>> = {
 
   // About
   "about.story.title": { en: "Our Story", ar: "قصتنا" },
-  "about.story.text": { en: "Nzom Laps is a technology studio building SaaS systems for modern organizations. Founded with the vision to simplify complex enterprise operations through technology, we design and develop scalable platforms that address real operational challenges.", ar: "مختبرات الأنظمة هي استوديو تقني يبني أنظمة SaaS للمنظمات الحديثة. تأسست برؤية تبسيط العمليات المؤسسية المعقدة من خلال التكنولوجيا." },
+  "about.story.text": { en: "Nzom Labs is a technology studio building SaaS systems for modern organizations. Founded with the vision to simplify complex enterprise operations through technology, we design and develop scalable platforms that address real operational challenges.", ar: "مختبرات الأنظمة هي استوديو تقني يبني أنظمة SaaS للمنظمات الحديثة. تأسست برؤية تبسيط العمليات المؤسسية المعقدة من خلال التكنولوجيا." },
   "about.vision.title": { en: "Our Vision", ar: "رؤيتنا" },
   "about.vision.text": { en: "To become a leading SaaS ecosystem provider in Saudi Arabia.", ar: "أن نصبح مزود منظومة SaaS رائد في المملكة العربية السعودية." },
   "about.mission.title": { en: "Our Mission", ar: "مهمتنا" },

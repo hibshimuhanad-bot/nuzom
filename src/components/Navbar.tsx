@@ -26,11 +26,9 @@ const Navbar = () => {
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center">
-            <span className="text-secondary-foreground font-bold text-sm">N</span>
-          </div>
+          <img src="/src/assets/logo.png" alt="Nzom Labs" className="w-8 h-8 rounded-lg object-contain" />
           <span className="text-foreground font-bold text-lg">
-            {language === "ar" ? "مختبرات الأنظمة" : "Nzom Laps"}
+            {language === "ar" ? "مختبرات الأنظمة" : "Nzom Labs"}
           </span>
         </Link>
 

@@ -26,7 +26,7 @@ const About = () => {
               {language === "ar" ? (
                 <>من <span className="text-gradient">نحن</span></>
               ) : (
-                <>About <span className="text-gradient">Nzom Laps</span></>
+                <>About <span className="text-gradient">Nzom Labs</span></>
               )}
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">

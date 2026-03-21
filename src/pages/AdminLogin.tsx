@@ -80,7 +80,7 @@ const AdminLogin = () => {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="admin@nzomlaps.com"
+                placeholder="admin@nzomlabs.com"
               />
             </div>
             <div className="space-y-2">
