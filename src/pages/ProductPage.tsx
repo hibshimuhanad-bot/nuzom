@@ -5,6 +5,11 @@ import { products } from "@/data/products";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ArrowLeft, Sparkles, GitBranch, Users, BarChart3, ShieldCheck } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import tasksScreenshot from "@/assets/screenshots/tasks-product-shot.png";
+
+const screenshotMap: Record<string, string> = {
+  tasks: tasksScreenshot,
+};
 
 const ProductPage = () => {
   const { slug } = useParams<{ slug: string }>();

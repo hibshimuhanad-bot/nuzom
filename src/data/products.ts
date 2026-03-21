@@ -169,7 +169,7 @@ export const products: Product[] = [
     rbacDesc: { en: "Executives see portfolios. Managers see projects. Team members see their tasks. Everyone focuses on what matters to them.", ar: "المسؤولون التنفيذيون يشوفون المحافظ. المديرون يشوفون المشاريع. أعضاء الفريق يشوفون مهامهم. كل واحد يركز على اللي يهمه." },
     analyticsDesc: { en: "Know instantly — is your team fast or stuck? Which projects are healthy? Where are the bottlenecks? Real answers, not guesswork.", ar: "اعرف فوراً — فريقك سريع ولا عالق؟ أي المشاريع صحية؟ وين الاختناقات؟ إجابات حقيقية، مو تخمينات." },
     securityDesc: { en: "Your project data stays private. Enterprise encryption, access logs, and multi-tenant isolation keep everything locked down.", ar: "بيانات مشاريعك تبقى خاصة. تشفير مؤسسي، سجلات وصول، وعزل يحمي كل شيء." },
-    screenshots: ["/src/assets/screenshots/tasks-product-shot.png"],
+    screenshots: ["tasks-product-shot"],
   },
 
 
