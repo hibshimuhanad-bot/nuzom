@@ -110,7 +110,7 @@ const translations: Record<string, Record<Language, string>> = {
     en: "Contact us now and get your system ready to work. No waiting, no complexity.",
     ar: "تواصل معنا الحين واحصل على نظامك جاهز للعمل. بدون انتظار، وبدون أي تعقيد.",
   },
-  "cta.button": { en: "Contact Us Now", ar: "تواصل معنا الحين" },
+  "cta.button": { en: "Contact Us Now", ar: "تواصل معنا " },
 
   // About
   "about.story.title": { en: "Our Story", ar: "قصتنا" },
