@@ -75,7 +75,7 @@ const SEOHead = () => {
         title = language === "ar" ? meta.titleAr : meta.title;
         description = language === "ar" ? meta.descriptionAr : meta.description;
       } else {
-        title = "Nzom Laps";
+        title = "Nzom Labs";
         description = "";
       }
     }
