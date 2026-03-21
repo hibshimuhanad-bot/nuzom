@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import logo from "@/assets/logo.png";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
@@ -26,7 +27,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <img src="/src/assets/logo.png" alt="Nzom Labs" className="w-8 h-8 rounded-lg object-contain" />
+          <img src={logo} alt="Nzom Labs" className="w-8 h-8 rounded-lg object-contain" />
           <span className="text-foreground font-bold text-lg">
             {language === "ar" ? "مختبرات الأنظمة" : "Nzom Labs"}
           </span>
