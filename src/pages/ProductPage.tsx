@@ -55,7 +55,7 @@ const ProductPage = () => {
       </section>
 
       {/* Screenshot Preview */}
-      {product.screenshots && product.screenshots.length > 0 && (
+      {screenshotMap[product.slug] && (
         <section className="py-14 md:py-20 bg-muted/30 relative overflow-hidden">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-primary/5 blur-[120px]" />
           <div className="container mx-auto px-4 relative z-10">
@@ -66,7 +66,7 @@ const ProductPage = () => {
               <div className="max-w-5xl mx-auto">
                 <div className="rounded-xl overflow-hidden shadow-2xl shadow-primary/10 border border-border/30 transition-transform duration-500 hover:scale-[1.02]">
                   <img
-                    src={product.screenshots[0]}
+                    src={screenshotMap[product.slug]}
                     alt={`${product.name[language]} dashboard`}
                     className="w-full h-auto"
                     loading="lazy"
