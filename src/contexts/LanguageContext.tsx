@@ -36,7 +36,7 @@ const translations: Record<string, Record<Language, string>> = {
   "ecosystem.coming_soon": { en: "Coming Soon", ar: "قريباً" },
 
   // Why Nzom
-  "why.title": { en: "Why Nzom Laps", ar: "لماذا مختبرات الأنظمة" },
+  "why.title": { en: "Why Nzom Labs", ar: "لماذا مختبرات الأنظمة" },
   "why.subtitle": { en: "Solutions designed to get you started immediately", ar: "حلول مصممة لتبدأ فوراً" },
   "why.enterprise.title": { en: "Ready for Immediate Use", ar: "جاهز للاستخدام الفوري" },
   "why.enterprise.desc": { en: "No need to build from scratch — our systems are ready to activate.", ar: "لا حاجة لبناء من الصفر، أنظمتنا جاهزة للتفعيل." },
