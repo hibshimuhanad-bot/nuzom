@@ -12,9 +12,9 @@ const pageMeta: Record<string, { title: string; titleAr: string; description: st
     descriptionAr: "مختبرات الأنظمة تبني منصات SaaS قابلة للتوسع لإدارة العمليات والامتثال والحوكمة في المملكة العربية السعودية.",
   },
   "/about": {
-    title: "About Nzom Laps – Saudi Technology Studio",
+    title: "About Nzom Labs – Saudi Technology Studio",
     titleAr: "من نحن – مختبرات الأنظمة",
-    description: "Learn about Nzom Laps, a Saudi technology studio focused on building enterprise SaaS systems for digital transformation.",
+    description: "Learn about Nzom Labs, a Saudi technology studio focused on building enterprise SaaS systems for digital transformation.",
     descriptionAr: "تعرف على مختبرات الأنظمة، استوديو تقني سعودي متخصص في بناء أنظمة SaaS للمؤسسات.",
   },
   "/blog": {
