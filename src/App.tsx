@@ -16,6 +16,7 @@ const AdminDashboard = lazy(() => import("./pages/AdminDashboard"));
 const ProductPage = lazy(() => import("./pages/ProductPage"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+const Unsubscribe = lazy(() => import("./pages/Unsubscribe"));
 
 const queryClient = new QueryClient();
 
@@ -37,6 +38,7 @@ const App = () => (
               <Route path="/admin" element={<AdminDashboard />} />
               <Route path="/products/:slug" element={<ProductPage />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
+              <Route path="/unsubscribe" element={<Unsubscribe />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
