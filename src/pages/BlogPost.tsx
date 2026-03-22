@@ -4,6 +4,30 @@ import Layout from "@/components/Layout";
 import { blogPosts, blogCategories } from "@/data/blog";
 import { Calendar, Clock, ArrowLeft, ArrowRight } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import { Button } from "@/components/ui/button";
+
+const categoryToProduct: Record<string, { slug: string; name: { en: string; ar: string }; cta: { en: string; ar: string } }> = {
+  hsse: {
+    slug: "hsse",
+    name: { en: "Nzom HSSE", ar: "نزوم السلامة" },
+    cta: { en: "Discover how Nzom HSSE can transform your safety operations", ar: "اكتشف كيف يمكن لنزوم السلامة تحويل عمليات السلامة لديك" },
+  },
+  legal: {
+    slug: "legal",
+    name: { en: "Nzom Legal", ar: "نزوم القانونية" },
+    cta: { en: "See how Nzom Legal streamlines your legal workflow", ar: "شاهد كيف يُبسّط نزوم القانونية سير عملك القانوني" },
+  },
+  tasks: {
+    slug: "tasks",
+    name: { en: "Nzom Tasks", ar: "نزوم المهام" },
+    cta: { en: "Learn how Nzom Tasks eliminates project chaos", ar: "تعرّف كيف يقضي نزوم المهام على فوضى المشاريع" },
+  },
+  booking: {
+    slug: "booking",
+    name: { en: "Nzom Booking", ar: "نزوم الحجوزات" },
+    cta: { en: "Explore how Nzom Booking modernizes your appointments", ar: "استكشف كيف يُحدّث نزوم الحجوزات نظام مواعيدك" },
+  },
+};
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -29,6 +53,7 @@ const BlogPost = () => {
 
   const category = blogCategories.find((c) => c.id === post.category);
   const BackArrow = isAr ? ArrowRight : ArrowLeft;
+  const product = categoryToProduct[post.category];
 
   return (
     <Layout>
@@ -102,6 +127,36 @@ const BlogPost = () => {
             </ScrollReveal>
           </div>
         </section>
+
+        {product && (
+          <section className="py-16 bg-muted/30">
+            <div className="container mx-auto px-4 max-w-3xl">
+              <ScrollReveal>
+                <div className="rounded-2xl border border-border bg-card p-8 md:p-12 text-center">
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
+                    {product.name[language]}
+                  </h3>
+                  <p className="text-muted-foreground text-lg mb-8 max-w-lg mx-auto">
+                    {product.cta[language]}
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 rounded-xl">
+                      <Link to={`/products/${product.slug}`}>
+                        {isAr ? "تعرّف على المنتج" : "Learn More"}
+                        {isAr ? <ArrowLeft className="h-4 w-4 ms-2" /> : <ArrowRight className="h-4 w-4 ms-2" />}
+                      </Link>
+                    </Button>
+                    <Button asChild variant="outline" size="lg" className="rounded-xl px-8">
+                      <Link to="/contact">
+                        {isAr ? "اطلب عرض تجريبي" : "Request a Demo"}
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+              </ScrollReveal>
+            </div>
+          </section>
+        )}
       </article>
     </Layout>
   );
