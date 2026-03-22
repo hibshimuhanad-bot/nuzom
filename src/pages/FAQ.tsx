@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Layout from "@/components/Layout";
 import ScrollReveal from "@/components/ScrollReveal";
