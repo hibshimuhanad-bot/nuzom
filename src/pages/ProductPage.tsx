@@ -8,10 +8,12 @@ import { ArrowRight, ArrowLeft, Sparkles, GitBranch, Users, BarChart3, ShieldChe
 import ScrollReveal from "@/components/ScrollReveal";
 import tasksScreenshot from "@/assets/screenshots/tasks-product-shot.png";
 import hsseScreenshot from "@/assets/screenshots/hsse-product-shot.png";
+import legalScreenshot from "@/assets/screenshots/legal-product-shot.png";
 
 const screenshotMap: Record<string, string> = {
   tasks: tasksScreenshot,
   hsse: hsseScreenshot,
+  legal: legalScreenshot,
 };
 
 const ProductPage = () => {
