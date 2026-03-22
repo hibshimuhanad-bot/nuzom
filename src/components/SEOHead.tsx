@@ -41,6 +41,12 @@ const pageMeta: Record<string, { title: string; titleAr: string; description: st
     description: "Review the terms and conditions for using Nzom Labs services and platforms.",
     descriptionAr: "اطلع على شروط وأحكام استخدام خدمات ومنصات مختبرات الأنظمة.",
   },
+  "/faq": {
+    title: "FAQ – Nzom Labs",
+    titleAr: "الأسئلة الشائعة – مختبرات الأنظمة",
+    description: "Find answers to common questions about Nzom Labs systems, pricing, and support.",
+    descriptionAr: "اعثر على إجابات للأسئلة الشائعة حول أنظمة مختبرات الأنظمة والدعم الفني.",
+  },
 };
 
 const SEOHead = () => {

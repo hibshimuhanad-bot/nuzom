@@ -84,6 +84,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><Link to="/about" className="text-muted-foreground hover:text-secondary text-sm transition-colors">{t("nav.about")}</Link></li>
               <li><Link to="/blog" className="text-muted-foreground hover:text-secondary text-sm transition-colors">{t("nav.blog")}</Link></li>
+              <li><Link to="/faq" className="text-muted-foreground hover:text-secondary text-sm transition-colors">{language === "ar" ? "الأسئلة الشائعة" : "FAQ"}</Link></li>
               <li><Link to="/contact" className="text-muted-foreground hover:text-secondary text-sm transition-colors">{t("nav.contact")}</Link></li>
             </ul>
           </div>
