@@ -85,6 +85,7 @@ const ProductPage = () => {
                       src={screenshotMap[product.slug]}
                       alt={`${product.name[language]} dashboard`}
                       className="w-full h-auto rounded-lg"
+                      loading="lazy"
                     />
                   </DialogContent>
                 </Dialog>
