@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Twitter, Linkedin } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { products } from "@/data/products";
@@ -17,9 +18,29 @@ const Footer = () => {
               <img src={logo} alt="Nzom Labs" className="w-8 h-8 rounded-lg object-contain" />
               <span className="font-bold text-lg">{brandName}</span>
             </div>
-            <p className="text-muted-foreground text-sm leading-relaxed">
+            <p className="text-muted-foreground text-sm leading-relaxed mb-4">
               {t("footer.description")}
             </p>
+            <div className="flex items-center gap-3">
+              <a
+                href="https://x.com/nzomlabs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-secondary transition-colors"
+                aria-label="Twitter / X"
+              >
+                <Twitter size={18} />
+              </a>
+              <a
+                href="https://linkedin.com/company/nzomlabs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-secondary transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={18} />
+              </a>
+            </div>
           </div>
 
           {/* Products */}
