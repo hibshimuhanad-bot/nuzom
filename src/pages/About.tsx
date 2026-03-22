@@ -1,12 +1,29 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import Layout from "@/components/Layout";
-import { Card, CardContent } from "@/components/ui/card";
-import { Eye, Target, Cloud, Cpu, Layers, Sparkles } from "lucide-react";
+import { Eye, Target, Cloud, Cpu, Layers, Sparkles, Zap, Shield, Lightbulb, HeadphonesIcon, ArrowRight, ArrowLeft } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import ParticleField from "@/components/ParticleField";
+import { products } from "@/data/products";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const About = () => {
   const { t, language } = useLanguage();
+  const ArrowIcon = language === "ar" ? ArrowLeft : ArrowRight;
+
+  const values = [
+    { icon: Zap, titleKey: "about.values.simplicity.title", descKey: "about.values.simplicity.desc", color: "text-secondary" },
+    { icon: Shield, titleKey: "about.values.security.title", descKey: "about.values.security.desc", color: "text-accent" },
+    { icon: Lightbulb, titleKey: "about.values.innovation.title", descKey: "about.values.innovation.desc", color: "text-[hsl(var(--glow-purple))]" },
+    { icon: HeadphonesIcon, titleKey: "about.values.support.title", descKey: "about.values.support.desc", color: "text-secondary" },
+  ];
+
+  const stats = [
+    { value: "4", label: t("about.stats.systems") },
+    { value: "5+", label: t("about.stats.sectors") },
+    { value: t("about.stats.activation.value"), label: t("about.stats.activation") },
+    { value: "24/7", label: t("about.stats.support") },
+  ];
 
   return (
     <Layout>
@@ -42,7 +59,8 @@ const About = () => {
           <ScrollReveal>
             <div className="bento-card p-8 md:p-12">
               <h2 className="text-3xl font-bold text-foreground mb-6">{t("about.story.title")}</h2>
-              <p className="text-muted-foreground text-lg leading-relaxed">{t("about.story.text")}</p>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-4">{t("about.story.text1")}</p>
+              <p className="text-muted-foreground text-lg leading-relaxed">{t("about.story.text2")}</p>
             </div>
           </ScrollReveal>
         </div>
@@ -75,8 +93,50 @@ const About = () => {
         </div>
       </section>
 
-      {/* Tech Stack */}
+      {/* Values */}
       <section className="py-20 bg-background dot-pattern relative">
+        <div className="container mx-auto px-4 max-w-4xl relative z-10">
+          <ScrollReveal>
+            <h2 className="text-3xl font-bold text-foreground text-center mb-12">{t("about.values.title")}</h2>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            {values.map((item, i) => (
+              <ScrollReveal key={i} delay={i * 100}>
+                <div className="bento-card p-8 h-full">
+                  <div className="w-14 h-14 rounded-2xl bg-card/80 border border-border/50 flex items-center justify-center mb-4 animate-pulse-glow">
+                    <item.icon className={`h-7 w-7 ${item.color}`} />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground mb-2">{t(item.titleKey)}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{t(item.descKey)}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section className="py-16 bg-background relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_800px_400px_at_50%_50%,hsl(var(--glow-accent)/0.06),transparent)]" />
+        <div className="container mx-auto px-4 max-w-4xl relative z-10">
+          <ScrollReveal>
+            <h2 className="text-3xl font-bold text-foreground text-center mb-12">{t("about.stats.title")}</h2>
+          </ScrollReveal>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {stats.map((stat, i) => (
+              <ScrollReveal key={i} delay={i * 100}>
+                <div className="bento-card p-6 text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-gradient mb-2">{stat.value}</div>
+                  <p className="text-muted-foreground text-sm">{stat.label}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Tech Stack */}
+      <section className="py-20 bg-background grid-pattern relative">
         <div className="container mx-auto px-4 max-w-4xl relative z-10">
           <ScrollReveal>
             <h2 className="text-3xl font-bold text-foreground text-center mb-12">
@@ -100,6 +160,58 @@ const About = () => {
               </ScrollReveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Our Products */}
+      <section className="py-20 bg-background relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_600px_400px_at_70%_50%,hsl(var(--glow-primary)/0.06),transparent)]" />
+        <div className="container mx-auto px-4 max-w-4xl relative z-10">
+          <ScrollReveal>
+            <h2 className="text-3xl font-bold text-foreground text-center mb-3">{t("about.products.title")}</h2>
+            <p className="text-muted-foreground text-center mb-12">{t("about.products.subtitle")}</p>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {products.map((product, i) => (
+              <ScrollReveal key={product.slug} delay={i * 100}>
+                <Link to={`/products/${product.slug}`}>
+                  <div className="bento-card p-6 h-full hover:border-primary/30 transition-colors group">
+                    <div className="flex items-center gap-4 mb-3">
+                      <div className={`w-12 h-12 rounded-xl flex items-center justify-center`} style={{ backgroundColor: `${product.color}15` }}>
+                        <product.icon className="h-6 w-6" style={{ color: product.color }} />
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-foreground">{product.name[language]}</h3>
+                        <p className="text-muted-foreground text-sm">{product.tagline[language]}</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-1 text-sm text-primary group-hover:gap-2 transition-all">
+                      <span>{t("ecosystem.learn_more")}</span>
+                      <ArrowIcon className="h-4 w-4" />
+                    </div>
+                  </div>
+                </Link>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 bg-background dot-pattern relative">
+        <div className="container mx-auto px-4 max-w-2xl text-center relative z-10">
+          <ScrollReveal>
+            <div className="bento-card p-10 md:p-14 shimmer-border">
+              <h2 className="text-3xl font-bold text-foreground mb-4">{t("cta.title")}</h2>
+              <p className="text-muted-foreground mb-8">{t("cta.subtitle")}</p>
+              <Button asChild size="lg" className="gap-2">
+                <Link to="/contact">
+                  {t("cta.button")}
+                  <ArrowIcon className="h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
     </Layout>
