@@ -24,7 +24,7 @@ const Hero = () => {
     <section className="relative min-h-[100vh] flex items-center justify-center ai-gradient-bg dot-pattern overflow-hidden">
       {/* Particle field */}
       <Suspense fallback={null}>
-        <ParticleField count={70} />
+        <ParticleField count={40} />
       </Suspense>
       {/* Floating orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ zIndex: 0 }}>
