@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Twitter, Linkedin, Instagram } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.webp";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { products } from "@/data/products";
 
