@@ -7,27 +7,27 @@ import { blogPosts } from "@/data/blog";
 const pageMeta: Record<string, { title: string; titleAr: string; description: string; descriptionAr: string }> = {
   "/": {
     title: "Nzom Labs – Enterprise SaaS Systems for Modern Organizations",
-    titleAr: "مختبرات الأنظمة – أنظمة SaaS للمؤسسات الحديثة",
+    titleAr: "مختبرات الأنظمة – حلول رقمية متكاملة للمؤسسات الحديثة",
     description: "Nzom Labs builds scalable SaaS platforms for operations, compliance, governance, and workflow management in Saudi Arabia.",
-    descriptionAr: "مختبرات الأنظمة تبني منصات SaaS قابلة للتوسع لإدارة العمليات والامتثال والحوكمة في المملكة العربية السعودية.",
+    descriptionAr: "مختبرات الأنظمة تبني منصات رقمية قابلة للتوسع لإدارة العمليات والامتثال والحوكمة في المملكة العربية السعودية.",
   },
   "/about": {
     title: "About Nzom Labs – Saudi Technology Studio",
     titleAr: "من نحن – مختبرات الأنظمة",
     description: "Learn about Nzom Labs, a Saudi technology studio focused on building enterprise SaaS systems for digital transformation.",
-    descriptionAr: "تعرف على مختبرات الأنظمة، استوديو تقني سعودي متخصص في بناء أنظمة SaaS للمؤسسات.",
+    descriptionAr: "تعرف على مختبرات الأنظمة، استوديو تقني سعودي متخصص في بناء أنظمة رقمية للمؤسسات.",
   },
   "/blog": {
     title: "Blog – Nzom Labs Insights",
     titleAr: "المدونة – رؤى مختبرات الأنظمة",
     description: "Insights on digital transformation, compliance best practices, and enterprise technology trends in Saudi Arabia.",
-    descriptionAr: "رؤى حول التحول الرقمي وأفضل ممارسات الامتثال واتجاهات تقنية المؤسسات في السعودية.",
+    descriptionAr: "رؤى حول التحول الرقمي وأفضل ممارسات الامتثال واتجاهات التقنية المؤسسية في السعودية.",
   },
   "/contact": {
     title: "Contact Nzom Labs – Request a Demo",
     titleAr: "تواصل معنا – مختبرات الأنظمة",
     description: "Get in touch with Nzom Labs for enterprise SaaS solutions. Request a demo or book a consultation.",
-    descriptionAr: "تواصل مع مختبرات الأنظمة لحلول SaaS للمؤسسات. اطلب عرضاً توضيحياً أو احجز استشارة.",
+    descriptionAr: "تواصل مع مختبرات الأنظمة لحلول المؤسسات الرقمية. اطلب عرضاً توضيحياً أو احجز استشارة.",
   },
 };
 
