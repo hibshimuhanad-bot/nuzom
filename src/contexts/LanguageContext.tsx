@@ -114,9 +114,13 @@ const translations: Record<string, Record<Language, string>> = {
 
   // About
   "about.story.title": { en: "Our Story", ar: "قصتنا" },
-  "about.story.text": {
-    en: "Nzom Labs is a technology studio building SaaS systems for modern organizations. Founded with the vision to simplify complex enterprise operations through technology, we design and develop scalable platforms that address real operational challenges.",
-    ar: "مختبرات الأنظمة هي استوديو تقني يبني أنظمة SaaS للمنظمات الحديثة. تأسست برؤية تبسيط العمليات المؤسسية المعقدة من خلال التكنولوجيا.",
+  "about.story.text1": {
+    en: "Nzom Labs is a Saudi technology studio specializing in building enterprise SaaS systems for modern organizations. Founded with the vision to simplify complex enterprise operations through technology, we design and develop scalable platforms that address real operational challenges across the Kingdom.",
+    ar: "مختبرات الأنظمة هي استوديو تقني سعودي متخصص في بناء أنظمة SaaS للمنظمات الحديثة. تأسست برؤية تبسيط العمليات المؤسسية المعقدة من خلال التكنولوجيا، حيث نصمم ونطور منصات قابلة للتوسع تعالج تحديات تشغيلية حقيقية في المملكة.",
+  },
+  "about.story.text2": {
+    en: "We focus on sectors with the greatest need for digital transformation — Construction, Legal, and Facility Management — delivering ready-to-use systems that eliminate complexity and accelerate growth for businesses of all sizes.",
+    ar: "نركز على القطاعات الأكثر حاجة للتحول الرقمي — المقاولات، القانون، وإدارة المرافق — نقدم أنظمة جاهزة للاستخدام تزيل التعقيد وتسرّع النمو للشركات بجميع أحجامها.",
   },
   "about.vision.title": { en: "Our Vision", ar: "رؤيتنا" },
   "about.vision.text": {
@@ -127,6 +131,44 @@ const translations: Record<string, Record<Language, string>> = {
   "about.mission.text": {
     en: "Design systems that simplify complex organizational operations.",
     ar: "تصميم أنظمة تبسط العمليات التنظيمية المعقدة.",
+  },
+
+  // About - Values
+  "about.values.title": { en: "Our Values", ar: "قيمنا" },
+  "about.values.simplicity.title": { en: "Simplicity", ar: "البساطة" },
+  "about.values.simplicity.desc": {
+    en: "Ready-made systems with zero complexity — just activate and start.",
+    ar: "أنظمة جاهزة بدون أي تعقيد — فعّل وابدأ.",
+  },
+  "about.values.security.title": { en: "Security", ar: "الأمان" },
+  "about.values.security.desc": {
+    en: "Protecting our clients' data is our top priority at every level.",
+    ar: "حماية بيانات عملائنا أولوية قصوى في كل مستوى.",
+  },
+  "about.values.innovation.title": { en: "Innovation", ar: "الابتكار" },
+  "about.values.innovation.desc": {
+    en: "Leveraging the latest technologies and AI to deliver smarter solutions.",
+    ar: "نستخدم أحدث التقنيات والذكاء الاصطناعي لتقديم حلول أذكى.",
+  },
+  "about.values.support.title": { en: "Continuous Support", ar: "الدعم المستمر" },
+  "about.values.support.desc": {
+    en: "Our team is with you from activation to full operation and beyond.",
+    ar: "فريقنا معك من التفعيل إلى التشغيل الكامل وما بعده.",
+  },
+
+  // About - Stats
+  "about.stats.title": { en: "By the Numbers", ar: "أرقامنا" },
+  "about.stats.systems": { en: "Ready Systems", ar: "أنظمة جاهزة" },
+  "about.stats.sectors": { en: "Sectors Served", ar: "قطاعات نخدمها" },
+  "about.stats.activation": { en: "Quick Activation", ar: "تفعيل سريع" },
+  "about.stats.activation.value": { en: "Days", ar: "أيام" },
+  "about.stats.support": { en: "Technical Support", ar: "دعم فني" },
+
+  // About - Products
+  "about.products.title": { en: "Our Systems", ar: "أنظمتنا" },
+  "about.products.subtitle": {
+    en: "Explore our ready-to-use enterprise solutions",
+    ar: "استكشف حلولنا المؤسسية الجاهزة للاستخدام",
   },
 
   // Contact
