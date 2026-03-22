@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Layout from "@/components/Layout";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -190,6 +190,39 @@ const FAQ = () => {
   const [activeSection, setActiveSection] = useState("general");
 
   const currentSection = faqSections.find((s) => s.id === activeSection) || faqSections[0];
+
+  // Inject FAQ JSON-LD structured data
+  useEffect(() => {
+    const allItems = faqSections.flatMap((section) =>
+      section.items.map((item) => ({
+        "@type": "Question",
+        name: item.q.en,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.a.en,
+        },
+      }))
+    );
+
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: allItems,
+    };
+
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.id = "faq-jsonld";
+    script.textContent = JSON.stringify(jsonLd);
+
+    // Remove existing if any
+    document.getElementById("faq-jsonld")?.remove();
+    document.head.appendChild(script);
+
+    return () => {
+      document.getElementById("faq-jsonld")?.remove();
+    };
+  }, []);
 
   return (
     <Layout>
