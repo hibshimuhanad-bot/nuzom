@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Twitter, Linkedin } from "lucide-react";
+import { Twitter, Linkedin, Instagram } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { products } from "@/data/products";
@@ -39,6 +39,24 @@ const Footer = () => {
                 aria-label="LinkedIn"
               >
                 <Linkedin size={18} />
+              </a>
+              <a
+                href="https://instagram.com/nzomlabs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-secondary transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram size={18} />
+              </a>
+              <a
+                href="https://tiktok.com/@nzomlabs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-secondary transition-colors"
+                aria-label="TikTok"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
               </a>
             </div>
           </div>
