@@ -55,6 +55,12 @@ const BlogPost = () => {
   const BackArrow = isAr ? ArrowRight : ArrowLeft;
   const product = categoryToProduct[post.category];
 
+  // Related articles: same category first, then others, exclude current
+  const relatedPosts = [
+    ...blogPosts.filter((p) => p.category === post.category && p.id !== post.id),
+    ...blogPosts.filter((p) => p.category !== post.category && p.id !== post.id),
+  ].slice(0, 3);
+
   return (
     <Layout>
       <article>
@@ -154,6 +160,53 @@ const BlogPost = () => {
                   </div>
                 </div>
               </ScrollReveal>
+            </div>
+          </section>
+        )}
+
+        {relatedPosts.length > 0 && (
+          <section className="py-16 bg-background">
+            <div className="container mx-auto px-4 max-w-5xl">
+              <ScrollReveal>
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-10">
+                  {isAr ? "مقالات مشابهة" : "Related Articles"}
+                </h2>
+              </ScrollReveal>
+              <div className="grid md:grid-cols-3 gap-6">
+                {relatedPosts.map((related, idx) => {
+                  const relCat = blogCategories.find((c) => c.id === related.category);
+                  return (
+                    <ScrollReveal key={related.id} delay={idx * 100}>
+                      <Link
+                        to={`/blog/${related.slug}`}
+                        className="group block rounded-2xl border border-border bg-card p-6 hover:border-secondary/50 hover:shadow-lg transition-all duration-300 h-full"
+                      >
+                        {relCat && (
+                          <span className="inline-block px-3 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-medium mb-3">
+                            {relCat.label[language]}
+                          </span>
+                        )}
+                        <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-secondary transition-colors line-clamp-2">
+                          {related.title[language]}
+                        </h3>
+                        <p className="text-muted-foreground text-sm line-clamp-3 mb-4">
+                          {related.excerpt[language]}
+                        </p>
+                        <div className="flex items-center gap-3 text-xs text-muted-foreground">
+                          <span className="flex items-center gap-1">
+                            <Calendar className="h-3 w-3" />
+                            {related.date}
+                          </span>
+                          <span className="flex items-center gap-1">
+                            <Clock className="h-3 w-3" />
+                            {related.readTime[language]}
+                          </span>
+                        </div>
+                      </Link>
+                    </ScrollReveal>
+                  );
+                })}
+              </div>
             </div>
           </section>
         )}
