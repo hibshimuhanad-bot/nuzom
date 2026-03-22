@@ -202,8 +202,8 @@ const translations: Record<string, Record<Language, string>> = {
 
   // Footer
   "footer.description": {
-    en: "Building enterprise SaaS systems for modern organizations.",
-    ar: "بناء أنظمة SaaS مؤسسية للمنظمات الحديثة.",
+    en: "Enterprise SaaS systems for modern organizations.",
+    ar: "أنظمة SaaS مؤسسية للمنظمات الحديثة.",
   },
   "footer.products": { en: "Products", ar: "المنتجات" },
   "footer.company": { en: "Company", ar: "الشركة" },
