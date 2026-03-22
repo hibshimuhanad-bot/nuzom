@@ -208,6 +208,9 @@ const translations: Record<string, Record<Language, string>> = {
   "footer.products": { en: "Products", ar: "المنتجات" },
   "footer.company": { en: "Company", ar: "الشركة" },
   "footer.rights": { en: "All rights reserved.", ar: "جميع الحقوق محفوظة." },
+  "footer.legal": { en: "Legal", ar: "قانوني" },
+  "privacy.title": { en: "Privacy Policy", ar: "سياسة الخصوصية" },
+  "terms.title": { en: "Terms & Conditions", ar: "الشروط والأحكام" },
 };
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {

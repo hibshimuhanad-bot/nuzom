@@ -49,9 +49,14 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact info */}
+          {/* Legal */}
           <div>
-            <h4 className="font-semibold mb-4">{t("nav.contact")}</h4>
+            <h4 className="font-semibold mb-4">{t("footer.legal")}</h4>
+            <ul className="space-y-2">
+              <li><Link to="/privacy" className="text-muted-foreground hover:text-secondary text-sm transition-colors">{t("privacy.title")}</Link></li>
+              <li><Link to="/terms" className="text-muted-foreground hover:text-secondary text-sm transition-colors">{t("terms.title")}</Link></li>
+            </ul>
+            <h4 className="font-semibold mb-2 mt-6">{t("nav.contact")}</h4>
             <ul className="space-y-2 text-muted-foreground text-sm">
               <li>info@nzomlabs.com</li>
               <li>{language === "ar" ? "الرياض، المملكة العربية السعودية" : "Riyadh, Saudi Arabia"}</li>
