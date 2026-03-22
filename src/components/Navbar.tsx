@@ -17,6 +17,7 @@ const Navbar = () => {
     { href: "/", label: t("nav.home") },
     { href: "/about", label: t("nav.about") },
     { href: "/blog", label: t("nav.blog") },
+    { href: "/faq", label: language === "ar" ? "الأسئلة الشائعة" : "FAQ" },
     { href: "/contact", label: t("nav.contact") },
   ];
 
