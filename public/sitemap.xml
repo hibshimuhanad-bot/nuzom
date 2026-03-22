@@ -21,6 +21,16 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://nzomlabs.com/privacy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://nzomlabs.com/terms</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://nzomlabs.com/products/hsse</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -36,42 +46,47 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://nzomlabs.com/products/hr</loc>
+    <loc>https://nzomlabs.com/products/booking</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://nzomlabs.com/products/fleet</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nzomlabs.com/blog/digital-transformation-saudi-construction</loc>
+    <loc>https://nzomlabs.com/blog/why-your-organization-needs-digital-safety-system</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nzomlabs.com/blog/navigating-saudi-compliance-requirements</loc>
+    <loc>https://nzomlabs.com/blog/work-permits-from-paper-to-automation</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nzomlabs.com/blog/future-enterprise-fleet-management</loc>
+    <loc>https://nzomlabs.com/blog/ai-powered-legal-case-management</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nzomlabs.com/blog/streamlining-legal-operations-technology</loc>
+    <loc>https://nzomlabs.com/blog/legal-document-management-challenge-and-solution</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nzomlabs.com/blog/hr-tech-trends-gcc-region</loc>
+    <loc>https://nzomlabs.com/blog/goodbye-manual-followups-task-automation</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nzomlabs.com/blog/building-safety-culture-enterprise-operations</loc>
+    <loc>https://nzomlabs.com/blog/managing-multiple-projects-one-system</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nzomlabs.com/blog/from-whatsapp-to-professional-booking-system</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nzomlabs.com/blog/zatca-e-invoicing-everything-you-need-to-know</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
