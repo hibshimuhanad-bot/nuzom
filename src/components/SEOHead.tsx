@@ -29,6 +29,18 @@ const pageMeta: Record<string, { title: string; titleAr: string; description: st
     description: "Get in touch with Nzom Labs for enterprise SaaS solutions. Request a demo or book a consultation.",
     descriptionAr: "تواصل مع مختبرات الأنظمة لحلول المؤسسات الرقمية. اطلب عرضاً توضيحياً أو احجز استشارة.",
   },
+  "/privacy": {
+    title: "Privacy Policy – Nzom Labs",
+    titleAr: "سياسة الخصوصية – مختبرات الأنظمة",
+    description: "Read the privacy policy of Nzom Labs. Learn how we collect, use, and protect your data.",
+    descriptionAr: "اطلع على سياسة الخصوصية لمختبرات الأنظمة وكيف نجمع ونستخدم ونحمي بياناتك.",
+  },
+  "/terms": {
+    title: "Terms & Conditions – Nzom Labs",
+    titleAr: "الشروط والأحكام – مختبرات الأنظمة",
+    description: "Review the terms and conditions for using Nzom Labs services and platforms.",
+    descriptionAr: "اطلع على شروط وأحكام استخدام خدمات ومنصات مختبرات الأنظمة.",
+  },
 };
 
 const SEOHead = () => {
