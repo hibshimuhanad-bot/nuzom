@@ -100,7 +100,7 @@ const faqSections: FAQSection[] = [
   },
   {
     id: "legal",
-    title: { en: "Nzom Legal", ar: "نزوم القانونية" },
+    title: { en: "aldalyel", ar: "الدليل" },
     icon: Scale,
     items: [
       {
