@@ -104,10 +104,10 @@ const faqSections: FAQSection[] = [
     icon: Scale,
     items: [
       {
-        q: { en: "What can Nzom Legal do for my firm?", ar: "ماذا يمكن أن يقدم نزوم القانونية لمكتبي؟" },
+        q: { en: "What can aldalyel do for my firm?", ar: "ماذا يمكن أن يقدم الدليل لمكتبي؟" },
         a: {
-          en: "Nzom Legal helps law firms and legal departments manage cases, track deadlines, organize documents, automate workflows, and generate reports — all from one unified platform powered by AI.",
-          ar: "نزوم القانونية يساعد مكاتب المحاماة والإدارات القانونية في إدارة القضايا وتتبع المواعيد وتنظيم المستندات وأتمتة سير العمل وإنشاء التقارير — كل ذلك من منصة واحدة مدعومة بالذكاء الاصطناعي.",
+          en: "aldalyel helps law firms and legal departments manage cases, track deadlines, organize documents, automate workflows, and generate reports — all from one unified platform powered by AI.",
+          ar: "الدليل يساعد مكاتب المحاماة والإدارات القانونية في إدارة القضايا وتتبع المواعيد وتنظيم المستندات وأتمتة سير العمل وإنشاء التقارير — كل ذلك من منصة واحدة مدعومة بالذكاء الاصطناعي.",
         },
       },
       {
