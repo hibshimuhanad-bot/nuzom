@@ -81,9 +81,9 @@ export const products: Product[] = [
   // 2. LEGAL — الإحساس: السيطرة
   // ═══════════════════════════════════════════
   {
-    slug: "legal",
+    slug: "aldalyel",
     available: true,
-    name: { en: "Nzom Legal", ar: "نزوم القانونية" },
+    name: { en: "aldalyel", ar: "الدليل" },
     tagline: {
       en: "Nothing slips through. Ever.",
       ar: "ولا شيء يفلت منك. أبداً."
