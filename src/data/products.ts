@@ -107,8 +107,8 @@ export const products: Product[] = [
       ar: "غارق في الملفات. المواعيد النهائية تفاجئك. جلسات المحكمة تتلخبط. فريقك يضيّع ساعات يدوّر مستندات بدل ما يبني قضايا. دايم تحس إنك متأخر خطوة."
     },
     solution: {
-      en: "Nzom Legal puts everything in one place — cases, sessions, documents, deadlines, billing. With AI that understands Saudi law, you're always prepared, always ahead.",
-      ar: "نزوم القانونية يحط كل شيء في مكان واحد — القضايا، الجلسات، المستندات، المواعيد، الفوترة. مع ذكاء اصطناعي يفهم النظام السعودي، دايماً جاهز، دايماً متقدم."
+      en: "aldalyel puts everything in one place — cases, sessions, documents, deadlines, billing. With AI that understands Saudi law, you're always prepared, always ahead.",
+      ar: "الدليل يحط كل شيء في مكان واحد — القضايا، الجلسات، المستندات، المواعيد، الفوترة. مع ذكاء اصطناعي يفهم النظام السعودي، دايماً جاهز، دايماً متقدم."
     },
     features: [
       { title: { en: "Case Management", ar: "إدارة القضايا" }, description: { en: "Every case has its own world — files, notes, deadlines, all in one clean view.", ar: "كل قضية لها عالمها — ملفات، ملاحظات، مواعيد، كلها في عرض واحد نظيف." }, icon: Briefcase },
