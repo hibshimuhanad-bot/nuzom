@@ -76,10 +76,10 @@ const faqSections: FAQSection[] = [
     icon: Shield,
     items: [
       {
-        q: { en: "What does Nzom HSSE cover?", ar: "ماذا يغطي نزوم السلامة؟" },
+        q: { en: "What does Zerisks cover?", ar: "ماذا يغطي زيريسكس؟" },
         a: {
-          en: "Nzom HSSE is a comprehensive safety management system covering incident reporting, work permit management, risk assessments, safety inspections, training tracking, and real-time analytics dashboards.",
-          ar: "نزوم السلامة هو نظام شامل لإدارة السلامة يغطي تقارير الحوادث وإدارة تصاريح العمل وتقييم المخاطر وجولات التفتيش وتتبع التدريب ولوحات تحليلات فورية.",
+          en: "Zerisks is a comprehensive safety management system covering incident reporting, work permit management, risk assessments, safety inspections, training tracking, and real-time analytics dashboards.",
+          ar: "زيريسكس هو نظام شامل لإدارة السلامة يغطي تقارير الحوادث وإدارة تصاريح العمل وتقييم المخاطر وجولات التفتيش وتتبع التدريب ولوحات تحليلات فورية.",
         },
       },
       {
