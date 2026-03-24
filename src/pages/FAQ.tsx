@@ -120,8 +120,8 @@ const faqSections: FAQSection[] = [
       {
         q: { en: "Can multiple lawyers collaborate on the same case?", ar: "هل يمكن لعدة محامين التعاون على نفس القضية؟" },
         a: {
-          en: "Yes, Nzom Legal supports team collaboration with role-based access. Multiple team members can work on the same case while maintaining proper access controls and audit trails.",
-          ar: "نعم، يدعم نزوم القانونية التعاون الجماعي مع صلاحيات حسب الدور. يمكن لعدة أعضاء العمل على نفس القضية مع الحفاظ على ضوابط الوصول وسجل المراجعة.",
+          en: "Yes, aldalyel supports team collaboration with role-based access. Multiple team members can work on the same case while maintaining proper access controls and audit trails.",
+          ar: "نعم، يدعم الدليل التعاون الجماعي مع صلاحيات حسب الدور. يمكن لعدة أعضاء العمل على نفس القضية مع الحفاظ على ضوابط الوصول وسجل المراجعة.",
         },
       },
     ],
