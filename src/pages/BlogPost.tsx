@@ -18,9 +18,9 @@ const categoryToProduct: Record<string, { slug: string; name: { en: string; ar: 
     cta: { en: "See how aldalyel streamlines your legal workflow", ar: "شاهد كيف يُبسّط الدليل سير عملك القانوني" },
   },
   tasks: {
-    slug: "tasks",
-    name: { en: "Nzom Tasks", ar: "نزوم المهام" },
-    cta: { en: "Learn how Nzom Tasks eliminates project chaos", ar: "تعرّف كيف يقضي نزوم المهام على فوضى المشاريع" },
+    slug: "nexdo",
+    name: { en: "Nexdo", ar: "نكست دو" },
+    cta: { en: "Learn how Nexdo eliminates project chaos", ar: "تعرّف كيف يقضي نكست دو على فوضى المشاريع" },
   },
   booking: {
     slug: "booking",

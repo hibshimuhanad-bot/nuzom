@@ -128,28 +128,28 @@ const faqSections: FAQSection[] = [
   },
   {
     id: "tasks",
-    title: { en: "Nzom Tasks", ar: "نزوم المهام" },
+    title: { en: "Nexdo", ar: "نكست دو" },
     icon: CheckSquare,
     items: [
       {
-        q: { en: "How is Nzom Tasks different from other project management tools?", ar: "كيف يختلف نزوم المهام عن أدوات إدارة المشاريع الأخرى؟" },
+        q: { en: "How is Nexdo different from other project management tools?", ar: "كيف يختلف نكست دو عن أدوات إدارة المشاريع الأخرى؟" },
         a: {
-          en: "Nzom Tasks is built specifically for enterprises in the region. It supports Arabic, manages portfolios and programs (not just projects), includes automated follow-ups, and provides executive-level dashboards for full operational visibility.",
-          ar: "نزوم المهام مصمم خصيصاً للمؤسسات في المنطقة. يدعم العربية ويدير المحافظ والبرامج (وليس المشاريع فقط)، ويتضمن متابعات آلية ولوحات تحكم تنفيذية لرؤية تشغيلية كاملة.",
+          en: "Nexdo is built specifically for enterprises in the region. It supports Arabic, manages portfolios and programs (not just projects), includes automated follow-ups, and provides executive-level dashboards for full operational visibility.",
+          ar: "نكست دو مصمم خصيصاً للمؤسسات في المنطقة. يدعم العربية ويدير المحافظ والبرامج (وليس المشاريع فقط)، ويتضمن متابعات آلية ولوحات تحكم تنفيذية لرؤية تشغيلية كاملة.",
         },
       },
       {
         q: { en: "Can I track team performance and deadlines?", ar: "هل يمكنني تتبع أداء الفريق والمواعيد النهائية؟" },
         a: {
-          en: "Yes, Nzom Tasks provides real-time dashboards showing task completion rates, team workload, overdue items, and progress across all projects and portfolios.",
-          ar: "نعم، يوفر نزوم المهام لوحات تحكم فورية تعرض معدلات إنجاز المهام وأعباء عمل الفريق والمهام المتأخرة والتقدم عبر جميع المشاريع والمحافظ.",
+          en: "Yes, Nexdo provides real-time dashboards showing task completion rates, team workload, overdue items, and progress across all projects and portfolios.",
+          ar: "نعم، يوفر نكست دو لوحات تحكم فورية تعرض معدلات إنجاز المهام وأعباء عمل الفريق والمهام المتأخرة والتقدم عبر جميع المشاريع والمحافظ.",
         },
       },
       {
         q: { en: "Does it support Kanban and Gantt views?", ar: "هل يدعم عرض كانبان وجانت؟" },
         a: {
-          en: "Yes, Nzom Tasks offers multiple views including Kanban boards, Gantt charts, list views, and calendar views to suit different work styles and preferences.",
-          ar: "نعم، يقدم نزوم المهام عروضاً متعددة تشمل لوحات كانبان ومخططات جانت وعرض القوائم والتقويم لتناسب أساليب العمل المختلفة.",
+          en: "Yes, Nexdo offers multiple views including Kanban boards, Gantt charts, list views, and calendar views to suit different work styles and preferences.",
+          ar: "نعم، يقدم نكست دو عروضاً متعددة تشمل لوحات كانبان ومخططات جانت وعرض القوائم والتقويم لتناسب أساليب العمل المختلفة.",
         },
       },
     ],

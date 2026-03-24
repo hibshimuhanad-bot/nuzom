@@ -128,16 +128,16 @@ export const products: Product[] = [
   // 3. TASKS — الإحساس: الارتياح
   // ═══════════════════════════════════════════
   {
-    slug: "tasks",
+    slug: "nexdo",
     available: true,
-    name: { en: "Nzom Tasks", ar: "نزوم المهام" },
+    name: { en: "Nexdo", ar: "نكست دو" },
     tagline: {
       en: "Relax. Everything is under control.",
       ar: "ارتاح.. كل شيء ماشي بالضبط."
     },
     description: {
-      en: "Open the system in the morning and find every task clear, every project on track, nothing lost. Nzom Tasks gives you the relief of knowing exactly where everything stands.",
-      ar: "افتح النظام الصبح وكل مهمة في مكانها، كل مشروع ماشي، وما في شيء ضايع. نزوم المهام يعطيك الراحة إنك تعرف بالضبط وين كل شيء واقف."
+      en: "Open the system in the morning and find every task clear, every project on track, nothing lost. Nexdo gives you the relief of knowing exactly where everything stands.",
+      ar: "افتح النظام الصبح وكل مهمة في مكانها، كل مشروع ماشي، وما في شيء ضايع. نكست دو يعطيك الراحة إنك تعرف بالضبط وين كل شيء واقف."
     },
     emotionalHook: {
       en: "Finally, clarity.",
@@ -154,8 +154,8 @@ export const products: Product[] = [
       ar: "تعبت من متابعة الناس واحد واحد؟ كل يوم تضيع وقت تدور مين سوى إيش. مهام تضيع بين الشقوق. المشاريع تحس بفوضى. أنت عنق الزجاجة لأن كل شيء يمر عليك."
     },
     solution: {
-      en: "With Nzom Tasks, you open the system and relax. Everything is in front of you — who's doing what, what's late, what's next. Your team moves without you having to push.",
-      ar: "مع نزوم المهام، تفتح النظام وترتاح. كل شيء أمامك — مين يسوي إيش، إيش متأخر، إيش الجاي. فريقك يتحرك بدون ما تحتاج تدفعهم."
+      en: "With Nexdo, you open the system and relax. Everything is in front of you — who's doing what, what's late, what's next. Your team moves without you having to push.",
+      ar: "مع نكست دو، تفتح النظام وترتاح. كل شيء أمامك — مين يسوي إيش، إيش متأخر، إيش الجاي. فريقك يتحرك بدون ما تحتاج تدفعهم."
     },
     features: [
       { title: { en: "Portfolios & Programs", ar: "المحافظ والبرامج" }, description: { en: "See the big picture. All your projects organized into portfolios that make sense.", ar: "شوف الصورة الكبيرة. كل مشاريعك منظمة في محافظ واضحة." }, icon: Layers },
