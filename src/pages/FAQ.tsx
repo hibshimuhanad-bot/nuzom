@@ -113,8 +113,8 @@ const faqSections: FAQSection[] = [
       {
         q: { en: "Does it support Arabic legal documents?", ar: "هل يدعم المستندات القانونية العربية؟" },
         a: {
-          en: "Yes, Nzom Legal fully supports Arabic and English documents, with RTL layout and bilingual templates designed for the Saudi legal context.",
-          ar: "نعم، نزوم القانونية يدعم المستندات العربية والإنجليزية بالكامل، مع تخطيط من اليمين لليسار وقوالب ثنائية اللغة مصممة للسياق القانوني السعودي.",
+          en: "Yes, aldalyel fully supports Arabic and English documents, with RTL layout and bilingual templates designed for the Saudi legal context.",
+          ar: "نعم، الدليل يدعم المستندات العربية والإنجليزية بالكامل، مع تخطيط من اليمين لليسار وقوالب ثنائية اللغة مصممة للسياق القانوني السعودي.",
         },
       },
       {
