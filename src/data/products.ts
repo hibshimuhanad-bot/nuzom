@@ -89,8 +89,8 @@ export const products: Product[] = [
       ar: "ولا شيء يفلت منك. أبداً."
     },
     description: {
-      en: "Every case tracked. Every deadline met. Every document at your fingertips. Nzom Legal gives you total control over your legal operations — so you focus on winning, not searching.",
-      ar: "كل قضية متابَعة. كل موعد ملتزم فيه. كل مستند في متناول يدك. نزوم القانونية يمنحك سيطرة مطلقة على عملياتك القانونية — عشان تركّز على كسب القضايا، مو البحث عن الملفات."
+      en: "Every case tracked. Every deadline met. Every document at your fingertips. aldalyel gives you total control over your legal operations — so you focus on winning, not searching.",
+      ar: "كل قضية متابَعة. كل موعد ملتزم فيه. كل مستند في متناول يدك. الدليل يمنحك سيطرة مطلقة على عملياتك القانونية — عشان تركّز على كسب القضايا، مو البحث عن الملفات."
     },
     emotionalHook: {
       en: "Total control over your legal world.",
