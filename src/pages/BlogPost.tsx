@@ -13,9 +13,9 @@ const categoryToProduct: Record<string, { slug: string; name: { en: string; ar: 
     cta: { en: "Discover how Nzom HSSE can transform your safety operations", ar: "اكتشف كيف يمكن لنزوم السلامة تحويل عمليات السلامة لديك" },
   },
   legal: {
-    slug: "legal",
-    name: { en: "Nzom Legal", ar: "نزوم القانونية" },
-    cta: { en: "See how Nzom Legal streamlines your legal workflow", ar: "شاهد كيف يُبسّط نزوم القانونية سير عملك القانوني" },
+    slug: "aldalyel",
+    name: { en: "aldalyel", ar: "الدليل" },
+    cta: { en: "See how aldalyel streamlines your legal workflow", ar: "شاهد كيف يُبسّط الدليل سير عملك القانوني" },
   },
   tasks: {
     slug: "tasks",
