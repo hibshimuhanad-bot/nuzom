@@ -92,8 +92,8 @@ const faqSections: FAQSection[] = [
       {
         q: { en: "Can field workers use it on mobile?", ar: "هل يمكن لعمال الميدان استخدامه من الجوال؟" },
         a: {
-          en: "Absolutely. Nzom HSSE is fully responsive and works on any device — mobile, tablet, or desktop — so field workers can report incidents and complete inspections directly from the site.",
-          ar: "بالتأكيد. نزوم السلامة يعمل على جميع الأجهزة — جوال أو تابلت أو كمبيوتر — مما يتيح لعمال الميدان تسجيل الحوادث وإتمام التفتيش من الموقع مباشرة.",
+          en: "Absolutely. Zerisks is fully responsive and works on any device — mobile, tablet, or desktop — so field workers can report incidents and complete inspections directly from the site.",
+          ar: "بالتأكيد. زيريسكس يعمل على جميع الأجهزة — جوال أو تابلت أو كمبيوتر — مما يتيح لعمال الميدان تسجيل الحوادث وإتمام التفتيش من الموقع مباشرة.",
         },
       },
     ],
