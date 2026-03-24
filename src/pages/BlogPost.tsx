@@ -9,8 +9,8 @@ import { Button } from "@/components/ui/button";
 const categoryToProduct: Record<string, { slug: string; name: { en: string; ar: string }; cta: { en: string; ar: string } }> = {
   hsse: {
     slug: "zerisks",
-    name: { en: "Zerisks", ar: "زيريسكس" },
-    cta: { en: "Discover how Zerisks can transform your safety operations", ar: "اكتشف كيف يمكن لزيريسكس تحويل عمليات السلامة لديك" },
+    name: { en: "Zerisks", ar: "زي ريسك" },
+    cta: { en: "Discover how Zerisks can transform your safety operations", ar: "اكتشف كيف يمكن لزي ريسك تحويل عمليات السلامة لديك" },
   },
   legal: {
     slug: "aldalyel",
