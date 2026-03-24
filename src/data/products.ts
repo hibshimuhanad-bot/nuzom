@@ -42,8 +42,8 @@ export const products: Product[] = [
       ar: "نَم وعينك مرتاحة.. مواقعك في أمان."
     },
     description: {
-      en: "Imagine ending your day knowing every permit is tracked, every risk is logged, and every worker goes home safe. That's Nzom HSSE — peace of mind, not just a system.",
-      ar: "تخيّل تنهي يومك وأنت متطمّن إن كل تصريح متابَع، وكل خطر مرصود، وكل عامل يرجع لأهله سالم. هذا نزوم السلامة — مو مجرد نظام، هذا راحة بال حقيقية."
+      en: "Imagine ending your day knowing every permit is tracked, every risk is logged, and every worker goes home safe. That's Zerisks — peace of mind, not just a system.",
+      ar: "تخيّل تنهي يومك وأنت متطمّن إن كل تصريح متابَع، وكل خطر مرصود، وكل عامل يرجع لأهله سالم. هذا زيريسكس — مو مجرد نظام، هذا راحة بال حقيقية."
     },
     emotionalHook: {
       en: "Peace of mind starts here.",
