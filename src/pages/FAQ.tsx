@@ -72,7 +72,7 @@ const faqSections: FAQSection[] = [
   },
   {
     id: "hsse",
-    title: { en: "Nzom HSSE", ar: "نزوم السلامة" },
+    title: { en: "Zerisks", ar: "زيريسكس" },
     icon: Shield,
     items: [
       {
