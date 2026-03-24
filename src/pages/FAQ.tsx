@@ -100,28 +100,28 @@ const faqSections: FAQSection[] = [
   },
   {
     id: "legal",
-    title: { en: "Nzom Legal", ar: "نزوم القانونية" },
+    title: { en: "aldalyel", ar: "الدليل" },
     icon: Scale,
     items: [
       {
-        q: { en: "What can Nzom Legal do for my firm?", ar: "ماذا يمكن أن يقدم نزوم القانونية لمكتبي؟" },
+        q: { en: "What can aldalyel do for my firm?", ar: "ماذا يمكن أن يقدم الدليل لمكتبي؟" },
         a: {
-          en: "Nzom Legal helps law firms and legal departments manage cases, track deadlines, organize documents, automate workflows, and generate reports — all from one unified platform powered by AI.",
-          ar: "نزوم القانونية يساعد مكاتب المحاماة والإدارات القانونية في إدارة القضايا وتتبع المواعيد وتنظيم المستندات وأتمتة سير العمل وإنشاء التقارير — كل ذلك من منصة واحدة مدعومة بالذكاء الاصطناعي.",
+          en: "aldalyel helps law firms and legal departments manage cases, track deadlines, organize documents, automate workflows, and generate reports — all from one unified platform powered by AI.",
+          ar: "الدليل يساعد مكاتب المحاماة والإدارات القانونية في إدارة القضايا وتتبع المواعيد وتنظيم المستندات وأتمتة سير العمل وإنشاء التقارير — كل ذلك من منصة واحدة مدعومة بالذكاء الاصطناعي.",
         },
       },
       {
         q: { en: "Does it support Arabic legal documents?", ar: "هل يدعم المستندات القانونية العربية؟" },
         a: {
-          en: "Yes, Nzom Legal fully supports Arabic and English documents, with RTL layout and bilingual templates designed for the Saudi legal context.",
-          ar: "نعم، نزوم القانونية يدعم المستندات العربية والإنجليزية بالكامل، مع تخطيط من اليمين لليسار وقوالب ثنائية اللغة مصممة للسياق القانوني السعودي.",
+          en: "Yes, aldalyel fully supports Arabic and English documents, with RTL layout and bilingual templates designed for the Saudi legal context.",
+          ar: "نعم، الدليل يدعم المستندات العربية والإنجليزية بالكامل، مع تخطيط من اليمين لليسار وقوالب ثنائية اللغة مصممة للسياق القانوني السعودي.",
         },
       },
       {
         q: { en: "Can multiple lawyers collaborate on the same case?", ar: "هل يمكن لعدة محامين التعاون على نفس القضية؟" },
         a: {
-          en: "Yes, Nzom Legal supports team collaboration with role-based access. Multiple team members can work on the same case while maintaining proper access controls and audit trails.",
-          ar: "نعم، يدعم نزوم القانونية التعاون الجماعي مع صلاحيات حسب الدور. يمكن لعدة أعضاء العمل على نفس القضية مع الحفاظ على ضوابط الوصول وسجل المراجعة.",
+          en: "Yes, aldalyel supports team collaboration with role-based access. Multiple team members can work on the same case while maintaining proper access controls and audit trails.",
+          ar: "نعم، يدعم الدليل التعاون الجماعي مع صلاحيات حسب الدور. يمكن لعدة أعضاء العمل على نفس القضية مع الحفاظ على ضوابط الوصول وسجل المراجعة.",
         },
       },
     ],

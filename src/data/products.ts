@@ -81,16 +81,16 @@ export const products: Product[] = [
   // 2. LEGAL — الإحساس: السيطرة
   // ═══════════════════════════════════════════
   {
-    slug: "legal",
+    slug: "aldalyel",
     available: true,
-    name: { en: "Nzom Legal", ar: "نزوم القانونية" },
+    name: { en: "aldalyel", ar: "الدليل" },
     tagline: {
       en: "Nothing slips through. Ever.",
       ar: "ولا شيء يفلت منك. أبداً."
     },
     description: {
-      en: "Every case tracked. Every deadline met. Every document at your fingertips. Nzom Legal gives you total control over your legal operations — so you focus on winning, not searching.",
-      ar: "كل قضية متابَعة. كل موعد ملتزم فيه. كل مستند في متناول يدك. نزوم القانونية يمنحك سيطرة مطلقة على عملياتك القانونية — عشان تركّز على كسب القضايا، مو البحث عن الملفات."
+      en: "Every case tracked. Every deadline met. Every document at your fingertips. aldalyel gives you total control over your legal operations — so you focus on winning, not searching.",
+      ar: "كل قضية متابَعة. كل موعد ملتزم فيه. كل مستند في متناول يدك. الدليل يمنحك سيطرة مطلقة على عملياتك القانونية — عشان تركّز على كسب القضايا، مو البحث عن الملفات."
     },
     emotionalHook: {
       en: "Total control over your legal world.",
@@ -107,8 +107,8 @@ export const products: Product[] = [
       ar: "غارق في الملفات. المواعيد النهائية تفاجئك. جلسات المحكمة تتلخبط. فريقك يضيّع ساعات يدوّر مستندات بدل ما يبني قضايا. دايم تحس إنك متأخر خطوة."
     },
     solution: {
-      en: "Nzom Legal puts everything in one place — cases, sessions, documents, deadlines, billing. With AI that understands Saudi law, you're always prepared, always ahead.",
-      ar: "نزوم القانونية يحط كل شيء في مكان واحد — القضايا، الجلسات، المستندات، المواعيد، الفوترة. مع ذكاء اصطناعي يفهم النظام السعودي، دايماً جاهز، دايماً متقدم."
+      en: "aldalyel puts everything in one place — cases, sessions, documents, deadlines, billing. With AI that understands Saudi law, you're always prepared, always ahead.",
+      ar: "الدليل يحط كل شيء في مكان واحد — القضايا، الجلسات، المستندات، المواعيد، الفوترة. مع ذكاء اصطناعي يفهم النظام السعودي، دايماً جاهز، دايماً متقدم."
     },
     features: [
       { title: { en: "Case Management", ar: "إدارة القضايا" }, description: { en: "Every case has its own world — files, notes, deadlines, all in one clean view.", ar: "كل قضية لها عالمها — ملفات، ملاحظات، مواعيد، كلها في عرض واحد نظيف." }, icon: Briefcase },

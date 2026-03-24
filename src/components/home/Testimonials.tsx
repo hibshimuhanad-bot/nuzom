@@ -10,7 +10,7 @@ const testimonials = [
   {
     name: { en: "Sarah Al-Otaibi", ar: "سارة العتيبي" },
     role: { en: "Legal Director, Horizon Law Firm", ar: "المدير القانوني، مكتب هورايزن للمحاماة" },
-    quote: { en: "Nzom Legal streamlined our entire case management process. We've seen a 40% improvement in case resolution time.", ar: "نزوم القانونية نظّم عملية إدارة القضايا بالكامل. شهدنا تحسناً بنسبة 40% في وقت حل القضايا." },
+    quote: { en: "aldalyel streamlined our entire case management process. We've seen a 40% improvement in case resolution time.", ar: "الدليل نظّم عملية إدارة القضايا بالكامل. شهدنا تحسناً بنسبة 40% في وقت حل القضايا." },
   },
   {
     name: { en: "Mohammed Al-Harbi", ar: "محمد الحربي" },
