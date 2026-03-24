@@ -31,12 +31,12 @@ export interface Product {
 
 export const products: Product[] = [
   // ═══════════════════════════════════════════
-  // 1. HSSE — الإحساس: راحة البال
+  // 1. Zerisks — الإحساس: راحة البال
   // ═══════════════════════════════════════════
   {
-    slug: "hsse",
+    slug: "zerisks",
     available: true,
-    name: { en: "Nzom HSSE", ar: "نزوم السلامة" },
+    name: { en: "Zerisks", ar: "زيريسكس" },
     tagline: {
       en: "Sleep well. Your sites are safe.",
       ar: "نَم وعينك مرتاحة.. مواقعك في أمان."
