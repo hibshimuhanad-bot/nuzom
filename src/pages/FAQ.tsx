@@ -72,28 +72,28 @@ const faqSections: FAQSection[] = [
   },
   {
     id: "hsse",
-    title: { en: "Nzom HSSE", ar: "نزوم السلامة" },
+    title: { en: "Zerisks", ar: "زيريسكس" },
     icon: Shield,
     items: [
       {
-        q: { en: "What does Nzom HSSE cover?", ar: "ماذا يغطي نزوم السلامة؟" },
+        q: { en: "What does Zerisks cover?", ar: "ماذا يغطي زيريسكس؟" },
         a: {
-          en: "Nzom HSSE is a comprehensive safety management system covering incident reporting, work permit management, risk assessments, safety inspections, training tracking, and real-time analytics dashboards.",
-          ar: "نزوم السلامة هو نظام شامل لإدارة السلامة يغطي تقارير الحوادث وإدارة تصاريح العمل وتقييم المخاطر وجولات التفتيش وتتبع التدريب ولوحات تحليلات فورية.",
+          en: "Zerisks is a comprehensive safety management system covering incident reporting, work permit management, risk assessments, safety inspections, training tracking, and real-time analytics dashboards.",
+          ar: "زيريسكس هو نظام شامل لإدارة السلامة يغطي تقارير الحوادث وإدارة تصاريح العمل وتقييم المخاطر وجولات التفتيش وتتبع التدريب ولوحات تحليلات فورية.",
         },
       },
       {
         q: { en: "Does it comply with Saudi safety regulations?", ar: "هل يتوافق مع أنظمة السلامة السعودية؟" },
         a: {
-          en: "Yes, Nzom HSSE is designed to align with Saudi labor law requirements and international safety standards like OSHA and ISO 45001, helping you maintain compliance effortlessly.",
-          ar: "نعم، نزوم السلامة مصمم ليتوافق مع متطلبات نظام العمل السعودي والمعايير الدولية مثل OSHA و ISO 45001، مما يساعدك على الامتثال بسهولة.",
+          en: "Yes, Zerisks is designed to align with Saudi labor law requirements and international safety standards like OSHA and ISO 45001, helping you maintain compliance effortlessly.",
+          ar: "نعم، زيريسكس مصمم ليتوافق مع متطلبات نظام العمل السعودي والمعايير الدولية مثل OSHA و ISO 45001، مما يساعدك على الامتثال بسهولة.",
         },
       },
       {
         q: { en: "Can field workers use it on mobile?", ar: "هل يمكن لعمال الميدان استخدامه من الجوال؟" },
         a: {
-          en: "Absolutely. Nzom HSSE is fully responsive and works on any device — mobile, tablet, or desktop — so field workers can report incidents and complete inspections directly from the site.",
-          ar: "بالتأكيد. نزوم السلامة يعمل على جميع الأجهزة — جوال أو تابلت أو كمبيوتر — مما يتيح لعمال الميدان تسجيل الحوادث وإتمام التفتيش من الموقع مباشرة.",
+          en: "Absolutely. Zerisks is fully responsive and works on any device — mobile, tablet, or desktop — so field workers can report incidents and complete inspections directly from the site.",
+          ar: "بالتأكيد. زيريسكس يعمل على جميع الأجهزة — جوال أو تابلت أو كمبيوتر — مما يتيح لعمال الميدان تسجيل الحوادث وإتمام التفتيش من الموقع مباشرة.",
         },
       },
     ],

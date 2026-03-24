@@ -5,7 +5,7 @@ const testimonials = [
   {
     name: { en: "Eng. Khalid Al-Rashidi", ar: "م. خالد الراشدي" },
     role: { en: "VP of Operations, Al-Manar Group", ar: "نائب رئيس العمليات، مجموعة المنار" },
-    quote: { en: "Nzom HSSE transformed our safety compliance workflow. Incident reporting that used to take days now happens in real-time.", ar: "نزوم HSSE حوّل سير عمل الامتثال بالسلامة لدينا. الإبلاغ عن الحوادث الذي كان يستغرق أياماً أصبح يحدث في الوقت الفعلي." },
+    quote: { en: "Zerisks transformed our safety compliance workflow. Incident reporting that used to take days now happens in real-time.", ar: "زيريسكس حوّل سير عمل الامتثال بالسلامة لدينا. الإبلاغ عن الحوادث الذي كان يستغرق أياماً أصبح يحدث في الوقت الفعلي." },
   },
   {
     name: { en: "Sarah Al-Otaibi", ar: "سارة العتيبي" },
@@ -15,7 +15,7 @@ const testimonials = [
   {
     name: { en: "Mohammed Al-Harbi", ar: "محمد الحربي" },
     role: { en: "COO, Desert Star Construction", ar: "مدير العمليات، شركة نجم الصحراء للمقاولات" },
-    quote: { en: "The integration between Nzom Tasks and Booking modules gave us unprecedented visibility across our 2,000+ workforce.", ar: "التكامل بين نزوم المهام ونظام الحجوزات أعطانا رؤية غير مسبوقة عبر أكثر من 2,000 موظف." },
+    quote: { en: "The integration between Nzom Tasks and Booking modules gave us unprecedented visibility across our 2,000+ workforce.", ar: "التكامل بين نزوم المهام ونظام الحجوزات أعطانا رؤية غير مسبوقة عبر أكثر من ٢٬٠٠٠ موظف." },
   },
   {
     name: { en: "Dr. Nora Al-Zahrani", ar: "د. نورا الزهراني" },

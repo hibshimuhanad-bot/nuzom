@@ -31,19 +31,19 @@ export interface Product {
 
 export const products: Product[] = [
   // ═══════════════════════════════════════════
-  // 1. HSSE — الإحساس: راحة البال
+  // 1. Zerisks — الإحساس: راحة البال
   // ═══════════════════════════════════════════
   {
-    slug: "hsse",
+    slug: "zerisks",
     available: true,
-    name: { en: "Nzom HSSE", ar: "نزوم السلامة" },
+    name: { en: "Zerisks", ar: "زيريسكس" },
     tagline: {
       en: "Sleep well. Your sites are safe.",
       ar: "نَم وعينك مرتاحة.. مواقعك في أمان."
     },
     description: {
-      en: "Imagine ending your day knowing every permit is tracked, every risk is logged, and every worker goes home safe. That's Nzom HSSE — peace of mind, not just a system.",
-      ar: "تخيّل تنهي يومك وأنت متطمّن إن كل تصريح متابَع، وكل خطر مرصود، وكل عامل يرجع لأهله سالم. هذا نزوم السلامة — مو مجرد نظام، هذا راحة بال حقيقية."
+      en: "Imagine ending your day knowing every permit is tracked, every risk is logged, and every worker goes home safe. That's Zerisks — peace of mind, not just a system.",
+      ar: "تخيّل تنهي يومك وأنت متطمّن إن كل تصريح متابَع، وكل خطر مرصود، وكل عامل يرجع لأهله سالم. هذا زيريسكس — مو مجرد نظام، هذا راحة بال حقيقية."
     },
     emotionalHook: {
       en: "Peace of mind starts here.",
@@ -60,8 +60,8 @@ export const products: Product[] = [
       ar: "تصحى وأنت قلقان. هل التصاريح جاهزة؟ هل الحادث تم تبليغه؟ هل الموقع فعلاً آمن؟ يومك يروح وأنت تلاحق أوراق وتتصل بمشرفين وتتمنى إن ما في شيء ضايع."
     },
     solution: {
-      en: "With Nzom HSSE, you open one screen and see everything — permits, incidents, risks, inspections, training. Everything is tracked, everyone is accountable, and you finally breathe.",
-      ar: "مع نزوم السلامة، تفتح شاشة وحدة وتشوف كل شيء — التصاريح، الحوادث، المخاطر، الفحوصات، التدريب. كل شيء متابَع، كل شخص مسؤول، وأخيراً ترتاح."
+      en: "With Zerisks, you open one screen and see everything — permits, incidents, risks, inspections, training. Everything is tracked, everyone is accountable, and you finally breathe.",
+      ar: "مع زيريسكس، تفتح شاشة وحدة وتشوف كل شيء — التصاريح، الحوادث، المخاطر، الفحوصات، التدريب. كل شيء متابَع، كل شخص مسؤول، وأخيراً ترتاح."
     },
     features: [
       { title: { en: "Permit to Work", ar: "تصاريح العمل" }, description: { en: "No more chasing signatures. Digital permits flow automatically to the right people.", ar: "بدون ملاحقة توقيعات. التصاريح الرقمية تروح للشخص الصحيح تلقائياً." }, icon: ClipboardCheck },
