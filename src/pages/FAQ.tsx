@@ -85,8 +85,8 @@ const faqSections: FAQSection[] = [
       {
         q: { en: "Does it comply with Saudi safety regulations?", ar: "هل يتوافق مع أنظمة السلامة السعودية؟" },
         a: {
-          en: "Yes, Nzom HSSE is designed to align with Saudi labor law requirements and international safety standards like OSHA and ISO 45001, helping you maintain compliance effortlessly.",
-          ar: "نعم، نزوم السلامة مصمم ليتوافق مع متطلبات نظام العمل السعودي والمعايير الدولية مثل OSHA و ISO 45001، مما يساعدك على الامتثال بسهولة.",
+          en: "Yes, Zerisks is designed to align with Saudi labor law requirements and international safety standards like OSHA and ISO 45001, helping you maintain compliance effortlessly.",
+          ar: "نعم، زيريسكس مصمم ليتوافق مع متطلبات نظام العمل السعودي والمعايير الدولية مثل OSHA و ISO 45001، مما يساعدك على الامتثال بسهولة.",
         },
       },
       {
