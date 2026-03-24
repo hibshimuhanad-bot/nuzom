@@ -5,7 +5,7 @@ const testimonials = [
   {
     name: { en: "Eng. Khalid Al-Rashidi", ar: "م. خالد الراشدي" },
     role: { en: "VP of Operations, Al-Manar Group", ar: "نائب رئيس العمليات، مجموعة المنار" },
-    quote: { en: "Zerisks transformed our safety compliance workflow. Incident reporting that used to take days now happens in real-time.", ar: "زيريسكس حوّل سير عمل الامتثال بالسلامة لدينا. الإبلاغ عن الحوادث الذي كان يستغرق أياماً أصبح يحدث في الوقت الفعلي." },
+    quote: { en: "Zerisks transformed our safety compliance workflow. Incident reporting that used to take days now happens in real-time.", ar: "زي ريسك حوّل سير عمل الامتثال بالسلامة لدينا. الإبلاغ عن الحوادث الذي كان يستغرق أياماً أصبح يحدث في الوقت الفعلي." },
   },
   {
     name: { en: "Sarah Al-Otaibi", ar: "سارة العتيبي" },
