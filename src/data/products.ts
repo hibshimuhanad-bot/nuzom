@@ -36,7 +36,7 @@ export const products: Product[] = [
   {
     slug: "zerisks",
     available: true,
-    name: { en: "Zerisks", ar: "زي ريسك" },
+    name: { en: "Zerisks HSSE", ar: "زي ريسك" },
     tagline: {
       en: "Sleep well. Your sites are safe.",
       ar: "نَم وعينك مرتاحة.. مواقعك في أمان."
@@ -83,7 +83,7 @@ export const products: Product[] = [
   {
     slug: "aldalyel",
     available: true,
-    name: { en: "aldalyel", ar: "الدليل" },
+    name: { en: "Aldalyel -Legal ", ar: "الدليل" },
     tagline: {
       en: "Nothing slips through. Ever.",
       ar: "ولا شيء يفلت منك. أبداً."
@@ -130,7 +130,7 @@ export const products: Product[] = [
   {
     slug: "nexdo",
     available: true,
-    name: { en: "Nexdo", ar: "نكست دو" },
+    name: { en: "Nexdo Task Managment ", ar: "نكست دو" },
     tagline: {
       en: "Relax. Everything is under control.",
       ar: "ارتاح.. كل شيء ماشي بالضبط."
