@@ -42,7 +42,7 @@ export const products: Product[] = [
       ar: "نَم وعينك مرتاحة.. مواقعك في أمان."
     },
     description: {
-      en: "Imagine ending your day knowing every permit is tracked, every risk is logged, and every worker goes home safe. That's Zerisks — peace of mind, not just a system.",
+      en: "Imagine ending your day knowing every permit is tracked, every risk is logged, and every worker goes home safe. That's Zerisks HSSE — peace of mind, not just a system.",
       ar: "تخيّل تنهي يومك وأنت متطمّن إن كل تصريح متابَع، وكل خطر مرصود، وكل عامل يرجع لأهله سالم. هذا زي ريسك — مو مجرد نظام، هذا راحة بال حقيقية."
     },
     emotionalHook: {
@@ -60,7 +60,7 @@ export const products: Product[] = [
       ar: "تصحى وأنت قلقان. هل التصاريح جاهزة؟ هل الحادث تم تبليغه؟ هل الموقع فعلاً آمن؟ يومك يروح وأنت تلاحق أوراق وتتصل بمشرفين وتتمنى إن ما في شيء ضايع."
     },
     solution: {
-      en: "With Zerisks, you open one screen and see everything — permits, incidents, risks, inspections, training. Everything is tracked, everyone is accountable, and you finally breathe.",
+      en: "With Zerisks HSSE, you open one screen and see everything — permits, incidents, risks, inspections, training. Everything is tracked, everyone is accountable, and you finally breathe.",
       ar: "مع زي ريسك، تفتح شاشة وحدة وتشوف كل شيء — التصاريح، الحوادث، المخاطر، الفحوصات، التدريب. كل شيء متابَع، كل شخص مسؤول، وأخيراً ترتاح."
     },
     features: [
@@ -89,7 +89,7 @@ export const products: Product[] = [
       ar: "ولا شيء يفلت منك. أبداً."
     },
     description: {
-      en: "Every case tracked. Every deadline met. Every document at your fingertips. aldalyel gives you total control over your legal operations — so you focus on winning, not searching.",
+      en: "Every case tracked. Every deadline met. Every document at your fingertips. Aldalyel -Legal gives you total control over your legal operations — so you focus on winning, not searching.",
       ar: "كل قضية متابَعة. كل موعد ملتزم فيه. كل مستند في متناول يدك. الدليل يمنحك سيطرة مطلقة على عملياتك القانونية — عشان تركّز على كسب القضايا، مو البحث عن الملفات."
     },
     emotionalHook: {
@@ -107,7 +107,7 @@ export const products: Product[] = [
       ar: "غارق في الملفات. المواعيد النهائية تفاجئك. جلسات المحكمة تتلخبط. فريقك يضيّع ساعات يدوّر مستندات بدل ما يبني قضايا. دايم تحس إنك متأخر خطوة."
     },
     solution: {
-      en: "aldalyel puts everything in one place — cases, sessions, documents, deadlines, billing. With AI that understands Saudi law, you're always prepared, always ahead.",
+      en: "Aldalyel -Legal puts everything in one place — cases, sessions, documents, deadlines, billing. With AI that understands Saudi law, you're always prepared, always ahead.",
       ar: "الدليل يحط كل شيء في مكان واحد — القضايا، الجلسات، المستندات، المواعيد، الفوترة. مع ذكاء اصطناعي يفهم النظام السعودي، دايماً جاهز، دايماً متقدم."
     },
     features: [
@@ -136,7 +136,7 @@ export const products: Product[] = [
       ar: "ارتاح.. كل شيء ماشي بالضبط."
     },
     description: {
-      en: "Open the system in the morning and find every task clear, every project on track, nothing lost. Nexdo gives you the relief of knowing exactly where everything stands.",
+      en: "Open the system in the morning and find every task clear, every project on track, nothing lost. Nexdo Task Managment gives you the relief of knowing exactly where everything stands.",
       ar: "افتح النظام الصبح وكل مهمة في مكانها، كل مشروع ماشي، وما في شيء ضايع. نكست دو يعطيك الراحة إنك تعرف بالضبط وين كل شيء واقف."
     },
     emotionalHook: {
@@ -154,7 +154,7 @@ export const products: Product[] = [
       ar: "تعبت من متابعة الناس واحد واحد؟ كل يوم تضيع وقت تدور مين سوى إيش. مهام تضيع بين الشقوق. المشاريع تحس بفوضى. أنت عنق الزجاجة لأن كل شيء يمر عليك."
     },
     solution: {
-      en: "With Nexdo, you open the system and relax. Everything is in front of you — who's doing what, what's late, what's next. Your team moves without you having to push.",
+      en: "With Nexdo Task Managment, you open the system and relax. Everything is in front of you — who's doing what, what's late, what's next. Your team moves without you having to push.",
       ar: "مع نكست دو، تفتح النظام وترتاح. كل شيء أمامك — مين يسوي إيش، إيش متأخر، إيش الجاي. فريقك يتحرك بدون ما تحتاج تدفعهم."
     },
     features: [
