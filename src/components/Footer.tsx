@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Twitter, Linkedin, Instagram } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.webp";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { products } from "@/data/products";
@@ -101,6 +102,9 @@ const Footer = () => {
               <li>info@nzomlabs.com</li>
               <li>{language === "ar" ? "الرياض، المملكة العربية السعودية" : "Riyadh, Saudi Arabia"}</li>
             </ul>
+            <Button asChild className="bg-secondary text-secondary-foreground hover:bg-secondary/90 mt-4 w-full">
+              <Link to="/contact">{t("nav.demo")}</Link>
+            </Button>
           </div>
         </div>
 
