@@ -4,7 +4,7 @@ import Layout from "@/components/Layout";
 import { products } from "@/data/products";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { ArrowRight, ArrowLeft, Sparkles, GitBranch, Users, BarChart3, ShieldCheck } from "lucide-react";
+import { ArrowRight, ArrowLeft, Sparkles, GitBranch, Users, BarChart3, ShieldCheck, ExternalLink } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import tasksScreenshot from "@/assets/screenshots/tasks-product-shot.png";
 import hsseScreenshot from "@/assets/screenshots/hsse-product-shot.png";
