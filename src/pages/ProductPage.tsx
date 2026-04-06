@@ -49,12 +49,22 @@ const ProductPage = () => {
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-3 text-gradient drop-shadow-sm">{product.name[language]}</h1>
             <p className="text-lg md:text-xl text-accent mb-2">{product.tagline[language]}</p>
             <p className="text-foreground/70 text-base md:text-lg mb-8 max-w-2xl mx-auto leading-relaxed">{product.description[language]}</p>
-            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 glow-btn rounded-xl">
-              <Link to="/contact">
-                {t("product.demo")}
-                {language === "ar" ? <ArrowLeft className="h-4 w-4 ms-2" /> : <ArrowRight className="h-4 w-4 ms-2" />}
-              </Link>
-            </Button>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 glow-btn rounded-xl">
+                <Link to="/contact">
+                  {t("product.demo")}
+                  {language === "ar" ? <ArrowLeft className="h-4 w-4 ms-2" /> : <ArrowRight className="h-4 w-4 ms-2" />}
+                </Link>
+              </Button>
+              {slug === "nexdo" && (
+                <Button asChild size="lg" variant="outline" className="rounded-xl px-8 border-primary/30 hover:bg-primary/10">
+                  <a href="https://ptmpillare.lovable.app/" target="_blank" rel="noopener noreferrer">
+                    {language === "ar" ? "جرّب الديمو" : "Try Demo"}
+                    <ExternalLink className="h-4 w-4 ms-2" />
+                  </a>
+                </Button>
+              )}
+            </div>
           </ScrollReveal>
         </div>
       </section>
