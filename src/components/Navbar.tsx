@@ -93,9 +93,6 @@ const Navbar = () => {
             {language === "en" ? "عربي" : "EN"}
           </button>
 
-          <Button asChild size="sm" className="hidden md:inline-flex bg-secondary text-secondary-foreground hover:bg-secondary/90">
-            <Link to="/contact">{t("nav.demo")}</Link>
-          </Button>
 
           {/* Mobile menu */}
           <Sheet open={open} onOpenChange={setOpen}>
@@ -132,9 +129,6 @@ const Navbar = () => {
                     </Link>
                   ))}
                 </div>
-                <Button asChild className="bg-secondary text-secondary-foreground hover:bg-secondary/90 mt-4">
-                  <Link to="/contact" onClick={() => setOpen(false)}>{t("nav.demo")}</Link>
-                </Button>
               </div>
             </SheetContent>
           </Sheet>
