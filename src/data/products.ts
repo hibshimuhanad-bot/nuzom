@@ -36,10 +36,10 @@ export const products: Product[] = [
   {
     slug: "zerisks",
     available: true,
-    name: { en: "Zerisks HSSE", ar: "زي ريسك" },
+    name: { en: "Zerisks HSSE", ar: "Zerisks HSSE" },
     tagline: {
       en: "Sleep well. Your sites are safe.",
-      ar: "نَم وعينك مرتاحة.. مواقعك في أمان."
+      ar: "نظام إدارة الصحة والسلامة والبيئة"
     },
     description: {
       en: "Imagine ending your day knowing every permit is tracked, every risk is logged, and every worker goes home safe. That's Zerisks HSSE — peace of mind, not just a system.",
@@ -83,10 +83,10 @@ export const products: Product[] = [
   {
     slug: "aldalyel",
     available: true,
-    name: { en: "Aldalyel -Legal ", ar: "الدليل" },
+    name: { en: "Aldalyel -Legal ", ar: "Aldalyel -Legal" },
     tagline: {
       en: "Nothing slips through. Ever.",
-      ar: "ولا شيء يفلت منك. أبداً."
+      ar: "نظام إدارة الشؤون القانونية"
     },
     description: {
       en: "Every case tracked. Every deadline met. Every document at your fingertips. Aldalyel -Legal gives you total control over your legal operations — so you focus on winning, not searching.",
@@ -130,10 +130,10 @@ export const products: Product[] = [
   {
     slug: "nexdo",
     available: true,
-    name: { en: "Nexdo Task Managment ", ar: "نكست دو" },
+    name: { en: "Nexdo Task Managment ", ar: "Nexdo Task Managment" },
     tagline: {
       en: "Relax. Everything is under control.",
-      ar: "ارتاح.. كل شيء ماشي بالضبط."
+      ar: "نظام إدارة المهام والمشاريع"
     },
     description: {
       en: "Open the system in the morning and find every task clear, every project on track, nothing lost. Nexdo Task Managment gives you the relief of knowing exactly where everything stands.",
@@ -181,10 +181,10 @@ export const products: Product[] = [
   {
     slug: "booking",
     available: true,
-    name: { en: "Nzom Booking", ar: "نزوم الحجوزات" },
+    name: { en: "Nzom Booking", ar: "Nzom Booking" },
     tagline: {
       en: "Clients book easily. You grow effortlessly.",
-      ar: "عملاءك يحجزون بسهولة. وأنت تنمو بدون ما تحس."
+      ar: "نظام إدارة الحجوزات والمواعيد"
     },
     description: {
       en: "No more WhatsApp chaos. No more double bookings. Nzom Booking lets your clients book, pay, and subscribe — smoothly, professionally, automatically. You focus on service, we handle the logistics.",
