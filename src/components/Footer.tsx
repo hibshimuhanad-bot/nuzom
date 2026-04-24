@@ -99,7 +99,7 @@ const Footer = () => {
             </ul>
             <h4 className="font-semibold mb-2 mt-6">{t("nav.contact")}</h4>
             <ul className="space-y-2 text-muted-foreground text-sm">
-              <li>info@nzomlabs.com</li>
+              <li>sales@nzomlabs.com</li>
               <li>{language === "ar" ? "الرياض، المملكة العربية السعودية" : "Riyadh, Saudi Arabia"}</li>
             </ul>
             <Button asChild className="bg-secondary text-secondary-foreground hover:bg-secondary/90 mt-4 w-full">

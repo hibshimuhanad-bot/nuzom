@@ -113,8 +113,8 @@ const TermsConditions = () => {
                 <h2 className="text-xl font-semibold mb-3 text-foreground">{isAr ? "9. التواصل" : "9. Contact"}</h2>
                 <p className="text-muted-foreground leading-relaxed">
                   {isAr
-                    ? "لأي استفسارات حول هذه الشروط والأحكام، يرجى التواصل عبر: info@nzomlabs.com"
-                    : "For any inquiries about these terms, please contact: info@nzomlabs.com"}
+                    ? "لأي استفسارات حول هذه الشروط والأحكام، يرجى التواصل عبر: sales@nzomlabs.com"
+                    : "For any inquiries about these terms, please contact: sales@nzomlabs.com"}
                 </p>
               </section>
             </ScrollReveal>
