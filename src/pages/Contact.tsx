@@ -84,7 +84,7 @@ const Contact = () => {
   };
 
   const contactInfo = [
-    { icon: Mail, label: language === "ar" ? "البريد الإلكتروني" : "Email", value: "info@nzomlabs.com" },
+    { icon: Mail, label: language === "ar" ? "البريد الإلكتروني" : "Email", value: "sales@nzomlabs.com" },
     { icon: MapPin, label: language === "ar" ? "الموقع" : "Location", value: language === "ar" ? "الرياض، المملكة العربية السعودية" : "Riyadh, Saudi Arabia" },
   ];
 

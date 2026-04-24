@@ -96,8 +96,8 @@ const PrivacyPolicy = () => {
                 <h2 className="text-xl font-semibold mb-3 text-foreground">{isAr ? "7. التواصل معنا" : "7. Contact Us"}</h2>
                 <p className="text-muted-foreground leading-relaxed">
                   {isAr
-                    ? "لأي استفسارات تتعلق بسياسة الخصوصية أو لممارسة حقوقكم، يرجى التواصل معنا عبر البريد الإلكتروني: info@nzomlabs.com"
-                    : "For any privacy-related inquiries or to exercise your rights, please contact us at: info@nzomlabs.com"}
+                    ? "لأي استفسارات تتعلق بسياسة الخصوصية أو لممارسة حقوقكم، يرجى التواصل معنا عبر البريد الإلكتروني: sales@nzomlabs.com"
+                    : "For any privacy-related inquiries or to exercise your rights, please contact us at: sales@nzomlabs.com"}
                 </p>
               </section>
             </ScrollReveal>
