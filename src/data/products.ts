@@ -222,4 +222,51 @@ export const products: Product[] = [
     securityDesc: { en: "Payment data encrypted. Client information protected. Fully compliant with Saudi commercial regulations.", ar: "بيانات الدفع مشفرة. معلومات العملاء محمية. متوافق بالكامل مع الأنظمة التجارية السعودية." },
   },
 
+  // ═══════════════════════════════════════════
+  // 8. CRM — الإحساس: السيطرة والانسجام
+  // ═══════════════════════════════════════════
+  {
+    slug: "crm",
+    available: true,
+    name: { en: "Customers Relation Managments", ar: "Customers Relation Managments" },
+    tagline: {
+      en: "Your customers, perfectly in tune.",
+      ar: "نظام إدارة علاقات العملاء"
+    },
+    description: {
+      en: "No more lost leads in inboxes. No more deals slipping through Excel. CRM gives every customer their place, every deal its stage, and every follow-up its time. Your sales team finally moves in harmony.",
+      ar: "خلاص من الفرص الضائعة في الإيميلات. خلاص من الصفقات اللي تطيح بين ملفات الإكسل. نظام إدارة علاقات العملاء يعطي كل عميل مكانه، وكل صفقة مرحلتها، وكل متابعة وقتها. فريق المبيعات أخيراً يشتغل بانسجام."
+    },
+    emotionalHook: {
+      en: "Every customer in place. Every deal in control.",
+      ar: "كل عميل في مكانه، وكل صفقة تحت السيطرة."
+    },
+    imagineDay: {
+      en: "Imagine opening your morning to a clear pipeline — every lead scored, every deal at the right stage, every follow-up scheduled. Your team knows exactly who to call, when, and why. Deals stop slipping. Revenue becomes predictable. Growth becomes a plan, not a hope.",
+      ar: "تخيّل تفتح صباحك على pipeline واضح — كل فرصة مُقيّمة، كل صفقة في مرحلتها الصحيحة، كل متابعة مجدولة. فريقك يعرف بالضبط مين يكلّم ومتى وليش. الصفقات تبطّل تطيح. الإيرادات تصير متوقّعة. النمو يصير خطة، مو أمنية."
+    },
+    icon: Users,
+    color: "from-fuchsia-500 to-purple-600",
+    problem: {
+      en: "Leads pile up in WhatsApp. Deals tracked in scattered spreadsheets. Follow-ups forgotten. Sales reps duplicate work. You don't know which deals will close this month — or why some keep slipping away.",
+      ar: "الفرص تتكدّس في الواتساب. الصفقات متابَعة في جداول مبعثرة. المتابعات تُنسى. مندوبو المبيعات يكرّرون نفس الشغل. ما تعرف أي صفقات راح تُقفل هذا الشهر — ولا ليش بعضها يضيع منك."
+    },
+    solution: {
+      en: "CRM unifies leads, contacts, companies, deals, and tasks in one clean workspace. Every interaction is logged, every pipeline is visual, every report is one click away. You see your sales like never before.",
+      ar: "نظام إدارة علاقات العملاء يوحّد الفرص والعملاء والشركات والصفقات والمهام في مساحة عمل واحدة نظيفة. كل تفاعل موثّق، كل pipeline مرئي، كل تقرير على بُعد ضغطة. تشوف مبيعاتك بطريقة ما شفتها قبل."
+    },
+    features: [
+      { title: { en: "Contacts & Companies", ar: "إدارة العملاء والشركات" }, description: { en: "A single source of truth for every customer and company you deal with.", ar: "مصدر واحد موثوق لكل عميل وشركة تتعامل معها." }, icon: Building2 },
+      { title: { en: "Deals & Pipeline", ar: "الصفقات والـ Pipeline" }, description: { en: "Visual sales pipeline. Drag deals between stages. Never lose track again.", ar: "pipeline مبيعات مرئي. اسحب الصفقات بين المراحل. ما تضيع منك صفقة مرة ثانية." }, icon: KanbanSquare },
+      { title: { en: "Lead Management", ar: "إدارة الفرص المحتملة" }, description: { en: "Capture, score, and convert leads into customers — systematically.", ar: "استقبل وقيّم وحوّل الفرص إلى عملاء — بطريقة منهجية." }, icon: Target },
+      { title: { en: "Tasks & Follow-ups", ar: "المهام والمتابعات" }, description: { en: "Every customer gets the right follow-up at the right time. Nothing forgotten.", ar: "كل عميل يحصل على المتابعة الصحيحة في الوقت الصحيح. ما يُنسى شيء." }, icon: CheckSquare },
+      { title: { en: "Reports & Dashboards", ar: "التقارير ولوحات التحكم" }, description: { en: "Sales performance, conversion rates, revenue forecasts — all live.", ar: "أداء المبيعات، معدلات التحويل، توقعات الإيرادات — كلها لحظية." }, icon: BarChart3 },
+      { title: { en: "Smart Notifications", ar: "الإشعارات الذكية" }, description: { en: "Be alerted on stuck deals, hot leads, and overdue follow-ups instantly.", ar: "تنبيهات فورية للصفقات الراكدة، الفرص الساخنة، والمتابعات المتأخرة." }, icon: AlertTriangle },
+    ],
+    workflowDesc: { en: "Leads route to the right rep automatically. Deals progress through your defined stages. Tasks are created on every status change. Follow-ups schedule themselves. Your sales process runs like clockwork.", ar: "الفرص تتوزّع على المندوب الصحيح تلقائياً. الصفقات تتنقّل بين المراحل اللي حدّدتها. المهام تتولّد مع كل تغيير حالة. المتابعات تجدول نفسها. عملية مبيعاتك تمشي زي الساعة." },
+    rbacDesc: { en: "Sales managers see the full pipeline. Reps see their accounts. Marketing sees lead sources. Each role gets exactly the view they need — nothing more, nothing less.", ar: "مديرو المبيعات يشوفون الـ pipeline كامل. المندوبون يشوفون حساباتهم. التسويق يشوف مصادر الفرص. كل دور يشوف بالضبط اللي يخصه — لا أكثر، ولا أقل." },
+    analyticsDesc: { en: "Which deals are likely to close? Which reps perform best? Where do leads drop off? Real answers that turn data into revenue.", ar: "أي صفقات محتمل تُقفل؟ أي مندوب الأفضل أداءً؟ وين تطيح الفرص؟ إجابات حقيقية تحوّل البيانات إلى إيرادات." },
+    securityDesc: { en: "Customer data is sacred. Multi-tenant isolation, encrypted storage, and full Saudi PDPL compliance keep your most valuable asset safe.", ar: "بيانات العملاء مقدسة. عزل متعدد المستأجرين، تخزين مشفّر، وامتثال كامل لنظام حماية البيانات السعودي PDPL يحمي أثمن أصولك." },
+  },
+
 ];
