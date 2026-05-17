@@ -59,6 +59,11 @@
     --shadow-elegant: 0 1px 2px rgba(0,0,0,0.04), 0 8px 24px -8px rgba(0,0,0,0.08);
     --shadow-premium: 0 0 0 1px hsla(43,56%,54%,0.18), 0 8px 32px -12px hsla(43,56%,54%,0.35);
 
+    /* Legacy glow aliases (mapped to emerald/gold — no blue/purple) */
+    --glow-primary: 162 84% 16%;
+    --glow-accent: 43 56% 54%;
+    --glow-purple: 43 56% 54%;
+
     /* Sidebar */
     --sidebar-background: 40 20% 97%;
     --sidebar-foreground: 162 30% 10%;
