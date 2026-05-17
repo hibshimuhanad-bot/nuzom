@@ -207,7 +207,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <p className="text-sm font-medium text-foreground">{item.label}</p>
-                        <p className="text-sm text-muted-foreground">{item.value}</p>
+                        <p className="text-sm text-muted-foreground"><bdi>{item.value}</bdi></p>
                       </div>
                     </div>
                   ))}
