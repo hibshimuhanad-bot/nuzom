@@ -218,7 +218,7 @@ const Contact = () => {
                   <div className="space-y-2 text-sm text-muted-foreground">
                     <p>{language === "ar" ? "الأحد – الخميس" : "Sunday – Thursday"}</p>
                     <p className="text-foreground font-medium" dir="ltr">9:00 AM – 5:00 PM</p>
-                    <p>{language === "ar" ? "بتوقيت الرياض (GMT+3)" : "Riyadh Time (GMT+3)"}</p>
+                    <p>{language === "ar" ? <>بتوقيت الرياض <bdi>(GMT+3)</bdi></> : "Riyadh Time (GMT+3)"}</p>
                   </div>
                 </div>
 
