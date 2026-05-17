@@ -1,0 +1,27 @@
+# Nzom Labs
+
+> Saudi technology studio building enterprise SaaS systems for operations, compliance, governance, and workflow management. Bilingual (Arabic/English) products tailored for Saudi organizations.
+
+## Pages
+
+- [Home](/): Overview of Nzom Labs and its product ecosystem.
+- [About](/about): Company story, mission, and approach to building enterprise SaaS.
+- [Contact](/contact): Request a demo, book a consultation, or reach the sales team.
+- [Blog](/blog): Insights on digital transformation, compliance, and enterprise tech in Saudi Arabia.
+- [FAQ](/faq): Common questions about Nzom Labs systems, pricing, and support.
+- [Privacy Policy](/privacy): How Nzom Labs collects, uses, and protects data.
+- [Terms & Conditions](/terms): Terms of use for Nzom Labs services and platforms.
+
+## Products
+
+- [Zerisks (HSSE)](/products/hsse): Digital safety, health, security, and environment management system.
+- [aldalyel (Legal)](/products/legal): AI-powered legal case and document management for law teams.
+- [Nexdo (Tasks)](/products/tasks): Project and task management built to eliminate operational chaos.
+- [Nzom Booking](/products/booking): Professional appointment and booking system for service businesses.
+- [Customers Relation Managments (CRM)](/products/crm): Multi-tenant CRM covering contacts, deals, leads, and pipelines.
+
+## Blog highlights
+
+- [Why your organization needs a digital safety system](/blog/why-your-organization-needs-digital-safety-system)
+- [AI-powered legal case management](/blog/ai-powered-legal-case-management)
+- [ZATCA e-invoicing: everything you need to know](/blog/zatca-e-invoicing-everything-you-need-to-know)
