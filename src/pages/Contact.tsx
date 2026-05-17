@@ -153,6 +153,7 @@ const Contact = () => {
                         type="tel"
                         maxLength={20}
                         placeholder="+966"
+                        dir="ltr"
                         value={formData.phone}
                         onChange={(e) => setFormData((prev) => ({ ...prev, phone: e.target.value }))}
                         className="bg-background/50 border-border/50 focus:border-secondary"
@@ -206,7 +207,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <p className="text-sm font-medium text-foreground">{item.label}</p>
-                        <p className="text-sm text-muted-foreground">{item.value}</p>
+                        <p className="text-sm text-muted-foreground"><bdi>{item.value}</bdi></p>
                       </div>
                     </div>
                   ))}
@@ -217,7 +218,7 @@ const Contact = () => {
                   <div className="space-y-2 text-sm text-muted-foreground">
                     <p>{language === "ar" ? "الأحد – الخميس" : "Sunday – Thursday"}</p>
                     <p className="text-foreground font-medium" dir="ltr">9:00 AM – 5:00 PM</p>
-                    <p>{language === "ar" ? "بتوقيت الرياض (GMT+3)" : "Riyadh Time (GMT+3)"}</p>
+                    <p>{language === "ar" ? <>بتوقيت الرياض <bdi>(GMT+3)</bdi></> : "Riyadh Time (GMT+3)"}</p>
                   </div>
                 </div>
 

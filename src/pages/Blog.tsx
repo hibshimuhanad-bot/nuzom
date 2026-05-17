@@ -68,7 +68,7 @@ const Blog = () => {
                 <Link to={`/blog/${post.slug}`} className="block h-full group">
                   <div className="bento-card p-6 h-full flex flex-col">
                     <div className="flex items-center gap-3 mb-3 text-muted-foreground text-xs">
-                      <span className="flex items-center gap-1"><Calendar className="h-3 w-3" />{post.date}</span>
+                      <span className="flex items-center gap-1"><Calendar className="h-3 w-3" /><span dir="ltr">{post.date}</span></span>
                       <span className="flex items-center gap-1"><Clock className="h-3 w-3" />{post.readTime[language]}</span>
                     </div>
                     <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-gradient-blue transition-colors">
