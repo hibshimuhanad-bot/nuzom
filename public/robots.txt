@@ -1,8 +1,14 @@
 User-agent: Googlebot
 Allow: /
+Disallow: /admin
+Disallow: /admin/
+Disallow: /unsubscribe
 
 User-agent: Bingbot
 Allow: /
+Disallow: /admin
+Disallow: /admin/
+Disallow: /unsubscribe
 
 User-agent: Twitterbot
 Allow: /
@@ -12,5 +18,8 @@ Allow: /
 
 User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /admin/
+Disallow: /unsubscribe
 
 Sitemap: https://nzomlabs.com/sitemap.xml
