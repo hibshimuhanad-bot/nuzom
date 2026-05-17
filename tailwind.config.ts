@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Inter", "IBM Plex Sans Arabic", "sans-serif"],
-        arabic: ["IBM Plex Sans Arabic", "sans-serif"],
+        sans: ["Inter", "Noto Kufi Arabic", "Tajawal", "sans-serif"],
+        arabic: ["Noto Kufi Arabic", "Tajawal", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
