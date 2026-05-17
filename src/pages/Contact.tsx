@@ -153,6 +153,7 @@ const Contact = () => {
                         type="tel"
                         maxLength={20}
                         placeholder="+966"
+                        dir="ltr"
                         value={formData.phone}
                         onChange={(e) => setFormData((prev) => ({ ...prev, phone: e.target.value }))}
                         className="bg-background/50 border-border/50 focus:border-secondary"
