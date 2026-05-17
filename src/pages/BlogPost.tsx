@@ -195,7 +195,7 @@ const BlogPost = () => {
                         <div className="flex items-center gap-3 text-xs text-muted-foreground">
                           <span className="flex items-center gap-1">
                             <Calendar className="h-3 w-3" />
-                            {related.date}
+                            <span dir="ltr">{related.date}</span>
                           </span>
                           <span className="flex items-center gap-1">
                             <Clock className="h-3 w-3" />
