@@ -1,58 +1,84 @@
-# Plan: Tier A Monochrome Color System
+# Plan: New Navy/Purple/Blue Palette
 
-تطبيق نظام ألوان **أحادي اللون فاخر** على غرار Vercel / Linear، مع لون واحد برّاق (أزرق `#0070F3`) كلمسة تمييز فقط. يستبدل الكحلي/الذهبي الحالي بالكامل.
+تطبيق نظام الألوان الجديد المُرسل، مع **وضع فاتح افتراضي** و**وضع داكن** متناسق. كل القيم HSL ومن خلال tokens فقط.
 
-## 1. لوحة الألوان (Tier A)
+## 1. اللوحة (Mapping)
 
-**فاتح (Light Mode — افتراضي):**
-- Background: `#FFFFFF` / Surface: `#FAFAFA` / Muted: `#F5F5F5`
-- Border: `#E5E5E5` (subtle) / `#D4D4D4` (emphasis)
-- Text: `#0A0A0A` primary / `#525252` secondary / `#A3A3A3` muted
-- Accent (one only): `#0070F3` (Vercel Blue)
+**Light Mode (افتراضي):**
+- `--background`: `#FFFFFF`
+- `--card` / surface: `#F8FAFC` (softGray) — `--muted`: `#EEF4FF` (softBlue)
+- `--foreground`: `#111827` — `--muted-foreground`: `#6B7280`
+- `--border` / `--input`: `#E5E7EB`
+- `--primary`: `#2563EB` (blue) — `--primary-foreground`: `#FFFFFF`
+- `--secondary`: `#F3F0FF` (softPurple) — `--secondary-foreground`: `#101B46` (navy)
+- `--accent`: `#4F46E5` (purple) — `--accent-foreground`: `#FFFFFF`
+- `--ring`: `#2563EB`
 
-**غامق (Dark Mode):**
-- Background: `#0A0A0A` / Surface: `#111111` → `#1A1A1A` → `#262626`
-- Border: `#2E2E2E` / `#404040`
-- Text: `#FAFAFA` / `#A0A0A0` / `#666666`
-- Accent: `#0070F3` (نفس اللون)
+**Dark Mode (`.dark`):**
+- `--background`: `#0B102F` — `--card`: `#121A3F` — `--muted`: `#101B46` (navy)
+- `--foreground`: `#F9FAFB` — `--muted-foreground`: `#CBD5E1`
+- `--border` / `--input`: `#243056`
+- `--primary`: `#4F46E5` (purple) — `--primary-foreground`: `#F9FAFB`
+- `--secondary`: `#101B46` — `--secondary-foreground`: `#F9FAFB`
+- `--accent`: `#2563EB` — `--accent-foreground`: `#F9FAFB`
 
-**حالات:** Success `#16A34A` · Warning `#D97706` · Error `#DC2626`
+**State (موحّد):** success `#10B981` · warning `#F59E0B` · error/destructive `#EF4444` · info `#0EA5E9`.
+
+**Brand constants** (إضافية للاستخدام المباشر في tailwind):
+- `brand-navy` `#101B46` · `brand-purple` `#4F46E5` · `brand-blue` `#2563EB`
 
 ## 2. الملفات المتأثرة
 
-- `src/index.css` — إعادة بناء كل `--background, --foreground, --primary, --secondary, --accent, --muted, --border, --ring, --card, --popover, --sidebar-*, --primary-glow, --accent-glow` بـ HSL للقيم أعلاه. تحديث جميع المتغيّرات في `:root` و `.dark`.
-- `src/index.css` (التدرّجات/الظلال) — إزالة كل تدرّجات/توهّجات الذهب (`--gradient-gold`, `--gradient-gold-shine`, `--shadow-gold-glow`, `--shadow-premium`, `.glass-gold`, `.hairline-gold`, `@keyframes gold-shine`, `.shimmer-border` بألوانه الذهبية). استبدالها بـ:
-  - `--gradient-primary` — تدرّج رمادي عميق
-  - `--gradient-accent` — تدرّج خفيف من `#0070F3` للتأكيد فقط على CTAs
-  - `--shadow-elegant` — ظل رمادي خالص (بدون توهّج ذهبي)
-  - `--shadow-accent-glow` — حلقة زرقاء خفيفة للأزرار الرئيسية
-- `tailwind.config.ts` — إزالة المفاتيح الميتة (`navy`, `electric`, `light-gray`) وقد تُسبّب تحذيرات.
-- `src/pages/Index.tsx` (Hero) — استبدال:
-  - `bg-gradient-gold text-primary` على CTA → `bg-foreground text-background` (زر أسود بنص أبيض، أسلوب Vercel)
-  - `shadow-gold-glow` → `shadow-elegant`
-  - `glass-gold` → `glass-panel` (بدون لون ذهبي)
-  - الكرات الذهبية العائمة → كرات رمادية/زرقاء خفيفة
-  - `text-gradient` على H1 → نص أسود خالص (`text-foreground`)
-  - `border-accent/40` على زر الـ outline → `border-border hover:border-foreground`
-- `src/components/home/CTABanner.tsx` — نفس المعالجة: زر `bg-background text-foreground`، إزالة `shadow-gold-glow` و `hairline-gold`.
-- `src/components/home/BentoGrid.tsx` — إزالة `bg-gradient-gold` overlay، استبدال أيقونات المنتج بخلفية `bg-foreground text-background`.
-- `src/components/Navbar.tsx`, `src/components/Footer.tsx`, `src/components/home/{WhyNuzom,HowToStart,Industries,Testimonials}.tsx`, `src/pages/{About,Blog,BlogPost,Contact,FAQ,ProductPage,PrivacyPolicy,TermsConditions}.tsx` — فحص سريع واستبدال أي `text-accent`, `bg-accent`, `border-accent` المستخدمة بنيّة "ذهبية" بـ `text-foreground` أو `border-border` حسب السياق. الاحتفاظ بـ `accent` فقط على عناصر التأكيد الحقيقية (روابط نشطة، CTA رئيسي، badges حالة).
+- `src/index.css`
+  - إعادة بناء `:root` بقيم **Light Mode** أعلاه (تحويل لكل التوكنز إلى HSL).
+  - إعادة بناء `.dark` بقيم **Dark Mode** أعلاه.
+  - تحديث التدرّجات:
+    - `--gradient-primary`: `linear-gradient(135deg, #2563EB → #4F46E5)`
+    - `--gradient-accent`: `linear-gradient(135deg, #4F46E5 → #2563EB)`
+    - `--gradient-surface` (light): `#FFFFFF → #F8FAFC` / (dark): `#0B102F → #121A3F`
+    - `--gradient-hero`: radial من purple+blue على خلفية soft
+    - `--gradient-mesh`: radial blobs (blue/purple/navy)
+  - تحديث الظلال: `--shadow-elegant`, `--shadow-card-hover`, `--shadow-accent-glow` لاستخدام `#2563EB`/`#4F46E5` بدلاً من cyan/navy الحالية.
+  - تحديث `.ai-gradient-bg::before` و `.dot-pattern` و `.grid-pattern` لتعمل صح في Light + Dark (تستخدم `var(--foreground)` بالفعل، فقط فحص opacity).
+  - تحديث `.bento-card` hover border إلى `--primary` بدل foreground.
+- `tailwind.config.ts`
+  - إضافة `brand: { navy, purple, blue }` و `state: { success, warning, error, info }` تحت `extend.colors`.
+- **Default theme switch:** الموقع حاليا داكن افتراضي (الـ root tokens داكنة). نحوّله إلى **Light افتراضي**:
+  - فحص `index.html` / `App.tsx` / `Layout.tsx` لإزالة أي `className="dark"` ثابت على `<html>` أو `<body>`، وإبقاء `.dark` متاحاً للتفعيل لاحقاً.
+- `src/components/home/CTABanner.tsx`
+  - الخلفية `bg-gradient-primary` تبقى (الآن blue→purple). الزر يبقى `bg-background text-foreground` لكن سيظهر أبيض على تدرّج blue/purple — جيد بصرياً.
+- `src/pages/Index.tsx` (Hero)
+  - الخلفية الحالية تعتمد على navy/cyan؛ مراجعة الـ floating orbs وتغيير ألوانها من cyan إلى `primary`/`accent` (blue+purple) مع opacity منخفض.
+  - زر primary CTA: `bg-primary text-primary-foreground shadow-accent-glow` (يصبح blue glow purple).
+  - زر outline: `border-border` يبقى — سيظهر صح في الوضعين.
+- `src/components/home/BentoGrid.tsx`, `WhyNuzom.tsx`, `Industries.tsx`, `HowToStart.tsx`, `Testimonials.tsx`
+  - فحص أي ألوان hardcoded أو `text-cyan-*`/`bg-cyan-*` واستبدالها بـ tokens (`text-accent`, `bg-primary/10`, ...).
+- `src/components/Navbar.tsx`, `Footer.tsx`
+  - فحص contrast على Light Mode (الـ navbar غالباً سيحتاج `bg-background/80 backdrop-blur` مع `border-border`).
+- صفحات أخرى (`About`, `Blog`, `BlogPost`, `Contact`, `FAQ`, `ProductPage`, `PrivacyPolicy`, `TermsConditions`)
+  - فحص سريع لاستخدامات `text-white`, `bg-[#...]`, أو tokens مفقودة. استبدال بـ semantic tokens فقط.
 
-## 3. مبدأ الاستخدام (Vercel-style restraint)
+## 3. Status Tokens
 
-- الأزرار الرئيسية: أسود/أبيض عاكس (`bg-foreground text-background`) — وليس Accent.
-- الأزرق `#0070F3` مخصّص للـ: روابط، حالات focus/ring، تأكيد مرّة واحدة لكل صفحة كحد أقصى.
-- لا تدرّجات على النصوص (`text-gradient`, `text-gradient-gold` → تُحذف).
-- لا توهّجات ملوّنة كبيرة في الـ Hero.
-- اعتماد المساحات البيضاء والـ Borders الرفيعة كعنصر تصميمي رئيسي.
+تحديث `--success` `#10B981`, `--warning` `#F59E0B`, `--destructive` `#EF4444`, إضافة `--info` `#0EA5E9` و mapping في tailwind.
 
 ## 4. الذاكرة
 
-- تحديث `mem://style/design-system` و `mem://index.md` Core: استبدال "Dark Tech UI / Navy & Gold" بـ **"Tier A Monochrome — Vercel/Linear style: BG `#FFFFFF`/`#0A0A0A`, Accent `#0070F3` فقط"**.
+تحديث `mem://style/design-system` و `mem://index.md` Core:
+- الوضع الافتراضي: **Light** بخلفية بيضاء + softGray + softBlue/Purple.
+- Primary = Blue `#2563EB`, Accent = Purple `#4F46E5`, Navy `#101B46` للـ headings/dark surfaces.
+- Dark mode: `#0B102F` خلفية مع navy surfaces.
+- ممنوع hardcoded colors. كل الـ tokens HSL.
 
-## ملاحظات تقنية
+## 5. ملاحظات تقنية
 
-- كل الألوان HSL في `index.css`.
-- التوافق مع RTL والـ logical CSS يبقى كما هو.
-- لا تغييرات على المنطق أو البيانات أو الـ Backend.
-- بعد التطبيق، فحص بصري سريع للـ Hero و BentoGrid و CTABanner للتأكد من اتساق الـ contrast (WCAG AA).
+- جميع الألوان تُكتب HSL داخل `index.css` (مثال: `#2563EB` → `221 83% 53%`، `#4F46E5` → `243 75% 59%`، `#101B46` → `230 64% 17%`، `#0B102F` → `230 62% 11%`).
+- لا تغييرات في المنطق/البيانات/Backend.
+- التحقّق من contrast (WCAG AA) خاصة لـ `muted-foreground` على `softBlue`/`softPurple`.
+- RTL والـ logical CSS تبقى كما هي.
+
+## نتيجة متوقّعة
+
+- موقع بمظهر فاتح أنيق (أبيض + لمسات blue/purple soft) كافتراضي.
+- وضع داكن غني (navy عميق) عند تفعيل `.dark`.
+- نظام ألوان موحّد قابل للصيانة عبر tokens فقط.
