@@ -12,7 +12,7 @@ const BentoGrid = () => {
       <div className="absolute inset-0 grid-pattern opacity-50" />
       <div className="container mx-auto px-4 relative z-10">
         <ScrollReveal className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gradient-blue">{t("ecosystem.title")}</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground">{t("ecosystem.title")}</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">{t("ecosystem.subtitle")}</p>
         </ScrollReveal>
 
