@@ -6,8 +6,7 @@
 
 @layer base {
   :root {
-    /* Surfaces */
-  :root {
+
     /* Surfaces — Warm White */
     --background: 42 30% 96%;
     --foreground: 215 60% 10%;
