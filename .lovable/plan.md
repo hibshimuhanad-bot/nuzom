@@ -1,84 +1,71 @@
-# Plan: New Navy/Purple/Blue Palette
+# خطة: ثيم داكن بنفسجي (Dark Purple Theme)
 
-تطبيق نظام الألوان الجديد المُرسل، مع **وضع فاتح افتراضي** و**وضع داكن** متناسق. كل القيم HSL ومن خلال tokens فقط.
+تحويل الموقع من الوضع الفاتح الحالي إلى **وضع داكن افتراضي** مستوحى من الصورة: خلفية سوداء عميقة + لمسات بنفسجية متوهجة + كروت زجاجية (glassmorphism).
 
-## 1. اللوحة (Mapping)
+## 1. اللوحة الجديدة (HSL Tokens)
 
-**Light Mode (افتراضي):**
-- `--background`: `#FFFFFF`
-- `--card` / surface: `#F8FAFC` (softGray) — `--muted`: `#EEF4FF` (softBlue)
-- `--foreground`: `#111827` — `--muted-foreground`: `#6B7280`
-- `--border` / `--input`: `#E5E7EB`
-- `--primary`: `#2563EB` (blue) — `--primary-foreground`: `#FFFFFF`
-- `--secondary`: `#F3F0FF` (softPurple) — `--secondary-foreground`: `#101B46` (navy)
-- `--accent`: `#4F46E5` (purple) — `--accent-foreground`: `#FFFFFF`
-- `--ring`: `#2563EB`
+**الوضع الافتراضي = Dark:**
+- `--background`: `#07060F` (أسود مزرق عميق)
+- `--card`: `#13102B` (بنفسجي داكن جداً للكروت)
+- `--muted`: `#1A1438`
+- `--foreground`: `#F5F3FF` (أبيض مائل للبنفسجي)
+- `--muted-foreground`: `#A89FC9`
+- `--border`: `#2A1F5C` (بنفسجي غامق للحدود)
+- `--primary`: `#7C6BFF` (بنفسجي ساطع — لون الزر Choose Standard)
+- `--primary-foreground`: `#FFFFFF`
+- `--accent`: `#4F46E5`
+- `--secondary`: `#1A1438`
+- `--ring`: `#7C6BFF`
 
-**Dark Mode (`.dark`):**
-- `--background`: `#0B102F` — `--card`: `#121A3F` — `--muted`: `#101B46` (navy)
-- `--foreground`: `#F9FAFB` — `--muted-foreground`: `#CBD5E1`
-- `--border` / `--input`: `#243056`
-- `--primary`: `#4F46E5` (purple) — `--primary-foreground`: `#F9FAFB`
-- `--secondary`: `#101B46` — `--secondary-foreground`: `#F9FAFB`
-- `--accent`: `#2563EB` — `--accent-foreground`: `#F9FAFB`
+**Light Mode (اختياري — يبقى كـ fallback):**
+- نفس قيم Navy/Purple/Blue الحالية (بيضاء بلمسات بنفسجية).
 
-**State (موحّد):** success `#10B981` · warning `#F59E0B` · error/destructive `#EF4444` · info `#0EA5E9`.
+**State:** success `#10B981` · warning `#F59E0B` · error `#EF4444` · info `#0EA5E9`.
 
-**Brand constants** (إضافية للاستخدام المباشر في tailwind):
-- `brand-navy` `#101B46` · `brand-purple` `#4F46E5` · `brand-blue` `#2563EB`
+## 2. التدرّجات والتأثيرات البصرية
 
-## 2. الملفات المتأثرة
+- `--gradient-primary`: `linear-gradient(135deg, #7C6BFF → #4F46E5)` (الزر الرئيسي بتوهج بنفسجي)
+- `--gradient-hero`: radial blobs بنفسجية على خلفية سوداء (مطابق للستارات المتوهجة في الصورة)
+- `--gradient-mesh`: 3 blobs بنفسجية ناعمة في زوايا الـ Hero
+- `--shadow-accent-glow`: توهج بنفسجي قوي حول الأزرار الرئيسية (`0 0 40px hsl(243 75% 65% / 0.5)`)
+- `--shadow-card-hover`: حدود بنفسجية متوهجة عند الـ hover على الكروت
 
-- `src/index.css`
-  - إعادة بناء `:root` بقيم **Light Mode** أعلاه (تحويل لكل التوكنز إلى HSL).
-  - إعادة بناء `.dark` بقيم **Dark Mode** أعلاه.
-  - تحديث التدرّجات:
-    - `--gradient-primary`: `linear-gradient(135deg, #2563EB → #4F46E5)`
-    - `--gradient-accent`: `linear-gradient(135deg, #4F46E5 → #2563EB)`
-    - `--gradient-surface` (light): `#FFFFFF → #F8FAFC` / (dark): `#0B102F → #121A3F`
-    - `--gradient-hero`: radial من purple+blue على خلفية soft
-    - `--gradient-mesh`: radial blobs (blue/purple/navy)
-  - تحديث الظلال: `--shadow-elegant`, `--shadow-card-hover`, `--shadow-accent-glow` لاستخدام `#2563EB`/`#4F46E5` بدلاً من cyan/navy الحالية.
-  - تحديث `.ai-gradient-bg::before` و `.dot-pattern` و `.grid-pattern` لتعمل صح في Light + Dark (تستخدم `var(--foreground)` بالفعل، فقط فحص opacity).
-  - تحديث `.bento-card` hover border إلى `--primary` بدل foreground.
-- `tailwind.config.ts`
-  - إضافة `brand: { navy, purple, blue }` و `state: { success, warning, error, info }` تحت `extend.colors`.
-- **Default theme switch:** الموقع حاليا داكن افتراضي (الـ root tokens داكنة). نحوّله إلى **Light افتراضي**:
-  - فحص `index.html` / `App.tsx` / `Layout.tsx` لإزالة أي `className="dark"` ثابت على `<html>` أو `<body>`، وإبقاء `.dark` متاحاً للتفعيل لاحقاً.
-- `src/components/home/CTABanner.tsx`
-  - الخلفية `bg-gradient-primary` تبقى (الآن blue→purple). الزر يبقى `bg-background text-foreground` لكن سيظهر أبيض على تدرّج blue/purple — جيد بصرياً.
-- `src/pages/Index.tsx` (Hero)
-  - الخلفية الحالية تعتمد على navy/cyan؛ مراجعة الـ floating orbs وتغيير ألوانها من cyan إلى `primary`/`accent` (blue+purple) مع opacity منخفض.
-  - زر primary CTA: `bg-primary text-primary-foreground shadow-accent-glow` (يصبح blue glow purple).
-  - زر outline: `border-border` يبقى — سيظهر صح في الوضعين.
-- `src/components/home/BentoGrid.tsx`, `WhyNuzom.tsx`, `Industries.tsx`, `HowToStart.tsx`, `Testimonials.tsx`
-  - فحص أي ألوان hardcoded أو `text-cyan-*`/`bg-cyan-*` واستبدالها بـ tokens (`text-accent`, `bg-primary/10`, ...).
-- `src/components/Navbar.tsx`, `Footer.tsx`
-  - فحص contrast على Light Mode (الـ navbar غالباً سيحتاج `bg-background/80 backdrop-blur` مع `border-border`).
-- صفحات أخرى (`About`, `Blog`, `BlogPost`, `Contact`, `FAQ`, `ProductPage`, `PrivacyPolicy`, `TermsConditions`)
-  - فحص سريع لاستخدامات `text-white`, `bg-[#...]`, أو tokens مفقودة. استبدال بـ semantic tokens فقط.
+## 3. الملفات المُعدَّلة
 
-## 3. Status Tokens
-
-تحديث `--success` `#10B981`, `--warning` `#F59E0B`, `--destructive` `#EF4444`, إضافة `--info` `#0EA5E9` و mapping في tailwind.
+- **`src/index.css`**
+  - تبديل قيم `:root` لتصبح Dark (بدل Light الحالي).
+  - نقل قيم Light الحالية إلى `.light` class (للاستخدام اللاحق لو احتاج).
+  - تحديث `.bento-card` لتأخذ خلفية شبه شفافة + `backdrop-blur` (نمط زجاجي مطابق للصورة).
+  - تحديث `.ai-gradient-bg::before` لإضافة blobs بنفسجية متوهجة.
+- **`index.html`** أو **`src/App.tsx`/`Layout.tsx`**
+  - إضافة `className="dark"` على `<html>` لتفعيل الوضع الداكن افتراضياً (لو موجود حالياً يُتأكد منه).
+- **`tailwind.config.ts`**
+  - تحديث `brand` tokens لتعكس البنفسجي الجديد (`brand-purple: #7C6BFF`).
+- **`src/pages/Index.tsx`** (Hero)
+  - الـ floating orbs: تغيير ألوانها لـ purple glow.
+  - الـ CTA الرئيسي: `bg-primary` مع `shadow-accent-glow` للتوهج.
+- **`src/components/home/BentoGrid.tsx`, `CTABanner.tsx`, `WhyNuzom.tsx`, `Industries.tsx`, `HowToStart.tsx`, `Testimonials.tsx`**
+  - مراجعة أي لون hardcoded واستبداله بـ tokens.
+  - الكروت تأخذ المظهر الزجاجي تلقائياً عبر `.bento-card`.
+- **`Navbar.tsx`, `Footer.tsx`**
+  - تأكيد contrast على الخلفية السوداء.
+  - زر Contact في Navbar يأخذ `bg-primary` مع توهج بنفسجي.
 
 ## 4. الذاكرة
 
-تحديث `mem://style/design-system` و `mem://index.md` Core:
-- الوضع الافتراضي: **Light** بخلفية بيضاء + softGray + softBlue/Purple.
-- Primary = Blue `#2563EB`, Accent = Purple `#4F46E5`, Navy `#101B46` للـ headings/dark surfaces.
-- Dark mode: `#0B102F` خلفية مع navy surfaces.
-- ممنوع hardcoded colors. كل الـ tokens HSL.
+تحديث `mem://index.md` Core و `mem://style/design-system`:
+- الوضع الافتراضي: **Dark** (أسود `#07060F` + بنفسجي `#7C6BFF`).
+- Primary = Purple `#7C6BFF`, Accent = Indigo `#4F46E5`.
+- مظهر الكروت: glassmorphism بحدود بنفسجية ناعمة.
+- ممنوع hardcoded colors، كل الـ tokens HSL.
 
-## 5. ملاحظات تقنية
+## 5. ملاحظات
 
-- جميع الألوان تُكتب HSL داخل `index.css` (مثال: `#2563EB` → `221 83% 53%`، `#4F46E5` → `243 75% 59%`، `#101B46` → `230 64% 17%`، `#0B102F` → `230 62% 11%`).
-- لا تغييرات في المنطق/البيانات/Backend.
-- التحقّق من contrast (WCAG AA) خاصة لـ `muted-foreground` على `softBlue`/`softPurple`.
+- **لا تغييرات في المنطق/البيانات/Backend.**
 - RTL والـ logical CSS تبقى كما هي.
+- فحص contrast (WCAG AA) للنصوص الثانوية على الخلفية الداكنة.
+- الشعار قد يحتاج نسخة فاتحة لو كان داكناً.
 
-## نتيجة متوقّعة
+## النتيجة المتوقّعة
 
-- موقع بمظهر فاتح أنيق (أبيض + لمسات blue/purple soft) كافتراضي.
-- وضع داكن غني (navy عميق) عند تفعيل `.dark`.
-- نظام ألوان موحّد قابل للصيانة عبر tokens فقط.
+موقع بمظهر داكن أنيق وفاخر: خلفية سوداء عميقة، كروت زجاجية بحدود بنفسجية، أزرار رئيسية متوهجة بالبنفسجي، وتأثيرات ضوئية ناعمة في الـ Hero — مطابق لروح الصورة المرفقة.
