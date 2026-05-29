@@ -140,22 +140,6 @@
     --sidebar-ring: 38 46% 60%;
   }
 
-
-    --glow-primary: 161 70% 32%;
-    --glow-accent: 43 56% 54%;
-    --glow-purple: 43 56% 54%;
-
-    --sidebar-background: 162 28% 7%;
-    --sidebar-foreground: 40 24% 96%;
-    --sidebar-primary: 161 70% 32%;
-    --sidebar-primary-foreground: 40 24% 96%;
-    --sidebar-accent: 162 20% 12%;
-    --sidebar-accent-foreground: 40 24% 96%;
-    --sidebar-border: 162 18% 16%;
-    --sidebar-ring: 43 56% 54%;
-  }
-}
-
 @layer base {
   * {
     @apply border-border;
@@ -178,21 +162,18 @@
 [dir="rtl"] h4 {
   font-family: "Noto Kufi Arabic", "Tajawal", sans-serif;
   line-height: 1.6;
-.ai-gradient-bg::before {
-  content: '';
-  position: absolute;
-  inset: -50%;
-  background:
-    radial-gradient(ellipse 600px 600px at 20% 30%, hsl(215 60% 10% / 0.06), transparent),
-    radial-gradient(ellipse 500px 500px at 80% 20%, hsl(38 46% 60% / 0.08), transparent),
-    radial-gradient(ellipse 400px 400px at 50% 90%, hsl(213 52% 25% / 0.06), transparent);
-  z-index: 0;
+  letter-spacing: 0;
+  font-weight: 600;
 }
-.dark .ai-gradient-bg::before {
-  background:
-    radial-gradient(ellipse 600px 600px at 20% 30%, hsl(213 52% 35% / 0.20), transparent),
-    radial-gradient(ellipse 500px 500px at 80% 20%, hsl(38 46% 60% / 0.12), transparent),
-    radial-gradient(ellipse 400px 400px at 50% 90%, hsl(215 60% 10% / 0.25), transparent);
+
+[dir="rtl"] p,
+[dir="rtl"] li {
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+[dir="rtl"] .font-mono {
+  font-family: "Noto Kufi Arabic", sans-serif;
 }
 
 @layer utilities {
@@ -222,16 +203,16 @@
   position: absolute;
   inset: -50%;
   background:
-    radial-gradient(ellipse 600px 600px at 20% 30%, hsl(162 84% 16% / 0.06), transparent),
-    radial-gradient(ellipse 500px 500px at 80% 20%, hsl(43 56% 54% / 0.07), transparent),
-    radial-gradient(ellipse 400px 400px at 50% 90%, hsl(161 70% 26% / 0.05), transparent);
+    radial-gradient(ellipse 600px 600px at 20% 30%, hsl(215 60% 10% / 0.06), transparent),
+    radial-gradient(ellipse 500px 500px at 80% 20%, hsl(38 46% 60% / 0.08), transparent),
+    radial-gradient(ellipse 400px 400px at 50% 90%, hsl(213 52% 25% / 0.06), transparent);
   z-index: 0;
 }
 .dark .ai-gradient-bg::before {
   background:
-    radial-gradient(ellipse 600px 600px at 20% 30%, hsl(161 70% 26% / 0.18), transparent),
-    radial-gradient(ellipse 500px 500px at 80% 20%, hsl(43 56% 54% / 0.10), transparent),
-    radial-gradient(ellipse 400px 400px at 50% 90%, hsl(162 84% 16% / 0.20), transparent);
+    radial-gradient(ellipse 600px 600px at 20% 30%, hsl(213 52% 35% / 0.20), transparent),
+    radial-gradient(ellipse 500px 500px at 80% 20%, hsl(38 46% 60% / 0.12), transparent),
+    radial-gradient(ellipse 400px 400px at 50% 90%, hsl(215 60% 10% / 0.25), transparent);
 }
 
 /* ── Dot Grid Pattern ── */
