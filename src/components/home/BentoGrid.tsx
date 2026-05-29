@@ -25,7 +25,7 @@ const BentoGrid = () => {
                     {t("ecosystem.available")}
                   </span>
                   <div className="relative z-10">
-                    <div className="w-12 h-12 rounded-xl bg-foreground text-background flex items-center justify-center mb-4 group-hover:scale-105 transition-all duration-300">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-primary text-primary-foreground flex items-center justify-center mb-4 shadow-accent-glow group-hover:scale-105 transition-all duration-300">
                       <product.icon className="h-6 w-6" />
                     </div>
                     <h3 className="font-bold text-foreground mb-2 text-xl">

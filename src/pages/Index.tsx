@@ -32,8 +32,8 @@ const Hero = () => {
 
       {/* Restrained floating shapes — neutral only */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ zIndex: 0 }}>
-        <div className="absolute top-[12%] start-[8%] w-72 h-72 rounded-full bg-foreground/[0.03] blur-3xl animate-float" />
-        <div className="absolute top-[58%] end-[12%] w-96 h-96 rounded-full bg-foreground/[0.03] blur-3xl animate-float-slow" style={{ animationDelay: "2s" }} />
+        <div className="absolute top-[12%] start-[8%] w-72 h-72 rounded-full bg-primary/20 blur-3xl animate-float" />
+        <div className="absolute top-[58%] end-[12%] w-96 h-96 rounded-full bg-accent/20 blur-3xl animate-float-slow" style={{ animationDelay: "2s" }} />
         <div className="absolute top-[22%] end-[10%] w-20 h-20 border border-border rounded-2xl rotate-12 animate-float-slow" style={{ animationDelay: "1s" }} />
         <div className="absolute bottom-[28%] start-[8%] w-16 h-16 border border-border rounded-xl -rotate-12 animate-float" style={{ animationDelay: "3s" }} />
       </div>
