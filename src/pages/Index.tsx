@@ -58,19 +58,19 @@ const Hero = () => {
             {t("hero.subtitle")}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button asChild size="lg" className="bg-foreground text-background hover:bg-foreground/90 px-8 rounded-xl font-semibold shadow-elegant transition-all hover:-translate-y-0.5">
+            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 rounded-xl font-semibold shadow-accent-glow transition-all hover:-translate-y-0.5">
               <a href="#products" onClick={(e) => { e.preventDefault(); document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' }); }}>
                 {t("hero.explore")}
                 <DirectionalArrow className="h-4 w-4 ms-2" />
               </a>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-border bg-background/40 text-foreground hover:bg-foreground/[0.04] hover:border-foreground/40 px-8 rounded-xl backdrop-blur-sm transition-all">
-            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 rounded-xl font-semibold shadow-accent-glow transition-all hover:-translate-y-0.5">
-
+              <Link to="/contact">
                 <Play className="h-4 w-4 me-2" />
                 {t("hero.demo")}
               </Link>
             </Button>
+
           </div>
           <p className="mt-6 md:mt-8 text-xs md:text-sm text-muted-foreground tracking-wide">
             {t("hero.stats")}
