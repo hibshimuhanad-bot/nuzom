@@ -30,5 +30,3 @@ const CTABanner = () => {
 
 export default CTABanner;
 
-
-export default CTABanner;
