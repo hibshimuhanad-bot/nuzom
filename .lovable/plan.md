@@ -1,45 +1,48 @@
-## New Color System: Navy + Warm Gold
+## الخطة: ترقية الموقع إلى مستوى World-Class
 
-Replace the current emerald palette with a navy/gold enterprise palette across the design tokens.
+اللوحة معتمدة (كحلي عميق `#0A1628` + ذهبي دافئ `#C8A96E` + أبيض دافئ `#F7F5F0`). الخطة تركز على رفع الموقع بصرياً وتجريبياً لمستوى وكالات Awwwards وستوديوهات SaaS العالمية.
 
-### Token mapping (HSL)
+### المحاور الأربعة للترقية
 
-| Token | Hex | HSL |
-|---|---|---|
-| `--primary` (Deep Navy) | #0A1628 | `215 60% 10%` |
-| `--secondary` (Corporate Blue) | #1E3A5F | `213 52% 25%` |
-| `--accent` (Warm Gold) | #C8A96E | `38 46% 60%` |
-| `--accent-glow` | lighter gold | `38 55% 70%` |
-| `--background` (Warm White) | #F7F5F0 | `42 30% 96%` |
-| `--card` / surface alt (Warm Gray) | #EDEAE3 | `42 18% 91%` |
-| `--foreground` (Text) | #0A1628 | `215 60% 10%` |
-| `--muted-foreground` | #6B7280 | `220 9% 46%` |
-| `--destructive` (Error) | #DC2626 | `0 72% 51%` |
-| Success | #16A34A | `142 76% 36%` |
-| Warning | #D97706 | `27 96% 44%` |
-| `--border` / `--input` | warm gray | `42 15% 85%` |
-| `--ring` | gold | `38 46% 60%` |
+**1. نظام تصميم محكم (Design System)**
+- إعادة بناء الـ tokens في `src/index.css`:
+  - تدرّجات سينمائية: `--gradient-hero` (كحلي عميق → كحلي أزرق → لمسة ذهبية)، `--gradient-gold-shine` (ذهبي ← ذهبي فاتح للأزرار والعناوين البارزة)، `--gradient-mesh` للخلفيات.
+  - ظلال راقية: `--shadow-elegant`, `--shadow-gold-glow`, `--shadow-card-hover`.
+  - شفافيات زجاجية مضبوطة (glassmorphism بنكهة كحلي/ذهبي بدل الأزرق السماوي القديم).
+- طباعة هرمية واضحة: مقاسات أكبر للعناوين الرئيسية (clamp 48–96px)، تتبع حروف ضيّق للعناوين الإنجليزية، وزن خفيف للنصوص الطويلة.
 
-### Changes
+**2. الـ Hero الرئيسي**
+- إعادة بناء `Hero` بتركيبة سينمائية:
+  - خلفية mesh gradient كحلية مع جزيئات ذهبية خفيفة (Canvas موجود مسبقاً، سيُعاد تلوينه).
+  - عنوان كبير بتدرّج ذهبي على بعض الكلمات المفتاحية.
+  - CTA مزدوج: زر ذهبي ممتلئ + زر ثانوي شفاف بحدود ذهبية.
+  - شريط ثقة سفلي (شعارات/إحصائيات مؤسسية).
 
-1. **`src/index.css`** — rewrite `:root` and `.dark` token blocks with the new HSL values. Update:
-   - `--primary`, `--primary-foreground`, `--primary-glow` → navy
-   - `--secondary` → corporate blue
-   - `--accent`, `--accent-glow` → warm gold
-   - `--background`, `--card`, `--popover`, `--muted`, `--secondary` → warm white/gray
-   - `--foreground`, `--muted-foreground` → navy/slate
-   - `--border`, `--input`, `--ring`
-   - Sidebar tokens to match
-   - Status colors: keep lifecycle palette but re-tune (`--status-active` → success green, `--status-hearing` → gold, `--status-execution` → corporate blue, `--status-judgment` stays purple-ish or shifts to navy)
-   - Gradients: `--gradient-primary` navy→corporate blue, `--gradient-gold` unchanged hue but new gold, `--gradient-surface` warm white→warm gray
-   - Shadow/glow alpha values switched to gold + navy
-   - `.ai-gradient-bg::before` radial gradients re-tinted with navy + gold
-   - Shimmer/pulse keyframes recolored to gold + navy
-   - Dark mode: deep navy background, lighter navy surfaces, gold accent unchanged
+**3. الأقسام الرئيسية (Bento + Magazine)**
+- **المنتجات**: bento grid غير متماثل (3 أحجام)، كل بطاقة بخلفية كحلية متدرّجة + حدود ذهبية رفيعة عند الـ hover + screenshot المنتج في إطار macOS.
+- **القدرات المؤسسية**: قسم أفقي مع أيقونات ذهبية وعناوين كبيرة (RBAC، ZATCA، Workflows).
+- **Testimonials**: بطاقات بخلفية surface alt + علامة اقتباس ذهبية كبيرة.
+- **FAQ**: accordion أنيق بفواصل ذهبية شعرية.
+- **CTA Footer**: قسم full-bleed كحلي مع عنوان ضخم وزر ذهبي.
 
-2. **`tailwind.config.ts`** — no semantic changes needed (already references CSS vars). Remove dead `navy`/`electric`/`light-gray` token references that don't exist in CSS to avoid runtime warnings.
+**4. الحركة والتفاعل (Motion)**
+- Scroll-reveal خفيف على جميع الأقسام (fade + translate-y 12px).
+- Hover states ذهبية على البطاقات والأزرار (lift + glow).
+- Cursor magnetic للأزرار الرئيسية.
+- انتقالات صفحات سلسة.
+- احترام `prefers-reduced-motion`.
 
-3. No component files touched — everything consumes semantic tokens.
+### تفاصيل تقنية
+- التغييرات الرئيسية في: `src/index.css`، `tailwind.config.ts`، `src/components/Hero.tsx`، `src/components/ProductsBento.tsx` (أو ما يعادله)، `src/components/Capabilities.tsx`، `src/components/Testimonials.tsx`، `src/components/FAQ.tsx`، `src/components/CTASection.tsx`، `src/components/Footer.tsx`.
+- استخدام `Framer Motion` للحركة (موجود في المشروع غالباً، وإلا سيُضاف).
+- جميع الألوان عبر semantic tokens — صفر ألوان مباشرة.
+- الحفاظ على RTL/logical CSS الكامل (start/end بدل left/right).
+- لا بيانات وهمية — كل المحتوى عربي حقيقي مطابق للهوية الحالية.
+- أداء: lazy-loading للصور، WebP، `fetchpriority="high"` لصورة الـ hero فقط.
 
-### Out of scope
-- Adding new success/warning tokens beyond what's already used (can add `--success` / `--warning` CSS vars if you want them available as Tailwind classes — confirm).
+### المخرجات المتوقعة
+- صفحة رئيسية بمستوى ستوديوهات عالمية: hero سينمائي، أقسام منظمة بـ bento، حركة سلسة، تدرّجات ذهبية محسوبة، تفاصيل micro-interactions.
+- اتساق كامل عبر بقية الصفحات (المنتجات، المدونة، الاتصال) — نفس النظام، نفس الإيقاع.
+
+### ملاحظة
+إذا أردت رؤية **3 اتجاهات بصرية مرسومة** قبل التنفيذ (Awwwards-style A/B/C)، أخبرني وسأولّدها لك للاختيار. خلاف ذلك، سأبدأ التنفيذ مباشرة وفق الخطة أعلاه عند الموافقة.
