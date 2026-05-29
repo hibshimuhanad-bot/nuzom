@@ -65,7 +65,8 @@ const Hero = () => {
               </a>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-border bg-background/40 text-foreground hover:bg-foreground/[0.04] hover:border-foreground/40 px-8 rounded-xl backdrop-blur-sm transition-all">
-              <Link to="/contact">
+            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 rounded-xl font-semibold shadow-accent-glow transition-all hover:-translate-y-0.5">
+
                 <Play className="h-4 w-4 me-2" />
                 {t("hero.demo")}
               </Link>
