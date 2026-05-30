@@ -45,9 +45,9 @@ const ProductPage = () => {
             <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${product.color} flex items-center justify-center mx-auto mb-5 shadow-lg`}>
               <product.icon className="h-7 w-7 text-foreground" />
             </div>
-            <p className="text-accent text-base md:text-lg font-semibold mb-2">{product.emotionalHook[language]}</p>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-3 text-gradient drop-shadow-sm">{product.name[language]}</h1>
-            <p className="text-lg md:text-xl text-accent mb-2">{product.tagline[language]}</p>
+            <p className="text-primary text-base md:text-lg font-semibold mb-2">{product.emotionalHook[language]}</p>
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-3 text-foreground">{product.name[language]}</h1>
+            <p className="text-lg md:text-xl text-muted-foreground mb-2">{product.tagline[language]}</p>
             <p className="text-muted-foreground text-base md:text-lg mb-8 max-w-2xl mx-auto leading-relaxed">{product.description[language]}</p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 glow-btn rounded-xl">
