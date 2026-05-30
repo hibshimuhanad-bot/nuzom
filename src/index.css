@@ -12,7 +12,7 @@
     --foreground: 0 0% 98%;                /* #FAFAFA — soft white, unified */
 
     --card: 250 47% 12%;                   /* #13102B */
-    --card-foreground: 250 100% 97%;
+    --card-foreground: 0 0% 98%;
 
     --popover: 250 47% 12%;
     --popover-foreground: 250 100% 97%;
