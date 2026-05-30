@@ -48,7 +48,7 @@ const ProductPage = () => {
             <p className="text-accent text-base md:text-lg font-semibold mb-2">{product.emotionalHook[language]}</p>
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-3 text-gradient drop-shadow-sm">{product.name[language]}</h1>
             <p className="text-lg md:text-xl text-accent mb-2">{product.tagline[language]}</p>
-            <p className="text-foreground/70 text-base md:text-lg mb-8 max-w-2xl mx-auto leading-relaxed">{product.description[language]}</p>
+            <p className="text-muted-foreground text-base md:text-lg mb-8 max-w-2xl mx-auto leading-relaxed">{product.description[language]}</p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 glow-btn rounded-xl">
                 <Link to="/contact">
@@ -150,7 +150,7 @@ const ProductPage = () => {
         <div className="container mx-auto px-4 relative z-10">
           <ScrollReveal>
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-3 text-gradient-blue">{t("product.features")}</h2>
-            <p className="text-foreground/70 text-center mb-10 max-w-lg mx-auto">{product.tagline[language]}</p>
+            <p className="text-muted-foreground text-center mb-10 max-w-lg mx-auto">{product.tagline[language]}</p>
           </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
             {product.features.map((feature, i) => (
@@ -199,7 +199,7 @@ const ProductPage = () => {
           <ScrollReveal>
             <p className="text-accent text-base font-semibold mb-2">{product.emotionalHook[language]}</p>
             <h2 className="text-2xl md:text-3xl font-bold mb-3 text-gradient">{t("cta.title")}</h2>
-            <p className="text-foreground/70 mb-8 max-w-xl mx-auto">{t("cta.subtitle")}</p>
+            <p className="text-muted-foreground mb-8 max-w-xl mx-auto">{t("cta.subtitle")}</p>
             <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-10 glow-btn rounded-xl">
               <Link to="/contact">
                 {t("product.demo")}
