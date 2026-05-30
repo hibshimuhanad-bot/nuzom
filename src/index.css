@@ -9,23 +9,23 @@
     /* ── Dark Purple (default) — Black + Glowing Purple ── */
 
     --background: 245 43% 5%;              /* #07060F */
-    --foreground: 250 100% 97%;            /* #F5F3FF */
+    --foreground: 0 0% 98%;                /* #FAFAFA — soft white, unified */
 
     --card: 250 47% 12%;                   /* #13102B */
-    --card-foreground: 250 100% 97%;
+    --card-foreground: 0 0% 98%;
 
     --popover: 250 47% 12%;
-    --popover-foreground: 250 100% 97%;
+    --popover-foreground: 0 0% 98%;
 
     --primary: 248 100% 71%;               /* #7C6BFF */
     --primary-foreground: 0 0% 100%;
     --primary-glow: 248 100% 78%;
 
     --secondary: 252 47% 15%;              /* #1A1438 */
-    --secondary-foreground: 250 100% 97%;
+    --secondary-foreground: 0 0% 98%;
 
     --muted: 252 47% 15%;
-    --muted-foreground: 252 31% 71%;       /* #A89FC9 */
+    --muted-foreground: 215 20% 80%;       /* #CBD5E1 — neutral, higher contrast */
 
     --accent: 243 75% 59%;                 /* #4F46E5 */
     --accent-foreground: 0 0% 100%;
@@ -85,18 +85,18 @@
 
   .dark {
     --background: 245 43% 5%;
-    --foreground: 250 100% 97%;
+    --foreground: 0 0% 98%;
     --card: 250 47% 12%;
-    --card-foreground: 250 100% 97%;
+    --card-foreground: 0 0% 98%;
     --popover: 250 47% 12%;
-    --popover-foreground: 250 100% 97%;
+    --popover-foreground: 0 0% 98%;
     --primary: 248 100% 71%;
     --primary-foreground: 0 0% 100%;
     --primary-glow: 248 100% 78%;
     --secondary: 252 47% 15%;
-    --secondary-foreground: 250 100% 97%;
+    --secondary-foreground: 0 0% 98%;
     --muted: 252 47% 15%;
-    --muted-foreground: 252 31% 71%;
+    --muted-foreground: 215 20% 80%;
     --accent: 243 75% 59%;
     --accent-foreground: 0 0% 100%;
     --accent-glow: 248 100% 71%;

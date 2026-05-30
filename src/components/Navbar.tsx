@@ -43,7 +43,7 @@ const Navbar = () => {
               className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                 isActive(link.href)
               ? "text-secondary"
-                  : "text-foreground/80 hover:text-foreground"
+                  : "text-muted-foreground hover:text-foreground"
               }`}
             >
               {link.label}
@@ -52,7 +52,7 @@ const Navbar = () => {
 
           {/* Solutions Dropdown */}
           <DropdownMenu>
-            <DropdownMenuTrigger className="px-3 py-2 rounded-md text-sm font-medium text-foreground/80 hover:text-foreground transition-colors flex items-center gap-1 outline-none">
+            <DropdownMenuTrigger className="px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1 outline-none">
               {t("nav.solutions")}
               <ChevronDown className="h-3 w-3" />
             </DropdownMenuTrigger>
@@ -75,7 +75,7 @@ const Navbar = () => {
               className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                 isActive(link.href)
               ? "text-secondary"
-                  : "text-foreground/80 hover:text-foreground"
+                  : "text-muted-foreground hover:text-foreground"
               }`}
             >
               {link.label}
@@ -87,7 +87,7 @@ const Navbar = () => {
         <div className="flex items-center gap-2">
           <button
             onClick={() => setLanguage(language === "en" ? "ar" : "en")}
-            className="flex items-center gap-1 px-2 py-1.5 rounded-md text-foreground/80 hover:text-foreground text-sm transition-colors"
+            className="flex items-center gap-1 px-2 py-1.5 rounded-md text-muted-foreground hover:text-foreground text-sm transition-colors"
           >
             <Globe className="h-4 w-4" />
             {language === "en" ? "عربي" : "EN"}
@@ -111,19 +111,19 @@ const Navbar = () => {
                     key={link.href}
                     to={link.href}
                     onClick={() => setOpen(false)}
-                    className="text-foreground/80 hover:text-foreground text-lg font-medium"
+                    className="text-muted-foreground hover:text-foreground text-lg font-medium"
                   >
                     {link.label}
                   </Link>
                 ))}
                 <div className="border-t border-border pt-4">
-                  <p className="text-foreground/60 text-sm mb-2">{t("nav.solutions")}</p>
+                  <p className="text-muted-foreground text-sm mb-2">{t("nav.solutions")}</p>
                   {products.map((product) => (
                     <Link
                       key={product.slug}
                       to={`/products/${product.slug}`}
                       onClick={() => setOpen(false)}
-                      className="block text-foreground/80 hover:text-foreground py-1.5"
+                      className="block text-muted-foreground hover:text-foreground py-1.5"
                     >
                       {product.name[language]}
                     </Link>
