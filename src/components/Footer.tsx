@@ -100,6 +100,17 @@ const Footer = () => {
             <h4 className="font-semibold mb-2 mt-6">{t("nav.contact")}</h4>
             <ul className="space-y-2 text-muted-foreground text-sm">
               <li>sales@nzomlabs.com</li>
+              <li>
+                <a
+                  href="https://wa.me/966546547545"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-secondary transition-colors"
+                  dir="ltr"
+                >
+                  <bdi>+966 54 654 7545</bdi>
+                </a>
+              </li>
               <li>{language === "ar" ? "الرياض، المملكة العربية السعودية" : "Riyadh, Saudi Arabia"}</li>
             </ul>
             <Button asChild className="bg-secondary text-secondary-foreground hover:bg-secondary/90 mt-4 w-full">
