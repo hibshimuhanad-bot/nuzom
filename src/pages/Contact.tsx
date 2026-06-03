@@ -209,7 +209,13 @@ const Contact = () => {
                       </div>
                       <div>
                         <p className="text-sm font-medium text-foreground">{item.label}</p>
-                        <p className="text-sm text-muted-foreground"><bdi>{item.value}</bdi></p>
+                        {item.href ? (
+                          <a href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-secondary transition-colors" dir="ltr">
+                            <bdi>{item.value}</bdi>
+                          </a>
+                        ) : (
+                          <p className="text-sm text-muted-foreground"><bdi>{item.value}</bdi></p>
+                        )}
                       </div>
                     </div>
                   ))}
