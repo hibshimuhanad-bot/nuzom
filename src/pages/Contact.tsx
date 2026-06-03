@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { MessageCircle } from "lucide-react";
 import { products } from "@/data/products";
 import { Mail, MapPin, Send, Sparkles, Twitter, Linkedin, Instagram } from "lucide-react";
 import { useState } from "react";
@@ -84,7 +85,8 @@ const Contact = () => {
   };
 
   const contactInfo = [
-    { icon: Mail, label: language === "ar" ? "البريد الإلكتروني" : "Email", value: "sales@nzomlabs.com" },
+    { icon: Mail, label: language === "ar" ? "البريد الإلكتروني" : "Email", value: "sales@nzomlabs.com", href: "mailto:sales@nzomlabs.com" },
+    { icon: MessageCircle, label: language === "ar" ? "واتساب" : "WhatsApp", value: "+966 54 654 7545", href: "https://wa.me/966546547545" },
     { icon: MapPin, label: language === "ar" ? "الموقع" : "Location", value: language === "ar" ? "الرياض، المملكة العربية السعودية" : "Riyadh, Saudi Arabia" },
   ];
 
@@ -207,7 +209,13 @@ const Contact = () => {
                       </div>
                       <div>
                         <p className="text-sm font-medium text-foreground">{item.label}</p>
-                        <p className="text-sm text-muted-foreground"><bdi>{item.value}</bdi></p>
+                        {item.href ? (
+                          <a href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-secondary transition-colors" dir="ltr">
+                            <bdi>{item.value}</bdi>
+                          </a>
+                        ) : (
+                          <p className="text-sm text-muted-foreground"><bdi>{item.value}</bdi></p>
+                        )}
                       </div>
                     </div>
                   ))}
