@@ -10,6 +10,7 @@ import tasksScreenshot from "@/assets/screenshots/tasks-product-shot.png";
 import hsseScreenshot from "@/assets/screenshots/hsse-product-shot.png";
 import legalScreenshot from "@/assets/screenshots/legal-product-shot.png";
 import aldalyelLogo from "@/assets/aldalyel-logo.png";
+import crmLogoAsset from "@/assets/crm-logo.png.asset.json";
 
 const screenshotMap: Record<string, string> = {
   tasks: tasksScreenshot,
@@ -19,7 +20,9 @@ const screenshotMap: Record<string, string> = {
 
 const logoMap: Record<string, string> = {
   aldalyel: aldalyelLogo,
+  crm: crmLogoAsset.url,
 };
+
 
 
 const ProductPage = () => {
