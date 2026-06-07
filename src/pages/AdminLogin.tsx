@@ -14,7 +14,6 @@ const AdminLogin = () => {
   const { toast } = useToast();
   const { t, language } = useLanguage();
   const [loading, setLoading] = useState(false);
-  const [isSignUp, setIsSignUp] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -23,33 +22,26 @@ const AdminLogin = () => {
     setLoading(true);
 
     try {
-      if (isSignUp) {
-        const { error } = await supabase.auth.signUp({ email, password });
-        if (error) throw error;
-        toast({ title: language === "ar" ? "تم إنشاء الحساب! يرجى التواصل مع المسؤول لمنحك الصلاحيات." : "Account created! Please contact an admin to grant you access." });
-        setIsSignUp(false);
-      } else {
-        const { error } = await supabase.auth.signInWithPassword({ email, password });
-        if (error) throw error;
+      const { error } = await supabase.auth.signInWithPassword({ email, password });
+      if (error) throw error;
 
-        // Check if user has admin role
-        const { data: roles } = await supabase
-          .from("user_roles")
-          .select("role")
-          .eq("role", "admin");
+      // Check if user has admin role
+      const { data: roles } = await supabase
+        .from("user_roles")
+        .select("role")
+        .eq("role", "admin");
 
-        if (!roles || roles.length === 0) {
-          await supabase.auth.signOut();
-          toast({
-            title: language === "ar" ? "تم رفض الوصول" : "Access denied",
-            description: language === "ar" ? "ليس لديك صلاحيات المسؤول." : "You do not have admin privileges.",
-            variant: "destructive",
-          });
-          return;
-        }
-
-        navigate("/admin");
+      if (!roles || roles.length === 0) {
+        await supabase.auth.signOut();
+        toast({
+          title: language === "ar" ? "تم رفض الوصول" : "Access denied",
+          description: language === "ar" ? "ليس لديك صلاحيات المسؤول." : "You do not have admin privileges.",
+          variant: "destructive",
+        });
+        return;
       }
+
+      navigate("/admin");
     } catch (err: any) {
       toast({
         title: language === "ar" ? "خطأ" : "Error",
@@ -69,7 +61,7 @@ const AdminLogin = () => {
             <Lock className="h-6 w-6 text-secondary-foreground" />
           </div>
           <CardTitle className="text-foreground">{t("admin.title")}</CardTitle>
-          <CardDescription>{isSignUp ? t("admin.signup_desc") : t("admin.signin")}</CardDescription>
+          <CardDescription>{t("admin.signin")}</CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleAuth} className="space-y-4">
@@ -95,15 +87,9 @@ const AdminLogin = () => {
               />
             </div>
             <Button type="submit" disabled={loading} className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90">
-              {loading ? "..." : isSignUp ? t("admin.register") : t("admin.login")}
+              {loading ? "..." : t("admin.login")}
             </Button>
           </form>
-          <p className="text-center text-sm text-muted-foreground mt-4">
-            {isSignUp ? t("admin.has_account") : t("admin.need_account")}{" "}
-            <button onClick={() => setIsSignUp(!isSignUp)} className="text-secondary hover:underline">
-              {isSignUp ? t("admin.login") : t("admin.register")}
-            </button>
-          </p>
         </CardContent>
       </Card>
     </div>

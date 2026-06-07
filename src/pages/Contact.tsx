@@ -31,44 +31,17 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      const id = crypto.randomUUID();
-      const { error } = await supabase
-        .from("contact_submissions")
-        .insert({
-          id,
+      const { error } = await supabase.functions.invoke("submit-contact", {
+        body: {
           company_name: formData.company_name.trim(),
           email: formData.email.trim(),
           phone: formData.phone.trim() || null,
           product: formData.product || null,
           message: formData.message.trim() || null,
-        });
+        },
+      });
 
       if (error) throw error;
-
-      // Send confirmation email to the submitter
-      await supabase.functions.invoke("send-transactional-email", {
-        body: {
-          templateName: "contact-confirmation",
-          recipientEmail: formData.email.trim(),
-          idempotencyKey: `contact-confirm-${id}`,
-          templateData: { company_name: formData.company_name.trim() },
-        },
-      });
-
-      // Send notification email to admin
-      await supabase.functions.invoke("send-transactional-email", {
-        body: {
-          templateName: "contact-notification",
-          idempotencyKey: `contact-notify-${id}`,
-          templateData: {
-            company_name: formData.company_name.trim(),
-            email: formData.email.trim(),
-            phone: formData.phone.trim() || null,
-            product: formData.product || null,
-            message: formData.message.trim() || null,
-          },
-        },
-      });
 
       toast({ title: language === "ar" ? "تم إرسال الرسالة بنجاح" : "Message sent successfully!" });
       setFormData({ company_name: "", email: "", phone: "", product: "", message: "" });
@@ -83,6 +56,7 @@ const Contact = () => {
       setLoading(false);
     }
   };
+
 
   const contactInfo = [
     { icon: Mail, label: language === "ar" ? "البريد الإلكتروني" : "Email", value: "sales@nzomlabs.com", href: "mailto:sales@nzomlabs.com" },
