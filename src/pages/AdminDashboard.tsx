@@ -27,6 +27,8 @@ const AdminDashboard = () => {
   const [submissions, setSubmissions] = useState<Submission[]>([]);
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState<any>(null);
+  const [authorized, setAuthorized] = useState(false);
+
 
   useEffect(() => {
     const checkAuth = async () => {
