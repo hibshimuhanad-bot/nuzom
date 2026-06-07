@@ -9,12 +9,18 @@ import ScrollReveal from "@/components/ScrollReveal";
 import tasksScreenshot from "@/assets/screenshots/tasks-product-shot.png";
 import hsseScreenshot from "@/assets/screenshots/hsse-product-shot.png";
 import legalScreenshot from "@/assets/screenshots/legal-product-shot.png";
+import aldalyelLogo from "@/assets/aldalyel-logo.png";
 
 const screenshotMap: Record<string, string> = {
   tasks: tasksScreenshot,
   hsse: hsseScreenshot,
   legal: legalScreenshot,
 };
+
+const logoMap: Record<string, string> = {
+  aldalyel: aldalyelLogo,
+};
+
 
 const ProductPage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -42,9 +48,18 @@ const ProductPage = () => {
 
         <div className="container mx-auto px-4 relative z-10">
           <ScrollReveal className="max-w-3xl mx-auto text-center" duration={800}>
-            <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${product.color} flex items-center justify-center mx-auto mb-5 shadow-lg`}>
-              <product.icon className="h-7 w-7 text-foreground" />
-            </div>
+            {logoMap[product.slug] ? (
+              <img
+                src={logoMap[product.slug]}
+                alt={`${product.name[language]} logo`}
+                className="w-20 h-20 md:w-24 md:h-24 rounded-2xl object-contain mx-auto mb-5 shadow-lg"
+              />
+            ) : (
+              <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${product.color} flex items-center justify-center mx-auto mb-5 shadow-lg`}>
+                <product.icon className="h-7 w-7 text-foreground" />
+              </div>
+            )}
+
             <p className="text-primary text-base md:text-lg font-semibold mb-2">{product.emotionalHook[language]}</p>
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-3 text-foreground">{product.name[language]}</h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-2">{product.tagline[language]}</p>
