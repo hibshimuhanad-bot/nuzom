@@ -64,6 +64,14 @@ const ProductPage = () => {
                   </a>
                 </Button>
               )}
+              {slug === "crm" && (
+                <Button asChild size="lg" variant="outline" className="rounded-xl px-8 border-primary/30 hover:bg-primary/10">
+                  <a href="https://namaacrm.app/" target="_blank" rel="noopener noreferrer">
+                    {language === "ar" ? "زيارة الموقع" : "Visit Site"}
+                    <ExternalLink className="h-4 w-4 ms-2" />
+                  </a>
+                </Button>
+              )}
             </div>
           </ScrollReveal>
         </div>
