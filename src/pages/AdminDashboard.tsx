@@ -51,7 +51,9 @@ const AdminDashboard = () => {
       }
 
       setUser(session.user);
+      setAuthorized(true);
       fetchSubmissions();
+
     };
 
     checkAuth();
@@ -98,8 +100,13 @@ const AdminDashboard = () => {
       year: "numeric", month: "short", day: "numeric", hour: "2-digit", minute: "2-digit",
     });
 
+  if (!authorized) {
+    return <div className="min-h-screen bg-background" />;
+  }
+
   return (
     <div className="min-h-screen bg-background">
+
       {/* Header */}
       <header className="bg-primary border-b border-border">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
