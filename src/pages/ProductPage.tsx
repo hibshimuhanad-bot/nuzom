@@ -9,12 +9,18 @@ import ScrollReveal from "@/components/ScrollReveal";
 import tasksScreenshot from "@/assets/screenshots/tasks-product-shot.png";
 import hsseScreenshot from "@/assets/screenshots/hsse-product-shot.png";
 import legalScreenshot from "@/assets/screenshots/legal-product-shot.png";
+import aldalyelLogo from "@/assets/aldalyel-logo.png";
 
 const screenshotMap: Record<string, string> = {
   tasks: tasksScreenshot,
   hsse: hsseScreenshot,
   legal: legalScreenshot,
 };
+
+const logoMap: Record<string, string> = {
+  aldalyel: aldalyelLogo,
+};
+
 
 const ProductPage = () => {
   const { slug } = useParams<{ slug: string }>();
