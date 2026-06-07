@@ -1,21 +1,8 @@
-## إضافة رقم الواتساب +966 54 654 7545
+Add Google Analytics 4 (Measurement ID: G-4RK668N601) with full SPA route tracking.
 
-### 1. صفحة التواصل (`src/pages/Contact.tsx`)
-- إضافة عنصر جديد في `contactInfo` بأيقونة واتساب (SVG مخصصة أو `MessageCircle` من lucide) مع رابط `https://wa.me/966546547545`.
-- عرض الرقم بصيغة `+966 54 654 7545` مع `dir="ltr"` داخل `<bdi>`.
+Steps:
+1. Add the gtag.js script block directly into the `<head>` of `index.html`, right after the existing `<noscript>` font tags and before the closing `</head>`.
+2. Create a new `src/components/AnalyticsTracker.tsx` component that imports `useLocation` from `react-router-dom`. Inside a `useEffect` hook, call `gtag('config', 'G-4RK668N601', { page_path: location.pathname + location.search })` whenever `location.pathname` changes. This ensures every client-side route change is tracked as a page view.
+3. Import and mount `<AnalyticsTracker />` inside `App.tsx`, placed immediately after `<SEOHead />` and still inside `<BrowserRouter>` so it has access to the router context.
 
-### 2. الفوتر (`src/components/Footer.tsx`)
-- إضافة سطر جديد ضمن قائمة معلومات التواصل بجانب البريد والموقع: رقم الواتساب كرابط `wa.me`.
-
-### 3. زر واتساب عائم في كل الصفحات
-- إنشاء مكوّن جديد `src/components/WhatsAppButton.tsx`:
-  - زر دائري ثابت في أسفل الصفحة (يحترم RTL: `start-6` في العربية و`end-6` في الإنجليزية، أو الأبسط: `end-6` دائمًا).
-  - خلفية خضراء واتساب `#25D366` مع توهج خفيف، أيقونة بيضاء.
-  - رابط `https://wa.me/966546547545?text=...` يفتح في تبويب جديد.
-  - `aria-label` ثنائي اللغة.
-- تركيبه داخل `src/components/Layout.tsx` ليظهر في كل الصفحات.
-
-### ملاحظات تقنية
-- استخدام رمز SWA SVG (نفس نمط أيقونة TikTok الحالية) لتجنّب إضافة تبعية.
-- اتباع التوكنات الدلالية فقط — اللون الأخضر استثناء مبرر لهوية واتساب، يُعرَّف كـ HSL في `index.css` تحت `--whatsapp: 142 70% 49%`.
-- لا تغييرات على الـ Backend.
+No backend or dependency changes required.

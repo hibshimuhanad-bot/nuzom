@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import SEOHead from "@/components/SEOHead";
+import AnalyticsTracker from "@/components/AnalyticsTracker";
 import Index from "./pages/Index";
 
 const About = lazy(() => import("./pages/About"));
@@ -31,6 +32,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <SEOHead />
+          <AnalyticsTracker />
           <Suspense fallback={null}>
             <Routes>
               <Route path="/" element={<Index />} />
