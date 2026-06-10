@@ -239,20 +239,138 @@ const ProductPage = () => {
         </div>
       </section>
 
+      {/* Testimonial */}
+      {product.testimonial && (
+        <section className="py-14 md:py-20 bg-background relative">
+          <div className="container mx-auto px-4 max-w-3xl relative z-10">
+            <ScrollReveal>
+              <div className="bento-card p-8 md:p-12 text-center">
+                <Quote className="h-8 w-8 text-primary mx-auto mb-5 opacity-60" />
+                <p className="text-foreground text-lg md:text-xl leading-relaxed mb-6 font-medium">
+                  "{product.testimonial.quote[language]}"
+                </p>
+                <div className="flex items-center justify-center gap-3 pt-4 border-t border-border/20">
+                  <div className="w-11 h-11 rounded-full bg-gradient-to-br from-primary/40 to-accent/40 flex items-center justify-center text-foreground font-bold">
+                    {product.testimonial.author[language].charAt(0)}
+                  </div>
+                  <div className="text-start">
+                    <p className="text-foreground font-semibold text-sm">{product.testimonial.author[language]}</p>
+                    <p className="text-muted-foreground text-xs">{product.testimonial.role[language]}</p>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+      )}
+
+      {/* Pricing */}
+      {product.pricing && product.pricing.length > 0 && (
+        <section className="py-14 md:py-20 bg-muted/30 relative overflow-hidden">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-primary/5 blur-[120px]" />
+          <div className="container mx-auto px-4 relative z-10">
+            <ScrollReveal className="text-center mb-12">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 text-gradient-blue">
+                {language === "ar" ? "أسعار بسيطة وواضحة" : "Simple, Transparent Pricing"}
+              </h2>
+              <p className="text-muted-foreground text-base md:text-lg max-w-xl mx-auto">
+                {language === "ar" ? "ابدأ مجاناً 14 يوم — بدون بطاقة ائتمان" : "Start with a 14-day free trial — no credit card required"}
+              </p>
+            </ScrollReveal>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-3xl mx-auto">
+              {product.pricing.map((plan, i) => (
+                <ScrollReveal key={i} delay={i * 100}>
+                  <div className={`bento-card p-7 h-full flex flex-col ${plan.highlighted ? "border-primary/40 bg-primary/5 relative" : ""}`}>
+                    {plan.highlighted && (
+                      <Badge className="absolute top-4 end-4 bg-primary text-primary-foreground">
+                        {language === "ar" ? "الأكثر شيوعاً" : "Most Popular"}
+                      </Badge>
+                    )}
+                    <h3 className="text-xl font-bold text-foreground mb-1">{plan.name[language]}</h3>
+                    <p className="text-muted-foreground text-sm mb-5">{plan.description[language]}</p>
+                    <div className="mb-6">
+                      <span className="text-4xl md:text-5xl font-extrabold text-foreground">{plan.price[language]}</span>
+                      <span className="text-muted-foreground text-sm ms-2">{plan.period[language]}</span>
+                    </div>
+                    <ul className="space-y-3 mb-7 flex-1">
+                      {plan.features.map((f, j) => (
+                        <li key={j} className="flex items-start gap-2 text-sm text-muted-foreground">
+                          <Check className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                          <span>{f[language]}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    {product.primaryCTA && (
+                      <Button asChild size="lg" className={`w-full rounded-xl ${plan.highlighted ? "bg-primary text-primary-foreground hover:bg-primary/90 glow-btn" : "bg-card border border-primary/30 text-foreground hover:bg-primary/10"}`}>
+                        <a href={product.primaryCTA.href} target={product.primaryCTA.external ? "_blank" : undefined} rel={product.primaryCTA.external ? "noopener noreferrer" : undefined}>
+                          {product.primaryCTA.label[language]}
+                        </a>
+                      </Button>
+                    )}
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* FAQ */}
+      {product.faq && product.faq.length > 0 && (
+        <section className="py-14 md:py-20 bg-background relative">
+          <div className="container mx-auto px-4 max-w-3xl relative z-10">
+            <ScrollReveal className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 text-gradient-blue">
+                {language === "ar" ? "أسئلة شائعة" : "Frequently Asked Questions"}
+              </h2>
+            </ScrollReveal>
+            <ScrollReveal delay={150}>
+              <div className="bento-card p-2 md:p-4">
+                <Accordion type="single" collapsible className="w-full">
+                  {product.faq.map((item, i) => (
+                    <AccordionItem key={i} value={`faq-${i}`} className="border-border/30 last:border-0">
+                      <AccordionTrigger className="text-start text-foreground font-semibold hover:no-underline px-3">
+                        {item.question[language]}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground leading-relaxed px-3">
+                        {item.answer[language]}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+      )}
+
       {/* CTA */}
       <section className="py-14 md:py-20 relative ai-gradient-bg overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] rounded-full bg-primary/10 blur-[80px]" />
         <div className="container mx-auto px-4 text-center relative z-10">
           <ScrollReveal>
             <p className="text-accent text-base font-semibold mb-2">{product.emotionalHook[language]}</p>
-            <h2 className="text-2xl md:text-3xl font-bold mb-3 text-gradient">{t("cta.title")}</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-3 text-gradient">
+              {product.primaryCTA
+                ? (language === "ar" ? "ابدأ تنظيم عملك خلال دقائق" : "Get organized in minutes")
+                : t("cta.title")}
+            </h2>
             <p className="text-muted-foreground mb-8 max-w-xl mx-auto">{t("cta.subtitle")}</p>
-            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-10 glow-btn rounded-xl">
-              <Link to="/contact">
-                {t("product.demo")}
-                {language === "ar" ? <ArrowLeft className="h-4 w-4 ms-2" /> : <ArrowRight className="h-4 w-4 ms-2" />}
-              </Link>
-            </Button>
+            {product.primaryCTA ? (
+              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-10 glow-btn rounded-xl">
+                <a href={product.primaryCTA.href} target={product.primaryCTA.external ? "_blank" : undefined} rel={product.primaryCTA.external ? "noopener noreferrer" : undefined}>
+                  {product.primaryCTA.label[language]}
+                  {language === "ar" ? <ArrowLeft className="h-4 w-4 ms-2" /> : <ArrowRight className="h-4 w-4 ms-2" />}
+                </a>
+              </Button>
+            ) : (
+              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-10 glow-btn rounded-xl">
+                <Link to="/contact">
+                  {t("product.demo")}
+                  {language === "ar" ? <ArrowLeft className="h-4 w-4 ms-2" /> : <ArrowRight className="h-4 w-4 ms-2" />}
+                </Link>
+              </Button>
+            )}
           </ScrollReveal>
         </div>
       </section>
