@@ -70,12 +70,21 @@ const ProductPage = () => {
             <p className="text-lg md:text-xl text-muted-foreground mb-2">{product.tagline[language]}</p>
             <p className="text-muted-foreground text-base md:text-lg mb-8 max-w-2xl mx-auto leading-relaxed">{product.description[language]}</p>
             <div className="flex flex-wrap items-center justify-center gap-4">
-              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 glow-btn rounded-xl">
-                <Link to="/contact">
-                  {t("product.demo")}
-                  {language === "ar" ? <ArrowLeft className="h-4 w-4 ms-2" /> : <ArrowRight className="h-4 w-4 ms-2" />}
-                </Link>
-              </Button>
+              {product.primaryCTA ? (
+                <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 glow-btn rounded-xl">
+                  <a href={product.primaryCTA.href} target={product.primaryCTA.external ? "_blank" : undefined} rel={product.primaryCTA.external ? "noopener noreferrer" : undefined}>
+                    {product.primaryCTA.label[language]}
+                    {language === "ar" ? <ArrowLeft className="h-4 w-4 ms-2" /> : <ArrowRight className="h-4 w-4 ms-2" />}
+                  </a>
+                </Button>
+              ) : (
+                <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 glow-btn rounded-xl">
+                  <Link to="/contact">
+                    {t("product.demo")}
+                    {language === "ar" ? <ArrowLeft className="h-4 w-4 ms-2" /> : <ArrowRight className="h-4 w-4 ms-2" />}
+                  </Link>
+                </Button>
+              )}
               {slug === "nexdo" && (
                 <Button asChild size="lg" variant="outline" className="rounded-xl px-8 border-primary/30 hover:bg-primary/10">
                   <a href="https://ptmpillare.lovable.app/" target="_blank" rel="noopener noreferrer">
@@ -92,15 +101,17 @@ const ProductPage = () => {
                   </a>
                 </Button>
               )}
-              {slug === "aldalyel" && (
-                <Button asChild size="lg" variant="outline" className="rounded-xl px-8 border-primary/30 hover:bg-primary/10">
-                  <a href="https://aldalyel.app/" target="_blank" rel="noopener noreferrer">
-                    {language === "ar" ? "زيارة الموقع" : "Visit Site"}
-                    <ExternalLink className="h-4 w-4 ms-2" />
-                  </a>
-                </Button>
-              )}
             </div>
+            {product.trustBadges && (
+              <div className="flex flex-wrap items-center justify-center gap-2 mt-6">
+                {product.trustBadges.map((badge, i) => (
+                  <Badge key={i} variant="outline" className="border-primary/20 bg-primary/5 text-muted-foreground font-normal py-1.5 px-3">
+                    <ShieldBadge className="h-3 w-3 me-1.5 text-primary" />
+                    {badge[language]}
+                  </Badge>
+                ))}
+              </div>
+            )}
           </ScrollReveal>
         </div>
       </section>
