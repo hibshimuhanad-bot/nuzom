@@ -9,6 +9,32 @@ import {
   Receipt
 } from "lucide-react";
 
+export interface PricingPlan {
+  name: { en: string; ar: string };
+  price: { en: string; ar: string };
+  period: { en: string; ar: string };
+  description: { en: string; ar: string };
+  features: { en: string; ar: string }[];
+  highlighted?: boolean;
+}
+
+export interface FAQItem {
+  question: { en: string; ar: string };
+  answer: { en: string; ar: string };
+}
+
+export interface Testimonial {
+  quote: { en: string; ar: string };
+  author: { en: string; ar: string };
+  role: { en: string; ar: string };
+}
+
+export interface PrimaryCTA {
+  label: { en: string; ar: string };
+  href: string;
+  external?: boolean;
+}
+
 export interface Product {
   slug: string;
   available?: boolean;
@@ -27,6 +53,12 @@ export interface Product {
   analyticsDesc: { en: string; ar: string };
   securityDesc: { en: string; ar: string };
   screenshots?: string[];
+  // Optional landing-page enhancements
+  primaryCTA?: PrimaryCTA;
+  pricing?: PricingPlan[];
+  faq?: FAQItem[];
+  testimonial?: Testimonial;
+  trustBadges?: { en: string; ar: string }[];
 }
 
 export const products: Product[] = [
@@ -83,7 +115,7 @@ export const products: Product[] = [
   {
     slug: "aldalyel",
     available: true,
-    name: { en: "Aldalyel -Legal ", ar: "Aldalyel -Legal" },
+    name: { en: "Aldalyel", ar: "الدليل" },
     tagline: {
       en: "Nothing slips through. Ever.",
       ar: "نظام إدارة الشؤون القانونية"
@@ -122,6 +154,73 @@ export const products: Product[] = [
     rbacDesc: { en: "Partners see the big picture. Associates see their cases. Clients see their status. Everyone gets exactly what they need — nothing more, nothing less.", ar: "الشركاء يشوفون الصورة الكبيرة. المحامون يشوفون قضاياهم. العملاء يشوفون حالتهم. كل واحد يحصل بالضبط اللي يحتاجه." },
     analyticsDesc: { en: "Know which cases are winning, which are stuck, and where your team spends its time. Data-driven decisions, not gut feelings.", ar: "اعرف أي القضايا تكسب، أيها عالقة، ووين فريقك يقضي وقته. قرارات مبنية على بيانات، مو أحاسيس." },
     securityDesc: { en: "Attorney-client privilege is non-negotiable. Bank-grade encryption, audit logs, and full Saudi data compliance protect every byte.", ar: "سرية المحامي والعميل ما فيها تفاوض. تشفير بنكي، سجلات تدقيق، وامتثال كامل للأنظمة السعودية يحمي كل بايت." },
+    primaryCTA: {
+      label: { en: "Start Free", ar: "ابدأ مجاناً" },
+      href: "https://aldalyel.app/signup",
+      external: true,
+    },
+    trustBadges: [
+      { en: "PDPL Compliant", ar: "متوافق مع نظام حماية البيانات" },
+      { en: "Data Hosted in Saudi Arabia", ar: "بياناتك مستضافة في السعودية" },
+      { en: "Native Arabic Support", ar: "دعم عربي أصيل" },
+      { en: "No Credit Card · 14-Day Trial", ar: "بدون بطاقة ائتمان · تجربة 14 يوم" },
+    ],
+    testimonial: {
+      quote: {
+        en: "Aldalyel streamlined our entire case management process. We've seen a 40% improvement in case resolution time, and not a single session has been missed since we started.",
+        ar: "الدليل نظّم عملية إدارة القضايا بالكامل. شفنا تحسّن 40% في وقت حل القضايا، وما فاتتنا أي جلسة من يوم ما بدأنا.",
+      },
+      author: { en: "Sarah Al-Otaibi", ar: "سارة العتيبي" },
+      role: { en: "Legal Director, Horizon Law Firm", ar: "المدير القانوني، مكتب هورايزن للمحاماة" },
+    },
+    pricing: [
+      {
+        name: { en: "Individual", ar: "الفرد" },
+        price: { en: "149", ar: "149" },
+        period: { en: "SAR / month", ar: "ر.س / شهرياً" },
+        description: { en: "Perfect for solo lawyers", ar: "مثالي للمحامي المستقل" },
+        features: [
+          { en: "One lawyer account", ar: "حساب محامٍ واحد" },
+          { en: "Unlimited cases", ar: "قضايا غير محدودة" },
+          { en: "Smart calendar & reminders", ar: "تقويم ذكي وتذكيرات" },
+          { en: "Basic billing", ar: "فوترة أساسية" },
+          { en: "Document management", ar: "إدارة المستندات" },
+        ],
+      },
+      {
+        name: { en: "Small Firm", ar: "مكتب صغير" },
+        price: { en: "299", ar: "299" },
+        period: { en: "SAR / month", ar: "ر.س / شهرياً" },
+        description: { en: "For firms up to 5 lawyers", ar: "لمكاتب حتى 5 محامين" },
+        features: [
+          { en: "Up to 5 lawyer accounts", ar: "حتى 5 حسابات محامين" },
+          { en: "Everything in Individual", ar: "كل ما في خطة الفرد" },
+          { en: "Team management & roles", ar: "إدارة الفريق والصلاحيات" },
+          { en: "Advanced reports", ar: "تقارير متقدمة" },
+          { en: "Client portal", ar: "بوابة العملاء" },
+          { en: "Priority support", ar: "دعم ذو أولوية" },
+        ],
+        highlighted: true,
+      },
+    ],
+    faq: [
+      {
+        question: { en: "Do I need a credit card for the free trial?", ar: "هل أحتاج بطاقة ائتمان للتجربة المجانية؟" },
+        answer: { en: "No. Start your 14-day free trial instantly without any payment information. We'll only ask for billing details if you decide to continue.", ar: "لا. ابدأ تجربتك المجانية لمدة 14 يوم فوراً بدون أي بيانات دفع. نطلب بيانات الفوترة فقط إذا قررت الاستمرار." },
+      },
+      {
+        question: { en: "Where is my case data stored?", ar: "أين تُخزَّن بيانات قضاياي؟" },
+        answer: { en: "All your data is hosted on secure servers inside Saudi Arabia, fully compliant with the Personal Data Protection Law (PDPL).", ar: "كل بياناتك مستضافة على خوادم آمنة داخل المملكة العربية السعودية، بامتثال كامل لنظام حماية البيانات الشخصية (PDPL)." },
+      },
+      {
+        question: { en: "What happens after the free trial ends?", ar: "ماذا يحدث بعد انتهاء التجربة المجانية؟" },
+        answer: { en: "You can choose a plan that fits you, or your account will be paused — your data stays safe for 90 days giving you time to decide.", ar: "تختار الخطة المناسبة، أو يتم إيقاف الحساب مؤقتاً — وبياناتك تبقى محفوظة لمدة 90 يوم لتعطيك وقت كافٍ للقرار." },
+      },
+      {
+        question: { en: "Does Aldalyel integrate with other Nzom products?", ar: "هل يتكامل الدليل مع منتجات نُظم الأخرى؟" },
+        answer: { en: "Yes. Aldalyel works seamlessly alongside Zerisks (HSSE) and other Nzom Labs tools when you need them — but it stands alone perfectly for law firms.", ar: "نعم. الدليل يعمل بسلاسة مع زي ريسك (HSSE) وأدوات نُظم الأخرى عند الحاجة — لكنه يقف لوحده بكفاءة كاملة لمكاتب المحاماة." },
+      },
+    ],
   },
 
   // ═══════════════════════════════════════════
