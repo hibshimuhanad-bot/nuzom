@@ -6,7 +6,15 @@ import { Calendar, Clock, ArrowLeft, ArrowRight } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Button } from "@/components/ui/button";
 
-const categoryToProduct: Record<string, { slug: string; name: { en: string; ar: string }; cta: { en: string; ar: string } }> = {
+type ProductCta = {
+  slug: string;
+  name: { en: string; ar: string };
+  cta: { en: string; ar: string };
+  externalUrl?: string;
+  externalLabel?: { en: string; ar: string };
+};
+
+const categoryToProduct: Record<string, ProductCta> = {
   hsse: {
     slug: "zerisks",
     name: { en: "Zerisks", ar: "زي ريسك" },
@@ -14,8 +22,10 @@ const categoryToProduct: Record<string, { slug: string; name: { en: string; ar: 
   },
   legal: {
     slug: "aldalyel",
-    name: { en: "aldalyel", ar: "الدليل" },
-    cta: { en: "See how aldalyel streamlines your legal workflow", ar: "شاهد كيف يُبسّط الدليل سير عملك القانوني" },
+    name: { en: "Aldalyel", ar: "الدليل" },
+    cta: { en: "See how Aldalyel streamlines your legal workflow", ar: "شاهد كيف يُبسّط الدليل سير عملك القانوني" },
+    externalUrl: "https://aldalyel.app/register",
+    externalLabel: { en: "Start your free Aldalyel trial", ar: "ابدأ تجربتك المجانية في الدليل" },
   },
   tasks: {
     slug: "nexdo",
@@ -26,6 +36,13 @@ const categoryToProduct: Record<string, { slug: string; name: { en: string; ar: 
     slug: "booking",
     name: { en: "Nzom Booking", ar: "نزوم الحجوزات" },
     cta: { en: "Explore how Nzom Booking modernizes your appointments", ar: "استكشف كيف يُحدّث نزوم الحجوزات نظام مواعيدك" },
+  },
+  crm: {
+    slug: "crm",
+    name: { en: "Namaa CRM", ar: "نماء CRM" },
+    cta: { en: "See how Namaa CRM turns your sales chaos into a predictable pipeline", ar: "اكتشف كيف يُحوّل نماء فوضى مبيعاتك إلى pipeline يمكن التنبؤ به" },
+    externalUrl: "https://namaacrm.app/register",
+    externalLabel: { en: "Start your free Namaa CRM trial", ar: "ابدأ تجربتك المجانية في نماء" },
   },
 };
 
@@ -146,15 +163,24 @@ const BlogPost = () => {
                     {product.cta[language]}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 rounded-xl">
+                    {product.externalUrl ? (
+                      <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 rounded-xl">
+                        <a href={product.externalUrl} target="_blank" rel="noopener noreferrer">
+                          {product.externalLabel ? product.externalLabel[language] : (isAr ? "ابدأ تجربتك المجانية" : "Start your free trial")}
+                          {isAr ? <ArrowLeft className="h-4 w-4 ms-2" /> : <ArrowRight className="h-4 w-4 ms-2" />}
+                        </a>
+                      </Button>
+                    ) : (
+                      <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 rounded-xl">
+                        <Link to={`/products/${product.slug}`}>
+                          {isAr ? "تعرّف على المنتج" : "Learn More"}
+                          {isAr ? <ArrowLeft className="h-4 w-4 ms-2" /> : <ArrowRight className="h-4 w-4 ms-2" />}
+                        </Link>
+                      </Button>
+                    )}
+                    <Button asChild variant="outline" size="lg" className="rounded-xl px-8">
                       <Link to={`/products/${product.slug}`}>
                         {isAr ? "تعرّف على المنتج" : "Learn More"}
-                        {isAr ? <ArrowLeft className="h-4 w-4 ms-2" /> : <ArrowRight className="h-4 w-4 ms-2" />}
-                      </Link>
-                    </Button>
-                    <Button asChild variant="outline" size="lg" className="rounded-xl px-8">
-                      <Link to="/contact">
-                        {isAr ? "اطلب عرض تجريبي" : "Request a Demo"}
                       </Link>
                     </Button>
                   </div>
