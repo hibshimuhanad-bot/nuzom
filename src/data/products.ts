@@ -366,6 +366,65 @@ export const products: Product[] = [
     rbacDesc: { en: "Sales managers see the full pipeline. Reps see their accounts. Marketing sees lead sources. Each role gets exactly the view they need — nothing more, nothing less.", ar: "مديرو المبيعات يشوفون الـ pipeline كامل. المندوبون يشوفون حساباتهم. التسويق يشوف مصادر الفرص. كل دور يشوف بالضبط اللي يخصه — لا أكثر، ولا أقل." },
     analyticsDesc: { en: "Which deals are likely to close? Which reps perform best? Where do leads drop off? Real answers that turn data into revenue.", ar: "أي صفقات محتمل تُقفل؟ أي مندوب الأفضل أداءً؟ وين تطيح الفرص؟ إجابات حقيقية تحوّل البيانات إلى إيرادات." },
     securityDesc: { en: "Customer data is sacred. Multi-tenant isolation, encrypted storage, and full Saudi PDPL compliance keep your most valuable asset safe.", ar: "بيانات العملاء مقدسة. عزل متعدد المستأجرين، تخزين مشفّر، وامتثال كامل لنظام حماية البيانات السعودي PDPL يحمي أثمن أصولك." },
+    primaryCTA: {
+      label: { en: "Start Free", ar: "ابدأ مجاناً" },
+      href: "https://namaacrm.app/register",
+      external: true,
+    },
+    trustBadges: [
+      { en: "PDPL Compliant", ar: "متوافق مع نظام حماية البيانات" },
+      { en: "Data Hosted in Saudi Arabia", ar: "بياناتك مستضافة في السعودية" },
+      { en: "Native Arabic Support", ar: "دعم عربي أصيل" },
+      { en: "No Credit Card · 14-Day Trial", ar: "بدون بطاقة ائتمان · تجربة 14 يوم" },
+    ],
+    pricing: [
+      {
+        name: { en: "Starter", ar: "البداية" },
+        price: { en: "199", ar: "199" },
+        period: { en: "SAR / month", ar: "ر.س / شهرياً" },
+        description: { en: "For small sales teams getting started", ar: "لفرق المبيعات الصغيرة اللي تبدأ" },
+        features: [
+          { en: "Up to 3 sales reps", ar: "حتى 3 مندوبي مبيعات" },
+          { en: "Unlimited contacts & companies", ar: "عملاء وشركات بدون حد" },
+          { en: "Visual deals pipeline", ar: "Pipeline مبيعات مرئي" },
+          { en: "Tasks & follow-ups", ar: "المهام والمتابعات" },
+          { en: "Basic reports", ar: "تقارير أساسية" },
+        ],
+      },
+      {
+        name: { en: "Growth", ar: "النمو" },
+        price: { en: "399", ar: "399" },
+        period: { en: "SAR / month", ar: "ر.س / شهرياً" },
+        description: { en: "For growing teams ready to scale", ar: "للفرق الجاهزة تنمو وتتوسّع" },
+        features: [
+          { en: "Up to 10 sales reps", ar: "حتى 10 مندوبي مبيعات" },
+          { en: "Everything in Starter", ar: "كل ما في خطة البداية" },
+          { en: "Lead scoring", ar: "تقييم الفرص (Lead scoring)" },
+          { en: "Advanced reports & dashboards", ar: "تقارير ولوحات تحكم متقدمة" },
+          { en: "Sales automations", ar: "أتمتة المبيعات" },
+          { en: "Priority support", ar: "دعم ذو أولوية" },
+        ],
+        highlighted: true,
+      },
+    ],
+    faq: [
+      {
+        question: { en: "Do I need a credit card for the free trial?", ar: "هل أحتاج بطاقة ائتمان للتجربة المجانية؟" },
+        answer: { en: "No. Start your 14-day free trial instantly without any payment information. We'll only ask for billing details if you decide to continue.", ar: "لا. ابدأ تجربتك المجانية لمدة 14 يوم فوراً بدون أي بيانات دفع. نطلب بيانات الفوترة فقط إذا قررت الاستمرار." },
+      },
+      {
+        question: { en: "Where is my customer data stored?", ar: "أين تُخزَّن بيانات عملائي؟" },
+        answer: { en: "All your data is hosted on secure servers inside Saudi Arabia, fully compliant with the Personal Data Protection Law (PDPL).", ar: "كل بياناتك مستضافة على خوادم آمنة داخل المملكة العربية السعودية، بامتثال كامل لنظام حماية البيانات الشخصية (PDPL)." },
+      },
+      {
+        question: { en: "What happens after the free trial ends?", ar: "ماذا يحدث بعد انتهاء التجربة المجانية؟" },
+        answer: { en: "You can pick the plan that fits you, or your account will be paused — your data stays safe for 90 days giving you time to decide.", ar: "تختار الخطة المناسبة، أو يتم إيقاف الحساب مؤقتاً — وبياناتك تبقى محفوظة لمدة 90 يوم لتعطيك وقت كافٍ للقرار." },
+      },
+      {
+        question: { en: "Does Namaa CRM integrate with other Nzom products?", ar: "هل يتكامل نظام إدارة العملاء مع منتجات نُظم الأخرى؟" },
+        answer: { en: "Yes. Namaa CRM works seamlessly with Nexdo (tasks) and Aldalyel (legal) when you need them — and it stands alone perfectly for sales teams.", ar: "نعم. نظام إدارة العملاء يعمل بسلاسة مع نكست دو (المهام) والدليل (القانوني) عند الحاجة — ويقف لوحده بكفاءة كاملة لفرق المبيعات." },
+      },
+    ],
   },
 
 ];

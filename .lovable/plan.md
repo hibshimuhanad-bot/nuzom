@@ -1,26 +1,33 @@
-# Show Aldalyel Logo Everywhere
+# Apply Landing-Page Enhancements to Namaa CRM
 
-The Aldalyel logo (`src/assets/aldalyel-logo.png`) currently only shows in the hero on `/products/aldalyel`. Everywhere else (Navbar dropdown, Bento Grid on home, About page ecosystem cards) we still render the generic lucide `BookOpen` icon. We'll wire the logo into those locations using the same `logoMap` approach already used on `ProductPage`.
+The CRM entry in `src/data/products.ts` is missing the same landing-page sections we added for Aldalyel: primary CTA, trust badges, testimonial, pricing, and FAQ. ProductPage already renders these sections when present, so we only need to extend the data.
 
 ## Changes
 
-1. **New helper `src/lib/productLogos.ts`**
-   - Export a shared `logoMap: Record<string, string>` containing `aldalyel` and `crm` entries (moved out of `ProductPage.tsx` so all components can import the same map).
+**File:** `src/data/products.ts` — CRM object (lines 327–369)
 
-2. **`src/pages/ProductPage.tsx`**
-   - Replace local `logoMap` with import from the helper. No visual change.
+Add the following fields (placed after `securityDesc`):
 
-3. **`src/components/Navbar.tsx`** (desktop solutions dropdown + mobile sheet)
-   - When `logoMap[product.slug]` exists, render a small `<img>` (w-4 h-4 rounded) instead of `<product.icon />`.
+1. **primaryCTA** → `"ابدأ مجاناً" / "Start Free"` → `https://namaacrm.app/register` (external).
+2. **trustBadges** (4 items, EN/AR):
+  - PDPL Compliant / متوافق مع نظام حماية البيانات
+  - Data Hosted in Saudi Arabia / بياناتك مستضافة في السعودية
+  - Native Arabic Support / دعم عربي أصيل
+  - No Credit Card · 14-Day Trial / بدون بطاقة ائتمان · تجربة 14 يوم
+  &nbsp;
+3. **pricing** (2 plans, mirroring Aldalyel's structure but CRM-focused):
+  - **Starter** — 199 SAR/mo: up to 3 sales reps, unlimited contacts & deals, visual pipeline, tasks & follow-ups, basic reports.
+  - **Growth** — 399 SAR/mo (highlighted): up to 10 reps, everything in Starter, lead scoring, advanced reports & dashboards, automations, priority support.
+4. **faq** (4 items):
+  - Free-trial credit card requirement
+  - Data hosting location (PDPL)
+  - What happens after trial ends (90-day data retention)
+  - Integration with other Nzom products (Nexdo, Aldalyel)
 
-4. **`src/components/home/BentoGrid.tsx`**
-   - In the product card icon tile (`w-12 h-12 ... bg-gradient-primary`), when a logo exists, render the logo image filling the tile (rounded, object-contain) on a neutral background instead of the gradient + lucide icon. Falls back to the current gradient tile for other products.
+No component changes are needed — `ProductPage.tsx` already conditionally renders these blocks. The CTA "ابدأ مجاناً" will surface in the hero, pricing cards, and final CTA on `/products/crm`.
 
-5. **`src/pages/About.tsx`** (ecosystem cards, line ~181)
-   - Same pattern: render logo image when available, otherwise keep the current colored lucide icon.
+## Notes
 
-Footer is text-only and doesn't render an icon, so no change there.
-
-## Result
-
-Aldalyel's real logo will appear in: Navbar dropdown (desktop + mobile), Home Bento Grid, About ecosystem section, and the product page hero (already working). The same path automatically picks up the CRM logo too, since it's already in `logoMap`.
+- Domain confirmed from the existing "Visit Site" link on ProductPage: `namaacrm.app`.
+- Logos for CRM already render everywhere thanks to the previous change (no extra work).
+- All copy in both EN and AR following project tone (emotional, direct, Saudi voice).
