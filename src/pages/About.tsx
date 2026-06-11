@@ -178,8 +178,12 @@ const About = () => {
                 <Link to={`/products/${product.slug}`}>
                   <div className="bento-card p-6 h-full hover:border-primary/30 transition-colors group">
                     <div className="flex items-center gap-4 mb-3">
-                      <div className={`w-12 h-12 rounded-xl flex items-center justify-center`} style={{ backgroundColor: `${product.color}15` }}>
-                        <product.icon className="h-6 w-6" style={{ color: product.color }} />
+                      <div className={`w-12 h-12 rounded-xl flex items-center justify-center overflow-hidden`} style={{ backgroundColor: logoMap[product.slug] ? undefined : `${product.color}15` }}>
+                        {logoMap[product.slug] ? (
+                          <img src={logoMap[product.slug]} alt={`${product.name[language]} logo`} className="w-full h-full object-contain p-1.5 bg-background/90 rounded-xl" />
+                        ) : (
+                          <product.icon className="h-6 w-6" style={{ color: product.color }} />
+                        )}
                       </div>
                       <div>
                         <h3 className="font-bold text-foreground">{product.name[language]}</h3>
