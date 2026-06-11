@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import { products } from "@/data/products";
+import { logoMap } from "@/lib/productLogos";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const BentoGrid = () => {
