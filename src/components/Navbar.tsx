@@ -6,6 +6,7 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/s
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Menu, ChevronDown, Globe } from "lucide-react";
 import { products } from "@/data/products";
+import { logoMap } from "@/lib/productLogos";
 import { useState } from "react";
 
 const Navbar = () => {
