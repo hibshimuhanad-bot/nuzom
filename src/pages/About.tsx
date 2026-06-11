@@ -4,6 +4,7 @@ import { Eye, Target, Cloud, Cpu, Layers, Sparkles, Zap, Shield, Lightbulb, Head
 import ScrollReveal from "@/components/ScrollReveal";
 import ParticleField from "@/components/ParticleField";
 import { products } from "@/data/products";
+import { logoMap } from "@/lib/productLogos";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
