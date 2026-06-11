@@ -156,7 +156,7 @@ export const products: Product[] = [
     securityDesc: { en: "Attorney-client privilege is non-negotiable. Bank-grade encryption, audit logs, and full Saudi data compliance protect every byte.", ar: "سرية المحامي والعميل ما فيها تفاوض. تشفير بنكي، سجلات تدقيق، وامتثال كامل للأنظمة السعودية يحمي كل بايت." },
     primaryCTA: {
       label: { en: "Start Free", ar: "ابدأ مجاناً" },
-      href: "https://aldalyel.app/signup",
+      href: "https://aldalyel.app/register",
       external: true,
     },
     trustBadges: [

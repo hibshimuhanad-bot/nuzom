@@ -1,8 +1,9 @@
-Add Google Analytics 4 (Measurement ID: G-4RK668N601) with full SPA route tracking.
+## Plan
 
-Steps:
-1. Add the gtag.js script block directly into the `<head>` of `index.html`, right after the existing `<noscript>` font tags and before the closing `</head>`.
-2. Create a new `src/components/AnalyticsTracker.tsx` component that imports `useLocation` from `react-router-dom`. Inside a `useEffect` hook, call `gtag('config', 'G-4RK668N601', { page_path: location.pathname + location.search })` whenever `location.pathname` changes. This ensures every client-side route change is tracked as a page view.
-3. Import and mount `<AnalyticsTracker />` inside `App.tsx`, placed immediately after `<SEOHead />` and still inside `<BrowserRouter>` so it has access to the router context.
+**Task:** Update Aldalyel primary CTA link in `src/data/products.ts`
 
-No backend or dependency changes required.
+**Change:**
+- File: `src/data/products.ts`
+- Line 159: Change `href: "https://aldalyel.app/signup"` → `href: "https://aldalyel.app/register"`
+
+**Impact:** Updates the "ابدأ مجاناً" / "Start Free" button destination across Hero, Pricing cards, and Final CTA sections on `/products/aldalyel`.
