@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import { products } from "@/data/products";
+import { logoMap } from "@/lib/productLogos";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const BentoGrid = () => {
@@ -25,8 +26,12 @@ const BentoGrid = () => {
                     {t("ecosystem.available")}
                   </span>
                   <div className="relative z-10">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-primary text-primary-foreground flex items-center justify-center mb-4 shadow-accent-glow group-hover:scale-105 transition-all duration-300">
-                      <product.icon className="h-6 w-6" />
+                    <div className="w-12 h-12 rounded-xl bg-gradient-primary text-primary-foreground flex items-center justify-center mb-4 shadow-accent-glow group-hover:scale-105 transition-all duration-300 overflow-hidden">
+                      {logoMap[product.slug] ? (
+                        <img src={logoMap[product.slug]} alt={`${product.name[language]} logo`} className="w-full h-full object-contain p-1.5 bg-background/90" />
+                      ) : (
+                        <product.icon className="h-6 w-6" />
+                      )}
                     </div>
                     <h3 className="font-bold text-foreground mb-2 text-xl">
                       {product.name[language]}

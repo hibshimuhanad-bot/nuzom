@@ -6,6 +6,7 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/s
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Menu, ChevronDown, Globe } from "lucide-react";
 import { products } from "@/data/products";
+import { logoMap } from "@/lib/productLogos";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -60,7 +61,11 @@ const Navbar = () => {
               {products.map((product) => (
                 <DropdownMenuItem key={product.slug} asChild>
                   <Link to={`/products/${product.slug}`} className="cursor-pointer">
-                    <product.icon className="h-4 w-4 me-2" />
+                    {logoMap[product.slug] ? (
+                      <img src={logoMap[product.slug]} alt="" className="h-4 w-4 me-2 rounded object-contain" />
+                    ) : (
+                      <product.icon className="h-4 w-4 me-2" />
+                    )}
                     {product.name[language]}
                   </Link>
                 </DropdownMenuItem>
@@ -123,8 +128,13 @@ const Navbar = () => {
                       key={product.slug}
                       to={`/products/${product.slug}`}
                       onClick={() => setOpen(false)}
-                      className="block text-muted-foreground hover:text-foreground py-1.5"
+                      className="flex items-center gap-2 text-muted-foreground hover:text-foreground py-1.5"
                     >
+                      {logoMap[product.slug] ? (
+                        <img src={logoMap[product.slug]} alt="" className="h-4 w-4 rounded object-contain" />
+                      ) : (
+                        <product.icon className="h-4 w-4" />
+                      )}
                       {product.name[language]}
                     </Link>
                   ))}
