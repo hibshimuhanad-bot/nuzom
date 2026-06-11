@@ -1,33 +1,69 @@
-# Apply Landing-Page Enhancements to Namaa CRM
+## الهدف
+إضافة 6 مقالات SEO جديدة (3 للدليل + 3 لنماء CRM) ثنائية اللغة، مبنية من واقع مميزات النظامين، مع زر CTA يحوّل لموقع المنتج المباشر، وتحديث الفئات والـ sitemap وروابط CTA الديناميكية.
 
-The CRM entry in `src/data/products.ts` is missing the same landing-page sections we added for Aldalyel: primary CTA, trust badges, testimonial, pricing, and FAQ. ProductPage already renders these sections when present, so we only need to extend the data.
+---
 
-## Changes
+## 1. توسيع فئات المدونة
+في `src/data/blog.ts` أضف فئة جديدة للـ CRM، وأبقِ "legal" لمقالات الدليل:
 
-**File:** `src/data/products.ts` — CRM object (lines 327–369)
+```ts
+{ id: "crm", label: { en: "CRM & Sales", ar: "المبيعات والعملاء" } }
+```
 
-Add the following fields (placed after `securityDesc`):
+---
 
-1. **primaryCTA** → `"ابدأ مجاناً" / "Start Free"` → `https://namaacrm.app/register` (external).
-2. **trustBadges** (4 items, EN/AR):
-  - PDPL Compliant / متوافق مع نظام حماية البيانات
-  - Data Hosted in Saudi Arabia / بياناتك مستضافة في السعودية
-  - Native Arabic Support / دعم عربي أصيل
-  - No Credit Card · 14-Day Trial / بدون بطاقة ائتمان · تجربة 14 يوم
-  &nbsp;
-3. **pricing** (2 plans, mirroring Aldalyel's structure but CRM-focused):
-  - **Starter** — 199 SAR/mo: up to 3 sales reps, unlimited contacts & deals, visual pipeline, tasks & follow-ups, basic reports.
-  - **Growth** — 399 SAR/mo (highlighted): up to 10 reps, everything in Starter, lead scoring, advanced reports & dashboards, automations, priority support.
-4. **faq** (4 items):
-  - Free-trial credit card requirement
-  - Data hosting location (PDPL)
-  - What happens after trial ends (90-day data retention)
-  - Integration with other Nzom products (Nexdo, Aldalyel)
+## 2. المقالات الستة الجديدة
 
-No component changes are needed — `ProductPage.tsx` already conditionally renders these blocks. The CTA "ابدأ مجاناً" will surface in the hero, pricing cards, and final CTA on `/products/crm`.
+### الدليل (legal) — كلها تستهدف SEO قانوني سعودي
 
-## Notes
+| # | Slug | العنوان (AR / EN) | الزاوية والكلمة المفتاحية |
+|---|------|---------------------|-----------------------------|
+| 1 | `aldalyel-saudi-law-firm-management` | كيف تدير مكتبك القانوني في السعودية بدون فوضى الملفات / How Saudi Law Firms Eliminate File Chaos | "إدارة مكاتب المحاماة"، "نظام مكاتب محاماة سعودي" — يصف ألم الجلسات الضائعة والملفات المبعثرة + يقدّم منهجية الدليل (مساحة لكل قضية، تقويم ذكي، تنبيهات). |
+| 2 | `ai-assistant-saudi-lawyers` | مساعد ذكاء اصطناعي متخصص بالأنظمة السعودية للمحامين / AI Trained on Saudi Law: A New Edge for Lawyers | "ذكاء اصطناعي قانوني"، "AI للمحامين السعوديين" — يشرح كيف يبحث المساعد في الأنظمة السعودية ويصيغ المذكرات، مع تمييزه عن أدوات غربية عامة. |
+| 3 | `pdpl-compliance-legal-data-saudi` | حماية بيانات الموكلين وفق نظام PDPL السعودي / Protecting Client Data Under Saudi PDPL | "نظام حماية البيانات الشخصية"، "PDPL law firms" — يربط متطلبات PDPL بسرية المحامي والموكل، استضافة البيانات داخل المملكة، وسجلات التدقيق. |
 
-- Domain confirmed from the existing "Visit Site" link on ProductPage: `namaacrm.app`.
-- Logos for CRM already render everywhere thanks to the previous change (no extra work).
-- All copy in both EN and AR following project tone (emotional, direct, Saudi voice).
+### نماء CRM (crm)
+
+| # | Slug | العنوان (AR / EN) | الزاوية والكلمة المفتاحية |
+|---|------|---------------------|-----------------------------|
+| 4 | `from-whatsapp-to-crm-saudi-sme` | من واتساب وإكسل إلى نظام CRM يجمع مبيعاتك / From WhatsApp & Excel to a Real Sales Pipeline | "نظام CRM سعودي"، "إدارة عملاء"، "Saudi SME CRM" — يصف فوضى متابعة العملاء على واتساب وكيف يحوّلها pipeline بصري لنماء. |
+| 5 | `sales-pipeline-management-arabic` | كيف تبني خط مبيعات (Pipeline) واضح يضاعف معدلات الإغلاق / Building a Sales Pipeline That Closes More Deals | "خط مبيعات"، "sales pipeline" — دليل عملي لمراحل البايبلاين، تسجيل النقاط للعملاء المحتملين، وأتمتة المهام. |
+| 6 | `crm-arabic-pdpl-saudi-sme` | لماذا تختار CRM عربي مستضاف داخل السعودية؟ / Why Saudi SMEs Need a Local Arabic CRM | "CRM عربي"، "بيانات داخل السعودية"، PDPL — مقارنة بين الأدوات الغربية (HubSpot/Zoho) ونماء من ناحية اللغة، التسعير بالريال، استضافة البيانات. |
+
+كل مقال:
+- ≈ 5–7 دقائق قراءة.
+- بنية: مقدمة بألم العميل → الحل من واقع النظام (3–4 نقاط ملموسة من المميزات) → عائد قابل للقياس → خاتمة تربط بالمنتج.
+- التواريخ: من 2026-04 إلى 2026-06 (الأحدث أعلى).
+
+---
+
+## 3. ربط زر CTA بالموقع المباشر
+حالياً `BlogPost.tsx` يولّد CTA حسب الفئة. التعديل:
+- `legal` → `https://aldalyel.app/register` بنص "ابدأ تجربتك المجانية في الدليل" / "Start your free Aldalyel trial".
+- `crm` → `https://namaacrm.app/register` بنص "ابدأ تجربتك المجانية في نماء" / "Start your free Namaa CRM trial".
+- الزر يفتح في تبويب جديد (`target="_blank" rel="noopener noreferrer"`).
+
+---
+
+## 4. SEO
+- `SEOHead.tsx` يلتقط مقالات المدونة تلقائياً، فلا حاجة لتعديل (Article JSON-LD يُولَّد للمقالات الجديدة فور إضافتها).
+- تحديث `public/sitemap.xml` بإضافة 6 إدخالات `/blog/<slug>` بأولوية `0.7`.
+
+---
+
+## 5. الملفات المتأثرة
+
+```text
+src/data/blog.ts          — فئة crm + 6 مقالات (AR/EN كامل المحتوى)
+src/pages/BlogPost.tsx    — توسعة دالة الـ CTA لفئتي legal و crm
+public/sitemap.xml        — إضافة 6 روابط
+```
+
+لا حاجة لتعديل `ProductPage.tsx` أو `Navbar` أو أي شيء يتعلق بالـ backend.
+
+---
+
+## النتيجة المتوقعة
+- 6 صفحات مفهرسة جديدة تستهدف كلمات مفتاحية سعودية محددة لكل منتج.
+- روابط CTA مباشرة تُحوّل من المحتوى للتسجيل، مما يحسّن معدل التحويل من العضوي.
+- المدونة تغطي الآن الخمسة منتجات في النظام البيئي (HSSE + Legal + Tasks + Booking + CRM).
