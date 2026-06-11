@@ -128,8 +128,13 @@ const Navbar = () => {
                       key={product.slug}
                       to={`/products/${product.slug}`}
                       onClick={() => setOpen(false)}
-                      className="block text-muted-foreground hover:text-foreground py-1.5"
+                      className="flex items-center gap-2 text-muted-foreground hover:text-foreground py-1.5"
                     >
+                      {logoMap[product.slug] ? (
+                        <img src={logoMap[product.slug]} alt="" className="h-4 w-4 rounded object-contain" />
+                      ) : (
+                        <product.icon className="h-4 w-4" />
+                      )}
                       {product.name[language]}
                     </Link>
                   ))}
