@@ -427,4 +427,118 @@ export const products: Product[] = [
     ],
   },
 
+  // ═══════════════════════════════════════════
+  // 9. SUMAA PLUS — الإحساس: الطمأنينة على السمعة
+  // ═══════════════════════════════════════════
+  {
+    slug: "samaa-plus",
+    available: true,
+    name: { en: "Sumaa Plus", ar: "سمعة بلس" },
+    tagline: {
+      en: "Manage your business reputation, intelligently.",
+      ar: "أدر سمعة أعمالك بذكاء"
+    },
+    description: {
+      en: "Every Google review tracked. Every reply crafted with AI in fluent Arabic. Every 1-star alert reaches you instantly. Sumaa Plus turns your scattered branch reviews into one calm, controlled stream — so your reputation never catches you off guard.",
+      ar: "كل مراجعة على Google متابَعة. كل رد مصاغ بذكاء اصطناعي بعربية فصيحة. كل تنبيه نجمة وحدة يوصلك فوراً. سمعة بلس تحوّل مراجعات فروعك المبعثرة إلى قناة واحدة هادئة تحت السيطرة — عشان سمعتك ما تفاجئك أبداً."
+    },
+    emotionalHook: {
+      en: "Your reputation, in your hands — moment by moment.",
+      ar: "سمعتك تحت سيطرتك — لحظة بلحظة."
+    },
+    imagineDay: {
+      en: "Imagine starting your morning with one screen showing every review from every branch — sorted, scored, and ready. Negative reviews flagged before they spread. AI-drafted replies awaiting your approval in your tone. Your branch managers respond consistently, not improvising. Your brand voice stays calm, professional, human — across every location.",
+      ar: "تخيّل تبدأ صباحك بشاشة وحدة تعرض كل مراجعة من كل فرع — مصنّفة، مقيّمة، وجاهزة. المراجعات السلبية مرصودة قبل لا تنتشر. ردود مصاغة بالذكاء الاصطناعي تنتظر موافقتك بأسلوبك. مديرو فروعك يردّون بانسجام، مو باجتهادات. صوت علامتك يبقى هادئ، احترافي، إنساني — في كل موقع."
+    },
+    icon: Star,
+    color: "from-teal-500 to-emerald-600",
+    problem: {
+      en: "Reviews land on Google before you see them. Each branch replies differently — or doesn't reply at all. A single 1-star review goes viral before anyone notices. You have no unified view across locations, no consistency, no control. Your reputation is being shaped without you in the room.",
+      ar: "المراجعات تنزل على Google قبل ما تشوفها. كل فرع يرد بطريقته — أو ما يرد أصلاً. مراجعة وحدة بنجمة وحدة تنتشر قبل لا أحد ينتبه. ما عندك رؤية موحدة عبر الفروع، ولا انسجام، ولا سيطرة. سمعتك تتشكّل وأنت مو في الغرفة."
+    },
+    solution: {
+      en: "Sumaa Plus connects directly to Google Business Profile, pulls every review across all your branches into one workspace, drafts AI replies in Arabic, and alerts you instantly on critical reviews. Approvals, escalations, and competitor benchmarking — all in one calm dashboard.",
+      ar: "سمعة بلس يربط مباشرة بـ Google Business Profile، يسحب كل المراجعات من جميع فروعك إلى مساحة عمل وحدة، يصيغ ردود ذكية بالعربية، وينبّهك فوراً على المراجعات الحرجة. الموافقات، التصعيدات، ومقارنة المنافسين — كلها في لوحة وحدة هادئة."
+    },
+    features: [
+      { title: { en: "Google Reviews Sync", ar: "مزامنة مراجعات Google" }, description: { en: "Direct integration with Google Business Profile. Every review, every location, in real time.", ar: "تكامل مباشر مع Google Business Profile. كل مراجعة، كل موقع، لحظة بلحظة." }, icon: Star },
+      { title: { en: "AI Arabic Replies", ar: "ردود ذكية بالعربية" }, description: { en: "Smart replies drafted in fluent Arabic, matching your brand voice. Approve in one click.", ar: "ردود ذكية مصاغة بعربية فصيحة، بنفس صوت علامتك. توافق بضغطة." }, icon: Brain },
+      { title: { en: "Critical 1★ Alerts", ar: "تنبيهات النجمة الواحدة" }, description: { en: "The moment a 1-star review lands, you know. Notifications fire before it spreads.", ar: "اللحظة اللي تنزل فيها مراجعة بنجمة وحدة، تعرف. الإشعارات توصل قبل لا تنتشر." }, icon: AlertTriangle },
+      { title: { en: "Approval Workflow", ar: "سير عمل الموافقات" }, description: { en: "Branch managers draft, reputation managers approve. Nothing reaches Google by mistake.", ar: "مديرو الفروع يصيغون، مديرو السمعة يوافقون. ما يوصل لـ Google شيء بالغلط." }, icon: Workflow },
+      { title: { en: "Multi-Branch Management", ar: "إدارة متعددة الفروع" }, description: { en: "Restaurants, clinics, hotels, retail — all locations under one tenant, with clean scopes.", ar: "مطاعم، عيادات، فنادق، تجزئة — كل المواقع تحت مؤسسة وحدة، بصلاحيات واضحة." }, icon: Building2 },
+      { title: { en: "Competitors & Reports", ar: "المنافسون والتقارير" }, description: { en: "Track competitor ratings beside yours. Trend reports show where you're winning or losing.", ar: "تابع تقييمات المنافسين جنب تقييماتك. تقارير الاتجاهات تورّيك وين تكسب ووين تخسر." }, icon: BarChart3 },
+    ],
+    workflowDesc: { en: "Reviews sync from Google automatically. AI drafts a reply. Branch manager edits, reputation manager approves, system publishes back to Google — with full audit trail. Critical reviews escalate instantly. You set the rules once.", ar: "المراجعات تتزامن من Google تلقائياً. الذكاء الاصطناعي يصيغ الرد. مدير الفرع يعدّل، مدير السمعة يوافق، النظام ينشر للـ Google — بسجل تدقيق كامل. المراجعات الحرجة تتصعّد فوراً. تحط القواعد مرة وحدة." },
+    rbacDesc: { en: "Platform owners see everything. Tenant admins manage their organization. Reputation managers handle all branches. Branch managers see only their locations — no tokens, no direct publish. Clean separation, zero leakage.", ar: "مالكو المنصة يشوفون كل شيء. مديرو المؤسسة يديرون منظمتهم. مديرو السمعة يتولّون كل الفروع. مديرو الفروع يشوفون مواقعهم فقط — بدون توكنات، بدون نشر مباشر. فصل نظيف، صفر تسريب." },
+    analyticsDesc: { en: "See your average rating trend per branch, per city, per service. Compare against competitors. Spot which locations need attention before the numbers slip publicly.", ar: "شوف اتجاه متوسط تقييمك لكل فرع، لكل مدينة، لكل خدمة. قارن مع المنافسين. اكتشف أي مواقع تحتاج اهتمام قبل لا تنزل الأرقام علناً." },
+    securityDesc: { en: "Google OAuth tokens stored in encrypted Vault — never in the database directly. Full PDPL compliance, data hosted in Saudi Arabia, audit logs on every sync and publish.", ar: "توكنات Google OAuth محفوظة في Vault مشفّر — أبداً في قاعدة البيانات مباشرة. امتثال كامل لنظام حماية البيانات، البيانات مستضافة في السعودية، سجلات تدقيق على كل مزامنة ونشر." },
+    primaryCTA: {
+      label: { en: "Start Free", ar: "ابدأ مجاناً" },
+      href: "https://sumaaplus.nzomlabs.com/login",
+      external: true,
+    },
+    trustBadges: [
+      { en: "PDPL Compliant", ar: "متوافق مع نظام حماية البيانات" },
+      { en: "Data Hosted in Saudi Arabia", ar: "بياناتك مستضافة في السعودية" },
+      { en: "Official Google Business Profile Integration", ar: "تكامل رسمي مع Google Business Profile" },
+      { en: "No Credit Card · 14-Day Trial", ar: "بدون بطاقة ائتمان · تجربة 14 يوم" },
+    ],
+    testimonial: {
+      quote: {
+        en: "Before Sumaa Plus, a bad review would sit unanswered for days across our branches. Now every review is replied to within an hour, in our brand voice. Our average rating jumped from 4.1 to 4.6 in three months.",
+        ar: "قبل سمعة بلس، المراجعة السيئة كانت تظل بدون رد لأيام في فروعنا. الحين كل مراجعة يوصلها رد خلال ساعة، بصوت علامتنا. متوسط تقييمنا قفز من 4.1 إلى 4.6 خلال ثلاثة أشهر.",
+      },
+      author: { en: "Khaled Al-Harbi", ar: "خالد الحربي" },
+      role: { en: "Reputation Director, Multi-Branch F&B Group", ar: "مدير السمعة، مجموعة مطاعم متعددة الفروع" },
+    },
+    pricing: [
+      {
+        name: { en: "Starter", ar: "البداية" },
+        price: { en: "199", ar: "199" },
+        period: { en: "SAR / month", ar: "ر.س / شهرياً" },
+        description: { en: "For single-branch businesses", ar: "للأعمال ذات الفرع الواحد" },
+        features: [
+          { en: "One branch / Google location", ar: "فرع واحد / موقع Google واحد" },
+          { en: "Unlimited reviews sync", ar: "مزامنة مراجعات غير محدودة" },
+          { en: "AI Arabic reply drafts", ar: "ردود ذكية مسوّدة بالعربية" },
+          { en: "Critical review alerts", ar: "تنبيهات المراجعات الحرجة" },
+          { en: "Basic reports", ar: "تقارير أساسية" },
+        ],
+      },
+      {
+        name: { en: "Business", ar: "الأعمال" },
+        price: { en: "499", ar: "499" },
+        period: { en: "SAR / month", ar: "ر.س / شهرياً" },
+        description: { en: "For multi-branch organizations", ar: "للمؤسسات متعددة الفروع" },
+        features: [
+          { en: "Up to 10 branches", ar: "حتى 10 فروع" },
+          { en: "Everything in Starter", ar: "كل ما في خطة البداية" },
+          { en: "Approval workflows & roles", ar: "سير عمل الموافقات والصلاحيات" },
+          { en: "Competitor benchmarking", ar: "مقارنة المنافسين" },
+          { en: "Advanced trend reports", ar: "تقارير اتجاهات متقدمة" },
+          { en: "Priority support", ar: "دعم ذو أولوية" },
+        ],
+        highlighted: true,
+      },
+    ],
+    faq: [
+      {
+        question: { en: "Do I need a credit card for the free trial?", ar: "هل أحتاج بطاقة ائتمان للتجربة المجانية؟" },
+        answer: { en: "No. Start your 14-day free trial instantly without any payment information. We'll only ask for billing details if you decide to continue.", ar: "لا. ابدأ تجربتك المجانية لمدة 14 يوم فوراً بدون أي بيانات دفع. نطلب بيانات الفوترة فقط إذا قررت الاستمرار." },
+      },
+      {
+        question: { en: "Where is my reputation data stored?", ar: "أين تُخزَّن بيانات سمعتي؟" },
+        answer: { en: "All your data is hosted on secure servers inside Saudi Arabia, fully compliant with the Personal Data Protection Law (PDPL). Google OAuth tokens are kept in an encrypted Vault — never in plain database fields.", ar: "كل بياناتك مستضافة على خوادم آمنة داخل المملكة العربية السعودية، بامتثال كامل لنظام حماية البيانات الشخصية (PDPL). توكنات Google OAuth محفوظة في Vault مشفّر — أبداً في حقول قاعدة بيانات عادية." },
+      },
+      {
+        question: { en: "How do I connect my Google Business Profile?", ar: "كيف أربط حساب Google Business Profile؟" },
+        answer: { en: "From your dashboard, click 'Connect Google'. You'll be taken through Google's official OAuth flow, then you map each branch to its Google location. Reviews start syncing immediately.", ar: "من لوحة التحكم، اضغط 'ربط Google'. تمر بتدفّق OAuth الرسمي من Google، ثم تربط كل فرع بموقعه على Google. المراجعات تبدأ تتزامن فوراً." },
+      },
+      {
+        question: { en: "Does Sumaa Plus integrate with other Nzom products?", ar: "هل يتكامل سمعة بلس مع منتجات نُظم الأخرى؟" },
+        answer: { en: "Yes. Sumaa Plus pairs naturally with Nzom Booking (turn happy customers into reviewers) and Namaa CRM (sync customer sentiment) — but it stands alone perfectly for any multi-branch business.", ar: "نعم. سمعة بلس يتكامل بشكل طبيعي مع نزوم الحجوزات (حوّل عملاءك السعداء إلى مراجعين) ونظام إدارة العملاء (مزامنة مشاعر العملاء) — ويقف لوحده بكفاءة كاملة لأي عمل متعدد الفروع." },
+      },
+    ],
+  },
+
 ];
