@@ -170,8 +170,8 @@ export const products: Product[] = [
         en: "Aldalyel streamlined our entire case management process. We've seen a 40% improvement in case resolution time, and not a single session has been missed since we started.",
         ar: "الدليل نظّم عملية إدارة القضايا بالكامل. شفنا تحسّن 40% في وقت حل القضايا، وما فاتتنا أي جلسة من يوم ما بدأنا.",
       },
-      author: { en: "Sarah Al-Otaibi", ar: "سارة العتيبي" },
-      role: { en: "Legal Director, Horizon Law Firm", ar: "المدير القانوني، مكتب هورايزن للمحاماة" },
+      author: { en: "One of our clients", ar: "أحد عملائنا" },
+      role: { en: "Law Firm — Saudi Arabia", ar: "مكتب محاماة — المملكة العربية السعودية" },
     },
     pricing: [
       {
@@ -488,8 +488,8 @@ export const products: Product[] = [
         en: "Before Sumaa Plus, a bad review would sit unanswered for days across our branches. Now every review is replied to within an hour, in our brand voice. Our average rating jumped from 4.1 to 4.6 in three months.",
         ar: "قبل سمعة بلس، المراجعة السيئة كانت تظل بدون رد لأيام في فروعنا. الحين كل مراجعة يوصلها رد خلال ساعة، بصوت علامتنا. متوسط تقييمنا قفز من 4.1 إلى 4.6 خلال ثلاثة أشهر.",
       },
-      author: { en: "Khaled Al-Harbi", ar: "خالد الحربي" },
-      role: { en: "Reputation Director, Multi-Branch F&B Group", ar: "مدير السمعة، مجموعة مطاعم متعددة الفروع" },
+      author: { en: "One of our clients", ar: "أحد عملائنا" },
+      role: { en: "Multi-Branch F&B Group — Saudi Arabia", ar: "مجموعة مطاعم متعددة الفروع — المملكة العربية السعودية" },
     },
     pricing: [
       {

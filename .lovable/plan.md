@@ -1,69 +1,22 @@
-## الهدف
-إضافة 6 مقالات SEO جديدة (3 للدليل + 3 لنماء CRM) ثنائية اللغة، مبنية من واقع مميزات النظامين، مع زر CTA يحوّل لموقع المنتج المباشر، وتحديث الفئات والـ sitemap وروابط CTA الديناميكية.
+## Plan: Anonymize All Testimonials
 
----
+### Goal
+Remove all real-sounding names and company roles from every testimonial across the site to eliminate any risk of being construed as impersonation or false endorsement, while keeping the testimonial quotes themselves.
 
-## 1. توسيع فئات المدونة
-في `src/data/blog.ts` أضف فئة جديدة للـ CRM، وأبقِ "legal" لمقالات الدليل:
+### Changes
 
-```ts
-{ id: "crm", label: { en: "CRM & Sales", ar: "المبيعات والعملاء" } }
-```
+1. **`src/data/products.ts`** — Update the two product-page testimonials:
+   - **Aldalyel testimonial** (lines 168-175): Replace `author` and `role` with generic bilingual placeholders (e.g., "One of our clients" / "أحد عملائنا" and "Saudi company" / "شركة سعودية").
+   - **Samaa Plus testimonial** (lines 486-493): Same replacement.
 
----
+2. **`src/components/home/Testimonials.tsx`** — Update the four homepage testimonials (lines 4-25):
+   - Replace every `name` and `role` field with the same generic bilingual placeholders.
+   - The `name[language].charAt(0)` avatar initializer will simply show the first letter of the generic label, which is acceptable.
 
-## 2. المقالات الستة الجديدة
+### No structural changes
+- The `Testimonial` interface in `src/data/products.ts` stays unchanged.
+- `ProductPage.tsx` and `Testimonials.tsx` rendering logic stays unchanged — only the data values are swapped.
 
-### الدليل (legal) — كلها تستهدف SEO قانوني سعودي
-
-| # | Slug | العنوان (AR / EN) | الزاوية والكلمة المفتاحية |
-|---|------|---------------------|-----------------------------|
-| 1 | `aldalyel-saudi-law-firm-management` | كيف تدير مكتبك القانوني في السعودية بدون فوضى الملفات / How Saudi Law Firms Eliminate File Chaos | "إدارة مكاتب المحاماة"، "نظام مكاتب محاماة سعودي" — يصف ألم الجلسات الضائعة والملفات المبعثرة + يقدّم منهجية الدليل (مساحة لكل قضية، تقويم ذكي، تنبيهات). |
-| 2 | `ai-assistant-saudi-lawyers` | مساعد ذكاء اصطناعي متخصص بالأنظمة السعودية للمحامين / AI Trained on Saudi Law: A New Edge for Lawyers | "ذكاء اصطناعي قانوني"، "AI للمحامين السعوديين" — يشرح كيف يبحث المساعد في الأنظمة السعودية ويصيغ المذكرات، مع تمييزه عن أدوات غربية عامة. |
-| 3 | `pdpl-compliance-legal-data-saudi` | حماية بيانات الموكلين وفق نظام PDPL السعودي / Protecting Client Data Under Saudi PDPL | "نظام حماية البيانات الشخصية"، "PDPL law firms" — يربط متطلبات PDPL بسرية المحامي والموكل، استضافة البيانات داخل المملكة، وسجلات التدقيق. |
-
-### نماء CRM (crm)
-
-| # | Slug | العنوان (AR / EN) | الزاوية والكلمة المفتاحية |
-|---|------|---------------------|-----------------------------|
-| 4 | `from-whatsapp-to-crm-saudi-sme` | من واتساب وإكسل إلى نظام CRM يجمع مبيعاتك / From WhatsApp & Excel to a Real Sales Pipeline | "نظام CRM سعودي"، "إدارة عملاء"، "Saudi SME CRM" — يصف فوضى متابعة العملاء على واتساب وكيف يحوّلها pipeline بصري لنماء. |
-| 5 | `sales-pipeline-management-arabic` | كيف تبني خط مبيعات (Pipeline) واضح يضاعف معدلات الإغلاق / Building a Sales Pipeline That Closes More Deals | "خط مبيعات"، "sales pipeline" — دليل عملي لمراحل البايبلاين، تسجيل النقاط للعملاء المحتملين، وأتمتة المهام. |
-| 6 | `crm-arabic-pdpl-saudi-sme` | لماذا تختار CRM عربي مستضاف داخل السعودية؟ / Why Saudi SMEs Need a Local Arabic CRM | "CRM عربي"، "بيانات داخل السعودية"، PDPL — مقارنة بين الأدوات الغربية (HubSpot/Zoho) ونماء من ناحية اللغة، التسعير بالريال، استضافة البيانات. |
-
-كل مقال:
-- ≈ 5–7 دقائق قراءة.
-- بنية: مقدمة بألم العميل → الحل من واقع النظام (3–4 نقاط ملموسة من المميزات) → عائد قابل للقياس → خاتمة تربط بالمنتج.
-- التواريخ: من 2026-04 إلى 2026-06 (الأحدث أعلى).
-
----
-
-## 3. ربط زر CTA بالموقع المباشر
-حالياً `BlogPost.tsx` يولّد CTA حسب الفئة. التعديل:
-- `legal` → `https://aldalyel.app/register` بنص "ابدأ تجربتك المجانية في الدليل" / "Start your free Aldalyel trial".
-- `crm` → `https://namaacrm.app/register` بنص "ابدأ تجربتك المجانية في نماء" / "Start your free Namaa CRM trial".
-- الزر يفتح في تبويب جديد (`target="_blank" rel="noopener noreferrer"`).
-
----
-
-## 4. SEO
-- `SEOHead.tsx` يلتقط مقالات المدونة تلقائياً، فلا حاجة لتعديل (Article JSON-LD يُولَّد للمقالات الجديدة فور إضافتها).
-- تحديث `public/sitemap.xml` بإضافة 6 إدخالات `/blog/<slug>` بأولوية `0.7`.
-
----
-
-## 5. الملفات المتأثرة
-
-```text
-src/data/blog.ts          — فئة crm + 6 مقالات (AR/EN كامل المحتوى)
-src/pages/BlogPost.tsx    — توسعة دالة الـ CTA لفئتي legal و crm
-public/sitemap.xml        — إضافة 6 روابط
-```
-
-لا حاجة لتعديل `ProductPage.tsx` أو `Navbar` أو أي شيء يتعلق بالـ backend.
-
----
-
-## النتيجة المتوقعة
-- 6 صفحات مفهرسة جديدة تستهدف كلمات مفتاحية سعودية محددة لكل منتج.
-- روابط CTA مباشرة تُحوّل من المحتوى للتسجيل، مما يحسّن معدل التحويل من العضوي.
-- المدونة تغطي الآن الخمسة منتجات في النظام البيئي (HSSE + Legal + Tasks + Booking + CRM).
+### Verification
+- Build passes.
+- Product pages and homepage render testimonials with quotes visible but names/roles replaced by generic text.

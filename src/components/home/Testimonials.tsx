@@ -3,23 +3,23 @@ import ScrollReveal from "@/components/ScrollReveal";
 
 const testimonials = [
   {
-    name: { en: "Eng. Khalid Al-Rashidi", ar: "م. خالد الراشدي" },
-    role: { en: "VP of Operations, Al-Manar Group", ar: "نائب رئيس العمليات، مجموعة المنار" },
+    name: { en: "One of our clients", ar: "أحد عملائنا" },
+    role: { en: "Industrial Operations — Saudi Arabia", ar: "عمليات صناعية — المملكة العربية السعودية" },
     quote: { en: "Zerisks transformed our safety compliance workflow. Incident reporting that used to take days now happens in real-time.", ar: "زي ريسك حوّل سير عمل الامتثال بالسلامة لدينا. الإبلاغ عن الحوادث الذي كان يستغرق أياماً أصبح يحدث في الوقت الفعلي." },
   },
   {
-    name: { en: "Sarah Al-Otaibi", ar: "سارة العتيبي" },
-    role: { en: "Legal Director, Horizon Law Firm", ar: "المدير القانوني، مكتب هورايزن للمحاماة" },
-    quote: { en: "aldalyel streamlined our entire case management process. We've seen a 40% improvement in case resolution time.", ar: "الدليل نظّم عملية إدارة القضايا بالكامل. شهدنا تحسناً بنسبة 40% في وقت حل القضايا." },
+    name: { en: "One of our clients", ar: "أحد عملائنا" },
+    role: { en: "Law Firm — Saudi Arabia", ar: "مكتب محاماة — المملكة العربية السعودية" },
+    quote: { en: "Aldalyel streamlined our entire case management process. We've seen a 40% improvement in case resolution time.", ar: "الدليل نظّم عملية إدارة القضايا بالكامل. شهدنا تحسناً بنسبة 40% في وقت حل القضايا." },
   },
   {
-    name: { en: "Mohammed Al-Harbi", ar: "محمد الحربي" },
-    role: { en: "COO, Desert Star Construction", ar: "مدير العمليات، شركة نجم الصحراء للمقاولات" },
+    name: { en: "One of our clients", ar: "أحد عملائنا" },
+    role: { en: "Construction Company — Saudi Arabia", ar: "شركة مقاولات — المملكة العربية السعودية" },
     quote: { en: "The integration between Nexdo and Booking modules gave us unprecedented visibility across our 2,000+ workforce.", ar: "التكامل بين نكست دو ونظام الحجوزات أعطانا رؤية غير مسبوقة عبر أكثر من ٢٬٠٠٠ موظف." },
   },
   {
-    name: { en: "Dr. Nora Al-Zahrani", ar: "د. نورا الزهراني" },
-    role: { en: "IT Manager, Riyadh Metro Project", ar: "مدير تقنية المعلومات، مشروع مترو الرياض" },
+    name: { en: "One of our clients", ar: "أحد عملائنا" },
+    role: { en: "Large-Scale Project — Saudi Arabia", ar: "مشروع كبير — المملكة العربية السعودية" },
     quote: { en: "Nzom Booking reduced our scheduling conflicts by 60% with smart room allocation and automated confirmations.", ar: "نزوم الحجوزات خفّض تعارضات الجدولة بنسبة 60% بفضل التخصيص الذكي للقاعات والتأكيدات الآلية." },
   },
 ];
