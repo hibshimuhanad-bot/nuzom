@@ -6,7 +6,7 @@ import {
   Briefcase, Calendar, Gavel,
   Target, Layers, KanbanSquare, Clock,
   CreditCard, Building2,
-  Receipt
+  Receipt, Star, MessageSquare, ThumbsUp
 } from "lucide-react";
 
 export interface PricingPlan {
