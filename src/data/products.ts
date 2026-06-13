@@ -107,6 +107,14 @@ export const products: Product[] = [
     rbacDesc: { en: "Everyone sees exactly what they need. Safety officers see everything. Workers see their tasks. Managers see their sites. No confusion, no overload.", ar: "كل واحد يشوف بالضبط اللي يخصه. مسؤول السلامة يشوف كل شيء. العامل يشوف مهامه. المدير يشوف مواقعه. بدون لخبطة، بدون حمل زايد." },
     analyticsDesc: { en: "See the safety pulse of your entire organization at a glance. Trends, patterns, weak spots — all visible before they become problems.", ar: "شوف نبض السلامة في كل منظمتك بنظرة وحدة. الاتجاهات، الأنماط، النقاط الضعيفة — كلها واضحة قبل لا تصير مشاكل." },
     securityDesc: { en: "Your safety data is sacred. Enterprise encryption, Saudi regulatory compliance, and audit trails that satisfy even Aramco standards.", ar: "بيانات السلامة حقتك مقدسة. تشفير مؤسسي، امتثال للأنظمة السعودية، ومسارات تدقيق ترضي حتى معايير أرامكو." },
+    testimonial: {
+      quote: {
+        en: "Zerisks transformed our safety compliance workflow. Incident reporting that used to take days now happens in real-time, and our audits became dramatically easier.",
+        ar: "زي ريسك حوّل سير عمل الامتثال بالسلامة عندنا. الإبلاغ عن الحوادث اللي كان ياخذ أيام صار يصير لحظياً، والتدقيق صار أسهل بشكل كبير.",
+      },
+      author: { en: "One of our clients", ar: "أحد عملائنا" },
+      role: { en: "Industrial Operations — Saudi Arabia", ar: "عمليات صناعية — المملكة العربية السعودية" },
+    },
   },
 
   // ═══════════════════════════════════════════
@@ -269,6 +277,14 @@ export const products: Product[] = [
     analyticsDesc: { en: "Know instantly — is your team fast or stuck? Which projects are healthy? Where are the bottlenecks? Real answers, not guesswork.", ar: "اعرف فوراً — فريقك سريع ولا عالق؟ أي المشاريع صحية؟ وين الاختناقات؟ إجابات حقيقية، مو تخمينات." },
     securityDesc: { en: "Your project data stays private. Enterprise encryption, access logs, and multi-tenant isolation keep everything locked down.", ar: "بيانات مشاريعك تبقى خاصة. تشفير مؤسسي، سجلات وصول، وعزل يحمي كل شيء." },
     screenshots: ["tasks-product-shot"],
+    testimonial: {
+      quote: {
+        en: "Nexdo gave us unprecedented visibility across our large workforce. Tasks finally route to the right people, deadlines stop slipping, and our managers spend their time on strategy instead of follow-ups.",
+        ar: "نكست دو أعطانا رؤية ما شفناها قبل عبر فريقنا الكبير. المهام أخيراً تروح للأشخاص الصحيحين، المواعيد بطّلت تطيح، والمديرون يصرفون وقتهم على الاستراتيجية بدل المتابعات.",
+      },
+      author: { en: "One of our clients", ar: "أحد عملائنا" },
+      role: { en: "Large-Scale Project — Saudi Arabia", ar: "مشروع كبير الحجم — المملكة العربية السعودية" },
+    },
   },
 
 
@@ -319,6 +335,14 @@ export const products: Product[] = [
     rbacDesc: { en: "Owners see all branches. Branch managers control their location. Staff see their schedules. Clients see their bookings. Simple, clean, no confusion.", ar: "أصحاب الأعمال يشوفون كل الفروع. مديرو الفروع يتحكمون بموقعهم. الموظفون يشوفون جداولهم. العملاء يشوفون حجوزاتهم. بسيط، نظيف، بدون لخبطة." },
     analyticsDesc: { en: "Which services make the most money? When are your peak hours? Which staff is booked the most? Answers to grow your business.", ar: "أي الخدمات تجيب أكثر فلوس؟ متى ساعات الذروة؟ أي موظف محجوز أكثر؟ إجابات تنمّي عملك." },
     securityDesc: { en: "Payment data encrypted. Client information protected. Fully compliant with Saudi commercial regulations.", ar: "بيانات الدفع مشفرة. معلومات العملاء محمية. متوافق بالكامل مع الأنظمة التجارية السعودية." },
+    testimonial: {
+      quote: {
+        en: "Nzom Booking reduced our scheduling conflicts dramatically with smart allocation and automated confirmations. Our front desk isn't glued to the phone anymore, and our branches finally run independently.",
+        ar: "نزوم الحجوزات خفّض تعارضات الجدولة بشكل كبير بفضل التخصيص الذكي والتأكيدات الآلية. الاستقبال ما عاد ملتصق بالتلفون، وفروعنا أخيراً تمشي باستقلالية.",
+      },
+      author: { en: "One of our clients", ar: "أحد عملائنا" },
+      role: { en: "Multi-Branch Service Business — Saudi Arabia", ar: "نشاط خدمي متعدد الفروع — المملكة العربية السعودية" },
+    },
   },
 
   // ═══════════════════════════════════════════
@@ -377,6 +401,14 @@ export const products: Product[] = [
       { en: "Native Arabic Support", ar: "دعم عربي أصيل" },
       { en: "No Credit Card · 14-Day Trial", ar: "بدون بطاقة ائتمان · تجربة 14 يوم" },
     ],
+    testimonial: {
+      quote: {
+        en: "Our pipeline finally feels under control. Leads stop falling through the cracks, follow-ups happen on time, and we can actually forecast revenue instead of guessing. Our sales team moves in harmony now.",
+        ar: "الـ pipeline حقنا أخيراً تحت السيطرة. الفرص بطّلت تطيح، المتابعات تصير في وقتها، وصرنا فعلاً نقدر نتوقّع الإيرادات بدل التخمين. فريق المبيعات يشتغل بانسجام الحين.",
+      },
+      author: { en: "One of our clients", ar: "أحد عملائنا" },
+      role: { en: "Sales Team — Saudi Arabia", ar: "فريق مبيعات — المملكة العربية السعودية" },
+    },
     pricing: [
       {
         name: { en: "Starter", ar: "البداية" },
