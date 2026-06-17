@@ -403,6 +403,36 @@ export const products: Product[] = [
       author: { en: "One of our clients", ar: "أحد عملائنا" },
       role: { en: "Multi-Branch Service Business — Saudi Arabia", ar: "نشاط خدمي متعدد الفروع — المملكة العربية السعودية" },
     },
+    pricing: [
+      {
+        name: { en: "Starter", ar: "البداية" },
+        price: { en: "249", ar: "249" },
+        period: { en: "SAR / month", ar: "ر.س / شهرياً" },
+        description: { en: "For single-branch businesses", ar: "للأعمال ذات الفرع الواحد" },
+        features: [
+          { en: "One branch", ar: "فرع واحد" },
+          { en: "Up to 500 bookings / month", ar: "حتى 500 حجز / شهر" },
+          { en: "Online booking 24/7", ar: "حجز إلكتروني 24/7" },
+          { en: "Automated reminders", ar: "تذكيرات تلقائية" },
+          { en: "ZATCA e-invoicing", ar: "فوترة إلكترونية متوافقة مع ZATCA" },
+        ],
+      },
+      {
+        name: { en: "Business", ar: "الأعمال" },
+        price: { en: "599", ar: "599" },
+        period: { en: "SAR / month", ar: "ر.س / شهرياً" },
+        description: { en: "For multi-branch service businesses", ar: "للأعمال الخدمية متعددة الفروع" },
+        features: [
+          { en: "Unlimited branches & bookings", ar: "فروع وحجوزات غير محدودة" },
+          { en: "Everything in Starter", ar: "كل ما في خطة البداية" },
+          { en: "Subscriptions & packages", ar: "الاشتراكات والباقات" },
+          { en: "WhatsApp notifications", ar: "إشعارات واتساب" },
+          { en: "Branch performance reports", ar: "تقارير أداء الفروع" },
+          { en: "Priority support", ar: "دعم بأولوية" },
+        ],
+        highlighted: true,
+      },
+    ],
   },
 
   // ═══════════════════════════════════════════
