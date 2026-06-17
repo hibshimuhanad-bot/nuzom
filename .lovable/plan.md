@@ -1,22 +1,28 @@
-## Plan: Anonymize All Testimonials
+## الخطة: إضافة خطط أسعار للمنتجات المتبقية
 
-### Goal
-Remove all real-sounding names and company roles from every testimonial across the site to eliminate any risk of being construed as impersonation or false endorsement, while keeping the testimonial quotes themselves.
+سأضيف حقل `pricing` لكل منتج في `src/data/products.ts` بنفس بنية خطط الدليل (خطتان لكل منتج: أساسية + موصى بها). الأسعار مقترحة بناءً على متوسطات سوق SaaS السعودي/الخليجي للفئات المستهدفة (SME).
 
-### Changes
+### الأسعار المقترحة (ر.س / شهرياً)
 
-1. **`src/data/products.ts`** — Update the two product-page testimonials:
-   - **Aldalyel testimonial** (lines 168-175): Replace `author` and `role` with generic bilingual placeholders (e.g., "One of our clients" / "أحد عملائنا" and "Saudi company" / "شركة سعودية").
-   - **Samaa Plus testimonial** (lines 486-493): Same replacement.
+| المنتج | Starter | Professional (موصى به) |
+|---|---|---|
+| **Zerisks HSSE** (سلامة صناعية) | 499 — حتى 25 عامل، موقع واحد | 1,299 — مواقع متعددة، عمال غير محدودين، تدقيق ISO |
+| **Nexdo** (إدارة مشاريع/مهام) | 99 / مستخدم | 199 / مستخدم — تقارير متقدمة + لوحات Gantt |
+| **Booking** (حجوزات متعددة الفروع) | 249 — فرع واحد، حتى 500 حجز/شهر | 599 — فروع غير محدودة + WhatsApp |
+| **CRM** (نمَاء CRM للمبيعات) | 79 / مستخدم | 179 / مستخدم — أتمتة + ذكاء اصطناعي |
+| **Samaa Plus** (مطاعم/F&B) | 349 / فرع | 799 / فرع — متعدد الفروع + ZATCA + تحليلات |
 
-2. **`src/components/home/Testimonials.tsx`** — Update the four homepage testimonials (lines 4-25):
-   - Replace every `name` and `role` field with the same generic bilingual placeholders.
-   - The `name[language].charAt(0)` avatar initializer will simply show the first letter of the generic label, which is acceptable.
+كل خطة تشمل 5–6 ميزات مكتوبة بالعربية والإنجليزية مأخوذة من ميزات المنتج الفعلية. خطة Professional ستحمل `highlighted: true`.
 
-### No structural changes
-- The `Testimonial` interface in `src/data/products.ts` stays unchanged.
-- `ProductPage.tsx` and `Testimonials.tsx` rendering logic stays unchanged — only the data values are swapped.
+### الملف الوحيد المعدَّل
+- `src/data/products.ts` — إضافة `pricing: [...]` داخل كائنات: zerisks, nexdo, booking, crm, samaa-plus.
 
-### Verification
-- Build passes.
-- Product pages and homepage render testimonials with quotes visible but names/roles replaced by generic text.
+### بدون تغييرات أخرى
+- لا تعديل في `ProductPage.tsx` (قسم الأسعار يظهر تلقائياً عند وجود `pricing`).
+- لا تعديل في الواجهة أو المكونات.
+
+### التحقق
+- بناء ناجح.
+- زيارة كل صفحة منتج للتأكد من ظهور قسم "أسعار بسيطة وواضحة" مع الخطتين.
+
+ملاحظة: إذا أردت تعديل أي سعر قبل التنفيذ أخبرني، وإلا سأنفذ بهذه الأرقام.
