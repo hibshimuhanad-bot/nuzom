@@ -315,6 +315,36 @@ export const products: Product[] = [
       author: { en: "One of our clients", ar: "أحد عملائنا" },
       role: { en: "Large-Scale Project — Saudi Arabia", ar: "مشروع كبير الحجم — المملكة العربية السعودية" },
     },
+    pricing: [
+      {
+        name: { en: "Team", ar: "الفريق" },
+        price: { en: "99", ar: "99" },
+        period: { en: "SAR / user / month", ar: "ر.س / مستخدم / شهرياً" },
+        description: { en: "For small teams getting organized", ar: "للفرق الصغيرة اللي تبدأ تنتظم" },
+        features: [
+          { en: "Unlimited projects & tasks", ar: "مشاريع ومهام غير محدودة" },
+          { en: "Kanban & timeline views", ar: "عروض كانبان والجدول الزمني" },
+          { en: "Task automation basics", ar: "أتمتة مهام أساسية" },
+          { en: "Bilingual interface (AR/EN)", ar: "واجهة ثنائية اللغة (عربي/إنجليزي)" },
+          { en: "Basic reports", ar: "تقارير أساسية" },
+        ],
+      },
+      {
+        name: { en: "Business", ar: "الأعمال" },
+        price: { en: "199", ar: "199" },
+        period: { en: "SAR / user / month", ar: "ر.س / مستخدم / شهرياً" },
+        description: { en: "For organizations managing portfolios", ar: "للمؤسسات اللي تدير محافظ مشاريع" },
+        features: [
+          { en: "Everything in Team", ar: "كل ما في خطة الفريق" },
+          { en: "Portfolios & programs", ar: "المحافظ والبرامج" },
+          { en: "Multi-company & departments", ar: "شركات متعددة وأقسام" },
+          { en: "Scheduled reports & dashboards", ar: "تقارير مجدولة ولوحات تحكم" },
+          { en: "Advanced workflow automation", ar: "أتمتة سير عمل متقدمة" },
+          { en: "Priority support", ar: "دعم بأولوية" },
+        ],
+        highlighted: true,
+      },
+    ],
   },
 
 
