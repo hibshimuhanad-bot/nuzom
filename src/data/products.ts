@@ -375,6 +375,24 @@ export const products: Product[] = [
         highlighted: true,
       },
     ],
+    faq: [
+      {
+        question: { en: "Do I need a credit card for the free trial?", ar: "هل أحتاج بطاقة ائتمان للتجربة المجانية؟" },
+        answer: { en: "No. Start your 14-day free trial instantly without any payment information. We'll only ask for billing details if you decide to continue.", ar: "لا. ابدأ تجربتك المجانية لمدة 14 يوم فوراً بدون أي بيانات دفع. نطلب بيانات الفوترة فقط إذا قررت الاستمرار." },
+      },
+      {
+        question: { en: "Where is my project data stored?", ar: "أين تُخزَّن بيانات مشاريعي؟" },
+        answer: { en: "All your data is hosted on secure servers inside Saudi Arabia, fully compliant with the Personal Data Protection Law (PDPL).", ar: "كل بياناتك مستضافة على خوادم آمنة داخل المملكة العربية السعودية، بامتثال كامل لنظام حماية البيانات الشخصية (PDPL)." },
+      },
+      {
+        question: { en: "Can I try Nexdo before subscribing?", ar: "هل أقدر أجرّب نكست دو قبل الاشتراك؟" },
+        answer: { en: "Yes. A live demo is available, and you can start a free trial to test the full system with your team before committing.", ar: "نعم. يوجد ديمو مباشر، وتقدر تبدأ تجربة مجانية لاختبار النظام كاملاً مع فريقك قبل الاشتراك." },
+      },
+      {
+        question: { en: "Does Nexdo integrate with other Nzom products?", ar: "هل يتكامل نكست دو مع منتجات نُظم الأخرى؟" },
+        answer: { en: "Yes. Nexdo works seamlessly with Namaa CRM and Aldalyel when you need them — and it stands alone perfectly for any team managing projects and tasks.", ar: "نعم. نكست دو يعمل بسلاسة مع نظام إدارة العملاء والدليل عند الحاجة — ويقف لوحده بكفاءة كاملة لأي فريق يدير مشاريع ومهام." },
+      },
+    ],
   },
 
 
