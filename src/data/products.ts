@@ -451,6 +451,12 @@ export const products: Product[] = [
       author: { en: "One of our clients", ar: "أحد عملائنا" },
       role: { en: "Multi-Branch Service Business — Saudi Arabia", ar: "نشاط خدمي متعدد الفروع — المملكة العربية السعودية" },
     },
+    trustBadges: [
+      { en: "PDPL Compliant", ar: "متوافق مع نظام حماية البيانات" },
+      { en: "ZATCA E-Invoicing Ready", ar: "متوافق مع الفوترة الإلكترونية ZATCA" },
+      { en: "Data Hosted in Saudi Arabia", ar: "بياناتك مستضافة في السعودية" },
+      { en: "Native Arabic Support", ar: "دعم عربي أصيل" },
+    ],
     pricing: [
       {
         name: { en: "Starter", ar: "البداية" },
@@ -479,6 +485,24 @@ export const products: Product[] = [
           { en: "Priority support", ar: "دعم بأولوية" },
         ],
         highlighted: true,
+      },
+    ],
+    faq: [
+      {
+        question: { en: "Is Nzom Booking ZATCA-compliant?", ar: "هل نزوم الحجوزات متوافق مع ZATCA؟" },
+        answer: { en: "Yes. Every invoice is generated as a compliant e-invoice with QR code and VAT details, following the Saudi ZATCA requirements.", ar: "نعم. كل فاتورة تتولّد كفاتورة إلكترونية متوافقة برمز QR وتفاصيل الضريبة، حسب متطلبات هيئة الزكاة والضريبة والجمارك (ZATCA)." },
+      },
+      {
+        question: { en: "Can clients book without downloading an app?", ar: "هل يقدر العملاء يحجزون بدون تنزيل تطبيق؟" },
+        answer: { en: "Yes. Booking happens through a public link your clients open on any browser — no app, no account creation required.", ar: "نعم. الحجز يصير عن طريق رابط عام يفتحه العميل من أي متصفح — بدون تطبيق، وبدون إنشاء حساب." },
+      },
+      {
+        question: { en: "Where is my booking and customer data stored?", ar: "أين تُخزَّن بيانات الحجوزات والعملاء؟" },
+        answer: { en: "All your data is hosted on secure servers inside Saudi Arabia, fully compliant with the Personal Data Protection Law (PDPL).", ar: "كل بياناتك مستضافة على خوادم آمنة داخل المملكة العربية السعودية، بامتثال كامل لنظام حماية البيانات الشخصية (PDPL)." },
+      },
+      {
+        question: { en: "Does Nzom Booking integrate with other Nzom products?", ar: "هل يتكامل نزوم الحجوزات مع منتجات نُظم الأخرى؟" },
+        answer: { en: "Yes. It pairs naturally with Sumaa Plus (turn satisfied customers into reviewers) and Namaa CRM (sync customer history) — and stands alone perfectly for any service business.", ar: "نعم. يتكامل بشكل طبيعي مع سمعة بلس (حوّل عملاءك الراضين إلى مراجعين) ونظام إدارة العملاء (مزامنة سجل العميل) — ويقف لوحده بكفاءة كاملة لأي نشاط خدمي." },
       },
     ],
   },
