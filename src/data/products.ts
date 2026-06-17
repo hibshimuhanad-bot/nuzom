@@ -115,6 +115,36 @@ export const products: Product[] = [
       author: { en: "One of our clients", ar: "أحد عملائنا" },
       role: { en: "Industrial Operations — Saudi Arabia", ar: "عمليات صناعية — المملكة العربية السعودية" },
     },
+    pricing: [
+      {
+        name: { en: "Starter", ar: "البداية" },
+        price: { en: "499", ar: "499" },
+        period: { en: "SAR / month", ar: "ر.س / شهرياً" },
+        description: { en: "For a single site, up to 25 workers", ar: "لموقع واحد، حتى 25 عاملاً" },
+        features: [
+          { en: "One site / location", ar: "موقع واحد" },
+          { en: "Up to 25 workers", ar: "حتى 25 عاملاً" },
+          { en: "Digital Permit to Work", ar: "تصاريح عمل رقمية" },
+          { en: "Incident reporting & investigation", ar: "بلاغات الحوادث والتحقيق" },
+          { en: "Risk register & inspections", ar: "سجل المخاطر والفحوصات" },
+        ],
+      },
+      {
+        name: { en: "Enterprise", ar: "المؤسسة" },
+        price: { en: "1,299", ar: "1,299" },
+        period: { en: "SAR / month", ar: "ر.س / شهرياً" },
+        description: { en: "Multi-site operations with full HSSE coverage", ar: "عمليات متعددة المواقع بتغطية كاملة للسلامة" },
+        features: [
+          { en: "Unlimited sites & workers", ar: "مواقع وعمّال غير محدودين" },
+          { en: "Everything in Starter", ar: "كل ما في خطة البداية" },
+          { en: "LOTO & Management of Change", ar: "عزل الطاقة وإدارة التغيير" },
+          { en: "ISO audits & compliance pack", ar: "تدقيق الآيزو وحزمة الامتثال" },
+          { en: "Training & lessons learned", ar: "التدريب والدروس المستفادة" },
+          { en: "Priority support & onboarding", ar: "دعم وتأهيل بأولوية" },
+        ],
+        highlighted: true,
+      },
+    ],
   },
 
   // ═══════════════════════════════════════════
@@ -285,6 +315,36 @@ export const products: Product[] = [
       author: { en: "One of our clients", ar: "أحد عملائنا" },
       role: { en: "Large-Scale Project — Saudi Arabia", ar: "مشروع كبير الحجم — المملكة العربية السعودية" },
     },
+    pricing: [
+      {
+        name: { en: "Team", ar: "الفريق" },
+        price: { en: "99", ar: "99" },
+        period: { en: "SAR / user / month", ar: "ر.س / مستخدم / شهرياً" },
+        description: { en: "For small teams getting organized", ar: "للفرق الصغيرة اللي تبدأ تنتظم" },
+        features: [
+          { en: "Unlimited projects & tasks", ar: "مشاريع ومهام غير محدودة" },
+          { en: "Kanban & timeline views", ar: "عروض كانبان والجدول الزمني" },
+          { en: "Task automation basics", ar: "أتمتة مهام أساسية" },
+          { en: "Bilingual interface (AR/EN)", ar: "واجهة ثنائية اللغة (عربي/إنجليزي)" },
+          { en: "Basic reports", ar: "تقارير أساسية" },
+        ],
+      },
+      {
+        name: { en: "Business", ar: "الأعمال" },
+        price: { en: "199", ar: "199" },
+        period: { en: "SAR / user / month", ar: "ر.س / مستخدم / شهرياً" },
+        description: { en: "For organizations managing portfolios", ar: "للمؤسسات اللي تدير محافظ مشاريع" },
+        features: [
+          { en: "Everything in Team", ar: "كل ما في خطة الفريق" },
+          { en: "Portfolios & programs", ar: "المحافظ والبرامج" },
+          { en: "Multi-company & departments", ar: "شركات متعددة وأقسام" },
+          { en: "Scheduled reports & dashboards", ar: "تقارير مجدولة ولوحات تحكم" },
+          { en: "Advanced workflow automation", ar: "أتمتة سير عمل متقدمة" },
+          { en: "Priority support", ar: "دعم بأولوية" },
+        ],
+        highlighted: true,
+      },
+    ],
   },
 
 
@@ -343,6 +403,36 @@ export const products: Product[] = [
       author: { en: "One of our clients", ar: "أحد عملائنا" },
       role: { en: "Multi-Branch Service Business — Saudi Arabia", ar: "نشاط خدمي متعدد الفروع — المملكة العربية السعودية" },
     },
+    pricing: [
+      {
+        name: { en: "Starter", ar: "البداية" },
+        price: { en: "249", ar: "249" },
+        period: { en: "SAR / month", ar: "ر.س / شهرياً" },
+        description: { en: "For single-branch businesses", ar: "للأعمال ذات الفرع الواحد" },
+        features: [
+          { en: "One branch", ar: "فرع واحد" },
+          { en: "Up to 500 bookings / month", ar: "حتى 500 حجز / شهر" },
+          { en: "Online booking 24/7", ar: "حجز إلكتروني 24/7" },
+          { en: "Automated reminders", ar: "تذكيرات تلقائية" },
+          { en: "ZATCA e-invoicing", ar: "فوترة إلكترونية متوافقة مع ZATCA" },
+        ],
+      },
+      {
+        name: { en: "Business", ar: "الأعمال" },
+        price: { en: "599", ar: "599" },
+        period: { en: "SAR / month", ar: "ر.س / شهرياً" },
+        description: { en: "For multi-branch service businesses", ar: "للأعمال الخدمية متعددة الفروع" },
+        features: [
+          { en: "Unlimited branches & bookings", ar: "فروع وحجوزات غير محدودة" },
+          { en: "Everything in Starter", ar: "كل ما في خطة البداية" },
+          { en: "Subscriptions & packages", ar: "الاشتراكات والباقات" },
+          { en: "WhatsApp notifications", ar: "إشعارات واتساب" },
+          { en: "Branch performance reports", ar: "تقارير أداء الفروع" },
+          { en: "Priority support", ar: "دعم بأولوية" },
+        ],
+        highlighted: true,
+      },
+    ],
   },
 
   // ═══════════════════════════════════════════
