@@ -1,31 +1,16 @@
-## توحيد Hero لكل المنتجات
+## Remove Secondary Buttons (CRM + Nexdo)
 
-### 1. تحديد حجم أقصى للعنوان (H1)
-في `src/pages/ProductPage.tsx` السطر 67:
-- **الحالي:** `text-3xl md:text-5xl lg:text-6xl` — يطلع ضخم جداً للأسماء الإنجليزية الطويلة (Nexdo Task Managment).
-- **الجديد:** `text-3xl md:text-4xl lg:text-5xl` + `max-w-2xl mx-auto` على H1 + `break-words` لضمان عدم الفيضان.
+All product pages should have a single unified primary CTA. Remove the hardcoded secondary buttons that currently appear only on Nexdo and CRM pages.
 
-النتيجة: عنوان "الدليل" و"Nexdo Task Managment" يطلعون بنفس الحجم تقريباً.
+### Changes
 
-### 2. توحيد الزر الأساسي على "ابدأ مجاناً"
-كل المنتجات تحتاج `primaryCTA` بنفس النص. الروابط المقترحة (في `src/data/products.ts`):
+**`src/pages/ProductPage.tsx`**
 
-| المنتج | الرابط الحالي | الزر |
-|---|---|---|
-| الدليل | `aldalyel.app/register` ✅ | ابدأ مجاناً |
-| CRM | `namaacrm.app/register` ✅ | ابدأ مجاناً |
-| Sumaa Plus | `sumaaplus.nzomlabs.com/login` ✅ | ابدأ مجاناً |
-| Nexdo | (ديمو فقط) | **ابدأ مجاناً** → `/contact` |
-| Booking | لا يوجد | **ابدأ مجاناً** → `/contact` |
-| Zerisks | لا يوجد | **ابدأ مجاناً** → `/contact` |
+Delete the two hardcoded conditional secondary button blocks:
 
-للمنتجات بدون رابط تسجيل: نضيف `primaryCTA` يوجّه لصفحة `/contact` بنفس النص "ابدأ مجاناً" / "Start Free".
+1.  **Nexdo secondary button** — `slug === "nexdo"` block that renders "جرّب الديمو" linking to the external demo.
+2.  **CRM secondary button** — `slug === "crm"` block that renders "زيارة الموقع" linking to namaacrm.app.
 
-ملاحظة: زر "جرّب الديمو" لـ Nexdo يبقى ثانوي (موجود بالفعل في ProductPage.tsx).
+After this change every product page will show only the primary CTA ("ابدأ مجاناً" / "Start Free").
 
-### الملفات المتأثرة
-- `src/pages/ProductPage.tsx` — تصغير حجم H1 + إضافة max-width.
-- `src/data/products.ts` — إضافة `primaryCTA` لـ Nexdo / Booking / Zerisks يوجّه للتواصل بنص "ابدأ مجاناً".
-
-### التحقق
-بعد التنفيذ: مقارنة `/products/aldalyel` و `/products/nexdo` و `/products/booking` بصرياً — نفس حجم العنوان، نفس الزر الأساسي البنفسجي.
+### No other files affected.
