@@ -115,6 +115,12 @@ export const products: Product[] = [
       author: { en: "One of our clients", ar: "أحد عملائنا" },
       role: { en: "Industrial Operations — Saudi Arabia", ar: "عمليات صناعية — المملكة العربية السعودية" },
     },
+    trustBadges: [
+      { en: "PDPL Compliant", ar: "متوافق مع نظام حماية البيانات" },
+      { en: "Data Hosted in Saudi Arabia", ar: "بياناتك مستضافة في السعودية" },
+      { en: "Native Arabic Support", ar: "دعم عربي أصيل" },
+      { en: "Aramco-Grade Standards", ar: "بمعايير ترضي أرامكو" },
+    ],
     pricing: [
       {
         name: { en: "Starter", ar: "البداية" },
@@ -143,6 +149,24 @@ export const products: Product[] = [
           { en: "Priority support & onboarding", ar: "دعم وتأهيل بأولوية" },
         ],
         highlighted: true,
+      },
+    ],
+    faq: [
+      {
+        question: { en: "Is Zerisks suitable for Saudi industrial sites?", ar: "هل زي ريسك مناسب للمواقع الصناعية السعودية؟" },
+        answer: { en: "Yes. Zerisks is built on Saudi regulatory requirements and meets the standards expected by Aramco, SABIC, and Ma'aden contractors.", ar: "نعم. زي ريسك مبني على الأنظمة السعودية ويلبّي المعايير المتوقعة من مقاولي أرامكو وسابك ومعادن." },
+      },
+      {
+        question: { en: "Can field workers report incidents from their phones?", ar: "هل يقدر العمّال يبلّغون عن الحوادث من جوّالاتهم؟" },
+        answer: { en: "Absolutely. Workers report incidents and submit permits from any device, in Arabic or English, even with weak connectivity.", ar: "بالتأكيد. العمّال يبلّغون عن الحوادث ويقدّمون التصاريح من أي جهاز، بالعربي أو الإنجليزي، حتى مع شبكة ضعيفة." },
+      },
+      {
+        question: { en: "Where is my safety data stored?", ar: "أين تُخزَّن بيانات السلامة؟" },
+        answer: { en: "All your data is hosted on secure servers inside Saudi Arabia, fully compliant with the Personal Data Protection Law (PDPL).", ar: "كل بياناتك مستضافة على خوادم آمنة داخل المملكة العربية السعودية، بامتثال كامل لنظام حماية البيانات الشخصية (PDPL)." },
+      },
+      {
+        question: { en: "Does Zerisks integrate with other Nzom products?", ar: "هل يتكامل زي ريسك مع منتجات نُظم الأخرى؟" },
+        answer: { en: "Yes. Zerisks works seamlessly alongside Nexdo (tasks) and Aldalyel (legal) when you need them — but it stands alone perfectly for HSSE teams.", ar: "نعم. زي ريسك يعمل بسلاسة مع نكست دو (المهام) والدليل (القانوني) عند الحاجة — لكنه يقف لوحده بكفاءة كاملة لفِرَق السلامة." },
       },
     ],
   },
