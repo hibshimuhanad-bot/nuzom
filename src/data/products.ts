@@ -86,7 +86,7 @@ export const products: Product[] = [
       ar: "تخيّل تبدأ صباحك ولوحة التحكم كلها خضراء — كل التصاريح معتمدة، كل الفحوصات مكتملة، صفر مخاطر مفتوحة. بدون اتصالات مفاجئة، بدون ركض آخر لحظة. تشرب قهوتك وأنت تعرف إن كل موقع شغّال بأمان. هذا وضعك الجديد."
     },
     icon: Shield,
-    color: "from-blue-500 to-cyan-600",
+    color: "from-primary to-accent",
     problem: {
       en: "You wake up worried. Are the permits in order? Did that incident get reported? Is the site actually safe? You spend your day chasing papers, calling supervisors, and hoping nothing falls through the cracks.",
       ar: "تصحى وأنت قلقان. هل التصاريح جاهزة؟ هل الحادث تم تبليغه؟ هل الموقع فعلاً آمن؟ يومك يروح وأنت تلاحق أوراق وتتصل بمشرفين وتتمنى إن ما في شيء ضايع."
@@ -171,7 +171,7 @@ export const products: Product[] = [
       ar: "تخيّل تدخل المحكمة وكل مستند جاهز، كل سابقة مبحوثة، كل موعد ملوّن في تقويمك. عميلك يسأل عن حالة القضية — تجاوبه في ثواني، مو ساعات. فريقك يشتغل بتناغم بدون سلسلة إيميلات. هذا العمل القانوني، بالطريقة الصحيحة."
     },
     icon: Scale,
-    color: "from-blue-500 to-cyan-600",
+    color: "from-primary to-accent",
     problem: {
       en: "You're drowning in files. Deadlines sneak up on you. Court dates get mixed up. Your team wastes hours searching for documents instead of building cases. It feels like you're always one step behind.",
       ar: "غارق في الملفات. المواعيد النهائية تفاجئك. جلسات المحكمة تتلخبط. فريقك يضيّع ساعات يدوّر مستندات بدل ما يبني قضايا. دايم تحس إنك متأخر خطوة."
@@ -285,7 +285,7 @@ export const products: Product[] = [
       ar: "تخيّل تفتح اللابتوب وتشوف لوحة نظيفة ومرتبة. كل مهمة معيّنة، كل موعد واضح، كل مشروع يتقدم. بدون ملاحقة أحد. بدون رسائل 'خلصت ذاك؟'. بس شغل هادي ومنتج."
     },
     icon: CheckSquare,
-    color: "from-violet-500 to-purple-600",
+    color: "from-primary to-accent",
     problem: {
       en: "Tired of chasing people one by one? Every day you waste time figuring out who did what. Tasks fall through the cracks. Projects feel chaotic. You're the bottleneck because everything flows through you.",
       ar: "تعبت من متابعة الناس واحد واحد؟ كل يوم تضيع وقت تدور مين سوى إيش. مهام تضيع بين الشقوق. المشاريع تحس بفوضى. أنت عنق الزجاجة لأن كل شيء يمر عليك."
@@ -374,7 +374,7 @@ export const products: Product[] = [
       ar: "تخيّل عملاءك يحجزون مواعيدهم من جوالاتهم الساعة 2 الصبح. التأكيدات ترسل تلقائياً. التذكيرات قبل الجلسة. الفواتير تتولّد فوراً. الاستقبال ما عاد ملتصق بالتلفون. فروعك تمشي باستقلالية. إيراداتك تنمو وأنت نايم."
     },
     icon: CalendarDays,
-    color: "from-pink-500 to-rose-600",
+    color: "from-primary to-accent",
     problem: {
       en: "Appointments via WhatsApp. Subscriptions in spreadsheets. Invoices by hand. Your receptionist is overwhelmed. Double bookings happen weekly. You have no idea which branch is performing better. Sound familiar?",
       ar: "المواعيد عبر الواتساب. الاشتراكات في جداول بيانات. الفواتير باليد. موظف الاستقبال مضغوط. حجوزات مزدوجة تصير كل أسبوع. ما تعرف أي فرع أفضل أداءً. مألوف؟"
@@ -459,7 +459,7 @@ export const products: Product[] = [
       ar: "تخيّل تفتح صباحك على pipeline واضح — كل فرصة مُقيّمة، كل صفقة في مرحلتها الصحيحة، كل متابعة مجدولة. فريقك يعرف بالضبط مين يكلّم ومتى وليش. الصفقات تبطّل تطيح. الإيرادات تصير متوقّعة. النمو يصير خطة، مو أمنية."
     },
     icon: Users,
-    color: "from-fuchsia-500 to-purple-600",
+    color: "from-primary to-accent",
     problem: {
       en: "Leads pile up in WhatsApp. Deals tracked in scattered spreadsheets. Follow-ups forgotten. Sales reps duplicate work. You don't know which deals will close this month — or why some keep slipping away.",
       ar: "الفرص تتكدّس في الواتساب. الصفقات متابَعة في جداول مبعثرة. المتابعات تُنسى. مندوبو المبيعات يكرّرون نفس الشغل. ما تعرف أي صفقات راح تُقفل هذا الشهر — ولا ليش بعضها يضيع منك."
@@ -573,7 +573,7 @@ export const products: Product[] = [
       ar: "تخيّل تبدأ صباحك بشاشة وحدة تعرض كل مراجعة من كل فرع — مصنّفة، مقيّمة، وجاهزة. المراجعات السلبية مرصودة قبل لا تنتشر. ردود مصاغة بالذكاء الاصطناعي تنتظر موافقتك بأسلوبك. مديرو فروعك يردّون بانسجام، مو باجتهادات. صوت علامتك يبقى هادئ، احترافي، إنساني — في كل موقع."
     },
     icon: Star,
-    color: "from-teal-500 to-emerald-600",
+    color: "from-primary to-accent",
     problem: {
       en: "Reviews land on Google before you see them. Each branch replies differently — or doesn't reply at all. A single 1-star review goes viral before anyone notices. You have no unified view across locations, no consistency, no control. Your reputation is being shaped without you in the room.",
       ar: "المراجعات تنزل على Google قبل ما تشوفها. كل فرع يرد بطريقته — أو ما يرد أصلاً. مراجعة وحدة بنجمة وحدة تنتشر قبل لا أحد ينتبه. ما عندك رؤية موحدة عبر الفروع، ولا انسجام، ولا سيطرة. سمعتك تتشكّل وأنت مو في الغرفة."
