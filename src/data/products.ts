@@ -115,6 +115,36 @@ export const products: Product[] = [
       author: { en: "One of our clients", ar: "أحد عملائنا" },
       role: { en: "Industrial Operations — Saudi Arabia", ar: "عمليات صناعية — المملكة العربية السعودية" },
     },
+    pricing: [
+      {
+        name: { en: "Starter", ar: "البداية" },
+        price: { en: "499", ar: "499" },
+        period: { en: "SAR / month", ar: "ر.س / شهرياً" },
+        description: { en: "For a single site, up to 25 workers", ar: "لموقع واحد، حتى 25 عاملاً" },
+        features: [
+          { en: "One site / location", ar: "موقع واحد" },
+          { en: "Up to 25 workers", ar: "حتى 25 عاملاً" },
+          { en: "Digital Permit to Work", ar: "تصاريح عمل رقمية" },
+          { en: "Incident reporting & investigation", ar: "بلاغات الحوادث والتحقيق" },
+          { en: "Risk register & inspections", ar: "سجل المخاطر والفحوصات" },
+        ],
+      },
+      {
+        name: { en: "Enterprise", ar: "المؤسسة" },
+        price: { en: "1,299", ar: "1,299" },
+        period: { en: "SAR / month", ar: "ر.س / شهرياً" },
+        description: { en: "Multi-site operations with full HSSE coverage", ar: "عمليات متعددة المواقع بتغطية كاملة للسلامة" },
+        features: [
+          { en: "Unlimited sites & workers", ar: "مواقع وعمّال غير محدودين" },
+          { en: "Everything in Starter", ar: "كل ما في خطة البداية" },
+          { en: "LOTO & Management of Change", ar: "عزل الطاقة وإدارة التغيير" },
+          { en: "ISO audits & compliance pack", ar: "تدقيق الآيزو وحزمة الامتثال" },
+          { en: "Training & lessons learned", ar: "التدريب والدروس المستفادة" },
+          { en: "Priority support & onboarding", ar: "دعم وتأهيل بأولوية" },
+        ],
+        highlighted: true,
+      },
+    ],
   },
 
   // ═══════════════════════════════════════════
