@@ -86,7 +86,7 @@ export const products: Product[] = [
       ar: "تخيّل تبدأ صباحك ولوحة التحكم كلها خضراء — كل التصاريح معتمدة، كل الفحوصات مكتملة، صفر مخاطر مفتوحة. بدون اتصالات مفاجئة، بدون ركض آخر لحظة. تشرب قهوتك وأنت تعرف إن كل موقع شغّال بأمان. هذا وضعك الجديد."
     },
     icon: Shield,
-    color: "from-blue-500 to-cyan-600",
+    color: "from-primary to-accent",
     problem: {
       en: "You wake up worried. Are the permits in order? Did that incident get reported? Is the site actually safe? You spend your day chasing papers, calling supervisors, and hoping nothing falls through the cracks.",
       ar: "تصحى وأنت قلقان. هل التصاريح جاهزة؟ هل الحادث تم تبليغه؟ هل الموقع فعلاً آمن؟ يومك يروح وأنت تلاحق أوراق وتتصل بمشرفين وتتمنى إن ما في شيء ضايع."
@@ -115,6 +115,12 @@ export const products: Product[] = [
       author: { en: "One of our clients", ar: "أحد عملائنا" },
       role: { en: "Industrial Operations — Saudi Arabia", ar: "عمليات صناعية — المملكة العربية السعودية" },
     },
+    trustBadges: [
+      { en: "PDPL Compliant", ar: "متوافق مع نظام حماية البيانات" },
+      { en: "Data Hosted in Saudi Arabia", ar: "بياناتك مستضافة في السعودية" },
+      { en: "Native Arabic Support", ar: "دعم عربي أصيل" },
+      { en: "Aramco-Grade Standards", ar: "بمعايير ترضي أرامكو" },
+    ],
     pricing: [
       {
         name: { en: "Starter", ar: "البداية" },
@@ -145,6 +151,24 @@ export const products: Product[] = [
         highlighted: true,
       },
     ],
+    faq: [
+      {
+        question: { en: "Is Zerisks suitable for Saudi industrial sites?", ar: "هل زي ريسك مناسب للمواقع الصناعية السعودية؟" },
+        answer: { en: "Yes. Zerisks is built on Saudi regulatory requirements and meets the standards expected by Aramco, SABIC, and Ma'aden contractors.", ar: "نعم. زي ريسك مبني على الأنظمة السعودية ويلبّي المعايير المتوقعة من مقاولي أرامكو وسابك ومعادن." },
+      },
+      {
+        question: { en: "Can field workers report incidents from their phones?", ar: "هل يقدر العمّال يبلّغون عن الحوادث من جوّالاتهم؟" },
+        answer: { en: "Absolutely. Workers report incidents and submit permits from any device, in Arabic or English, even with weak connectivity.", ar: "بالتأكيد. العمّال يبلّغون عن الحوادث ويقدّمون التصاريح من أي جهاز، بالعربي أو الإنجليزي، حتى مع شبكة ضعيفة." },
+      },
+      {
+        question: { en: "Where is my safety data stored?", ar: "أين تُخزَّن بيانات السلامة؟" },
+        answer: { en: "All your data is hosted on secure servers inside Saudi Arabia, fully compliant with the Personal Data Protection Law (PDPL).", ar: "كل بياناتك مستضافة على خوادم آمنة داخل المملكة العربية السعودية، بامتثال كامل لنظام حماية البيانات الشخصية (PDPL)." },
+      },
+      {
+        question: { en: "Does Zerisks integrate with other Nzom products?", ar: "هل يتكامل زي ريسك مع منتجات نُظم الأخرى؟" },
+        answer: { en: "Yes. Zerisks works seamlessly alongside Nexdo (tasks) and Aldalyel (legal) when you need them — but it stands alone perfectly for HSSE teams.", ar: "نعم. زي ريسك يعمل بسلاسة مع نكست دو (المهام) والدليل (القانوني) عند الحاجة — لكنه يقف لوحده بكفاءة كاملة لفِرَق السلامة." },
+      },
+    ],
   },
 
   // ═══════════════════════════════════════════
@@ -171,7 +195,7 @@ export const products: Product[] = [
       ar: "تخيّل تدخل المحكمة وكل مستند جاهز، كل سابقة مبحوثة، كل موعد ملوّن في تقويمك. عميلك يسأل عن حالة القضية — تجاوبه في ثواني، مو ساعات. فريقك يشتغل بتناغم بدون سلسلة إيميلات. هذا العمل القانوني، بالطريقة الصحيحة."
     },
     icon: Scale,
-    color: "from-blue-500 to-cyan-600",
+    color: "from-primary to-accent",
     problem: {
       en: "You're drowning in files. Deadlines sneak up on you. Court dates get mixed up. Your team wastes hours searching for documents instead of building cases. It feels like you're always one step behind.",
       ar: "غارق في الملفات. المواعيد النهائية تفاجئك. جلسات المحكمة تتلخبط. فريقك يضيّع ساعات يدوّر مستندات بدل ما يبني قضايا. دايم تحس إنك متأخر خطوة."
@@ -285,7 +309,7 @@ export const products: Product[] = [
       ar: "تخيّل تفتح اللابتوب وتشوف لوحة نظيفة ومرتبة. كل مهمة معيّنة، كل موعد واضح، كل مشروع يتقدم. بدون ملاحقة أحد. بدون رسائل 'خلصت ذاك؟'. بس شغل هادي ومنتج."
     },
     icon: CheckSquare,
-    color: "from-violet-500 to-purple-600",
+    color: "from-primary to-accent",
     problem: {
       en: "Tired of chasing people one by one? Every day you waste time figuring out who did what. Tasks fall through the cracks. Projects feel chaotic. You're the bottleneck because everything flows through you.",
       ar: "تعبت من متابعة الناس واحد واحد؟ كل يوم تضيع وقت تدور مين سوى إيش. مهام تضيع بين الشقوق. المشاريع تحس بفوضى. أنت عنق الزجاجة لأن كل شيء يمر عليك."
@@ -315,6 +339,12 @@ export const products: Product[] = [
       author: { en: "One of our clients", ar: "أحد عملائنا" },
       role: { en: "Large-Scale Project — Saudi Arabia", ar: "مشروع كبير الحجم — المملكة العربية السعودية" },
     },
+    trustBadges: [
+      { en: "PDPL Compliant", ar: "متوافق مع نظام حماية البيانات" },
+      { en: "Data Hosted in Saudi Arabia", ar: "بياناتك مستضافة في السعودية" },
+      { en: "Native Arabic Support", ar: "دعم عربي أصيل" },
+      { en: "No Credit Card · 14-Day Trial", ar: "بدون بطاقة ائتمان · تجربة 14 يوم" },
+    ],
     pricing: [
       {
         name: { en: "Team", ar: "الفريق" },
@@ -343,6 +373,24 @@ export const products: Product[] = [
           { en: "Priority support", ar: "دعم بأولوية" },
         ],
         highlighted: true,
+      },
+    ],
+    faq: [
+      {
+        question: { en: "Do I need a credit card for the free trial?", ar: "هل أحتاج بطاقة ائتمان للتجربة المجانية؟" },
+        answer: { en: "No. Start your 14-day free trial instantly without any payment information. We'll only ask for billing details if you decide to continue.", ar: "لا. ابدأ تجربتك المجانية لمدة 14 يوم فوراً بدون أي بيانات دفع. نطلب بيانات الفوترة فقط إذا قررت الاستمرار." },
+      },
+      {
+        question: { en: "Where is my project data stored?", ar: "أين تُخزَّن بيانات مشاريعي؟" },
+        answer: { en: "All your data is hosted on secure servers inside Saudi Arabia, fully compliant with the Personal Data Protection Law (PDPL).", ar: "كل بياناتك مستضافة على خوادم آمنة داخل المملكة العربية السعودية، بامتثال كامل لنظام حماية البيانات الشخصية (PDPL)." },
+      },
+      {
+        question: { en: "Can I try Nexdo before subscribing?", ar: "هل أقدر أجرّب نكست دو قبل الاشتراك؟" },
+        answer: { en: "Yes. A live demo is available, and you can start a free trial to test the full system with your team before committing.", ar: "نعم. يوجد ديمو مباشر، وتقدر تبدأ تجربة مجانية لاختبار النظام كاملاً مع فريقك قبل الاشتراك." },
+      },
+      {
+        question: { en: "Does Nexdo integrate with other Nzom products?", ar: "هل يتكامل نكست دو مع منتجات نُظم الأخرى؟" },
+        answer: { en: "Yes. Nexdo works seamlessly with Namaa CRM and Aldalyel when you need them — and it stands alone perfectly for any team managing projects and tasks.", ar: "نعم. نكست دو يعمل بسلاسة مع نظام إدارة العملاء والدليل عند الحاجة — ويقف لوحده بكفاءة كاملة لأي فريق يدير مشاريع ومهام." },
       },
     ],
   },
@@ -374,7 +422,7 @@ export const products: Product[] = [
       ar: "تخيّل عملاءك يحجزون مواعيدهم من جوالاتهم الساعة 2 الصبح. التأكيدات ترسل تلقائياً. التذكيرات قبل الجلسة. الفواتير تتولّد فوراً. الاستقبال ما عاد ملتصق بالتلفون. فروعك تمشي باستقلالية. إيراداتك تنمو وأنت نايم."
     },
     icon: CalendarDays,
-    color: "from-pink-500 to-rose-600",
+    color: "from-primary to-accent",
     problem: {
       en: "Appointments via WhatsApp. Subscriptions in spreadsheets. Invoices by hand. Your receptionist is overwhelmed. Double bookings happen weekly. You have no idea which branch is performing better. Sound familiar?",
       ar: "المواعيد عبر الواتساب. الاشتراكات في جداول بيانات. الفواتير باليد. موظف الاستقبال مضغوط. حجوزات مزدوجة تصير كل أسبوع. ما تعرف أي فرع أفضل أداءً. مألوف؟"
@@ -403,6 +451,12 @@ export const products: Product[] = [
       author: { en: "One of our clients", ar: "أحد عملائنا" },
       role: { en: "Multi-Branch Service Business — Saudi Arabia", ar: "نشاط خدمي متعدد الفروع — المملكة العربية السعودية" },
     },
+    trustBadges: [
+      { en: "PDPL Compliant", ar: "متوافق مع نظام حماية البيانات" },
+      { en: "ZATCA E-Invoicing Ready", ar: "متوافق مع الفوترة الإلكترونية ZATCA" },
+      { en: "Data Hosted in Saudi Arabia", ar: "بياناتك مستضافة في السعودية" },
+      { en: "Native Arabic Support", ar: "دعم عربي أصيل" },
+    ],
     pricing: [
       {
         name: { en: "Starter", ar: "البداية" },
@@ -433,6 +487,24 @@ export const products: Product[] = [
         highlighted: true,
       },
     ],
+    faq: [
+      {
+        question: { en: "Is Nzom Booking ZATCA-compliant?", ar: "هل نزوم الحجوزات متوافق مع ZATCA؟" },
+        answer: { en: "Yes. Every invoice is generated as a compliant e-invoice with QR code and VAT details, following the Saudi ZATCA requirements.", ar: "نعم. كل فاتورة تتولّد كفاتورة إلكترونية متوافقة برمز QR وتفاصيل الضريبة، حسب متطلبات هيئة الزكاة والضريبة والجمارك (ZATCA)." },
+      },
+      {
+        question: { en: "Can clients book without downloading an app?", ar: "هل يقدر العملاء يحجزون بدون تنزيل تطبيق؟" },
+        answer: { en: "Yes. Booking happens through a public link your clients open on any browser — no app, no account creation required.", ar: "نعم. الحجز يصير عن طريق رابط عام يفتحه العميل من أي متصفح — بدون تطبيق، وبدون إنشاء حساب." },
+      },
+      {
+        question: { en: "Where is my booking and customer data stored?", ar: "أين تُخزَّن بيانات الحجوزات والعملاء؟" },
+        answer: { en: "All your data is hosted on secure servers inside Saudi Arabia, fully compliant with the Personal Data Protection Law (PDPL).", ar: "كل بياناتك مستضافة على خوادم آمنة داخل المملكة العربية السعودية، بامتثال كامل لنظام حماية البيانات الشخصية (PDPL)." },
+      },
+      {
+        question: { en: "Does Nzom Booking integrate with other Nzom products?", ar: "هل يتكامل نزوم الحجوزات مع منتجات نُظم الأخرى؟" },
+        answer: { en: "Yes. It pairs naturally with Sumaa Plus (turn satisfied customers into reviewers) and Namaa CRM (sync customer history) — and stands alone perfectly for any service business.", ar: "نعم. يتكامل بشكل طبيعي مع سمعة بلس (حوّل عملاءك الراضين إلى مراجعين) ونظام إدارة العملاء (مزامنة سجل العميل) — ويقف لوحده بكفاءة كاملة لأي نشاط خدمي." },
+      },
+    ],
   },
 
   // ═══════════════════════════════════════════
@@ -459,7 +531,7 @@ export const products: Product[] = [
       ar: "تخيّل تفتح صباحك على pipeline واضح — كل فرصة مُقيّمة، كل صفقة في مرحلتها الصحيحة، كل متابعة مجدولة. فريقك يعرف بالضبط مين يكلّم ومتى وليش. الصفقات تبطّل تطيح. الإيرادات تصير متوقّعة. النمو يصير خطة، مو أمنية."
     },
     icon: Users,
-    color: "from-fuchsia-500 to-purple-600",
+    color: "from-primary to-accent",
     problem: {
       en: "Leads pile up in WhatsApp. Deals tracked in scattered spreadsheets. Follow-ups forgotten. Sales reps duplicate work. You don't know which deals will close this month — or why some keep slipping away.",
       ar: "الفرص تتكدّس في الواتساب. الصفقات متابَعة في جداول مبعثرة. المتابعات تُنسى. مندوبو المبيعات يكرّرون نفس الشغل. ما تعرف أي صفقات راح تُقفل هذا الشهر — ولا ليش بعضها يضيع منك."
@@ -573,7 +645,7 @@ export const products: Product[] = [
       ar: "تخيّل تبدأ صباحك بشاشة وحدة تعرض كل مراجعة من كل فرع — مصنّفة، مقيّمة، وجاهزة. المراجعات السلبية مرصودة قبل لا تنتشر. ردود مصاغة بالذكاء الاصطناعي تنتظر موافقتك بأسلوبك. مديرو فروعك يردّون بانسجام، مو باجتهادات. صوت علامتك يبقى هادئ، احترافي، إنساني — في كل موقع."
     },
     icon: Star,
-    color: "from-teal-500 to-emerald-600",
+    color: "from-primary to-accent",
     problem: {
       en: "Reviews land on Google before you see them. Each branch replies differently — or doesn't reply at all. A single 1-star review goes viral before anyone notices. You have no unified view across locations, no consistency, no control. Your reputation is being shaped without you in the room.",
       ar: "المراجعات تنزل على Google قبل ما تشوفها. كل فرع يرد بطريقته — أو ما يرد أصلاً. مراجعة وحدة بنجمة وحدة تنتشر قبل لا أحد ينتبه. ما عندك رؤية موحدة عبر الفروع، ولا انسجام، ولا سيطرة. سمعتك تتشكّل وأنت مو في الغرفة."
