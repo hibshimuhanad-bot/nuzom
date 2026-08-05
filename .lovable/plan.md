@@ -1,16 +1,38 @@
-## Remove Secondary Buttons (CRM + Nexdo)
+## كاروسيل Meta Ads — الحملة رقم 3 (جمع العملاء المحتملين / Leads)
 
-All product pages should have a single unified primary CTA. Remove the hardcoded secondary buttons that currently appear only on Nexdo and CRM pages.
+إنتاج شرائح PNG مربعة (1080×1080) جاهزة للرفع مباشرة في Meta Ads Manager، بهوية nzomlabs البصرية (خلفية #07060F، بنفسجي #7C6BFF، نص أبيض ناعم #FAFAFA، خط Noto Kufi Arabic).
 
-### Changes
+### بنية الكاروسيل (8 شرائح)
 
-**`src/pages/ProductPage.tsx`**
+| # | الشريحة | الرسالة |
+|---|---|---|
+| 1 | الهوك | "أنظمة جاهزة للتشغيل لمنشأتك — من يوم واحد" + شعار nzomlabs |
+| 2 | الدليل | إدارة القضايا والمستندات لمكاتب المحاماة |
+| 3 | نماء CRM | متابعة العملاء والصفقات بدون واتساب متفرّق |
+| 4 | سمعة بلس | إدارة تقييمات الفروع في مكان واحد |
+| 5 | Nexdo | إدارة المهام والمشاريع للفرق |
+| 6 | Zerisks HSSE | السلامة والامتثال للمنشآت الصناعية |
+| 7 | Nzom Booking | إدارة الحجوزات والمواعيد |
+| 8 | CTA | "احجز عرضاً مجانياً — عبّئ النموذج" + رقم واتساب + nzomlabs.com |
 
-Delete the two hardcoded conditional secondary button blocks:
+كل شريحة منتج تحمل: الشعار/الأيقونة، اسم المنتج، سطر ألم واحد، وسطر تحوّل واحد، وشريط سفلي موحّد بهوية nzomlabs.
 
-1.  **Nexdo secondary button** — `slug === "nexdo"` block that renders "جرّب الديمو" linking to the external demo.
-2.  **CRM secondary button** — `slug === "crm"` block that renders "زيارة الموقع" linking to namaacrm.app.
+### طريقة التنفيذ
 
-After this change every product page will show only the primary CTA ("ابدأ مجاناً" / "Start Free").
+- توليد الشرائح ببايثون (Pillow) داخل السandbox — تحكم دقيق بالتباعد والـ RTL، بدون توليد AI عشوائي.
+- تشكيل النص العربي عبر `arabic_reshaper` + `python-bidi` ليظهر متصلاً وباتجاه صحيح.
+- الخط: Noto Kufi Arabic (يُنزَّل من Google Fonts).
+- الشعارات: تُقرأ من روابط `src/lib/productLogos.ts` الحالية.
+- المخرجات: `/mnt/documents/meta-leads-carousel/slide-01.png` … `slide-08.png`.
+- ملف نصي مرافق `captions.md` يحتوي: النص الأساسي للإعلان (Primary Text)، عنوان كل بطاقة (Headline ≤40 حرف)، الوصف، وCTA المقترح "إرسال النموذج".
 
-### No other files affected.
+### مواصفات تقنية
+
+- 1080×1080 px، RGB، PNG.
+- منطقة آمنة 90px من كل حافة (Meta تقصّ الأطراف في بعض المواضع).
+- حد أقصى ~20% نص من مساحة الصورة لتفادي خفض التوصيل.
+- فحص بصري لكل شريحة بعد التوليد (تداخل، قصّ نص، تباين) وإعادة التوليد عند وجود مشاكل.
+
+### لا تغييرات على كود الموقع
+
+هذه مخرجات إعلانية فقط — لا تعديل على `src/`.
