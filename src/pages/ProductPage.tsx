@@ -11,11 +11,13 @@ import { Badge } from "@/components/ui/badge";
 import tasksScreenshot from "@/assets/screenshots/tasks-product-shot.png";
 import legalScreenshot from "@/assets/screenshots/legal-product-shot.png";
 import zerisksPreviewAsset from "@/assets/zerisks-preview.png.asset.json";
+import crmPreviewAsset from "@/assets/crm-preview.png.asset.json";
 import { logoMap } from "@/lib/productLogos";
 
 const screenshotMap: Record<string, string> = {
   nexdo: tasksScreenshot,
   zerisks: zerisksPreviewAsset.url,
+  crm: crmPreviewAsset.url,
   aldalyel: legalScreenshot,
 };
 
