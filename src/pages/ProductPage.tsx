@@ -14,6 +14,7 @@ import zerisksPreviewAsset from "@/assets/zerisks-preview.png.asset.json";
 import crmPreviewAsset from "@/assets/crm-preview.png.asset.json";
 import nexdoPreviewAsset from "@/assets/nexdo-preview.png.asset.json";
 import meeadiPreviewAsset from "@/assets/meeadi-preview.png.asset.json";
+import samaaPlusPreviewAsset from "@/assets/samaa-plus-preview.png.asset.json";
 import { logoMap } from "@/lib/productLogos";
 
 const screenshotMap: Record<string, string> = {
