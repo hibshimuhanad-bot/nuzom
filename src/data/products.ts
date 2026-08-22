@@ -277,7 +277,8 @@ export const products: Product[] = [
     securityDesc: { en: "Your project data stays private. Enterprise encryption, access logs, and multi-tenant isolation keep everything locked down.", ar: "بيانات مشاريعك تبقى خاصة. تشفير مؤسسي، سجلات وصول، وعزل يحمي كل شيء." },
     primaryCTA: {
       label: { en: "Start Free", ar: "ابدأ مجاناً" },
-      href: "/contact",
+      href: "https://nexdo.nzomlabs.com",
+      external: true,
     },
     screenshots: ["tasks-product-shot"],
     testimonial: {
