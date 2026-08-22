@@ -196,10 +196,10 @@ const FAQ = () => {
     const allItems = faqSections.flatMap((section) =>
       section.items.map((item) => ({
         "@type": "Question",
-        name: item.q.en,
+        name: item.q[language],
         acceptedAnswer: {
           "@type": "Answer",
-          text: item.a.en,
+          text: item.a[language],
         },
       }))
     );
@@ -222,7 +222,7 @@ const FAQ = () => {
     return () => {
       document.getElementById("faq-jsonld")?.remove();
     };
-  }, []);
+  }, [language]);
 
   return (
     <Layout>
