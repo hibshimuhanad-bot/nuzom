@@ -365,7 +365,8 @@ export const products: Product[] = [
     securityDesc: { en: "Payment data encrypted. Client information protected. Fully compliant with Saudi commercial regulations.", ar: "بيانات الدفع مشفرة. معلومات العملاء محمية. متوافق بالكامل مع الأنظمة التجارية السعودية." },
     primaryCTA: {
       label: { en: "Start Free", ar: "ابدأ مجاناً" },
-      href: "/contact",
+      href: "https://meeadi.nzomlabs.com",
+      external: true,
     },
     testimonial: {
       quote: {
