@@ -9,13 +9,13 @@ import ScrollReveal from "@/components/ScrollReveal";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import tasksScreenshot from "@/assets/screenshots/tasks-product-shot.png";
-import hsseScreenshot from "@/assets/screenshots/hsse-product-shot.png";
 import legalScreenshot from "@/assets/screenshots/legal-product-shot.png";
+import zerisksPreviewAsset from "@/assets/zerisks-preview.png.asset.json";
 import { logoMap } from "@/lib/productLogos";
 
 const screenshotMap: Record<string, string> = {
   nexdo: tasksScreenshot,
-  zerisks: hsseScreenshot,
+  zerisks: zerisksPreviewAsset.url,
   aldalyel: legalScreenshot,
 };
 
