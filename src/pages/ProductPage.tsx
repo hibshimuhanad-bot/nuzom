@@ -94,42 +94,6 @@ const ProductPage = () => {
         </div>
       </section>
 
-      {/* Screenshot Preview */}
-      {screenshotMap[product.slug] && (
-        <section className="py-14 md:py-20 bg-muted/30 relative overflow-hidden">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-primary/5 blur-[120px]" />
-          <div className="container mx-auto px-4 relative z-10">
-            <ScrollReveal>
-              <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-gradient-blue">{t("product.preview")}</h2>
-            </ScrollReveal>
-            <ScrollReveal delay={200}>
-              <div className="max-w-5xl mx-auto">
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <div className="rounded-xl overflow-hidden shadow-2xl shadow-primary/10 border border-border/30 transition-transform duration-500 hover:scale-[1.02] cursor-zoom-in">
-                      <img
-                        src={screenshotMap[product.slug]}
-                        alt={`${product.name[language]} dashboard`}
-                        className="w-full h-auto"
-                        loading="lazy"
-                      />
-                    </div>
-                  </DialogTrigger>
-                  <DialogContent className="max-w-[95vw] max-h-[95vh] p-2 bg-background/95 backdrop-blur-sm border-border/50">
-                    <img
-                      src={screenshotMap[product.slug]}
-                      alt={`${product.name[language]} dashboard`}
-                      className="w-full h-auto rounded-lg"
-                      loading="lazy"
-                    />
-                  </DialogContent>
-                </Dialog>
-              </div>
-            </ScrollReveal>
-          </div>
-        </section>
-      )}
-
       {/* Problem / Solution — Story */}
       <section className="py-14 md:py-20 bg-background relative">
         <div className="container mx-auto px-4 max-w-3xl relative z-10">
@@ -289,6 +253,42 @@ const ProductPage = () => {
                 </ScrollReveal>
               ))}
             </div>
+          </div>
+        </section>
+      )}
+
+      {/* Screenshot Preview */}
+      {screenshotMap[product.slug] && (
+        <section className="py-14 md:py-20 bg-muted/30 relative overflow-hidden">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-primary/5 blur-[120px]" />
+          <div className="container mx-auto px-4 relative z-10">
+            <ScrollReveal>
+              <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-gradient-blue">{t("product.preview")}</h2>
+            </ScrollReveal>
+            <ScrollReveal delay={200}>
+              <div className="max-w-5xl mx-auto">
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <div className="rounded-xl overflow-hidden shadow-2xl shadow-primary/10 border border-border/30 transition-transform duration-500 hover:scale-[1.02] cursor-zoom-in">
+                      <img
+                        src={screenshotMap[product.slug]}
+                        alt={`${product.name[language]} dashboard`}
+                        className="w-full h-auto"
+                        loading="lazy"
+                      />
+                    </div>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-[95vw] max-h-[95vh] p-2 bg-background/95 backdrop-blur-sm border-border/50">
+                    <img
+                      src={screenshotMap[product.slug]}
+                      alt={`${product.name[language]} dashboard`}
+                      className="w-full h-auto rounded-lg"
+                      loading="lazy"
+                    />
+                  </DialogContent>
+                </Dialog>
+              </div>
+            </ScrollReveal>
           </div>
         </section>
       )}
