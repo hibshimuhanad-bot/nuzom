@@ -33,9 +33,9 @@ const categoryToProduct: Record<string, ProductCta> = {
     cta: { en: "Learn how Nexdo eliminates project chaos", ar: "تعرّف كيف يقضي نكست دو على فوضى المشاريع" },
   },
   booking: {
-    slug: "booking",
-    name: { en: "Nzom Booking", ar: "نزوم الحجوزات" },
-    cta: { en: "Explore how Nzom Booking modernizes your appointments", ar: "استكشف كيف يُحدّث نزوم الحجوزات نظام مواعيدك" },
+    slug: "meeadi",
+    name: { en: "Meeadi", ar: "Meeadi" },
+    cta: { en: "Explore how Meeadi modernizes your appointments", ar: "استكشف كيف يُحدّث Meeadi نظام مواعيدك" },
   },
   crm: {
     slug: "crm",

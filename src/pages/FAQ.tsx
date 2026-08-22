@@ -156,28 +156,28 @@ const faqSections: FAQSection[] = [
   },
   {
     id: "booking",
-    title: { en: "Nzom Booking", ar: "نزوم الحجوزات" },
+    title: { en: "Meeadi", ar: "Meeadi" },
     icon: CalendarDays,
     items: [
       {
-        q: { en: "What types of businesses can use Nzom Booking?", ar: "ما أنواع الأعمال التي يمكنها استخدام نزوم الحجوزات؟" },
+        q: { en: "What types of businesses can use Meeadi?", ar: "ما أنواع الأعمال التي يمكنها استخدام Meeadi؟" },
         a: {
-          en: "Nzom Booking is ideal for clinics, salons, consulting offices, training centers, coworking spaces, and any service-based business that manages appointments and schedules.",
-          ar: "نزوم الحجوزات مثالي للعيادات والصالونات ومكاتب الاستشارات ومراكز التدريب ومساحات العمل المشتركة وأي عمل خدمي يدير مواعيد وجداول.",
+          en: "Meeadi is ideal for clinics, salons, consulting offices, training centers, coworking spaces, and any service-based business that manages appointments and schedules.",
+          ar: "Meeadi مثالي للعيادات والصالونات ومكاتب الاستشارات ومراكز التدريب ومساحات العمل المشتركة وأي عمل خدمي يدير مواعيد وجداول.",
         },
       },
       {
         q: { en: "Does it support ZATCA e-invoicing?", ar: "هل يدعم الفوترة الإلكترونية لهيئة الزكاة؟" },
         a: {
-          en: "Yes, Nzom Booking includes built-in ZATCA-compliant e-invoicing, so you can issue electronic invoices that meet Saudi regulatory requirements directly from the platform.",
-          ar: "نعم، يتضمن نزوم الحجوزات فوترة إلكترونية متوافقة مع متطلبات هيئة الزكاة والضريبة والجمارك، مما يتيح لك إصدار فواتير إلكترونية مباشرة من المنصة.",
+          en: "Yes, Meeadi includes built-in ZATCA-compliant e-invoicing, so you can issue electronic invoices that meet Saudi regulatory requirements directly from the platform.",
+          ar: "نعم، يتضمن Meeadi فوترة إلكترونية متوافقة مع متطلبات هيئة الزكاة والضريبة والجمارك، مما يتيح لك إصدار فواتير إلكترونية مباشرة من المنصة.",
         },
       },
       {
         q: { en: "Can customers book online by themselves?", ar: "هل يمكن للعملاء الحجز أونلاين بأنفسهم؟" },
         a: {
-          en: "Yes, Nzom Booking provides a customer-facing booking page where clients can view available slots, select services, and book appointments 24/7 without calling or messaging.",
-          ar: "نعم، يوفر نزوم الحجوزات صفحة حجز للعملاء يمكنهم من خلالها عرض الأوقات المتاحة واختيار الخدمات وحجز المواعيد على مدار الساعة بدون اتصال أو رسائل.",
+          en: "Yes, Meeadi provides a customer-facing booking page where clients can view available slots, select services, and book appointments 24/7 without calling or messaging.",
+          ar: "نعم، يوفر Meeadi صفحة حجز للعملاء يمكنهم من خلالها عرض الأوقات المتاحة واختيار الخدمات وحجز المواعيد على مدار الساعة بدون اتصال أو رسائل.",
         },
       },
     ],

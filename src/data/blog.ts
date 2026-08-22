@@ -14,7 +14,7 @@ export const blogCategories = [
   { id: "hsse", label: { en: "Safety", ar: "السلامة" } },
   { id: "legal", label: { en: "Legal", ar: "القانونية" } },
   { id: "tasks", label: { en: "Tasks", ar: "المهام" } },
-  { id: "booking", label: { en: "Booking", ar: "الحجوزات" } },
+  { id: "booking", label: { en: "Meeadi", ar: "Meeadi" } },
   { id: "crm", label: { en: "CRM & Sales", ar: "المبيعات والعملاء" } },
 ];
 

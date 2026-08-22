@@ -20,7 +20,7 @@ const testimonials = [
   {
     name: { en: "One of our clients", ar: "أحد عملائنا" },
     role: { en: "Large-Scale Project — Saudi Arabia", ar: "مشروع كبير — المملكة العربية السعودية" },
-    quote: { en: "Nzom Booking reduced our scheduling conflicts by 60% with smart room allocation and automated confirmations.", ar: "نزوم الحجوزات خفّض تعارضات الجدولة بنسبة 60% بفضل التخصيص الذكي للقاعات والتأكيدات الآلية." },
+    quote: { en: "Meeadi reduced our scheduling conflicts by 60% with smart room allocation and automated confirmations.", ar: "Meeadi خفّض تعارضات الجدولة بنسبة 60% بفضل التخصيص الذكي للقاعات والتأكيدات الآلية." },
   },
 ];
 
