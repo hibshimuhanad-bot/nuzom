@@ -14,9 +14,9 @@ import legalScreenshot from "@/assets/screenshots/legal-product-shot.png";
 import { logoMap } from "@/lib/productLogos";
 
 const screenshotMap: Record<string, string> = {
-  tasks: tasksScreenshot,
-  hsse: hsseScreenshot,
-  legal: legalScreenshot,
+  nexdo: tasksScreenshot,
+  zerisks: hsseScreenshot,
+  aldalyel: legalScreenshot,
 };
 
 
