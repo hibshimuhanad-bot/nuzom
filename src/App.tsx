@@ -41,6 +41,7 @@ const App = () => (
               <Route path="/contact" element={<Contact />} />
               <Route path="/admin/login" element={<AdminLogin />} />
               <Route path="/admin" element={<AdminDashboard />} />
+              <Route path="/products/booking" element={<Navigate to="/products/meeadi" replace />} />
               <Route path="/products/:slug" element={<ProductPage />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/unsubscribe" element={<Unsubscribe />} />
