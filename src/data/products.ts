@@ -322,16 +322,16 @@ export const products: Product[] = [
   // 7. BOOKING — الإحساس: السلاسة
   // ═══════════════════════════════════════════
   {
-    slug: "booking",
+    slug: "meeadi",
     available: true,
-    name: { en: "Nzom Booking", ar: "Nzom Booking" },
+    name: { en: "Meeadi", ar: "Meeadi" },
     tagline: {
       en: "Clients book easily. You grow effortlessly.",
       ar: "نظام إدارة الحجوزات والمواعيد"
     },
     description: {
-      en: "No more WhatsApp chaos. No more double bookings. Nzom Booking lets your clients book, pay, and subscribe — smoothly, professionally, automatically. You focus on service, we handle the logistics.",
-      ar: "خلاص من فوضى الواتساب. خلاص من الحجوزات المزدوجة. نزوم الحجوزات يخلّي عملاءك يحجزون ويدفعون ويشتركون — بسلاسة واحترافية وتلقائياً. أنت ركّز على خدمتك، والباقي علينا."
+      en: "No more WhatsApp chaos. No more double bookings. Meeadi lets your clients book, pay, and subscribe — smoothly, professionally, automatically. You focus on service, we handle the logistics.",
+      ar: "خلاص من فوضى الواتساب. خلاص من الحجوزات المزدوجة. Meeadi يخلّي عملاءك يحجزون ويدفعون ويشتركون — بسلاسة واحترافية وتلقائياً. أنت ركّز على خدمتك، والباقي علينا."
     },
     emotionalHook: {
       en: "Smooth bookings, happy clients.",
@@ -348,8 +348,8 @@ export const products: Product[] = [
       ar: "المواعيد عبر الواتساب. الاشتراكات في جداول بيانات. الفواتير باليد. موظف الاستقبال مضغوط. حجوزات مزدوجة تصير كل أسبوع. ما تعرف أي فرع أفضل أداءً. مألوف؟"
     },
     solution: {
-      en: "Nzom Booking digitalizes everything — scheduling, packages, reminders, invoicing, multi-branch management. Your clients get a smooth experience, and you get clear business visibility.",
-      ar: "نزوم الحجوزات يرقمن كل شيء — الجدولة، الباقات، التذكيرات، الفوترة، إدارة الفروع. عملاءك يحصلون تجربة سلسة، وأنت تحصل رؤية واضحة لعملك."
+      en: "Meeadi digitalizes everything — scheduling, packages, reminders, invoicing, multi-branch management. Your clients get a smooth experience, and you get clear business visibility.",
+      ar: "Meeadi يرقمن كل شيء — الجدولة، الباقات، التذكيرات، الفوترة، إدارة الفروع. عملاءك يحصلون تجربة سلسة، وأنت تحصل رؤية واضحة لعملك."
     },
     features: [
       { title: { en: "Appointment Management", ar: "إدارة المواعيد" }, description: { en: "Smart calendar that prevents double bookings. Clients book 24/7.", ar: "تقويم ذكي يمنع الحجوزات المزدوجة. العملاء يحجزون ٢٤/٧." }, icon: CalendarDays },
@@ -369,8 +369,8 @@ export const products: Product[] = [
     },
     testimonial: {
       quote: {
-        en: "Nzom Booking reduced our scheduling conflicts dramatically with smart allocation and automated confirmations. Our front desk isn't glued to the phone anymore, and our branches finally run independently.",
-        ar: "نزوم الحجوزات خفّض تعارضات الجدولة بشكل كبير بفضل التخصيص الذكي والتأكيدات الآلية. الاستقبال ما عاد ملتصق بالتلفون، وفروعنا أخيراً تمشي باستقلالية.",
+        en: "Meeadi reduced our scheduling conflicts dramatically with smart allocation and automated confirmations. Our front desk isn't glued to the phone anymore, and our branches finally run independently.",
+        ar: "Meeadi خفّض تعارضات الجدولة بشكل كبير بفضل التخصيص الذكي والتأكيدات الآلية. الاستقبال ما عاد ملتصق بالتلفون، وفروعنا أخيراً تمشي باستقلالية.",
       },
       author: { en: "One of our clients", ar: "أحد عملائنا" },
       role: { en: "Multi-Branch Service Business — Saudi Arabia", ar: "نشاط خدمي متعدد الفروع — المملكة العربية السعودية" },
@@ -383,7 +383,7 @@ export const products: Product[] = [
     ],
     faq: [
       {
-        question: { en: "Is Nzom Booking ZATCA-compliant?", ar: "هل نزوم الحجوزات متوافق مع ZATCA؟" },
+        question: { en: "Is Meeadi ZATCA-compliant?", ar: "هل Meeadi متوافق مع ZATCA؟" },
         answer: { en: "Yes. Every invoice is generated as a compliant e-invoice with QR code and VAT details, following the Saudi ZATCA requirements.", ar: "نعم. كل فاتورة تتولّد كفاتورة إلكترونية متوافقة برمز QR وتفاصيل الضريبة، حسب متطلبات هيئة الزكاة والضريبة والجمارك (ZATCA)." },
       },
       {
@@ -395,7 +395,7 @@ export const products: Product[] = [
         answer: { en: "All your data is hosted on secure servers inside Saudi Arabia, fully compliant with the Personal Data Protection Law (PDPL).", ar: "كل بياناتك مستضافة على خوادم آمنة داخل المملكة العربية السعودية، بامتثال كامل لنظام حماية البيانات الشخصية (PDPL)." },
       },
       {
-        question: { en: "Does Nzom Booking integrate with other Nzom products?", ar: "هل يتكامل نزوم الحجوزات مع منتجات نُظم الأخرى؟" },
+        question: { en: "Does Meeadi integrate with other Nzom products?", ar: "هل يتكامل Meeadi مع منتجات نُظم الأخرى؟" },
         answer: { en: "Yes. It pairs naturally with Sumaa Plus (turn satisfied customers into reviewers) and Namaa CRM (sync customer history) — and stands alone perfectly for any service business.", ar: "نعم. يتكامل بشكل طبيعي مع سمعة بلس (حوّل عملاءك الراضين إلى مراجعين) ونظام إدارة العملاء (مزامنة سجل العميل) — ويقف لوحده بكفاءة كاملة لأي نشاط خدمي." },
       },
     ],
@@ -564,7 +564,7 @@ export const products: Product[] = [
       },
       {
         question: { en: "Does Sumaa Plus integrate with other Nzom products?", ar: "هل يتكامل سمعة بلس مع منتجات نُظم الأخرى؟" },
-        answer: { en: "Yes. Sumaa Plus pairs naturally with Nzom Booking (turn happy customers into reviewers) and Namaa CRM (sync customer sentiment) — but it stands alone perfectly for any multi-branch business.", ar: "نعم. سمعة بلس يتكامل بشكل طبيعي مع نزوم الحجوزات (حوّل عملاءك السعداء إلى مراجعين) ونظام إدارة العملاء (مزامنة مشاعر العملاء) — ويقف لوحده بكفاءة كاملة لأي عمل متعدد الفروع." },
+        answer: { en: "Yes. Sumaa Plus pairs naturally with Meeadi (turn happy customers into reviewers) and Namaa CRM (sync customer sentiment) — but it stands alone perfectly for any multi-branch business.", ar: "نعم. سمعة بلس يتكامل بشكل طبيعي مع Meeadi (حوّل عملاءك السعداء إلى مراجعين) ونظام إدارة العملاء (مزامنة مشاعر العملاء) — ويقف لوحده بكفاءة كاملة لأي عمل متعدد الفروع." },
       },
     ],
   },
