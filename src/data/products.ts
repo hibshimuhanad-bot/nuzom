@@ -109,7 +109,8 @@ export const products: Product[] = [
     securityDesc: { en: "Your safety data is sacred. Enterprise encryption, Saudi regulatory compliance, and audit trails that satisfy even Aramco standards.", ar: "بيانات السلامة حقتك مقدسة. تشفير مؤسسي، امتثال للأنظمة السعودية، ومسارات تدقيق ترضي حتى معايير أرامكو." },
     primaryCTA: {
       label: { en: "Start Free", ar: "ابدأ مجاناً" },
-      href: "/contact",
+      href: "https://zerisks.nzomlabs.com",
+      external: true,
     },
     testimonial: {
       quote: {
@@ -124,36 +125,6 @@ export const products: Product[] = [
       { en: "Data Hosted in Saudi Arabia", ar: "بياناتك مستضافة في السعودية" },
       { en: "Native Arabic Support", ar: "دعم عربي أصيل" },
       { en: "Aramco-Grade Standards", ar: "بمعايير ترضي أرامكو" },
-    ],
-    pricing: [
-      {
-        name: { en: "Starter", ar: "البداية" },
-        price: { en: "499", ar: "499" },
-        period: { en: "SAR / month", ar: "ر.س / شهرياً" },
-        description: { en: "For a single site, up to 25 workers", ar: "لموقع واحد، حتى 25 عاملاً" },
-        features: [
-          { en: "One site / location", ar: "موقع واحد" },
-          { en: "Up to 25 workers", ar: "حتى 25 عاملاً" },
-          { en: "Digital Permit to Work", ar: "تصاريح عمل رقمية" },
-          { en: "Incident reporting & investigation", ar: "بلاغات الحوادث والتحقيق" },
-          { en: "Risk register & inspections", ar: "سجل المخاطر والفحوصات" },
-        ],
-      },
-      {
-        name: { en: "Enterprise", ar: "المؤسسة" },
-        price: { en: "1,299", ar: "1,299" },
-        period: { en: "SAR / month", ar: "ر.س / شهرياً" },
-        description: { en: "Multi-site operations with full HSSE coverage", ar: "عمليات متعددة المواقع بتغطية كاملة للسلامة" },
-        features: [
-          { en: "Unlimited sites & workers", ar: "مواقع وعمّال غير محدودين" },
-          { en: "Everything in Starter", ar: "كل ما في خطة البداية" },
-          { en: "LOTO & Management of Change", ar: "عزل الطاقة وإدارة التغيير" },
-          { en: "ISO audits & compliance pack", ar: "تدقيق الآيزو وحزمة الامتثال" },
-          { en: "Training & lessons learned", ar: "التدريب والدروس المستفادة" },
-          { en: "Priority support & onboarding", ar: "دعم وتأهيل بأولوية" },
-        ],
-        highlighted: true,
-      },
     ],
     faq: [
       {
@@ -239,36 +210,6 @@ export const products: Product[] = [
       author: { en: "One of our clients", ar: "أحد عملائنا" },
       role: { en: "Law Firm — Saudi Arabia", ar: "مكتب محاماة — المملكة العربية السعودية" },
     },
-    pricing: [
-      {
-        name: { en: "Individual", ar: "الفرد" },
-        price: { en: "149", ar: "149" },
-        period: { en: "SAR / month", ar: "ر.س / شهرياً" },
-        description: { en: "Perfect for solo lawyers", ar: "مثالي للمحامي المستقل" },
-        features: [
-          { en: "One lawyer account", ar: "حساب محامٍ واحد" },
-          { en: "Unlimited cases", ar: "قضايا غير محدودة" },
-          { en: "Smart calendar & reminders", ar: "تقويم ذكي وتذكيرات" },
-          { en: "Basic billing", ar: "فوترة أساسية" },
-          { en: "Document management", ar: "إدارة المستندات" },
-        ],
-      },
-      {
-        name: { en: "Small Firm", ar: "مكتب صغير" },
-        price: { en: "299", ar: "299" },
-        period: { en: "SAR / month", ar: "ر.س / شهرياً" },
-        description: { en: "For firms up to 5 lawyers", ar: "لمكاتب حتى 5 محامين" },
-        features: [
-          { en: "Up to 5 lawyer accounts", ar: "حتى 5 حسابات محامين" },
-          { en: "Everything in Individual", ar: "كل ما في خطة الفرد" },
-          { en: "Team management & roles", ar: "إدارة الفريق والصلاحيات" },
-          { en: "Advanced reports", ar: "تقارير متقدمة" },
-          { en: "Client portal", ar: "بوابة العملاء" },
-          { en: "Priority support", ar: "دعم ذو أولوية" },
-        ],
-        highlighted: true,
-      },
-    ],
     faq: [
       {
         question: { en: "Do I need a credit card for the free trial?", ar: "هل أحتاج بطاقة ائتمان للتجربة المجانية؟" },
@@ -352,36 +293,6 @@ export const products: Product[] = [
       { en: "Data Hosted in Saudi Arabia", ar: "بياناتك مستضافة في السعودية" },
       { en: "Native Arabic Support", ar: "دعم عربي أصيل" },
       { en: "No Credit Card · 14-Day Trial", ar: "بدون بطاقة ائتمان · تجربة 14 يوم" },
-    ],
-    pricing: [
-      {
-        name: { en: "Team", ar: "الفريق" },
-        price: { en: "99", ar: "99" },
-        period: { en: "SAR / user / month", ar: "ر.س / مستخدم / شهرياً" },
-        description: { en: "For small teams getting organized", ar: "للفرق الصغيرة اللي تبدأ تنتظم" },
-        features: [
-          { en: "Unlimited projects & tasks", ar: "مشاريع ومهام غير محدودة" },
-          { en: "Kanban & timeline views", ar: "عروض كانبان والجدول الزمني" },
-          { en: "Task automation basics", ar: "أتمتة مهام أساسية" },
-          { en: "Bilingual interface (AR/EN)", ar: "واجهة ثنائية اللغة (عربي/إنجليزي)" },
-          { en: "Basic reports", ar: "تقارير أساسية" },
-        ],
-      },
-      {
-        name: { en: "Business", ar: "الأعمال" },
-        price: { en: "199", ar: "199" },
-        period: { en: "SAR / user / month", ar: "ر.س / مستخدم / شهرياً" },
-        description: { en: "For organizations managing portfolios", ar: "للمؤسسات اللي تدير محافظ مشاريع" },
-        features: [
-          { en: "Everything in Team", ar: "كل ما في خطة الفريق" },
-          { en: "Portfolios & programs", ar: "المحافظ والبرامج" },
-          { en: "Multi-company & departments", ar: "شركات متعددة وأقسام" },
-          { en: "Scheduled reports & dashboards", ar: "تقارير مجدولة ولوحات تحكم" },
-          { en: "Advanced workflow automation", ar: "أتمتة سير عمل متقدمة" },
-          { en: "Priority support", ar: "دعم بأولوية" },
-        ],
-        highlighted: true,
-      },
     ],
     faq: [
       {
@@ -469,36 +380,6 @@ export const products: Product[] = [
       { en: "Data Hosted in Saudi Arabia", ar: "بياناتك مستضافة في السعودية" },
       { en: "Native Arabic Support", ar: "دعم عربي أصيل" },
     ],
-    pricing: [
-      {
-        name: { en: "Starter", ar: "البداية" },
-        price: { en: "249", ar: "249" },
-        period: { en: "SAR / month", ar: "ر.س / شهرياً" },
-        description: { en: "For single-branch businesses", ar: "للأعمال ذات الفرع الواحد" },
-        features: [
-          { en: "One branch", ar: "فرع واحد" },
-          { en: "Up to 500 bookings / month", ar: "حتى 500 حجز / شهر" },
-          { en: "Online booking 24/7", ar: "حجز إلكتروني 24/7" },
-          { en: "Automated reminders", ar: "تذكيرات تلقائية" },
-          { en: "ZATCA e-invoicing", ar: "فوترة إلكترونية متوافقة مع ZATCA" },
-        ],
-      },
-      {
-        name: { en: "Business", ar: "الأعمال" },
-        price: { en: "599", ar: "599" },
-        period: { en: "SAR / month", ar: "ر.س / شهرياً" },
-        description: { en: "For multi-branch service businesses", ar: "للأعمال الخدمية متعددة الفروع" },
-        features: [
-          { en: "Unlimited branches & bookings", ar: "فروع وحجوزات غير محدودة" },
-          { en: "Everything in Starter", ar: "كل ما في خطة البداية" },
-          { en: "Subscriptions & packages", ar: "الاشتراكات والباقات" },
-          { en: "WhatsApp notifications", ar: "إشعارات واتساب" },
-          { en: "Branch performance reports", ar: "تقارير أداء الفروع" },
-          { en: "Priority support", ar: "دعم بأولوية" },
-        ],
-        highlighted: true,
-      },
-    ],
     faq: [
       {
         question: { en: "Is Nzom Booking ZATCA-compliant?", ar: "هل نزوم الحجوزات متوافق مع ZATCA؟" },
@@ -583,36 +464,6 @@ export const products: Product[] = [
       author: { en: "One of our clients", ar: "أحد عملائنا" },
       role: { en: "Sales Team — Saudi Arabia", ar: "فريق مبيعات — المملكة العربية السعودية" },
     },
-    pricing: [
-      {
-        name: { en: "Starter", ar: "البداية" },
-        price: { en: "199", ar: "199" },
-        period: { en: "SAR / month", ar: "ر.س / شهرياً" },
-        description: { en: "For small sales teams getting started", ar: "لفرق المبيعات الصغيرة اللي تبدأ" },
-        features: [
-          { en: "Up to 3 sales reps", ar: "حتى 3 مندوبي مبيعات" },
-          { en: "Unlimited contacts & companies", ar: "عملاء وشركات بدون حد" },
-          { en: "Visual deals pipeline", ar: "Pipeline مبيعات مرئي" },
-          { en: "Tasks & follow-ups", ar: "المهام والمتابعات" },
-          { en: "Basic reports", ar: "تقارير أساسية" },
-        ],
-      },
-      {
-        name: { en: "Growth", ar: "النمو" },
-        price: { en: "399", ar: "399" },
-        period: { en: "SAR / month", ar: "ر.س / شهرياً" },
-        description: { en: "For growing teams ready to scale", ar: "للفرق الجاهزة تنمو وتتوسّع" },
-        features: [
-          { en: "Up to 10 sales reps", ar: "حتى 10 مندوبي مبيعات" },
-          { en: "Everything in Starter", ar: "كل ما في خطة البداية" },
-          { en: "Lead scoring", ar: "تقييم الفرص (Lead scoring)" },
-          { en: "Advanced reports & dashboards", ar: "تقارير ولوحات تحكم متقدمة" },
-          { en: "Sales automations", ar: "أتمتة المبيعات" },
-          { en: "Priority support", ar: "دعم ذو أولوية" },
-        ],
-        highlighted: true,
-      },
-    ],
     faq: [
       {
         question: { en: "Do I need a credit card for the free trial?", ar: "هل أحتاج بطاقة ائتمان للتجربة المجانية؟" },
@@ -697,36 +548,6 @@ export const products: Product[] = [
       author: { en: "One of our clients", ar: "أحد عملائنا" },
       role: { en: "Multi-Branch F&B Group — Saudi Arabia", ar: "مجموعة مطاعم متعددة الفروع — المملكة العربية السعودية" },
     },
-    pricing: [
-      {
-        name: { en: "Starter", ar: "البداية" },
-        price: { en: "199", ar: "199" },
-        period: { en: "SAR / month", ar: "ر.س / شهرياً" },
-        description: { en: "For single-branch businesses", ar: "للأعمال ذات الفرع الواحد" },
-        features: [
-          { en: "One branch / Google location", ar: "فرع واحد / موقع Google واحد" },
-          { en: "Unlimited reviews sync", ar: "مزامنة مراجعات غير محدودة" },
-          { en: "AI Arabic reply drafts", ar: "ردود ذكية مسوّدة بالعربية" },
-          { en: "Critical review alerts", ar: "تنبيهات المراجعات الحرجة" },
-          { en: "Basic reports", ar: "تقارير أساسية" },
-        ],
-      },
-      {
-        name: { en: "Business", ar: "الأعمال" },
-        price: { en: "499", ar: "499" },
-        period: { en: "SAR / month", ar: "ر.س / شهرياً" },
-        description: { en: "For multi-branch organizations", ar: "للمؤسسات متعددة الفروع" },
-        features: [
-          { en: "Up to 10 branches", ar: "حتى 10 فروع" },
-          { en: "Everything in Starter", ar: "كل ما في خطة البداية" },
-          { en: "Approval workflows & roles", ar: "سير عمل الموافقات والصلاحيات" },
-          { en: "Competitor benchmarking", ar: "مقارنة المنافسين" },
-          { en: "Advanced trend reports", ar: "تقارير اتجاهات متقدمة" },
-          { en: "Priority support", ar: "دعم ذو أولوية" },
-        ],
-        highlighted: true,
-      },
-    ],
     faq: [
       {
         question: { en: "Do I need a credit card for the free trial?", ar: "هل أحتاج بطاقة ائتمان للتجربة المجانية؟" },
