@@ -109,7 +109,8 @@ export const products: Product[] = [
     securityDesc: { en: "Your safety data is sacred. Enterprise encryption, Saudi regulatory compliance, and audit trails that satisfy even Aramco standards.", ar: "بيانات السلامة حقتك مقدسة. تشفير مؤسسي، امتثال للأنظمة السعودية، ومسارات تدقيق ترضي حتى معايير أرامكو." },
     primaryCTA: {
       label: { en: "Start Free", ar: "ابدأ مجاناً" },
-      href: "/contact",
+      href: "https://zerisks.nzomlabs.com",
+      external: true,
     },
     testimonial: {
       quote: {
