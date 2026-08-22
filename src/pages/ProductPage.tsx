@@ -23,6 +23,7 @@ const screenshotMap: Record<string, string> = {
   crm: crmPreviewAsset.url,
   aldalyel: legalScreenshot,
   meeadi: meeadiPreviewAsset.url,
+  "samaa-plus": samaaPlusPreviewAsset.url,
 };
 
 
