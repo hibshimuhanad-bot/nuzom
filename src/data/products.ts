@@ -7,7 +7,7 @@ import {
   Target, Layers, KanbanSquare, Clock,
   CreditCard, Building2,
   Receipt, Star, MessageSquare, ThumbsUp,
-  UserCheck, Activity, ScanLine
+  UserCheck, Activity, ScanLine, ShieldCheck
 } from "lucide-react";
 
 export interface PricingPlan {
