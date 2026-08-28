@@ -15,6 +15,7 @@ import crmPreviewAsset from "@/assets/crm-preview.png.asset.json";
 import nexdoPreviewAsset from "@/assets/nexdo-preview.png.asset.json";
 import meeadiPreviewAsset from "@/assets/meeadi-preview.png.asset.json";
 import samaaPlusPreviewAsset from "@/assets/samaa-plus-preview.png.asset.json";
+import visitorpathPreviewAsset from "@/assets/visitorpath-preview.png.asset.json";
 import { logoMap } from "@/lib/productLogos";
 
 const screenshotMap: Record<string, string> = {
@@ -24,6 +25,7 @@ const screenshotMap: Record<string, string> = {
   aldalyel: legalScreenshot,
   meeadi: meeadiPreviewAsset.url,
   "samaa-plus": samaaPlusPreviewAsset.url,
+  "visitor-path": visitorpathPreviewAsset.url,
 };
 
 
