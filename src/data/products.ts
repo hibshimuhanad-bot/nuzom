@@ -630,8 +630,8 @@ export const products: Product[] = [
     ],
     testimonial: {
       quote: {
-        en: "Reception used to waste half the day calling hosts about arrivals. With Visitor Path, guests check in by QR and approvals happen from the phone. We finally know who's in the building at any moment.",
-        ar: "الاستقبال كان يضيّع نص يومه يتصل على المستضيفين عن الواصلين. مع Visitor Path، الضيوف يسجلون بـ QR والموافقات تصير من الجوال. أخيراً نعرف من موجود بالمبنى في أي لحظة.",
+        en: "Reception used to waste half the day calling hosts about arrivals. With Visitor Path, guests are checked in at the front desk in seconds and approvals happen from the phone. We finally know who's in the building at any moment.",
+        ar: "الاستقبال كان يضيّع نص يومه يتصل على المستضيفين عن الواصلين. مع Visitor Path، الضيوف يُسجَّل دخولهم عند الاستقبال خلال ثواني والموافقات تصير من الجوال. أخيراً نعرف من موجود بالمبنى في أي لحظة.",
       },
       author: { en: "One of our clients", ar: "أحد عملائنا" },
       role: { en: "Corporate Facility — Saudi Arabia", ar: "منشأة شركات — المملكة العربية السعودية" },
@@ -639,7 +639,7 @@ export const products: Product[] = [
     faq: [
       {
         question: { en: "Do visitors need to install an app?", ar: "هل يحتاج الزوار لتثبيت تطبيق؟" },
-        answer: { en: "No. Visitors receive an invitation with a QR code. Reception scans it for instant check-in — no downloads, no accounts needed for guests.", ar: "لا. الزائر يستلم دعوة فيها رمز QR. الاستقبال يمسحه لتسجيل الدخول فوراً — بدون تحميلات، وبدون حسابات للضيوف." },
+        answer: { en: "No. The visitor only receives an invitation, and check-in happens in person at reception — no downloads, no accounts needed for guests.", ar: "لا. الزائر يستلم دعوة فقط، والتسجيل يتم حضورياً عند الاستقبال — بدون تحميلات، وبدون حسابات للضيوف." },
       },
       {
         question: { en: "How does watchlist screening work?", ar: "كيف يعمل فحص قائمة المراقبة؟" },
@@ -650,10 +650,11 @@ export const products: Product[] = [
         answer: { en: "Yes. Visitor Path is tenant-scoped with multi-location support. Each location has its own capacity limits, reception workspace, and live occupancy view.", ar: "نعم. Visitor Path متعدد المستأجرين ويدعم تعدد المواقع. كل موقع له حدود سعة خاصة، ومساحة استقبال خاصة، وعرض إشغال مباشر مستقل." },
       },
       {
-        question: { en: "Does Visitor Path integrate with other Nzom products?", ar: "هل يتكامل Visitor Path مع منتجات نُظم الأخرى؟" },
-        answer: { en: "Yes. It pairs naturally with Zerisks HSSE (site safety and permits) and Nexdo (follow-up tasks) — and stands alone perfectly for any facility that receives visitors.", ar: "نعم. يتكامل بشكل طبيعي مع Zerisks HSSE (سلامة المواقع والتصاريح) ونكست دو (مهام المتابعة) — ويقف لوحده بكفاءة كاملة لأي منشأة تستقبل زواراً." },
+        question: { en: "Is visitor data stored securely?", ar: "هل بيانات الزوار محفوظة وآمنة؟" },
+        answer: { en: "Yes. Access is role-based, each organization's data is fully isolated, and every action is recorded in an audit log — with data hosted in Saudi Arabia and aligned with PDPL.", ar: "نعم. الصلاحيات حسب الدور، وبيانات كل منشأة معزولة تماماً، وكل عملية مسجّلة في سجل التدقيق — والبيانات مستضافة في السعودية ومتوافقة مع نظام حماية البيانات." },
       },
     ],
+
   },
 
 ];
