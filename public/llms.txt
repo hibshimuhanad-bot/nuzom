@@ -19,6 +19,7 @@
 - [Nexdo (Tasks)](/products/tasks): Project and task management built to eliminate operational chaos.
 - [Meeadi](/products/meeadi): Professional appointment and booking system for service businesses.
 - [Customers Relation Managments (CRM)](/products/crm): Multi-tenant CRM covering contacts, deals, leads, and pipelines.
+- [Visitor Path](/products/visitor-path): Visitor management system — invitations, QR check-in, approvals, watchlist screening, live occupancy, and audit reporting.
 
 ## Blog highlights
 

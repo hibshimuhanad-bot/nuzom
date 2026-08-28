@@ -6,7 +6,8 @@ import {
   Briefcase, Calendar, Gavel,
   Target, Layers, KanbanSquare, Clock,
   CreditCard, Building2,
-  Receipt, Star, MessageSquare, ThumbsUp
+  Receipt, Star, MessageSquare, ThumbsUp,
+  QrCode, UserCheck, Activity, ScanLine
 } from "lucide-react";
 
 export interface PricingPlan {
@@ -566,6 +567,90 @@ export const products: Product[] = [
       {
         question: { en: "Does Sumaa Plus integrate with other Nzom products?", ar: "هل يتكامل سمعة بلس مع منتجات نُظم الأخرى؟" },
         answer: { en: "Yes. Sumaa Plus pairs naturally with Meeadi (turn happy customers into reviewers) and Namaa CRM (sync customer sentiment) — but it stands alone perfectly for any multi-branch business.", ar: "نعم. سمعة بلس يتكامل بشكل طبيعي مع Meeadi (حوّل عملاءك السعداء إلى مراجعين) ونظام إدارة العملاء (مزامنة مشاعر العملاء) — ويقف لوحده بكفاءة كاملة لأي عمل متعدد الفروع." },
+      },
+    ],
+  },
+
+  // ═══════════════════════════════════════════
+  // 10. VISITOR PATH — الإحساس: السيطرة على من يدخل منشأتك
+  // ═══════════════════════════════════════════
+  {
+    slug: "visitor-path",
+    available: true,
+    name: { en: "Visitor Path", ar: "Visitor Path" },
+    tagline: {
+      en: "Know exactly who's in your building — always.",
+      ar: "نظام إدارة الزوار"
+    },
+    description: {
+      en: "Every invitation sent, every QR scanned at reception, every approval logged, every watchlist match flagged — before the visitor reaches your door. Visitor Path turns your front desk from a paper logbook into a smart security checkpoint.",
+      ar: "كل دعوة مُرسلة، كل QR ممسوح في الاستقبال، كل موافقة مسجّلة، كل مطابقة في قائمة المراقبة مُنبَّه عنها — قبل لا يوصل الزائر لبابك. Visitor Path يحوّل الاستقبال من سجل ورقي إلى نقطة تفتيش أمنية ذكية."
+    },
+    emotionalHook: {
+      en: "Your front door, fully under control.",
+      ar: "مدخل منشأتك تحت سيطرتك الكاملة."
+    },
+    imagineDay: {
+      en: "Imagine your receptionist starts the day knowing exactly who's coming, who's inside, and who's late to leave. Visitors check in with a QR in seconds. Hosts approve from their phones. A watchlist match triggers an instant alert to security — quietly, professionally. At any moment, you know your live occupancy per location, and every movement is in the audit trail.",
+      ar: "تخيّل موظف الاستقبال يبدأ يومه وهو يعرف بالضبط من جاي، ومن داخل المبنى، ومن تأخر بالخروج. الزوار يسجلون دخولهم بـ QR خلال ثواني. المستضيفون يوافقون من جوالاتهم. أي مطابقة في قائمة المراقبة تطلق تنبيهاً فورياً للأمن — بهدوء واحترافية. في أي لحظة، تعرف الإشغال المباشر لكل موقع، وكل حركة مسجّلة في سجل التدقيق."
+    },
+    icon: ScanLine,
+    color: "from-primary to-accent",
+    problem: {
+      en: "Visitors walk in unannounced. Reception juggles phone calls, paper logs, and WhatsApp messages to find hosts. Nobody knows who's actually inside the building right now. A banned person can return unnoticed. When security asks 'who was here last Tuesday?', the answer takes hours of digging.",
+      ar: "الزوار يدخلون بدون سابق إنذار. الاستقبال يتخبّط بين المكالمات والسجلات الورقية ورسائل الواتساب عشان يلقى المستضيف. لا أحد يعرف من موجود فعلياً داخل المبنى الآن. الشخص الممنوع يقدر يرجع بدون ما أحد ينتبه. ولما يسأل الأمن 'من كان هنا الثلاثاء الماضي؟'، الجواب ياخذ ساعات من البحث."
+    },
+    solution: {
+      en: "Visitor Path digitizes the entire visit lifecycle: invitations with QR codes, instant reception lookup, host approvals from any device, watchlist screening with automatic security alerts, live occupancy per location, and a complete audit trail — all in one bilingual, tenant-scoped platform.",
+      ar: "Visitor Path يرقمن دورة الزيارة كاملة: دعوات برموز QR، بحث فوري في الاستقبال، موافقات المستضيف من أي جهاز، فحص قائمة المراقبة مع تنبيهات أمنية تلقائية، إشغال مباشر لكل موقع، وسجل تدقيق كامل — كلها في منصة وحدة ثنائية اللغة متعددة المستأجرين."
+    },
+    features: [
+      { title: { en: "Visits & Invitations", ar: "الزيارات والدعوات" }, description: { en: "Create visits and send invitations with QR codes. Guests arrive expected, not surprising.", ar: "أنشئ الزيارات وأرسل الدعوات برموز QR. الضيوف يوصلون متوقَّعين، مو مفاجأة." }, icon: CalendarDays },
+      { title: { en: "QR Reception Check-in", ar: "استقبال بـ QR" }, description: { en: "Reception looks up any visit by QR scan in seconds. Check-in and check-out with one tap.", ar: "الاستقبال يبحث عن أي زيارة بمسح QR خلال ثواني. تسجيل الدخول والخروج بضغطة وحدة." }, icon: QrCode },
+      { title: { en: "Approval Queue", ar: "قائمة الموافقات" }, description: { en: "Hosts approve or reject visit requests instantly. No visit happens without the right sign-off.", ar: "المستضيفون يوافقون أو يرفضون طلبات الزيارة فوراً. ما تصير زيارة بدون الاعتماد الصحيح." }, icon: UserCheck },
+      { title: { en: "Watchlist Screening", ar: "قائمة المراقبة" }, description: { en: "Banned visitors are screened automatically. Security gets alerted the moment a match appears.", ar: "الزوار الممنوعون يُفحصون تلقائياً. الأمن يُنبَّه لحظة ظهور أي مطابقة." }, icon: AlertTriangle },
+      { title: { en: "Live Occupancy", ar: "الإشغال المباشر" }, description: { en: "See who's inside each location right now, against capacity limits — in real time.", ar: "شوف من موجود داخل كل موقع الآن، مقارنة بحدود السعة — لحظة بلحظة." }, icon: Activity },
+      { title: { en: "Reports & Audit Log", ar: "التقارير وسجل التدقيق" }, description: { en: "Every action logged. Export visit reports to CSV for compliance and investigations.", ar: "كل إجراء مسجّل. صدّر تقارير الزيارات بصيغة CSV للامتثال والتحقيقات." }, icon: FileText },
+    ],
+    workflowDesc: { en: "Invitation created with QR → guest arrives → reception scans → host approves → watchlist screened → visitor checked in → occupancy updates live → check-out logged. Every step in the audit trail, every notification delivered through your configured channels.", ar: "الدعوة تُنشأ بـ QR → الضيف يوصل → الاستقبال يمسح → المستضيف يوافق → قائمة المراقبة تُفحص → الزائر يسجّل دخوله → الإشغال يتحدث مباشرة → الخروج يُسجَّل. كل خطوة في سجل التدقيق، وكل إشعار يوصل عبر قنواتك المضبوطة." },
+    rbacDesc: { en: "System owners see all tenants. Tenant admins manage their organization, locations, and policies. Reception staff check visitors in. Hosts manage only their own visits. Unauthorized modules are hidden and routes are blocked — clean, enforced separation.", ar: "مالكو النظام يشوفون كل المستأجرين. مديرو المؤسسة يديرون منظمتهم ومواقعهم وسياساتهم. موظفو الاستقبال يسجلون الزوار. المستضيفون يديرون زياراتهم فقط. الوحدات غير المصرّحة مخفية والمسارات محجوبة — فصل نظيف ومُطبَّق." },
+    analyticsDesc: { en: "Dashboards show today's visits, pending approvals, current occupancy, no-shows, and watchlist alerts. Track 7-day visit trends and location capacity at a glance.", ar: "لوحات المعلومات تعرض زيارات اليوم، الموافقات المعلّقة، الإشغال الحالي، من لم يحضر، وتنبيهات المراقبة. تابع اتجاهات الزيارات لآخر 7 أيام وسعة المواقع بنظرة وحدة." },
+    securityDesc: { en: "Tenant-scoped data isolation, full audit logging on every action, watchlist alerts routed to security channels, PDPL compliant, and data hosted in Saudi Arabia.", ar: "عزل بيانات على مستوى المستأجر، سجل تدقيق كامل على كل إجراء، تنبيهات قائمة المراقبة توجَّه لقنوات الأمن، متوافق مع نظام حماية البيانات، والبيانات مستضافة في السعودية." },
+    primaryCTA: {
+      label: { en: "Start Free", ar: "ابدأ مجاناً" },
+      href: "https://visitorpath.nzomlabs.com",
+      external: true,
+    },
+    trustBadges: [
+      { en: "PDPL Compliant", ar: "متوافق مع نظام حماية البيانات" },
+      { en: "Data Hosted in Saudi Arabia", ar: "بياناتك مستضافة في السعودية" },
+      { en: "Full Audit Trail", ar: "سجل تدقيق كامل" },
+      { en: "iOS & Android Ready", ar: "جاهز لـ iOS و Android" },
+    ],
+    testimonial: {
+      quote: {
+        en: "Reception used to waste half the day calling hosts about arrivals. With Visitor Path, guests check in by QR and approvals happen from the phone. We finally know who's in the building at any moment.",
+        ar: "الاستقبال كان يضيّع نص يومه يتصل على المستضيفين عن الواصلين. مع Visitor Path، الضيوف يسجلون بـ QR والموافقات تصير من الجوال. أخيراً نعرف من موجود بالمبنى في أي لحظة.",
+      },
+      author: { en: "One of our clients", ar: "أحد عملائنا" },
+      role: { en: "Corporate Facility — Saudi Arabia", ar: "منشأة شركات — المملكة العربية السعودية" },
+    },
+    faq: [
+      {
+        question: { en: "Do visitors need to install an app?", ar: "هل يحتاج الزوار لتثبيت تطبيق؟" },
+        answer: { en: "No. Visitors receive an invitation with a QR code. Reception scans it for instant check-in — no downloads, no accounts needed for guests.", ar: "لا. الزائر يستلم دعوة فيها رمز QR. الاستقبال يمسحه لتسجيل الدخول فوراً — بدون تحميلات، وبدون حسابات للضيوف." },
+      },
+      {
+        question: { en: "How does watchlist screening work?", ar: "كيف يعمل فحص قائمة المراقبة؟" },
+        answer: { en: "You maintain a watchlist of banned or flagged individuals. Every visit request is screened automatically, and security receives an instant alert when a match is found — before the visit is approved.", ar: "تدير قائمة مراقبة بالأشخاص الممنوعين أو المُبلَّغ عنهم. كل طلب زيارة يُفحص تلقائياً، والأمن يستلم تنبيهاً فورياً عند أي مطابقة — قبل اعتماد الزيارة." },
+      },
+      {
+        question: { en: "Can I manage multiple locations?", ar: "هل أقدر أدير أكثر من موقع؟" },
+        answer: { en: "Yes. Visitor Path is tenant-scoped with multi-location support. Each location has its own capacity limits, reception workspace, and live occupancy view.", ar: "نعم. Visitor Path متعدد المستأجرين ويدعم تعدد المواقع. كل موقع له حدود سعة خاصة، ومساحة استقبال خاصة، وعرض إشغال مباشر مستقل." },
+      },
+      {
+        question: { en: "Does Visitor Path integrate with other Nzom products?", ar: "هل يتكامل Visitor Path مع منتجات نُظم الأخرى؟" },
+        answer: { en: "Yes. It pairs naturally with Zerisks HSSE (site safety and permits) and Nexdo (follow-up tasks) — and stands alone perfectly for any facility that receives visitors.", ar: "نعم. يتكامل بشكل طبيعي مع Zerisks HSSE (سلامة المواقع والتصاريح) ونكست دو (مهام المتابعة) — ويقف لوحده بكفاءة كاملة لأي منشأة تستقبل زواراً." },
       },
     ],
   },
