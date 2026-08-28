@@ -24,7 +24,9 @@
    - تحديث `public/sitemap.xml` بإضافة `/products/visitor-path`
    - تحديث `public/llms.txt` إن كان يحتوي قائمة المنتجات
 
-4. **ملاحظة**: لا توجد صورة معاينة (screenshot) للوحة النظام حالياً — ستُضاف لاحقاً عند توفيرها، والقسم مخفي تلقائياً بدونها.
+4. **صورة المعاينة**
+   - رفع لقطة لوحة معلومات Visitor Path المرفوعة (`user-uploads://image-23.png`) كأصل CDN باسم `visitorpath-preview.png.asset.json`
+   - إضافتها إلى `screenshotMap` في `src/pages/ProductPage.tsx` (تظهر فوق الأسئلة الشائعة)
 
 ## التقنية
 - الملفات: `src/data/products.ts`, `src/lib/productLogos.ts`, `public/sitemap.xml`, `public/llms.txt`
