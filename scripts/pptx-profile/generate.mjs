@@ -384,15 +384,18 @@ products.forEach((p, idx) => {
     ["أتمتة بالذكاء الاصطناعي", "ربط WhatsApp وCRM بذكاء اصطناعي، ومساعد شخصي ذكي."],
     ["[خدمة إضافية]", "[نص يُستكمل لاحقًا — أضف أي خدمة أخرى تناسب استراتيجيتك.]"],
   ];
+  const svcW = 5.8;
+  const svcGap = 0.5;
+  const svcRightX = 13.333 - 0.5 - svcW;
   services.forEach(([title, desc], i) => {
     const row = Math.floor(i / 2);
     const col = i % 2;
-    const x = 9.45 - col * 6.0;
+    const x = svcRightX - col * (svcW + svcGap);
     const y = 2.05 + row * 1.55;
-    s.addShape(pptx.ShapeType.roundRect, { x, y, w: 5.7, h: 1.35, fill: { color: PAPER2 }, rectRadius: 0.08, line: { color: BORDER } });
-    s.addShape(pptx.ShapeType.ellipse, { x: x + 5.25, y: y + 0.2, w: 0.25, h: 0.25, fill: { color: PURPLE } });
-    s.addText([ar(title)], { x: x + 0.25, y: y + 0.15, w: 4.85, h: 0.45, fontSize: 20, bold: true, color: INK, align: "right" });
-    s.addText([ar(desc)], { x: x + 0.25, y: y + 0.6, w: 4.85, h: 0.6, fontSize: 16, color: MUTED, align: "right" });
+    s.addShape(pptx.ShapeType.roundRect, { x, y, w: svcW, h: 1.35, fill: { color: PAPER2 }, rectRadius: 0.08, line: { color: BORDER } });
+    s.addShape(pptx.ShapeType.ellipse, { x: x + svcW - 0.45, y: y + 0.2, w: 0.25, h: 0.25, fill: { color: PURPLE } });
+    s.addText([ar(title)], { x: x + 0.25, y: y + 0.15, w: svcW - 0.8, h: 0.45, fontSize: 20, bold: true, color: INK, align: "right" });
+    s.addText([ar(desc)], { x: x + 0.25, y: y + 0.6, w: svcW - 0.8, h: 0.6, fontSize: 16, color: MUTED, align: "right" });
   });
 }
 
