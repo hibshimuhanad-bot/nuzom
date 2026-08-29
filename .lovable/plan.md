@@ -21,7 +21,7 @@ The whole deck reads right-to-left, so it is built that way from the start and n
 
 ## Slides
 
-1. Cover (dark) — Nzom Labs logo + "مختبرات الأنظمة"، with a tech-partner tagline instead of "استوديو تقني سعودي": "شريكك التقني للتحول الرقمي"، plus Riyadh / Saudi Arabia.
+1. Cover (dark) — Nzom Labs logo + "مختبرات الأنظمة"، with the tagline "شريكك الرقمي لبناء منظومات العمليات" (no "تقني" / "استوديو"), plus Riyadh / Saudi Arabia.
 2. من نحن — company story from the About page.
 3. الرؤية والرسالة — using your exact statements from the website's About page: الرؤية «أن نصبح مزود منظومة SaaS رائد في المملكة العربية السعودية» والمهمة «تصميم أنظمة تبسط العمليات التنظيمية المعقدة».
 4. لماذا مختبرات الأنظمة — the four differentiators from the homepage.
