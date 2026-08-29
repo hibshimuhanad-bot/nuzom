@@ -78,7 +78,8 @@ resolve_asset "$PROJECT_ROOT/src/assets/visitorpath-preview.png.asset.json" visi
 # --- generate pptx ---
 export PPTX_IMG_DIR="$IMG"
 export PPTX_OUT="$OUT/nzom-labs-company-profile.pptx"
-cd "$ROOT" && node "$PROJECT_ROOT/scripts/pptx-profile/generate.mjs"
+cp "$PROJECT_ROOT/scripts/pptx-profile/generate.mjs" "$ROOT/generate.mjs"
+cd "$ROOT" && node generate.mjs
 
 # --- convert to pdf ---
 echo "Converting to PDF..."
