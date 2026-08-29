@@ -14,8 +14,8 @@ FONT_DIR="$ROOT/fonts"
 mkdir -p "$FONT_DIR"
 if [ ! -f "$FONT_DIR/Tajawal-Regular.ttf" ]; then
   echo "Downloading Tajawal font..."
-  curl -L -o "$FONT_DIR/tajawal.zip" "https://fonts.google.com/download?family=Tajawal"
-  unzip -o "$FONT_DIR/tajawal.zip" -d "$FONT_DIR"
+  curl -L -o "$FONT_DIR/Tajawal-Regular.ttf" "https://github.com/google/fonts/raw/main/ofl/tajawal/Tajawal-Regular.ttf"
+  curl -L -o "$FONT_DIR/Tajawal-Bold.ttf" "https://github.com/google/fonts/raw/main/ofl/tajawal/Tajawal-Bold.ttf"
 fi
 # register with fontconfig for LibreOffice
 mkdir -p "$HOME/.config/fontconfig"
