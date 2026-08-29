@@ -178,13 +178,14 @@ const products = [
 
   s.addShape(pptx.ShapeType.rect, { x: 8.2, y: 2.35, w: 4.6, h: 3.6, fill: { color: PURPLE_D }, rectRadius: 0.08, line: { color: PURPLE_D } });
   const stats = [
-    ["٧+", "أنظمة جاهزة"],
-    ["٢٤/٧", "دعم فني"],
+    ["7+", "أنظمة جاهزة"],
+    ["24/7", "دعم فني"],
     ["Saudi", "استضافة محلية"],
   ];
   stats.forEach(([num, label], i) => {
     const y = 2.55 + i * 1.15;
-    s.addText([ar(num)], { x: 8.4, y, w: 4.2, h: 0.55, fontSize: 36, bold: true, color: PAPER, align: "center" });
+    const isAr = /[\u0600-\u06FF]/.test(num);
+    s.addText([{ text: num, options: { fontFace: isAr ? AR : LAT, rtlMode: isAr, align: "center" } }], { x: 8.4, y, w: 4.2, h: 0.55, fontSize: 36, bold: true, color: PAPER });
     s.addText([ar(label)], { x: 8.4, y: y + 0.55, w: 4.2, h: 0.35, fontSize: 18, color: MUTED_L, align: "center" });
   });
 }
