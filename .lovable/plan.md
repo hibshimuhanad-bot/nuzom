@@ -7,9 +7,17 @@ Build a client-facing company profile presentation for Nzom Labs, same approach 
 - Cover slide and closing/contact slide use the dark brand background (#07060F) with the Nzom Labs logo and purple accents.
 - All slides in between use a clean white/light background with dark text — easy to read and to present in front of clients or print.
 - Accents throughout: primary purple #7C6BFF, indigo #4F46E5, dark ink #07060F for headings, gray #5B6172 for body text, light surface #F4F5F8 for cards.
-- Arabic-first RTL layout, Tajawal / Noto Kufi Arabic for Arabic and Arial for Latin lines.
 - Product logos and the real dashboard preview screenshots already used on the website product pages.
 - Footer on every slide: page number and nzomlabs.com.
+
+## RTL reading direction (Arabic-first)
+
+The whole deck reads right-to-left, so it is built that way from the start and needs no rework later:
+
+- Every Arabic text box uses rtlMode with right alignment; all layouts are mirrored — titles, text columns, and bullets start from the right edge, images sit on the left.
+- Reading order on every slide flows right to left (grid cards ordered RTL, steps numbered RTL, navigation flow RTL).
+- Only pure Latin strings (URLs, page numbers, email) use left-aligned Latin font.
+- Visual QA pass on the rendered pages confirms RTL correctness before delivery.
 
 ## Slides
 
