@@ -29,7 +29,7 @@ The whole deck reads right-to-left, so it is built that way from the start and n
 6. منظومة الأنظمة — grid of all seven products with logos and taglines.
 7-13. One slide per product (Zerisks, Aldalyel, Nexdo, Meeadi, Namaa CRM, Sumaa Plus, Visitor Path) — logo, Arabic name and tagline, 4 key features, target audience, dashboard preview image, product URL.
 14. قسم توريد الأجهزة — placeholder section slide with the right layout and headings (categories, why us, process) and clearly marked placeholder text for you to fill later.
-15. قسم الخدمات التقنية — placeholder section slide listing service types (تصميم وتطوير مواقع، مراجعة الكود، استشارات تقنية، دعم وصيانة) with placeholder detail text to fill later.
+15. قسم الخدمات التقنية — placeholder section slide listing service types: تصميم وتطوير مواقع، مراجعة الكود، استشارات تقنية، دعم وصيانة، وأتمتة بالذكاء الاصطناعي (AI Automation) مثل ربط WhatsApp بالذكاء الاصطناعي، ربط CRM بالذكاء الاصطناعي، ومساعد شخصي ذكي. Placeholder detail text to fill later.
 16. القدرات المؤسسية — RBAC, ZATCA e-invoicing, workflows, bilingual/RTL, security and PDPL compliance.
 17. كيف تبدأ — activation journey steps.
 18. تواصل معنا (dark) — phone/WhatsApp, email, website, social handles (@nzomlabs), YouTube, Riyadh.
