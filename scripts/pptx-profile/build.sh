@@ -39,6 +39,8 @@ fi
 cp "$PROJECT_ROOT/src/assets/logo.png" "$IMG/logo.png"
 cp "$PROJECT_ROOT/src/assets/aldalyel-logo.png" "$IMG/aldalyel-logo.png"
 
+PREVIEW_URL="https://id-preview--746419f1-72ce-4d66-b0ae-69ec912477c7.lovable.app"
+
 resolve_asset() {
   local asset_json="$1"
   local slug="$2"
@@ -46,14 +48,16 @@ resolve_asset() {
   if [ -f "$asset_json" ]; then
     local url
     url=$(python3 -c "import json,sys; print(json.load(sys.stdin)['url'])" < "$asset_json")
-    local ext
-    ext=$(python3 -c "import json,sys; print(json.load(sys.stdin)['content_type'].split('/')[-1])" < "$asset_json")
-    local tmp="$IMG/${slug}-${kind}.${ext}"
+    local tmp="$IMG/${slug}-${kind}.tmp"
     echo "Downloading $slug $kind from $url"
-    curl -sfL "http://localhost:8080$url" -o "$tmp"
-    if [ "$ext" = "webp" ]; then
+    curl -sfL "$PREVIEW_URL$url" -o "$tmp"
+    local real
+    real=$(file -b --mime-type "$tmp" | cut -d/ -f2)
+    if [ "$real" = "webp" ]; then
       cwebp -quiet "$tmp" -o "$IMG/${slug}-${kind}.png"
       rm "$tmp"
+    else
+      mv "$tmp" "$IMG/${slug}-${kind}.${real}"
     fi
   fi
 }
