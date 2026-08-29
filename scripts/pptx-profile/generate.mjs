@@ -413,15 +413,18 @@ products.forEach((p, idx) => {
     ["الأمان والامتثال", "تشفير مؤسسي، بيانات مستضافة في السعودية، امتثال PDPL."],
     ["تعدد المواقع", "إدارة فروع ومواقع متعددة تحت مؤسسة واحدة."],
   ];
+  const capW = 5.8;
+  const capGap = 0.5;
+  const capRightX = 13.333 - 0.5 - capW;
   caps.forEach(([title, desc], i) => {
     const row = Math.floor(i / 2);
     const col = i % 2;
-    const x = 9.45 - col * 6.0;
+    const x = capRightX - col * (capW + capGap);
     const y = 2.05 + row * 1.55;
-    s.addShape(pptx.ShapeType.roundRect, { x, y, w: 5.7, h: 1.35, fill: { color: PAPER2 }, rectRadius: 0.08, line: { color: BORDER } });
-    s.addShape(pptx.ShapeType.ellipse, { x: x + 5.25, y: y + 0.2, w: 0.25, h: 0.25, fill: { color: PURPLE } });
-    s.addText([ar(title)], { x: x + 0.25, y: y + 0.15, w: 4.85, h: 0.45, fontSize: 20, bold: true, color: INK, align: "right" });
-    s.addText([ar(desc)], { x: x + 0.25, y: y + 0.6, w: 4.85, h: 0.6, fontSize: 16, color: MUTED, align: "right" });
+    s.addShape(pptx.ShapeType.roundRect, { x, y, w: capW, h: 1.35, fill: { color: PAPER2 }, rectRadius: 0.08, line: { color: BORDER } });
+    s.addShape(pptx.ShapeType.ellipse, { x: x + capW - 0.45, y: y + 0.2, w: 0.25, h: 0.25, fill: { color: PURPLE } });
+    s.addText([ar(title)], { x: x + 0.25, y: y + 0.15, w: capW - 0.8, h: 0.45, fontSize: 20, bold: true, color: INK, align: "right" });
+    s.addText([ar(desc)], { x: x + 0.25, y: y + 0.6, w: capW - 0.8, h: 0.6, fontSize: 16, color: MUTED, align: "right" });
   });
 }
 
