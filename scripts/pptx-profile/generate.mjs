@@ -346,7 +346,8 @@ products.forEach((p, idx) => {
   ];
   cats.forEach((c, i) => {
     const x = 9.0 - i * 4.15;
-    s.addShape(pptx.ShapeType.roundRect, { x, y: 3.6, w: 3.85, h: 2.4, fill: { color: PAPER2 }, rectRadius: 0.08, line: { color: BORDER } });
+    const y = 3.6;
+    s.addShape(pptx.ShapeType.roundRect, { x, y, w: 3.85, h: 2.4, fill: { color: PAPER2 }, rectRadius: 0.08, line: { color: BORDER } });
     s.addText([ar(c)], { x: x + 0.2, y: y + 0.3, w: 3.45, h: 1.8, fontSize: 19, color: MUTED, align: "right", lineSpacingMultiple: 1.3 });
   });
 }
