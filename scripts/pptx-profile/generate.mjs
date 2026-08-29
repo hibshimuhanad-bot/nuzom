@@ -209,11 +209,15 @@ const products = [
     ["الابتكار", "نستخدم أحدث التقنيات والذكاء الاصطناعي لتقديم حلول أذكى."],
     ["الدعم المستمر", "فريقنا معك من التفعيل إلى التشغيل الكامل وما بعده."],
   ];
+  const cardW = 2.85;
+  const gap = 0.25;
+  const startX = 13.333 - 0.5 - cardW;
   values.forEach(([title, desc], i) => {
-    const x = 8.8 - i * 3.15;
-    s.addShape(pptx.ShapeType.roundRect, { x, y: 5.0, w: 2.9, h: 1.55, fill: { color: PAPER2 }, rectRadius: 0.06, line: { color: BORDER } });
-    s.addText([ar(title)], { x: x + 0.15, y: 5.1, w: 2.6, h: 0.4, fontSize: 20, bold: true, color: INK, align: "right" });
-    s.addText([ar(desc)], { x: x + 0.15, y: 5.55, w: 2.6, h: 0.85, fontSize: 16, color: MUTED, align: "right" });
+    const x = startX - i * (cardW + gap);
+    const y = 4.7;
+    s.addShape(pptx.ShapeType.roundRect, { x, y, w: cardW, h: 1.75, fill: { color: PAPER2 }, rectRadius: 0.06, line: { color: BORDER } });
+    s.addText([ar(title)], { x: x + 0.15, y: y + 0.1, w: cardW - 0.3, h: 0.45, fontSize: 20, bold: true, color: INK, align: "right" });
+    s.addText([ar(desc)], { x: x + 0.15, y: y + 0.55, w: cardW - 0.3, h: 1.0, fontSize: 16, color: MUTED, align: "right" });
   });
 }
 
