@@ -439,13 +439,17 @@ products.forEach((p, idx) => {
     ["٢", "تواصل معنا", "فريقنا يفهم احتياجك ويجهز كل شيء."],
     ["٣", "ابدأ العمل", "نظامك جاهز ويعمل خلال أيام."],
   ];
+  const stepW = 3.7;
+  const stepGap = 0.3;
+  const stepStartX = 13.333 - 0.5 - stepW;
   steps.forEach(([num, title, desc], i) => {
-    const x = 10.0 - i * 4.2;
-    s.addShape(pptx.ShapeType.roundRect, { x, y: 2.4, w: 3.7, h: 3.2, fill: { color: PAPER2 }, rectRadius: 0.1, line: { color: BORDER } });
-    s.addShape(pptx.ShapeType.ellipse, { x: x + 1.35, y: 2.65, w: 1.0, h: 1.0, fill: { color: PURPLE } });
-    s.addText([ar(num)], { x, y: 2.75, w: 3.7, h: 0.8, fontSize: 40, bold: true, color: PAPER, align: "center" });
-    s.addText([ar(title)], { x: x + 0.2, y: 3.85, w: 3.3, h: 0.55, fontSize: 26, bold: true, color: INK, align: "center" });
-    s.addText([ar(desc)], { x: x + 0.2, y: 4.45, w: 3.3, h: 0.9, fontSize: 18, color: MUTED, align: "center" });
+    const x = stepStartX - i * (stepW + stepGap);
+    const y = 2.4;
+    s.addShape(pptx.ShapeType.roundRect, { x, y, w: stepW, h: 3.2, fill: { color: PAPER2 }, rectRadius: 0.1, line: { color: BORDER } });
+    s.addShape(pptx.ShapeType.ellipse, { x: x + (stepW - 1.0) / 2, y: y + 0.25, w: 1.0, h: 1.0, fill: { color: PURPLE } });
+    s.addText([ar(num)], { x, y: y + 0.35, w: stepW, h: 0.8, fontSize: 40, bold: true, color: PAPER, align: "center" });
+    s.addText([ar(title)], { x: x + 0.2, y: y + 1.45, w: stepW - 0.4, h: 0.55, fontSize: 26, bold: true, color: INK, align: "center" });
+    s.addText([ar(desc)], { x: x + 0.2, y: y + 2.05, w: stepW - 0.4, h: 0.9, fontSize: 18, color: MUTED, align: "center" });
   });
 }
 
