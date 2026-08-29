@@ -249,15 +249,18 @@ const products = [
     ["نظام واحد أو منظومة كاملة", "اختر ما تحتاج، وأضف أنظمة أخرى لاحقاً."],
     ["دعم فني مستمر", "فريقنا معك من التفعيل إلى التشغيل الكامل."],
   ];
+  const cardW = 5.8;
+  const gap = 0.5;
+  const rightX = 13.333 - 0.5 - cardW;
   items.forEach(([title, desc], i) => {
     const row = Math.floor(i / 2);
     const col = i % 2;
-    const x = 9.45 - col * 6.0;
+    const x = rightX - col * (cardW + gap);
     const y = 2.1 + row * 2.1;
-    s.addShape(pptx.ShapeType.roundRect, { x, y, w: 5.7, h: 1.85, fill: { color: PAPER2 }, rectRadius: 0.08, line: { color: BORDER } });
-    s.addShape(pptx.ShapeType.ellipse, { x: x + 5.25, y: y + 0.25, w: 0.28, h: 0.28, fill: { color: PURPLE } });
-    s.addText([ar(title)], { x: x + 0.25, y: y + 0.2, w: 4.9, h: 0.5, fontSize: 23, bold: true, color: INK, align: "right" });
-    s.addText([ar(desc)], { x: x + 0.25, y: y + 0.75, w: 5.0, h: 0.9, fontSize: 19, color: MUTED, align: "right" });
+    s.addShape(pptx.ShapeType.roundRect, { x, y, w: cardW, h: 1.85, fill: { color: PAPER2 }, rectRadius: 0.08, line: { color: BORDER } });
+    s.addShape(pptx.ShapeType.ellipse, { x: x + cardW - 0.45, y: y + 0.25, w: 0.28, h: 0.28, fill: { color: PURPLE } });
+    s.addText([ar(title)], { x: x + 0.25, y: y + 0.2, w: cardW - 0.7, h: 0.5, fontSize: 23, bold: true, color: INK, align: "right" });
+    s.addText([ar(desc)], { x: x + 0.25, y: y + 0.75, w: cardW - 0.5, h: 0.9, fontSize: 19, color: MUTED, align: "right" });
   });
 }
 
