@@ -275,12 +275,16 @@ const products = [
     ["توريد الأجهزة", "[نص يُستكمل لاحقًا — أضف فئات الأجهزة والعلامات التجارية التي تقدمها الشركة.]", PURPLE_D],
     ["الخدمات التقنية", "تصميم وتطوير المواقع، مراجعة الكود، الاستشارات التقنية، الدعم والصيانة، وأتمتة بالذكاء الاصطناعي.", "5B6172"],
   ];
+  const divW = 3.85;
+  const divGap = 0.3;
+  const divStartX = 13.333 - 0.5 - divW;
   divs.forEach(([title, desc, color], i) => {
-    const x = 9.0 - i * 4.15;
-    s.addShape(pptx.ShapeType.roundRect, { x, y: 2.2, w: 3.85, h: 3.8, fill: { color: PAPER2 }, rectRadius: 0.1, line: { color: BORDER } });
-    s.addShape(pptx.ShapeType.roundRect, { x: x + 0.2, y: 2.45, w: 0.7, h: 0.18, fill: { color }, rectRadius: 0.04, line: { color } });
-    s.addText([ar(title)], { x: x + 0.2, y: 2.85, w: 3.45, h: 0.7, fontSize: 26, bold: true, color: INK, align: "right" });
-    s.addText([ar(desc)], { x: x + 0.2, y: 3.65, w: 3.45, h: 2.1, fontSize: 19, color: MUTED, align: "right", lineSpacingMultiple: 1.3 });
+    const x = divStartX - i * (divW + divGap);
+    const y = 2.2;
+    s.addShape(pptx.ShapeType.roundRect, { x, y, w: divW, h: 3.8, fill: { color: PAPER2 }, rectRadius: 0.1, line: { color: BORDER } });
+    s.addShape(pptx.ShapeType.roundRect, { x: x + 0.2, y: y + 0.25, w: 0.7, h: 0.18, fill: { color }, rectRadius: 0.04, line: { color } });
+    s.addText([ar(title)], { x: x + 0.2, y: y + 0.65, w: divW - 0.4, h: 0.7, fontSize: 26, bold: true, color: INK, align: "right" });
+    s.addText([ar(desc)], { x: x + 0.2, y: y + 1.45, w: divW - 0.4, h: 2.1, fontSize: 19, color: MUTED, align: "right", lineSpacingMultiple: 1.3 });
   });
 }
 
