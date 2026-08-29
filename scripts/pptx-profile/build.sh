@@ -76,10 +76,9 @@ resolve_asset "$PROJECT_ROOT/src/assets/visitorpath-logo.png.asset.json" visitor
 resolve_asset "$PROJECT_ROOT/src/assets/visitorpath-preview.png.asset.json" visitor-path preview
 
 # --- generate pptx ---
-cd "$ROOT"
 export PPTX_IMG_DIR="$IMG"
 export PPTX_OUT="$OUT/nzom-labs-company-profile.pptx"
-node "$PROJECT_ROOT/scripts/pptx-profile/generate.mjs"
+cd "$ROOT" && node "$PROJECT_ROOT/scripts/pptx-profile/generate.mjs"
 
 # --- convert to pdf ---
 echo "Converting to PDF..."
