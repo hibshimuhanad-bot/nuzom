@@ -294,17 +294,20 @@ const products = [
   s.addText([ar("منظومة الأنظمة")], { x: 0.5, y: 0.5, w: 12.3, h: 0.5, fontSize: 18, bold: true, color: PURPLE, align: "right" });
   s.addText([ar("أنظمة جاهزة للتشغيل")], { x: 0.5, y: 1.05, w: 12.3, h: 0.7, fontSize: 40, bold: true, color: INK, align: "right" });
 
+  const prodW = 2.85;
+  const prodGap = 0.25;
+  const prodStartX = 13.333 - 0.5 - prodW;
   products.forEach((p, i) => {
     const row = Math.floor(i / 4);
     const col = i % 4;
-    const x = 9.55 - col * 3.15;
+    const x = prodStartX - col * (prodW + prodGap);
     const y = 2.0 + row * 2.25;
-    s.addShape(pptx.ShapeType.roundRect, { x, y, w: 2.9, h: 2.0, fill: { color: PAPER2 }, rectRadius: 0.08, line: { color: BORDER } });
+    s.addShape(pptx.ShapeType.roundRect, { x, y, w: prodW, h: 2.0, fill: { color: PAPER2 }, rectRadius: 0.08, line: { color: BORDER } });
     if (fs.existsSync(path.join(IMG, `${p.slug}-logo.png`))) {
-      s.addImage({ ...d(`${p.slug}-logo.png`), x: x + 1.55, y: y + 0.15, w: 1.1, h: 0.55, sizing: { type: "contain", w: 1.1, h: 0.55 } });
+      s.addImage({ ...d(`${p.slug}-logo.png`), x: x + prodW - 1.25, y: y + 0.15, w: 1.1, h: 0.55, sizing: { type: "contain", w: 1.1, h: 0.55 } });
     }
-    s.addText([ar(p.name)], { x: x + 0.15, y: y + 0.75, w: 2.6, h: 0.45, fontSize: 18, bold: true, color: INK, align: "right" });
-    s.addText([ar(p.tagline)], { x: x + 0.15, y: y + 1.2, w: 2.6, h: 0.65, fontSize: 14, color: MUTED, align: "right" });
+    s.addText([ar(p.name)], { x: x + 0.15, y: y + 0.75, w: prodW - 0.3, h: 0.45, fontSize: 18, bold: true, color: INK, align: "right" });
+    s.addText([ar(p.tagline)], { x: x + 0.15, y: y + 1.2, w: prodW - 0.3, h: 0.65, fontSize: 14, color: MUTED, align: "right" });
   });
 }
 
