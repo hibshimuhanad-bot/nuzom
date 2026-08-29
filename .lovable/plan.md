@@ -21,7 +21,7 @@ The whole deck reads right-to-left, so it is built that way from the start and n
 
 ## Slides
 
-1. Cover (dark) — logo, headline, "استوديو تقني سعودي"، Riyadh / Saudi Arabia.
+1. Cover (dark) — Nzom Labs logo + "مختبرات الأنظمة"، with a tech-partner tagline instead of "استوديو تقني سعودي": "شريكك التقني للتحول الرقمي"، plus Riyadh / Saudi Arabia.
 2. من نحن — company story from the About page.
 3. الرؤية والرسالة.
 4. لماذا مختبرات الأنظمة — the four differentiators from the homepage.
