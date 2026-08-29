@@ -359,11 +359,14 @@ products.forEach((p, idx) => {
     "[فئة الأجهزة ٢ — أضف الوصف]",
     "[فئة الأجهزة ٣ — أضف الوصف]",
   ];
+  const hwW = 3.85;
+  const hwGap = 0.3;
+  const hwStartX = 13.333 - 0.5 - hwW;
   cats.forEach((c, i) => {
-    const x = 9.0 - i * 4.15;
+    const x = hwStartX - i * (hwW + hwGap);
     const y = 3.6;
-    s.addShape(pptx.ShapeType.roundRect, { x, y, w: 3.85, h: 2.4, fill: { color: PAPER2 }, rectRadius: 0.08, line: { color: BORDER } });
-    s.addText([ar(c)], { x: x + 0.2, y: y + 0.3, w: 3.45, h: 1.8, fontSize: 19, color: MUTED, align: "right", lineSpacingMultiple: 1.3 });
+    s.addShape(pptx.ShapeType.roundRect, { x, y, w: hwW, h: 2.4, fill: { color: PAPER2 }, rectRadius: 0.08, line: { color: BORDER } });
+    s.addText([ar(c)], { x: x + 0.2, y: y + 0.3, w: hwW - 0.4, h: 1.8, fontSize: 19, color: MUTED, align: "right", lineSpacingMultiple: 1.3 });
   });
 }
 
