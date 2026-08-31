@@ -13,6 +13,12 @@ const Navbar = () => {
   const { t, language, setLanguage } = useLanguage();
   const location = useLocation();
   const [open, setOpen] = useState(false);
+  const [isDark, setIsDark] = useState(() => document.documentElement.classList.contains("dark"));
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", isDark);
+    try { localStorage.setItem("theme", isDark ? "dark" : "light"); } catch {}
+  }, [isDark]);
 
   const navLinks = [
     { href: "/", label: t("nav.home") },
