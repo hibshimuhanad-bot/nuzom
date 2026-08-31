@@ -27,7 +27,7 @@ const testimonials = [
 const Testimonials = () => {
   const { t, language } = useLanguage();
   return (
-    <section className="py-28 bg-background relative overflow-hidden">
+    <section className="py-28 section-soft relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern opacity-20" />
       <div className="container mx-auto px-4 relative z-10">
         <ScrollReveal className="text-center mb-16">

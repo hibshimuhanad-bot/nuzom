@@ -51,6 +51,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        "surface-soft": "hsl(var(--surface-soft))",
+        "dark-section": "hsl(var(--dark-section))",
+        "accent-saas": "hsl(var(--accent-saas))",
+        "accent-it": "hsl(var(--accent-it))",
+        "accent-hardware": "hsl(var(--accent-hardware))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

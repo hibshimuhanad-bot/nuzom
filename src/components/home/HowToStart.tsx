@@ -12,7 +12,7 @@ const HowToStart = () => {
   const { t, language } = useLanguage();
 
   return (
-    <section className="py-28 bg-muted/30 relative">
+    <section className="py-28 section-soft relative">
       <div className="absolute inset-0 grid-pattern opacity-30" />
       <div className="container mx-auto px-4 relative z-10">
         <ScrollReveal className="text-center mb-16">

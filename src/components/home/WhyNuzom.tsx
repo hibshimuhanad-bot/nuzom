@@ -13,8 +13,8 @@ const WhyNuzom = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-28 bg-muted/50 relative ai-gradient-bg">
-      <div className="absolute inset-0 dot-pattern" />
+    <section className="py-28 section-dark relative">
+      <div className="absolute inset-0 dot-pattern opacity-40" />
       <div className="container mx-auto px-4 relative z-10">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-center mb-4 text-gradient">{t("why.title")}</h2>

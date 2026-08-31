@@ -14,7 +14,7 @@ const Industries = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-28 bg-background relative">
+    <section className="py-28 section-white relative">
       <div className="absolute inset-0 grid-pattern opacity-30" />
       <div className="container mx-auto px-4 relative z-10">
         <ScrollReveal>
