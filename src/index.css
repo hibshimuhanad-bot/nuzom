@@ -315,6 +315,10 @@
   box-shadow: none;
 }
 
+.home-enterprise .hero-enterprise {
+  background-image: var(--gradient-hero);
+}
+
 /* Accent bar for SaaS product cards */
 .home-enterprise .card-accent-saas { border-top: 3px solid hsl(var(--accent-saas)); }
 
