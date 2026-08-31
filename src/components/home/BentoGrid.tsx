@@ -9,8 +9,8 @@ const BentoGrid = () => {
   const { t, language } = useLanguage();
 
   return (
-    <section id="products" className="py-28 bg-background relative">
-      <div className="absolute inset-0 grid-pattern opacity-50" />
+    <section id="products" className="py-28 section-white relative">
+      
       <div className="container mx-auto px-4 relative z-10">
         <ScrollReveal className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground">{t("ecosystem.title")}</h2>
@@ -21,7 +21,7 @@ const BentoGrid = () => {
           {products.map((product, i) => (
             <ScrollReveal key={product.slug} delay={i * 80}>
               <Link to={`/products/${product.slug}`} className="block h-full">
-                <div className="bento-card p-6 h-full flex flex-col justify-between group relative min-h-[240px]">
+                <div className="bento-card card-accent-saas p-6 h-full flex flex-col justify-between group relative min-h-[240px]">
                   <span className="absolute top-3 end-3 z-20 text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-foreground/5 text-muted-foreground border border-border">
                     {t("ecosystem.available")}
                   </span>
