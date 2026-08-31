@@ -4,10 +4,10 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { Menu, ChevronDown, Globe } from "lucide-react";
+import { Menu, ChevronDown, Globe, Sun, Moon } from "lucide-react";
 import { products } from "@/data/products";
 import { logoMap } from "@/lib/productLogos";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Navbar = () => {
   const { t, language, setLanguage } = useLanguage();
