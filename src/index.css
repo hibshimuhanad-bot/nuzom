@@ -228,6 +228,98 @@
   transform: translateY(-4px);
 }
 
+/* ════════════════════════════════════════════
+   Enterprise light palette — Home page scope
+   ════════════════════════════════════════════ */
+.home-enterprise {
+  --background: 214 43% 98%;             /* #F7F9FC */
+  --foreground: 222 47% 11%;             /* #0F172A */
+
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+
+  --primary: 221 83% 53%;                /* #2563EB */
+  --primary-foreground: 0 0% 100%;
+  --primary-glow: 221 83% 62%;
+
+  --secondary: 210 40% 96%;              /* #F1F5F9 */
+  --secondary-foreground: 222 47% 11%;
+
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 19% 35%;       /* #475569 */
+
+  --accent: 221 83% 53%;
+  --accent-foreground: 0 0% 100%;
+  --accent-glow: 221 83% 62%;
+
+  --border: 214 32% 91%;                 /* #E2E8F0 */
+  --input: 214 32% 91%;
+  --ring: 221 83% 53%;
+
+  --surface-soft: 210 40% 96%;
+  --dark-section: 219 47% 8%;            /* #0B1220 */
+  --accent-saas: 262 83% 58%;            /* #7C3AED */
+  --accent-it: 192 91% 36%;              /* #0891B2 */
+  --accent-hardware: 32 95% 44%;         /* #D97706 */
+
+  --gradient-primary: linear-gradient(135deg, hsl(221 83% 53%), hsl(262 83% 58%));
+  --gradient-accent: linear-gradient(135deg, hsl(221 83% 53%), hsl(192 91% 36%));
+  --gradient-surface: linear-gradient(180deg, #ffffff, #f7f9fc);
+  --gradient-hero: linear-gradient(135deg, #f8fafc 0%, #eef4ff 55%, #f5f3ff 100%);
+  --gradient-mesh: none;
+
+  --shadow-elegant: 0 8px 30px rgba(15, 23, 42, 0.06);
+  --shadow-card-hover: 0 16px 40px rgba(15, 23, 42, 0.10);
+  --shadow-deep: 0 20px 60px rgba(15, 23, 42, 0.10);
+  --shadow-accent-glow: 0 8px 24px -8px hsl(221 83% 53% / 0.45);
+
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+/* Flat, corporate cards inside the home scope */
+.home-enterprise .bento-card {
+  background: hsl(var(--card));
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: 1px solid hsl(var(--border));
+  border-radius: 1rem;
+  box-shadow: var(--shadow-elegant);
+}
+.home-enterprise .bento-card:hover {
+  border-color: hsl(var(--primary) / 0.35);
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* Section rhythm */
+.home-enterprise .section-white { background-color: #ffffff; }
+.home-enterprise .section-soft { background-color: hsl(var(--background)); }
+.home-enterprise .section-dark {
+  background-color: hsl(var(--dark-section));
+  --foreground: 0 0% 100%;
+  --card: 219 40% 13%;
+  --card-foreground: 0 0% 100%;
+  --muted: 219 40% 13%;
+  --muted-foreground: 213 27% 84%;       /* #CBD5E1 */
+  --border: 217 33% 22%;
+  --primary: 221 83% 60%;
+  --primary-foreground: 0 0% 100%;
+  --accent: 221 83% 68%;
+  color: hsl(var(--foreground));
+}
+.home-enterprise .section-dark .bento-card {
+  background: hsl(var(--card));
+  border-color: hsl(var(--border));
+  box-shadow: none;
+}
+
+/* Accent bar for SaaS product cards */
+.home-enterprise .card-accent-saas { border-top: 3px solid hsl(var(--accent-saas)); }
+
+
+
 /* ── Glow Button (neutral) ── */
 .glow-btn {
   position: relative;
