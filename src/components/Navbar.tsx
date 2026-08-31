@@ -49,7 +49,7 @@ const Navbar = () => {
               to={link.href}
               className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                 isActive(link.href)
-              ? "text-secondary"
+              ? "text-accent"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
@@ -85,7 +85,7 @@ const Navbar = () => {
               to={link.href}
               className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                 isActive(link.href)
-              ? "text-secondary"
+              ? "text-accent"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >

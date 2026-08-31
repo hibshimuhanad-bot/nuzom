@@ -75,7 +75,7 @@ const Blog = () => {
                       {post.title[language]}
                     </h3>
                     <p className="text-muted-foreground text-sm leading-relaxed flex-1">{post.excerpt[language]}</p>
-                    <span className="inline-block mt-4 px-3 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-medium border border-secondary/20 w-fit">
+                    <span className="inline-block mt-4 px-3 py-1 rounded-full bg-secondary/10 text-accent text-xs font-medium border border-secondary/20 w-fit">
                       {blogCategories.find((c) => c.id === post.category)?.label[language]}
                     </span>
                   </div>
