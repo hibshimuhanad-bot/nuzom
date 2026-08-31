@@ -27,7 +27,7 @@ const Footer = () => {
                 href="https://x.com/nzomlabs"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-secondary transition-colors"
+                className="text-muted-foreground hover:text-accent transition-colors"
                 aria-label="Twitter / X"
               >
                 <Twitter size={18} />
@@ -36,7 +36,7 @@ const Footer = () => {
                 href="https://linkedin.com/company/nzomlabs"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-secondary transition-colors"
+                className="text-muted-foreground hover:text-accent transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={18} />
@@ -45,7 +45,7 @@ const Footer = () => {
                 href="https://instagram.com/nzomlabs"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-secondary transition-colors"
+                className="text-muted-foreground hover:text-accent transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram size={18} />
@@ -54,7 +54,7 @@ const Footer = () => {
                 href="https://tiktok.com/@nzomlabs"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-secondary transition-colors"
+                className="text-muted-foreground hover:text-accent transition-colors"
                 aria-label="TikTok"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
@@ -63,7 +63,7 @@ const Footer = () => {
                 href="https://www.youtube.com/@NzomLabs"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-secondary transition-colors"
+                className="text-muted-foreground hover:text-accent transition-colors"
                 aria-label="YouTube"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
@@ -79,7 +79,7 @@ const Footer = () => {
                 <li key={product.slug}>
                   <Link
                     to={`/products/${product.slug}`}
-                    className="text-muted-foreground hover:text-secondary text-sm transition-colors"
+                    className="text-muted-foreground hover:text-accent text-sm transition-colors"
                   >
                     {product.name[language]}
                   </Link>
@@ -92,10 +92,10 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">{t("footer.company")}</h4>
             <ul className="space-y-2">
-              <li><Link to="/about" className="text-muted-foreground hover:text-secondary text-sm transition-colors">{t("nav.about")}</Link></li>
-              <li><Link to="/blog" className="text-muted-foreground hover:text-secondary text-sm transition-colors">{t("nav.blog")}</Link></li>
-              <li><Link to="/faq" className="text-muted-foreground hover:text-secondary text-sm transition-colors">{language === "ar" ? "الأسئلة الشائعة" : "FAQ"}</Link></li>
-              <li><Link to="/contact" className="text-muted-foreground hover:text-secondary text-sm transition-colors">{t("nav.contact")}</Link></li>
+              <li><Link to="/about" className="text-muted-foreground hover:text-accent text-sm transition-colors">{t("nav.about")}</Link></li>
+              <li><Link to="/blog" className="text-muted-foreground hover:text-accent text-sm transition-colors">{t("nav.blog")}</Link></li>
+              <li><Link to="/faq" className="text-muted-foreground hover:text-accent text-sm transition-colors">{language === "ar" ? "الأسئلة الشائعة" : "FAQ"}</Link></li>
+              <li><Link to="/contact" className="text-muted-foreground hover:text-accent text-sm transition-colors">{t("nav.contact")}</Link></li>
             </ul>
           </div>
 
@@ -103,8 +103,8 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">{t("footer.legal")}</h4>
             <ul className="space-y-2">
-              <li><Link to="/privacy" className="text-muted-foreground hover:text-secondary text-sm transition-colors">{t("privacy.title")}</Link></li>
-              <li><Link to="/terms" className="text-muted-foreground hover:text-secondary text-sm transition-colors">{t("terms.title")}</Link></li>
+              <li><Link to="/privacy" className="text-muted-foreground hover:text-accent text-sm transition-colors">{t("privacy.title")}</Link></li>
+              <li><Link to="/terms" className="text-muted-foreground hover:text-accent text-sm transition-colors">{t("terms.title")}</Link></li>
             </ul>
             <h4 className="font-semibold mb-2 mt-6">{t("nav.contact")}</h4>
             <ul className="space-y-2 text-muted-foreground text-sm">
@@ -114,7 +114,7 @@ const Footer = () => {
                   href="https://wa.me/966546547545"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-secondary transition-colors"
+                  className="hover:text-accent transition-colors"
                   dir="ltr"
                 >
                   <bdi>+966 54 654 7545</bdi>
