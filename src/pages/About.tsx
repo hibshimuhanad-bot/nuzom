@@ -13,10 +13,10 @@ const About = () => {
   const ArrowIcon = language === "ar" ? ArrowLeft : ArrowRight;
 
   const values = [
-    { icon: Zap, titleKey: "about.values.simplicity.title", descKey: "about.values.simplicity.desc", color: "text-accent" },
+    { icon: Zap, titleKey: "about.values.simplicity.title", descKey: "about.values.simplicity.desc", color: "text-secondary" },
     { icon: Shield, titleKey: "about.values.security.title", descKey: "about.values.security.desc", color: "text-accent" },
     { icon: Lightbulb, titleKey: "about.values.innovation.title", descKey: "about.values.innovation.desc", color: "text-[hsl(var(--glow-purple))]" },
-    { icon: HeadphonesIcon, titleKey: "about.values.support.title", descKey: "about.values.support.desc", color: "text-accent" },
+    { icon: HeadphonesIcon, titleKey: "about.values.support.title", descKey: "about.values.support.desc", color: "text-secondary" },
   ];
 
   const stats = [
@@ -75,7 +75,7 @@ const About = () => {
             <ScrollReveal direction="left">
               <div className="bento-card p-8 h-full shimmer-border">
                 <div className="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center mb-5">
-                  <Eye className="h-7 w-7 text-accent" />
+                  <Eye className="h-7 w-7 text-secondary" />
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-3">{t("about.vision.title")}</h3>
                 <p className="text-muted-foreground leading-relaxed">{t("about.vision.text")}</p>
@@ -146,7 +146,7 @@ const About = () => {
           </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             {[
-              { icon: Cloud, title: language === "ar" ? "بنية سحابية" : "Cloud Infrastructure", desc: language === "ar" ? "بنية تحتية سحابية حديثة وآمنة" : "Modern and secure cloud infrastructure", color: "text-accent" },
+              { icon: Cloud, title: language === "ar" ? "بنية سحابية" : "Cloud Infrastructure", desc: language === "ar" ? "بنية تحتية سحابية حديثة وآمنة" : "Modern and secure cloud infrastructure", color: "text-secondary" },
               { icon: Layers, title: language === "ar" ? "بنية SaaS قابلة للتوسع" : "Scalable SaaS Architecture", desc: language === "ar" ? "أنظمة متعددة المستأجرين مصممة للنمو" : "Multi-tenant systems designed for growth", color: "text-accent" },
               { icon: Cpu, title: language === "ar" ? "أتمتة بالذكاء الاصطناعي" : "AI-Driven Automation", desc: language === "ar" ? "حلول ذكية لأتمتة العمليات" : "Smart solutions for process automation", color: "text-[hsl(var(--glow-purple))]" },
             ].map((item, i) => (

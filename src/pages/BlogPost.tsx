@@ -60,7 +60,7 @@ const BlogPost = () => {
           <h1 className="text-3xl font-bold text-foreground mb-4">
             {isAr ? "المقال غير موجود" : "Post Not Found"}
           </h1>
-          <Link to="/blog" className="text-accent hover:underline">
+          <Link to="/blog" className="text-secondary hover:underline">
             {isAr ? "العودة إلى المدونة" : "Back to Blog"}
           </Link>
         </section>
@@ -105,7 +105,7 @@ const BlogPost = () => {
                   {post.readTime[language]}
                 </span>
                 {category && (
-                  <span className="px-3 py-1 rounded-full bg-secondary/20 text-accent text-xs font-medium">
+                  <span className="px-3 py-1 rounded-full bg-secondary/20 text-secondary text-xs font-medium">
                     {category.label[language]}
                   </span>
                 )}
@@ -128,7 +128,7 @@ const BlogPost = () => {
                           if (match) {
                             return (
                               <li key={j} className="flex gap-2 text-muted-foreground leading-relaxed">
-                                <span className="text-accent font-semibold shrink-0">•</span>
+                                <span className="text-secondary font-semibold shrink-0">•</span>
                                 <span>
                                   <strong className="text-foreground">{match[1]}:</strong> {match[2]}
                                 </span>
@@ -208,11 +208,11 @@ const BlogPost = () => {
                         className="group block rounded-2xl border border-border bg-card p-6 hover:border-secondary/50 hover:shadow-lg transition-all duration-300 h-full"
                       >
                         {relCat && (
-                          <span className="inline-block px-3 py-1 rounded-full bg-secondary/10 text-accent text-xs font-medium mb-3">
+                          <span className="inline-block px-3 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-medium mb-3">
                             {relCat.label[language]}
                           </span>
                         )}
-                        <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-accent transition-colors line-clamp-2">
+                        <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-secondary transition-colors line-clamp-2">
                           {related.title[language]}
                         </h3>
                         <p className="text-muted-foreground text-sm line-clamp-3 mb-4">

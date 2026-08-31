@@ -6,148 +6,105 @@
 
 @layer base {
   :root {
-    /* ── الهوية الجديدة — Light (default): Cream + Bronze + Deep Navy ── */
+    /* ── Dark Purple (default) — Black + Glowing Purple ── */
 
-    --background: 42 48% 90%;              /* #F2EBDA — cream */
-    --foreground: 215 51% 11%;             /* #0E1A2B — deep navy */
+    --background: 245 43% 5%;              /* #07060F */
+    --foreground: 0 0% 98%;                /* #FAFAFA — soft white, unified */
 
-    --card: 0 0% 100%;                     /* white cards on cream */
-    --card-foreground: 215 51% 11%;
+    --card: 250 47% 12%;                   /* #13102B */
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 215 51% 11%;
+    --popover: 250 47% 12%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 32 51% 40%;                 /* Bronze — darkened for contrast */
-    --primary-foreground: 42 48% 96%;
-    --primary-glow: 31 62% 60%;            /* #D89C5A — light bronze */
+    --primary: 248 100% 71%;               /* #7C6BFF */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 248 100% 78%;
 
-    --secondary: 177 51% 25%;              /* #1F5F5C — deep teal */
-    --secondary-foreground: 42 48% 95%;
+    --secondary: 252 47% 15%;              /* #1A1438 */
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 42 44% 89%;                   /* #F0E9D8 — soft bg */
-    --muted-foreground: 223 13% 38%;       /* #5C6478 — body text */
+    --muted: 252 47% 15%;
+    --muted-foreground: 215 20% 80%;       /* #CBD5E1 — neutral, higher contrast */
 
-    --accent: 177 51% 25%;                 /* deep teal — icons, secondary highlights */
-    --accent-foreground: 42 48% 95%;
-    --accent-glow: 31 62% 60%;
-
-    --destructive: 0 72% 45%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 44 25% 80%;                  /* #D9D2BF — hairline */
-    --input: 44 25% 76%;
-    --ring: 32 51% 40%;
-
-    --radius: 0.625rem;
-
-    --success: 160 84% 30%;
-    --success-foreground: 0 0% 100%;
-    --warning: 38 92% 40%;
-    --warning-foreground: 0 0% 100%;
-    --info: 199 89% 38%;
-    --info-foreground: 0 0% 100%;
-
-    --brand-navy: 215 51% 11%;             /* #0E1A2B */
-    --brand-purple: 32 51% 47%;            /* legacy key → Bronze #B47B3A */
-    --brand-blue: 177 51% 25%;             /* legacy key → Deep Teal #1F5F5C */
-
-    --status-draft: 216 16% 55%;
-    --status-active: 160 84% 30%;
-    --status-hearing: 199 89% 38%;
-    --status-judgment: 32 51% 40%;
-    --status-execution: 177 51% 25%;
-
-    --gradient-primary: linear-gradient(135deg, hsl(32 51% 40%), hsl(31 62% 52%));
-    --gradient-accent: linear-gradient(135deg, hsl(177 51% 25%), hsl(177 45% 35%));
-    --gradient-surface: linear-gradient(180deg, hsl(42 48% 90%), hsl(42 44% 86%));
-    --gradient-hero: radial-gradient(ellipse 1200px 800px at 50% 0%, hsl(32 51% 47% / 0.14), transparent 60%), radial-gradient(ellipse 900px 600px at 85% 30%, hsl(177 51% 25% / 0.10), transparent 60%), radial-gradient(ellipse 900px 600px at 15% 70%, hsl(31 62% 60% / 0.12), transparent 60%), linear-gradient(180deg, hsl(42 48% 90%) 0%, hsl(42 44% 86%) 100%);
-    --gradient-mesh: radial-gradient(at 20% 20%, hsl(32 51% 47% / 0.12) 0%, transparent 50%), radial-gradient(at 80% 30%, hsl(177 51% 25% / 0.10) 0%, transparent 50%), radial-gradient(at 50% 90%, hsl(31 62% 60% / 0.08) 0%, transparent 50%);
-    --gradient-dark-hero: var(--gradient-hero);
-
-    --shadow-elegant: 0 1px 2px rgba(14,26,43,0.06), 0 8px 24px -8px rgba(14,26,43,0.10);
-    --shadow-card-hover: 0 1px 2px rgba(14,26,43,0.06), 0 16px 48px -12px hsl(32 51% 47% / 0.25), 0 0 0 1px hsl(32 51% 47% / 0.20);
-    --shadow-deep: 0 24px 80px -20px rgba(14,26,43,0.25);
-    --shadow-accent-glow: 0 0 0 1px hsl(32 51% 47% / 0.25), 0 4px 16px -2px hsl(32 51% 47% / 0.30), 0 16px 48px -8px hsl(31 62% 50% / 0.30);
-
-    --glow-primary: 32 51% 47%;
-    --glow-accent: 177 51% 25%;
-    --glow-purple: 32 51% 47%;
-
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 215 51% 11%;
-    --sidebar-primary: 32 51% 40%;
-    --sidebar-primary-foreground: 42 48% 96%;
-    --sidebar-accent: 42 44% 89%;
-    --sidebar-accent-foreground: 215 51% 11%;
-    --sidebar-border: 44 25% 80%;
-    --sidebar-ring: 32 51% 40%;
-  }
-
-  .dark {
-    /* ── Dark mode: Deep Navy base + Light Bronze accents ── */
-    --background: 215 55% 7%;
-    --foreground: 42 48% 92%;              /* cream text */
-
-    --card: 215 45% 13%;
-    --card-foreground: 42 48% 92%;
-
-    --popover: 215 45% 13%;
-    --popover-foreground: 42 48% 92%;
-
-    --primary: 31 62% 60%;                 /* #D89C5A — light bronze for contrast */
-    --primary-foreground: 215 51% 11%;
-    --primary-glow: 31 62% 68%;
-
-    --secondary: 215 40% 18%;
-    --secondary-foreground: 42 48% 92%;
-
-    --muted: 215 40% 16%;
-    --muted-foreground: 216 16% 70%;       /* #A6B0BF */
-
-    --accent: 31 62% 60%;                  /* light bronze */
-    --accent-foreground: 215 51% 11%;
-    --accent-glow: 31 62% 60%;
+    --accent: 243 75% 59%;                 /* #4F46E5 */
+    --accent-foreground: 0 0% 100%;
+    --accent-glow: 248 100% 71%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 215 35% 24%;
-    --input: 215 35% 24%;
-    --ring: 31 62% 60%;
+    --border: 250 49% 24%;                 /* #2A1F5C */
+    --input: 250 49% 24%;
+    --ring: 248 100% 71%;
+
+    --radius: 0.625rem;
 
     --success: 160 84% 39%;
     --success-foreground: 0 0% 100%;
     --warning: 38 92% 50%;
-    --warning-foreground: 215 55% 7%;
+    --warning-foreground: 245 43% 5%;
     --info: 199 89% 48%;
     --info-foreground: 0 0% 100%;
 
-    --status-draft: 216 16% 65%;
+    --brand-navy: 245 43% 5%;
+    --brand-purple: 248 100% 71%;
+    --brand-blue: 243 75% 59%;
+
+    --status-draft: 252 31% 71%;
     --status-active: 160 84% 39%;
     --status-hearing: 199 89% 48%;
-    --status-judgment: 31 62% 60%;
-    --status-execution: 177 45% 45%;
+    --status-judgment: 248 100% 71%;
+    --status-execution: 243 75% 59%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(31 62% 60%), hsl(32 51% 47%));
-    --gradient-accent: linear-gradient(135deg, hsl(177 45% 45%), hsl(177 51% 30%));
-    --gradient-surface: linear-gradient(180deg, hsl(215 55% 7%), hsl(215 50% 10%));
-    --gradient-hero: radial-gradient(ellipse 1200px 800px at 50% 0%, hsl(31 62% 60% / 0.16), transparent 60%), radial-gradient(ellipse 900px 600px at 85% 30%, hsl(177 51% 30% / 0.18), transparent 60%), radial-gradient(ellipse 900px 600px at 15% 70%, hsl(32 51% 47% / 0.12), transparent 60%), linear-gradient(180deg, hsl(215 55% 7%) 0%, hsl(215 50% 10%) 100%);
-    --gradient-mesh: radial-gradient(at 20% 20%, hsl(31 62% 60% / 0.14) 0%, transparent 50%), radial-gradient(at 80% 30%, hsl(177 51% 30% / 0.14) 0%, transparent 50%), radial-gradient(at 50% 90%, hsl(32 51% 47% / 0.08) 0%, transparent 50%);
+    --gradient-primary: linear-gradient(135deg, hsl(248 100% 71%), hsl(243 75% 59%));
+    --gradient-accent: linear-gradient(135deg, hsl(243 75% 59%), hsl(248 100% 71%));
+    --gradient-surface: linear-gradient(180deg, hsl(245 43% 5%), hsl(250 47% 9%));
+    --gradient-hero: radial-gradient(ellipse 1200px 800px at 50% 0%, hsl(248 100% 71% / 0.22), transparent 60%), radial-gradient(ellipse 900px 600px at 85% 30%, hsl(243 75% 59% / 0.18), transparent 60%), radial-gradient(ellipse 900px 600px at 15% 70%, hsl(248 100% 71% / 0.14), transparent 60%), linear-gradient(180deg, hsl(245 43% 5%) 0%, hsl(250 47% 8%) 100%);
+    --gradient-mesh: radial-gradient(at 20% 20%, hsl(248 100% 71% / 0.18) 0%, transparent 50%), radial-gradient(at 80% 30%, hsl(243 75% 59% / 0.18) 0%, transparent 50%), radial-gradient(at 50% 90%, hsl(248 100% 71% / 0.10) 0%, transparent 50%);
     --gradient-dark-hero: var(--gradient-hero);
 
     --shadow-elegant: 0 1px 2px rgba(0,0,0,0.5), 0 8px 24px -8px rgba(0,0,0,0.6);
-    --shadow-card-hover: 0 1px 2px rgba(0,0,0,0.5), 0 16px 48px -12px hsl(31 62% 60% / 0.30), 0 0 0 1px hsl(31 62% 60% / 0.25);
+    --shadow-card-hover: 0 1px 2px rgba(0,0,0,0.5), 0 16px 48px -12px hsl(248 100% 71% / 0.35), 0 0 0 1px hsl(248 100% 71% / 0.30);
     --shadow-deep: 0 24px 80px -20px rgba(0,0,0,0.7);
-    --shadow-accent-glow: 0 0 0 1px hsl(31 62% 60% / 0.35), 0 4px 16px -2px hsl(31 62% 60% / 0.40), 0 16px 48px -8px hsl(32 51% 47% / 0.40);
+    --shadow-accent-glow: 0 0 0 1px hsl(248 100% 71% / 0.4), 0 4px 16px -2px hsl(248 100% 71% / 0.45), 0 16px 48px -8px hsl(243 75% 59% / 0.45);
 
-    --sidebar-background: 215 45% 13%;
-    --sidebar-foreground: 42 48% 92%;
-    --sidebar-primary: 31 62% 60%;
-    --sidebar-primary-foreground: 215 51% 11%;
-    --sidebar-accent: 215 40% 18%;
-    --sidebar-accent-foreground: 42 48% 92%;
-    --sidebar-border: 215 35% 24%;
-    --sidebar-ring: 31 62% 60%;
+    --glow-primary: 248 100% 71%;
+    --glow-accent: 243 75% 59%;
+    --glow-purple: 248 100% 71%;
+
+    --sidebar-background: 250 47% 12%;
+    --sidebar-foreground: 250 100% 97%;
+    --sidebar-primary: 248 100% 71%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 252 47% 15%;
+    --sidebar-accent-foreground: 250 100% 97%;
+    --sidebar-border: 250 49% 24%;
+    --sidebar-ring: 248 100% 71%;
+  }
+
+  .dark {
+    --background: 245 43% 5%;
+    --foreground: 0 0% 98%;
+    --card: 250 47% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 250 47% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 248 100% 71%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 248 100% 78%;
+    --secondary: 252 47% 15%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 252 47% 15%;
+    --muted-foreground: 215 20% 80%;
+    --accent: 243 75% 59%;
+    --accent-foreground: 0 0% 100%;
+    --accent-glow: 248 100% 71%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 250 49% 24%;
+    --input: 250 49% 24%;
+    --ring: 248 100% 71%;
   }
 }
 
@@ -164,7 +121,7 @@
 
 /* ── RTL / Arabic typography refinements ── */
 [dir="rtl"] {
-  font-family: "Tajawal", "Noto Kufi Arabic", sans-serif;
+  font-family: "Noto Kufi Arabic", "Tajawal", sans-serif;
   letter-spacing: 0;
 }
 
@@ -172,7 +129,7 @@
 [dir="rtl"] h2,
 [dir="rtl"] h3,
 [dir="rtl"] h4 {
-  font-family: "Tajawal", "Noto Kufi Arabic", sans-serif;
+  font-family: "Noto Kufi Arabic", "Tajawal", sans-serif;
   line-height: 1.6;
   letter-spacing: 0;
   font-weight: 600;
@@ -185,7 +142,7 @@
 }
 
 [dir="rtl"] .font-mono {
-  font-family: "Tajawal", sans-serif;
+  font-family: "Noto Kufi Arabic", sans-serif;
 }
 
 @layer utilities {
@@ -227,39 +184,39 @@
   position: absolute;
   inset: -50%;
   background:
-    radial-gradient(ellipse 600px 600px at 20% 30%, hsl(32 51% 47% / 0.06), transparent),
-    radial-gradient(ellipse 500px 500px at 80% 20%, hsl(177 51% 25% / 0.06), transparent),
-    radial-gradient(ellipse 400px 400px at 50% 90%, hsl(32 51% 47% / 0.04), transparent);
+    radial-gradient(ellipse 600px 600px at 20% 30%, hsl(0 0% 0% / 0.04), transparent),
+    radial-gradient(ellipse 500px 500px at 80% 20%, hsl(212 100% 48% / 0.05), transparent),
+    radial-gradient(ellipse 400px 400px at 50% 90%, hsl(0 0% 0% / 0.03), transparent);
   z-index: 0;
 }
 .dark .ai-gradient-bg::before {
   background:
     radial-gradient(ellipse 600px 600px at 20% 30%, hsl(0 0% 100% / 0.04), transparent),
-    radial-gradient(ellipse 500px 500px at 80% 20%, hsl(177 45% 55% / 0.08), transparent),
+    radial-gradient(ellipse 500px 500px at 80% 20%, hsl(212 100% 55% / 0.10), transparent),
     radial-gradient(ellipse 400px 400px at 50% 90%, hsl(0 0% 100% / 0.04), transparent);
 }
 
 /* ── Dot Grid Pattern ── */
 .dot-pattern {
-  background-image: radial-gradient(hsl(var(--foreground) / 0.06) 1px, transparent 1px);
+  background-image: radial-gradient(hsl(var(--foreground) / 0.05) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
 /* ── Grid Lines Pattern ── */
 .grid-pattern {
   background-image:
-    linear-gradient(hsl(var(--foreground) / 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, hsl(var(--foreground) / 0.05) 1px, transparent 1px);
+    linear-gradient(hsl(var(--foreground) / 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--foreground) / 0.04) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
-/* ── Bento Card ── */
+/* ── Bento Card (glassmorphism on dark) ── */
 .bento-card {
   position: relative;
-  background: linear-gradient(180deg, hsl(var(--card) / 0.85) 0%, hsl(var(--card) / 0.65) 100%);
+  background: linear-gradient(180deg, hsl(var(--card) / 0.7) 0%, hsl(var(--card) / 0.4) 100%);
   backdrop-filter: blur(16px) saturate(140%);
   -webkit-backdrop-filter: blur(16px) saturate(140%);
-  border: 1px solid hsl(var(--border) / 0.9);
+  border: 1px solid hsl(var(--border) / 0.8);
   border-radius: 1.25rem;
   box-shadow: var(--shadow-elegant);
   transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease;

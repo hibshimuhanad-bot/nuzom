@@ -4,21 +4,15 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { Menu, ChevronDown, Globe, Sun, Moon } from "lucide-react";
+import { Menu, ChevronDown, Globe } from "lucide-react";
 import { products } from "@/data/products";
 import { logoMap } from "@/lib/productLogos";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const Navbar = () => {
   const { t, language, setLanguage } = useLanguage();
   const location = useLocation();
   const [open, setOpen] = useState(false);
-  const [isDark, setIsDark] = useState(() => document.documentElement.classList.contains("dark"));
-
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", isDark);
-    try { localStorage.setItem("theme", isDark ? "dark" : "light"); } catch {}
-  }, [isDark]);
 
   const navLinks = [
     { href: "/", label: t("nav.home") },
@@ -49,7 +43,7 @@ const Navbar = () => {
               to={link.href}
               className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                 isActive(link.href)
-              ? "text-accent"
+              ? "text-secondary"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
@@ -85,7 +79,7 @@ const Navbar = () => {
               to={link.href}
               className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                 isActive(link.href)
-              ? "text-accent"
+              ? "text-secondary"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
@@ -103,15 +97,6 @@ const Navbar = () => {
             <Globe className="h-4 w-4" />
             {language === "en" ? "عربي" : "EN"}
           </button>
-
-          <button
-            onClick={() => setIsDark(!isDark)}
-            aria-label={isDark ? "Light mode" : "Dark mode"}
-            className="p-2 rounded-md text-muted-foreground hover:text-foreground transition-colors"
-          >
-            {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-          </button>
-
 
 
           {/* Mobile menu */}

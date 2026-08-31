@@ -90,7 +90,7 @@ const ParticleField = ({ count = 40, className = "" }: ParticleFieldProps) => {
 
         if (finalSize > 1.5) {
           const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, finalSize * 4);
-          gradient.addColorStop(0, `rgba(180, 123, 58, ${finalOpacity * 0.15})`);
+          gradient.addColorStop(0, `rgba(34, 211, 238, ${finalOpacity * 0.15})`);
           gradient.addColorStop(1, "transparent");
           ctx.beginPath();
           ctx.arc(p.x, p.y, finalSize * 4, 0, Math.PI * 2);
@@ -100,7 +100,7 @@ const ParticleField = ({ count = 40, className = "" }: ParticleFieldProps) => {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, finalSize, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(180, 123, 58, ${finalOpacity})`;
+        ctx.fillStyle = `rgba(200, 220, 255, ${finalOpacity})`;
         ctx.fill();
       }
 
@@ -115,7 +115,7 @@ const ParticleField = ({ count = 40, className = "" }: ParticleFieldProps) => {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(31, 95, 92, ${alpha})`;
+            ctx.strokeStyle = `rgba(37, 99, 235, ${alpha})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }

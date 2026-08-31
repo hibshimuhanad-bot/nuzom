@@ -48,12 +48,12 @@ const Unsubscribe = () => {
 
   const content: Record<Status, { icon: React.ReactNode; title: string; desc: string }> = {
     loading: {
-      icon: <Loader2 className="h-12 w-12 text-accent animate-spin" />,
+      icon: <Loader2 className="h-12 w-12 text-secondary animate-spin" />,
       title: language === "ar" ? "جاري التحقق..." : "Verifying...",
       desc: "",
     },
     valid: {
-      icon: <MailX className="h-12 w-12 text-accent" />,
+      icon: <MailX className="h-12 w-12 text-secondary" />,
       title: language === "ar" ? "إلغاء الاشتراك" : "Unsubscribe",
       desc: language === "ar" ? "هل تريد إلغاء الاشتراك من رسائل البريد الإلكتروني؟" : "Would you like to unsubscribe from emails?",
     },
