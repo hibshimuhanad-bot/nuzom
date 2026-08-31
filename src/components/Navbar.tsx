@@ -104,6 +104,15 @@ const Navbar = () => {
             {language === "en" ? "عربي" : "EN"}
           </button>
 
+          <button
+            onClick={() => setIsDark(!isDark)}
+            aria-label={isDark ? "Light mode" : "Dark mode"}
+            className="p-2 rounded-md text-muted-foreground hover:text-foreground transition-colors"
+          >
+            {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+          </button>
+
+
 
           {/* Mobile menu */}
           <Sheet open={open} onOpenChange={setOpen}>
